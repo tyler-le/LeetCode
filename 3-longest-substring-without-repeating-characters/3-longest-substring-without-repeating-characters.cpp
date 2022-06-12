@@ -22,8 +22,7 @@ public:
                 count++;
             }
             
-            // if dupl char found, delete char at position 'begin' and slide start of                    window over by 1 and decrement count
-            // then check for new max
+            // if dupl. char found, delete char at position 'begin' and slide start of                  window over by 1 and decrement count/char at 'begin' position then check                  for new max
             else {
                 max_so_far = std::max(count, max_so_far);
                 map[s[begin]]--;
@@ -33,6 +32,7 @@ public:
             }
         }
         
+        // if end reached end of array, it is possible count wasn't compared against max            in order to update max, so we will do it here
         return count > max_so_far ? count : max_so_far;
     }
 };
