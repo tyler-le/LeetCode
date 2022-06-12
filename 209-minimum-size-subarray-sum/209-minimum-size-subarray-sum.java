@@ -6,11 +6,9 @@ class Solution {
         int end = 0;
         
         while (start < nums.length && end < nums.length) {
+            
             if (curr_sum >= target) {
-                if ((end - start + 1) < length) {
-                    length = end - start + 1;
-                }
-                
+                if (end - start + 1 < length) length = end - start + 1;
                 curr_sum = curr_sum - nums[start];
                 start++;
             }
