@@ -1,7 +1,6 @@
 #include <unordered_map>
 #include <algorithm>
-#include <iostream>
-#include <string>
+
 
 
 class Solution {
@@ -10,15 +9,13 @@ public:
         unordered_map<char, int> map;
         
         int max_so_far = INT_MIN;
-        int count = 0;
-        int begin = 0;
-        int end = 0;
-        int row = 0;
+        int count = 0, begin = 0, end = 0, row = 0;
         const int S_LEN = s.length();
     
         
         while(end < S_LEN) {
-            if (map.find(s[end]) == map.end() || map.find(s[end])->second == 0) {
+            auto mapping = map.find(s[end]);
+            if (mapping == map.end() || mapping->second == 0) {
                 map[s[end]]++;
                 end++;
                 count++;
