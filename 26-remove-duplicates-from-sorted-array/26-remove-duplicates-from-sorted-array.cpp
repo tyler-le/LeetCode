@@ -2,17 +2,15 @@ class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
         // two pointer approach
+        // one to keep insertion location, the other to find next non-duplicate to insert
         int l = 0;
         int r = 0;
+        int size = nums.size();
         
-        // if (nums.size() == 1) return 1;
-        
-        while (r < nums.size()) {
-            while (r < nums.size() && nums[r] == nums[l]) r++;
-            
+        while (r < size) {
+            while (r < size && nums[r] == nums[l]) r++;
             l++;
-            
-            if (r < nums.size()) nums[l] = nums[r];
+            if (r < size) nums[l] = nums[r];
         }
         
         return l;
