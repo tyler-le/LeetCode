@@ -5,7 +5,7 @@ class Solution {
         int start = 0;
         int end = 0;
         
-        while (start < nums.length && end < nums.length) {
+        while (end < nums.length) {
             
             if (curr_sum >= target) {
                 if (end - start + 1 < length) length = end - start + 1;
