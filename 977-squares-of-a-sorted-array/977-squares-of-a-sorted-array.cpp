@@ -1,5 +1,3 @@
-#include <stdlib.h>     /* abs */
-#include <vector>
 
 class Solution {
 public:
@@ -17,10 +15,14 @@ public:
         
 //         return squared;
         
+        
+        
         /**
         * This approach is O(n)
         **/
         
+        // two pointer
+        // one at front, one at end. we will take the abs. value of each and push the one with the bigger                square to the end of the resulting array and adjust pointers when needed.
         vector<int> squared;
         int l = 0;
         int r = nums.size() - 1;
