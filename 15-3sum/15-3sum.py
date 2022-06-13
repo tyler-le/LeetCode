@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         res = []
-        
         nums.sort()
 
         for index in range (0, len(nums) - 1):
@@ -17,7 +16,6 @@ class Solution(object):
             # two-pointer approach    
             l = index + 1
             r = len(nums) - 1
-            curr_sum = -nums[index]
             
             # this part is 2Sum / 2Sum II. we leverage the sorted array 
             while l < r:
