@@ -30,11 +30,14 @@ public:
         if (nums.size() == 0) return squared;
         
         while (l < r) {
+            
+            // if left has bigger abs. value, we push its square to result
             if (abs(nums[l]) > abs(nums[r])) {
                 squared.insert(squared.begin(), nums[l] * nums[l]); // vector has no 'push_front' 
                 l++;
             }
             
+            // if right has bigger (or equal) abs, we push its square to result
             else if (abs(nums[l]) <= abs(nums[r])) {
                 squared.insert(squared.begin(), nums[r] * nums[r]);
                 r--;
@@ -42,6 +45,8 @@ public:
             
         }
 
+        // when l == r (aka size of nums is 1)
+        // also the while-loop does not handle this case, so we do it here
         squared.insert(squared.begin(), nums[l] * nums[l]);
         
         return squared;
