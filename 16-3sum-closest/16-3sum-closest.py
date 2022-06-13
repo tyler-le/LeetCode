@@ -10,11 +10,11 @@ class Solution(object):
         closest = sys.maxint
         curr_sum = 0
         nums.sort()
+        end = len(nums) - 1
         
-        for index in range(0, len(nums)-1):
+        for index in range(0, end):
             l = index + 1
-            r = len(nums) - 1
-            print(index)
+            r = end
             
             while l < r:
                 if nums[index] + nums[l] + nums[r] == target:
