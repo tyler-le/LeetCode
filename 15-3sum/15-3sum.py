@@ -6,9 +6,6 @@ class Solution(object):
         """
         res = []
         
-        if len(nums) < 3:
-            return res
-        
         nums.sort()
 
         for index in range (0, len(nums) - 1):
