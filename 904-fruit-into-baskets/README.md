@@ -13,26 +13,26 @@
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
 
-<pre><strong>Input:</strong> fruits = [<u>1,2,1</u>]
+<pre style="position: relative;"><strong>Input:</strong> fruits = [<u>1,2,1</u>]
 <strong>Output:</strong> 3
 <strong>Explanation:</strong> We can pick from all 3 trees.
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p><strong>Example 2:</strong></p>
 
-<pre><strong>Input:</strong> fruits = [0,<u>1,2,2</u>]
+<pre style="position: relative;"><strong>Input:</strong> fruits = [0,<u>1,2,2</u>]
 <strong>Output:</strong> 3
 <strong>Explanation:</strong> We can pick from trees [1,2,2].
 If we had started at the first tree, we would only pick from trees [0,1].
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p><strong>Example 3:</strong></p>
 
-<pre><strong>Input:</strong> fruits = [1,<u>2,3,2,2</u>]
+<pre style="position: relative;"><strong>Input:</strong> fruits = [1,<u>2,3,2,2</u>]
 <strong>Output:</strong> 4
 <strong>Explanation:</strong> We can pick from trees [2,3,2,2].
 If we had started at the first tree, we would only pick from trees [1,2].
-</pre>
+<div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
 
 <p>&nbsp;</p>
 <p><strong>Constraints:</strong></p>
