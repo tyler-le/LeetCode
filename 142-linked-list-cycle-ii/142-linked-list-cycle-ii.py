@@ -13,6 +13,7 @@ class Solution(object):
         
         slow = fast = head
         
+        # Look for cycle
         while fast is not None:
             if fast.next is None or fast.next.next is None:
                 return None
@@ -23,6 +24,8 @@ class Solution(object):
             if slow is fast:
                 break
                 
+        # cycle is found, look for head of cycle.
+        # keep incrementing curr and fast and when they equal, that is the head of the cycle
         curr = head
         while curr is not fast:
             curr = curr.next
