@@ -4,32 +4,20 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
+        l,r, index = 0, len(nums) - 1, 0
         
-        num_zero, num_one, num_two = 0,0,0
-        
-        for num in nums:
-            if num == 0:
-                num_zero+=1
+        while index <= r:
+            if nums[index] == 0:
+                temp = nums[l]
+                nums[l] = nums[index]
+                nums[index] = temp
+                l+=1
                 
-            elif num == 1:
-                num_one+=1
-                
-            else:
-                num_two+=2
-                
-        
-        for index in range(len(nums)):
-            if num_zero > 0:
-                nums[index] = 0
-                num_zero-=1
-                
-            elif num_one > 0:
-                nums[index] = 1
-                num_one-=1
-                
-            else:
-                nums[index] = 2
-                num_two-=1
-                
-    
-        
+            elif nums[index] == 2:
+                temp = nums[r]
+                nums[r] = nums[index]
+                nums[index] = temp
+                r-=1
+                index-=1
+                    
+            index+=1
