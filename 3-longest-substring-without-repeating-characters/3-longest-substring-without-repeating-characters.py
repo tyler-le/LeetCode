@@ -1,20 +1,16 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         used_char = {}
-        substr_max = 0
+        substr_max = 1
         l, r = 0, 1
         
         if len(s) == 0:
-            return substr_max
-        
-        if len(s) == 1:
-            return 1
+            return 0
         
         used_char[s[l]] = 1
         while r < len(s):
             
             if s[r] in used_char and used_char[s[r]] != 0:
-                print ("test")
 
                 while used_char[s[r]] != 0:
                     used_char[s[l]] -= 1
