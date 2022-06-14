@@ -27,6 +27,7 @@ class Solution(object):
                 
                 if my_dict[fruits[start]] == 0:
                     del my_dict[fruits[start]]
+                    
                 start+=1
                 
             end+=1
