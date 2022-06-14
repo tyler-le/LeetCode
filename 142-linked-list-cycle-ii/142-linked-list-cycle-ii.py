@@ -21,15 +21,13 @@ class Solution(object):
             fast = fast.next.next
             
             if slow is fast:
-                print("yes")
                 break
                 
         curr = head
         while curr is not fast:
             curr = curr.next
             fast = fast.next
-            if curr is fast:
-                return fast
+            
         return fast
             
             
