@@ -8,7 +8,10 @@ class Solution:
             return 0
         
         used_char[s[l]] = 1
-        while r < len(s):
+        
+        s_len = len(s)
+        
+        while r < s_len:
             
             if s[r] in used_char and used_char[s[r]] != 0:
 
