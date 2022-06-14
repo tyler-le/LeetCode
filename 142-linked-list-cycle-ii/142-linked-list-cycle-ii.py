@@ -16,8 +16,10 @@ class Solution(object):
         while fast is not None:
             if fast.next is None or fast.next.next is None:
                 return None
+            
             slow = slow.next
             fast = fast.next.next
+            
             if slow is fast:
                 break
                 
