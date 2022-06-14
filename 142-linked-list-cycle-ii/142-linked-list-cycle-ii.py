@@ -11,15 +11,25 @@ class Solution(object):
         :rtype: ListNode
         """
         
-        my_set = set()
-        curr = head
+        slow = fast = head
         
-        while (curr is not None):
-            if curr in my_set:
-                return curr
+        while fast is not None:
+            if fast.next is None or fast.next.next is None:
+                return None
             
-            my_set.add(curr)
+            slow = slow.next
+            fast = fast.next.next
+            
+            if slow is fast:
+                print("yes")
+                break
+                
+        curr = head
+        while curr is not fast:
             curr = curr.next
-        
-        return None
-        
+            fast = fast.next
+            if curr is fast:
+                return fast
+        return fast
+            
+            
