@@ -17,13 +17,15 @@ class Solution(object):
             slow = self.sum_of_squares(slow)
             fast = self.sum_of_squares(self.sum_of_squares(fast))
             
-            if slow == fast and slow != 1:
-                return False
-            
-            elif slow == 1 or fast == 1:
+            if slow is 1 or fast is 1:
                 return True
             
-        return fast == 1
+            elif slow is fast and slow is not 1:
+                return False
+            
+            
+            
+        #return fast == 1
     
     
    
