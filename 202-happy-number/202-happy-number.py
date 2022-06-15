@@ -13,20 +13,17 @@ class Solution(object):
         :rtype: bool
         """
         slow = fast = n
+        
         while (True):
             slow = self.sum_of_squares(slow)
             fast = self.sum_of_squares(self.sum_of_squares(fast))
             
-            if slow is 1 or fast is 1:
+            if slow == 1 or fast == 1:
                 return True
             
-            elif slow is fast and slow is not 1:
+            elif slow == fast and slow != 1:
                 return False
-            
-            
-            
-        #return fast == 1
-    
+                
     
    
    
