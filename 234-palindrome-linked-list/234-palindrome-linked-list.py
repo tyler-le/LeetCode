@@ -9,12 +9,28 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        s=""
-        curr = head
-        while curr != None:
-            s += str(curr.val)
-            curr = curr.next
+        slow = fast = head
+        
+        # Look for middle
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
             
-        return s == s[::-1]
+        # reverse second half
+        prev = None
+        while slow != None:
+            tmp = slow.next
+            slow.next = prev
+            prev = slow
+            slow = tmp
+        
+        left, right = head, prev
+        while left != None and right != None:
+            if left.val != right.val:
+                return False
             
+            left = left.next
+            right = right.next
+            
+        return True
         
