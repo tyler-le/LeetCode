@@ -24,11 +24,11 @@ class Solution(object):
             prev = slow
             slow = tmp
         
+        # Compare the two lists
         left, right = head, prev
         while left != None and right != None:
             if left.val != right.val:
                 return False
-            
             left = left.next
             right = right.next
             
