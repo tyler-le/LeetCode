@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        l,r, index = 0, len(nums) - 1, 0
+        l,r, index = 0, len(nums)-1, 0
         
         while index <= r:
             if nums[index] == 0:
