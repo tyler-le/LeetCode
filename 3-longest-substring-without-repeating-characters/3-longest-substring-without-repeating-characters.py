@@ -17,11 +17,10 @@ class Solution(object):
                 
             else:
                 res = max(res, r-l)
-                while my_map[s[r]]>0:
-                    if s[l] in my_map:
-                        my_map[s[l]]-=1
+                while s[l] in my_map and my_map[s[r]]>0:
+                    my_map[s[l]]-=1
                     l+=1
                 del my_map[s[r]]
             
-        return max(res,r-l)
+        return max(res, r-l)
         
