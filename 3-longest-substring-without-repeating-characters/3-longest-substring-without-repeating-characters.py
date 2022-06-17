@@ -1,27 +1,27 @@
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
         
-        if len(s) == 0:
-            return 0
+        res = 0
+        l,r=0,0
         
-        used_char = {}
-        substr_max = 1
-        l, r = 0, 1
-    
-        used_char[s[l]] = 1
-                
+        my_map={}
+        
         while r < len(s):
-            
-            if s[r] in used_char and used_char[s[r]] != 0:
-                while used_char[s[r]] != 0:
-                    used_char[s[l]] -= 1
-                    l += 1
-                    
+            if s[r] not in my_map:
+                my_map[s[r]] = 1
+                r+=1
+                
             else:
-                used_char[s[r]] = 1
-                r += 1
-                
-            substr_max = max(substr_max, r-l)
-                
-        return substr_max
+                res = max(res, r-l)
+                while my_map[s[r]]>0:
+                    if s[l] in my_map:
+                        my_map[s[l]]-=1
+                    l+=1
+                del my_map[s[r]]
+            
+        return max(res,r-l)
         
