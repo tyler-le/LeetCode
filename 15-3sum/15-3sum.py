@@ -16,7 +16,14 @@ class Solution:
             # this part is 2Sum / 2Sum II. we leverage the sorted array 
             while l < r:
                 target_sum = nums[l] + nums[r] + nums[index]
-                if target_sum == 0:
+                
+                if target_sum > 0:
+                    r-=1
+                    
+                elif target_sum < 0:
+                    l+=1
+                    
+                else:
                     res.append([nums[l], nums[r], nums[index]])
                     
                     while l < r and nums[l] == nums[l+1]:
@@ -26,12 +33,6 @@ class Solution:
                         r-=1
                         
                     l+=1
-                    r-=1
-                
-                elif target_sum < 0:
-                    l+=1
-                    
-                else:
                     r-=1
                     
         return res
