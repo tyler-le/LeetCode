@@ -13,11 +13,6 @@ class Solution:
                     temp = nums[nums[i]]
                     nums[nums[i]] = nums[i]
                     nums[i]=temp
-                    
-
-            
-            
-            
-        
+                      
         return res
         
