@@ -2,30 +2,24 @@ class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         res = []
         nums.sort()
-
-        for index in range (0, len(nums) - 1):
+        for index in range(len(nums) - 1):
             
-            # avoid duplicates
-            if index > 0 and nums[index] == nums[index-1]:
+            if index > 0 and nums[index]==nums[index-1]:
                 continue
                 
-            # two-pointer approach    
-            l = index + 1
-            r = len(nums) - 1
-            
-            # this part is 2Sum / 2Sum II. we leverage the sorted array 
-            while l < r:
-                target_sum = nums[l] + nums[r] + nums[index]
+            l,r = index+1, len(nums)-1
                 
-                if target_sum > 0:
-                    r-=1
-                    
-                elif target_sum < 0:
+            while l < r:
+                target_sum = nums[index] + nums[l] + nums[r]
+                
+                if target_sum < 0:
                     l+=1
                     
-                else:
-                    res.append([nums[l], nums[r], nums[index]])
+                elif target_sum > 0:
+                    r-=1
                     
+                else:
+                    res.append([nums[index], nums[l], nums[r]])
                     while l < r and nums[l] == nums[l+1]:
                         l+=1
                         
