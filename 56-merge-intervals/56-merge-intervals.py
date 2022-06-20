@@ -4,22 +4,18 @@ class Solution(object):
         :type intervals: List[List[int]]
         :rtype: List[List[int]]
         """
-        
+        start,end=0,1
         intervals.sort(key = lambda i : i[0])
+        res = [intervals[0]]
         
-        res = []
-        res.append(intervals[0])
-        
-        for start,end in intervals[1:]:
-            last_in_res = res[-1]
-            a_overlaps_b = start>=last_in_res[0] and start <=last_in_res[1]
-            b_overlaps_a = last_in_res[0]>=start and last_in_res[0]<=end
+        for i in range (1, len(intervals)):
+            has_overlap = (res[-1][start]>=intervals[i][start] and res[-1][start]<=intervals[i][end]) or (intervals[i][start]>=res[-1][start] and intervals[i][start]<=res[-1][end])
             
-            if a_overlaps_b or b_overlaps_a:
-                res[-1] = [min(start, last_in_res[0]), max(end, last_in_res[1])]
-                
+            if has_overlap:
+                res[-1][start], res[-1][end] = min(res[-1][start], intervals[i][start]), max(res[-1][end], intervals[i][end])
             else:
-                res.append([start,end])
-
+                res.append(intervals[i])
+                
         return res
+        
         
