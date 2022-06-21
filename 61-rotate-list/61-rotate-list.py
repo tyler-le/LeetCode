@@ -10,30 +10,26 @@ class Solution(object):
         :type k: int
         :rtype: ListNode
         """
-        
-        counter = head
-        list_len = 0
-        
-        while counter is not None:
-            list_len+=1
-            counter = counter.next
-        
-        if list_len == 0:
+        if not head:
             return None
         
-        new_head_index = (list_len - k) % list_len
-        
-        new_head = head
-        for i in range(new_head_index):
-            new_head = new_head.next
+        tail, list_len = head, 1
 
-        curr = new_head
-        for j in range(list_len - 1):
-            if curr.next is None:
-                curr.next = head
+        while tail.next is not None:
+            tail = tail.next
+            list_len+=1
+        
+        k = k % list_len
+        if k == 0:
+            return head
+        
+        curr = head
+        for i in range(list_len - k - 1):
             curr = curr.next
-            
+
+        new_head = curr.next
         curr.next = None
+        tail.next = head
         
         return new_head
             
