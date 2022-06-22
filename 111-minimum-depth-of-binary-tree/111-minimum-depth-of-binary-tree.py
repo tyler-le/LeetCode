@@ -18,7 +18,7 @@ class Solution:
         while q:
             level_size = len(q)
             
-            for i in range(level_size):
+            for _ in range(level_size):
                 popped = q.popleft()
                 
                 if not popped.left and not popped.right:
