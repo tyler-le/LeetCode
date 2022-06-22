@@ -16,7 +16,7 @@ class Solution:
         
         
         while q:
-            curr_level = []
+            curr_level = deque()
             count = len(q)
             is_even_iteration = (i%2 == 0)
             
@@ -31,13 +31,13 @@ class Solution:
                         q.append(popped.right)
                         
                 else:
-                    curr_level.insert(0, popped.val)
+                    curr_level.appendleft(popped.val)
                     if popped.left:
                         q.append(popped.left)
                     if popped.right:
                         q.append(popped.right)
                 
-            res.append(curr_level)
+            res.append(list(curr_level))
             i+=1
                 
         return res
