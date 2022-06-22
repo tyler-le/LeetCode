@@ -16,8 +16,6 @@ class Solution:
         while q:
             level_sum, level_size = 0, len(q)
             
-            
-            
             for i in range(level_size):
                 popped = q.popleft()
                 level_sum+=popped.val
