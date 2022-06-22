@@ -13,8 +13,6 @@ class Solution:
         
         q.append(root)
         
-        
-        
         while q:
             curr_level = deque()
             count = len(q)
@@ -25,17 +23,14 @@ class Solution:
                 
                 if is_even_iteration:
                     curr_level.append(popped.val)
-                    if popped.left:
-                        q.append(popped.left)
-                    if popped.right:
-                        q.append(popped.right)
-                        
                 else:
                     curr_level.appendleft(popped.val)
-                    if popped.left:
-                        q.append(popped.left)
-                    if popped.right:
-                        q.append(popped.right)
+                    
+                if popped.left:
+                    q.append(popped.left)
+                if popped.right:
+                    q.append(popped.right)
+                        
                 
             res.append(list(curr_level))
             i+=1
