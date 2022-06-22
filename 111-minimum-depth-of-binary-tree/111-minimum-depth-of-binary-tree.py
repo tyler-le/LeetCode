@@ -10,7 +10,7 @@ class Solution:
         if not root:
             return 0
         
-        min_depth, q, depth_counter = sys.maxsize, deque(), 1 
+        q, depth_counter = deque(), 1 
         
         q.append(root)
             
@@ -22,7 +22,7 @@ class Solution:
                 popped = q.popleft()
                 
                 if not popped.left and not popped.right:
-                    min_depth = min(min_depth, depth_counter)
+                    return depth_counter
                     
                 if popped.left:
                     q.append(popped.left)
@@ -31,7 +31,6 @@ class Solution:
                     
             depth_counter+=1
             
-        return min_depth
         
         
         
