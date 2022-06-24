@@ -12,10 +12,8 @@ class Solution:
         
         is_leaf = root.left is None and root.right is None
         
-        if is_leaf and targetSum == root.val:
-            return True
-        if is_leaf and targetSum != root.val:
-            return False
+        if is_leaf:
+            return targetSum == root.val
         
         return self.hasPathSum(root.left, targetSum-root.val) or self.hasPathSum(root.right, targetSum-root.val)
         
