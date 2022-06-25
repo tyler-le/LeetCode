@@ -13,9 +13,8 @@ class Solution:
         def diam_helper(root):
             if root is None:
                 return 0    
-            
-            left_height = diam_helper(root.left)
-            right_height = diam_helper(root.right)
+          
+            left_height, right_height = diam_helper(root.left), diam_helper(root.right)
             
             curr_diameter = left_height + right_height
             self.max_diameter = max(self.max_diameter, curr_diameter) 
