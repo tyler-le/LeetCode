@@ -10,9 +10,7 @@ class Solution(object):
             return False
         
         
-        s1_count, s2_count, window_size = {}, {}, len(s1)
-        l = r = 0
-        
+        s1_count, s2_count= {}, {}        
         
         # populate s1_count
         for s in s1:
@@ -23,8 +21,7 @@ class Solution(object):
         for i in range(len(s2) - len(s1) + 1):
             substrings.append(s2[i:i+len(s1)])
             
-       # print(substrings)
-        
+            
         # check each substring to see if its an anagram of s1
         for substr in substrings:
             new_dict = {}
