@@ -9,7 +9,6 @@ class Solution(object):
         if len(s1) > len(s2):
             return False
         
-        
         s1_count, s2_count= {}, {}        
         
         # populate s1_count
@@ -24,10 +23,10 @@ class Solution(object):
             
         # check each substring to see if its an anagram of s1
         for substr in substrings:
-            new_dict = {}
+            substr_dict = {}
             for ch in substr:
-                new_dict[ch] = 1 + new_dict.get(ch, 0)
-            if new_dict == s1_count:
+                substr_dict[ch] = 1 + substr_dict.get(ch, 0)
+            if substr_dict == s1_count:
                 return True
             
         return False
