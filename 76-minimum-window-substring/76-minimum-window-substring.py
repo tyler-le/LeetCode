@@ -28,6 +28,6 @@ class Solution:
                         is_valid = False
                 
                 l+=1
-        print (res)
-        return "" if len(res) < 2 else s[res[0]:res[1]+1]
+                
+        return "" if len(res) == 0 else s[res[0]:res[1]+1]
         
