@@ -8,7 +8,6 @@ class Solution:
         while r < len(s):
             s_map[s[r]] = 1 + s_map.get(s[r], 0)
             
-            #print(s_map, t_map)
             is_valid = True
             for key, value in t_map.items():
                 if key not in s_map or s_map[key] < value:
