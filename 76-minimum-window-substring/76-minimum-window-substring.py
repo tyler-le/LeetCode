@@ -1,11 +1,11 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        l,r,res,min_len,t_map,s_map = 0,0,"",float('inf'),{},{}
+        l,r,res,min_len,t_map,s_map = 0,0,[],float('inf'),{},{}
         
         for ch in t:
             t_map[ch] = 1+t_map.get(ch, 0)
         
-        while r < len(s):
+        for r in range(len(s)):
             s_map[s[r]] = 1 + s_map.get(s[r], 0)
             
             is_valid = True
@@ -16,7 +16,7 @@ class Solution:
             while is_valid:
                 if r-l+1 < min_len:
                     min_len = r-l+1
-                    res=s[l:r+1]
+                    res=[l,r]
                     
                 s_map[s[l]]-=1
                 
@@ -28,7 +28,6 @@ class Solution:
                         is_valid = False
                 
                 l+=1
-            r+=1
-            
-        return res
+        print (res)
+        return "" if len(res) < 2 else s[res[0]:res[1]+1]
         
