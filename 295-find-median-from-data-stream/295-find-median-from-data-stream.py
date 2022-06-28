@@ -19,19 +19,14 @@ class MedianFinder(object):
             heappush(self.second_half, num)
             
             
-        # balance out the heaps
-#         if len(self.first_half) > len(self.second_half) + 1:
-#             removed = heappop(self.first_half)
-#             heappush(self.second_half, removed)
-            
-#         elif len(self.first_half) < len(self.second_half):
-#             removed = -heappop(self.second_half)
-#             heappush(self.first_half, removed)
-            
+        # balance out the heaps. if uneven length, extra elem will go in first_half
         if len(self.first_half) > len(self.second_half) + 1:
-            heappush(self.second_half, -heappop(self.first_half))
+            removed = -heappop(self.first_half)
+            heappush(self.second_half, removed)
+            
         elif len(self.first_half) < len(self.second_half):
-            heappush(self.first_half, -heappop(self.second_half))
+            removed = heappop(self.second_half)
+            heappush(self.first_half, -removed)
             
         
             
