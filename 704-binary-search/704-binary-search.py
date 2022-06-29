@@ -1,18 +1,16 @@
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        def helper(nums, target, low, high):
-            
-            if high < low: return -1        
-            mid = low + (high - low) / 2
-    
-            if nums[mid] < target: return helper(nums, target, mid+1, high)
-            elif nums[mid] > target: return helper(nums,target, low, mid-1)
-            else: return mid
-            
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        lo, hi = 0, len(nums) - 1
         
-        return helper(nums, target, 0, len(nums)-1)
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            
+            if nums[mid] < target:
+                lo = mid + 1
+            elif nums[mid] > target:
+                hi = mid - 1
+            else:
+                return mid
+            
+        return -1
+        
