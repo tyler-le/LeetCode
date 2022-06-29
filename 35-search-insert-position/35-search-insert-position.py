@@ -6,17 +6,17 @@ class Solution(object):
         :rtype: int
         """
         
-        low, high = 0, len(nums) - 1
+        lo, hi = 0, len(nums) - 1
         
-        while low <= high:
-            mid = int((low + high) / 2)
+        while lo <= hi:
+            mid = int((lo + hi) / 2)
             
             if nums[mid] < target:
-                low = mid + 1
+                lo = mid + 1
             elif nums[mid] > target:
-                high = mid - 1
+                hi = mid - 1
             else:
                 return mid
             
-        return low
+        return lo
         
