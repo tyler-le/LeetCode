@@ -1,43 +1,30 @@
-class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        def binary_search(nums, target, low, high):
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        
+        low, high = 0, len(nums) - 1
+        
+        while low <= high:
+            mid = low + ((high - low) // 2)
             
-            while low <= high:
-                mid = low + ( (high - low) // 2)
-                if nums[mid] < target:
-                    low = mid + 1
-                elif nums[mid] > target:
+            if nums[mid] == target:
+                return mid
+            
+            # nums[low] to nums[mid] is sorted
+            if nums[low] <= nums[mid]:
+                if target >= nums[low] and target < nums[mid]:
                     high = mid - 1
                 else:
-                    return mid
+                    low = mid + 1
+                    
+            else:
+                if target > nums[mid] and target <= nums[high]:
+                    low = mid + 1
+                else:
+                    high = mid - 1
+            
+        return -1
                 
-            return -1
-            
-            
-            
-            
-        valley_index = len(nums) - 1
-        
-        for i in range(len(nums) - 1):
-            if nums[i] > nums[i+1]:
-                valley_index = i+1
-                break
                 
-        left = binary_search(nums, target, 0, valley_index - 1)
-        right = binary_search(nums, target, valley_index, len(nums) - 1)
-        
-        if left == -1 and right == -1:
-            return -1
-        elif left == -1:
-            return right
-        else:
-            return left
-        
-        
-            
+                
+                
         
