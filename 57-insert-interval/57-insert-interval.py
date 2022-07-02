@@ -1,26 +1,31 @@
-class Solution:
-    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+class Solution(object):
+    def insert(self, intervals, newInterval):
+        """
+        :type intervals: List[List[int]]
+        :type newInterval: List[int]
+        :rtype: List[List[int]]
+        """
         res = []
         
-        for i in range (len(intervals)):
-            # if newInterval comes before current interval and is disjoint, 
-            # put it up front and attach the rest of intervals (which is nonoverlapping) and return
-            if newInterval[1] < intervals[i][0]:
+        if len(intervals) == 0:
+            return [newInterval]
+        
+        for i in range(len(intervals)):
+            currInterval_start, currInterval_end = intervals[i][0], intervals[i][1]
+            newInterval_start, newInterval_end = newInterval[0], newInterval[1]
+            
+            comes_before_no_overlap = newInterval_end < currInterval_start
+            if comes_before_no_overlap:
                 res.append(newInterval)
                 res+=intervals[i:]
                 return res
             
-            # else if the newInterval is not connected to curr interval, we can add the interval[i] 
-            # and continue without appending
-            elif newInterval[0] > intervals[i][1]:
+            goes_after_no_overlap = newInterval_start > currInterval_end
+            if goes_after_no_overlap:
                 res.append(intervals[i])
-                
-            # else there is overlap, so we update the newInterval continue without appending
+            
             else:
-                newInterval = [min(intervals[i][0], newInterval[0]), max(intervals[i][1], newInterval[1])]
-        
+                newInterval[0], newInterval[1] = min(newInterval_start, currInterval_start), max(newInterval_end, currInterval_end)
+                
         res.append(newInterval)
         return res
-                            
-            
-        
