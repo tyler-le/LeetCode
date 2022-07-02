@@ -19,12 +19,6 @@ class Solution(object):
             elif curr_a is curr_b:
                 return curr_a
             
-            if curr_a is None:
-                curr_a = headB
-            else:
-                curr_a = curr_a.next    
-                
-            if curr_b is None:
-                curr_b = headA
-            else:
-                curr_b = curr_b.next
+            
+            curr_a = headB if (curr_a is None) else curr_a.next
+            curr_b = headA if (curr_b is None) else curr_b.next
