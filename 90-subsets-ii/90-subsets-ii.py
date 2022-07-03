@@ -1,34 +1,30 @@
-class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        # BFS Solution
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
         
-        nums.sort()
-        power_set = []
-        power_set.append([])
-        added_last_step = 0
+        # BACKTRACKING SOLUTION
         
-        for i in range(len(nums)):
-    
-            current_level = []
+        def backtrack(i, subset):
+            if i >= len(nums):
+                return res.append(subset[::]) # copy
             
-            # if duplicate, append nums[i] to all subsets created in last iter
-            if i > 0 and nums[i] == nums[i-1]:
-                for j in range(len(power_set) - added_last_step, len(power_set)):
-                    new_subset = power_set[j] + [nums[i]]
-                    current_level.append(new_subset)
-                 
-            # if not duplicate, append nums[i] to all subsets in power set.
-            else:
-                for subset in power_set:
-                    new_subset = subset + [nums[i]]
-                    current_level.append(new_subset)
+            # include nums[i] if not duplicate
+            subset.append(nums[i])
+            backtrack(i+1, subset)
                 
-            power_set += current_level
-            added_last_step = len(current_level)
+            # skip duplicates
+            while i + 1 < len(nums) and nums[i] == nums[i+1]:
+                i+=1
             
-        return power_set
-            
+            # exclude nums[i]
+            subset.pop()
+            backtrack(i+1, subset)
 
-        
-        
+        nums.sort()
+        subset, res = [], []
+        backtrack(0, subset)
+        return res
         
