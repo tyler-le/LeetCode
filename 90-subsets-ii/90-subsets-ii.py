@@ -9,7 +9,7 @@ class Solution(object):
         
         def backtrack(i):
             if i >= len(nums):
-                return res.append(subset[::]) # copy
+                return res.append(subset*1) # copy
             
             # include nums[i] if not duplicate
             subset.append(nums[i])
