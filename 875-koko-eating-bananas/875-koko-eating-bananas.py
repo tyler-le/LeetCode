@@ -17,7 +17,7 @@ class Solution:
                 if mid == 0: return 1
                 total_hours += math.ceil(pile / eating_speed)
             
-            if total_hours <= h:
+            if total_hours <= h: 
                 high = mid
                 
             else:
