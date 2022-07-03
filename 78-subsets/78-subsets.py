@@ -4,12 +4,11 @@ class Solution:
         
         def backtrack(index):
             if index >= len(nums):
-                return res.append(subset.copy())
+                return res.append(subset[:])
             
             # include nums[index]
             subset.append(nums[index])
             backtrack(index+1)
-            
             
             # exclude nums[index]
             subset.pop()
