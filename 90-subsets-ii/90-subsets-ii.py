@@ -1,5 +1,7 @@
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        # BFS Solution
+        
         nums.sort()
         power_set = []
         power_set.append([])
