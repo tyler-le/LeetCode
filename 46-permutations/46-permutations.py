@@ -1,9 +1,7 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         
-        res = []
-        used_chars = set()
-        permutation = []
+        
         
         def backtrack():
             if len(permutation) == len(nums):
@@ -18,8 +16,9 @@ class Solution:
                     backtrack()
                     
                     permutation.pop()
-                    used_chars.remove(nums[i])    
-                    
+                    used_chars.remove(nums[i])  
+                      
+        res, permutation, used_chars = [], [], set()
         backtrack()       
         return res
             
