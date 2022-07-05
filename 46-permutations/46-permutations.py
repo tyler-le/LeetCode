@@ -7,7 +7,7 @@ class Solution:
         
         def backtrack():
             if len(permutation) == len(nums):
-                res.append(permutation[::])
+                res.append(permutation.copy())
                 return
             
             for i in range(len(nums)):
