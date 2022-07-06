@@ -6,7 +6,7 @@ class Solution(object):
         """
         def backtrack():
             if len(nums) == len(permutation):
-                res.append(permutation[:])
+                res.append(permutation[::])
                 return
             
             for i in range(len(nums)):
