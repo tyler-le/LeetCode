@@ -1,25 +1,24 @@
-class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
-        
-        
-        
+class Solution(object):
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
         def backtrack():
-            if len(permutation) == len(nums):
-                res.append(permutation.copy())
+            if len(nums) == len(permutation):
+                res.append(permutation[:])
                 return
             
             for i in range(len(nums)):
-                if nums[i] not in used_chars:
+                if not used[i]:
                     permutation.append(nums[i])
-                    used_chars.add(nums[i])
+                    used[i] = True
                     
                     backtrack()
                     
                     permutation.pop()
-                    used_chars.remove(nums[i])  
-                      
-        res, permutation, used_chars = [], [], set()
-        backtrack()       
-        return res
-            
+                    used[i] = False
         
+        used, res, permutation = [False] * len(nums), [], []
+        backtrack()
+        return res
