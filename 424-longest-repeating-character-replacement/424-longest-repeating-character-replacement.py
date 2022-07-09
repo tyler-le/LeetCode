@@ -11,10 +11,10 @@ class Solution(object):
             count[s[r]] = 1 + count.get(s[r], 0)
             most_freq = max(count.values())
             
-            if r-l+1 - most_freq > k:
+            while r-l+1 - most_freq > k:
                 count[s[l]]-=1
                 l+=1
-                #most_freq = max(count.values())
+                most_freq = max(count.values())
                 
             res = max(res, r-l+1)
         
