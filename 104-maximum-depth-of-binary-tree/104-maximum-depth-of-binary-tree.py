@@ -11,7 +11,7 @@ class Solution:
         def dfs(root):
             if root is None:
                 return 0
-            return max( dfs(root.left)+1, dfs(root.right)+1 )
+            return max( dfs(root.left), dfs(root.right))  + 1
             
         return dfs(root)
         
