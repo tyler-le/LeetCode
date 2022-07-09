@@ -11,9 +11,6 @@ class Solution:
                 if curr_num == '.':
                     continue
                     
-                if (i//3, j//3) not in subgrid:
-                    subgrid[(i//3, j//3)] = set()
-                    
                 if curr_num in rows[i] or curr_num in cols[j] or curr_num in subgrid[(i//3,j//3)]:
                     print(rows)
 
