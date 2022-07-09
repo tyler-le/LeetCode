@@ -11,11 +11,11 @@ class Solution(object):
             
             if prices[buy_day] > prices[sell_day]:
                 buy_day = sell_day
-                sell_day += 1
                 
             else:
                 curr_profit = prices[sell_day] - prices[buy_day]
                 max_profit = max(max_profit, curr_profit)
-                sell_day += 1
+                
+            sell_day += 1
                 
         return max_profit
