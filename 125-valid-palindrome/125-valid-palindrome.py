@@ -5,12 +5,12 @@ class Solution(object):
         :rtype: bool
         """
         
-        constructed = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
-        l,r = 0, len(constructed)-1
+        s = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+        l,r = 0, len(s)-1
 
         while l < r:
             
-            if constructed[l] != constructed[r]:
+            if s[l] != s[r]:
                 return False
             
             l+=1
