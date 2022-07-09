@@ -14,7 +14,7 @@ class Solution(object):
             while r-l+1 - most_freq > k:
                 count[s[l]]-=1
                 l+=1
-                most_freq = max(count.values())
+                #most_freq = max(count.values())
                 
             res = max(res, r-l+1)
         
