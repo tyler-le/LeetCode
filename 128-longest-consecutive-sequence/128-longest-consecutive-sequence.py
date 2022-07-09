@@ -1,9 +1,7 @@
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        my_set = set()
+        my_set = set(nums)
         longest = 0
-        for num in nums:
-            my_set.add(num)
         
         for num in nums:
             # check if leftmost elem in set
