@@ -1,21 +1,20 @@
-class Solution(object):
-    def characterReplacement(self, s, k):
-        """
-        :type s: str
-        :type k: int
-        :rtype: int
-        """
-        res, l, count = 0, 0, {}
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        max_len = 0
+        count = {}
+        l = r = 0
         
-        for r in range(len(s)):
-            count[s[r]] = 1 + count.get(s[r], 0)
-            most_freq = max(count.values())
+        while r < len(s):
+            count[s[r]] = 1+count.get(s[r],0)
+            most_frequent = max(count.values())
+            num_replacements = (r-l+1) - most_frequent
             
-            while r-l+1 - most_freq > k:
+            if num_replacements > k:
                 count[s[l]]-=1
                 l+=1
-                most_freq = max(count.values())
                 
-            res = max(res, r-l+1)
+            max_len = max(r-l+1, max_len)
+            r+=1
+            
+        return max_len
         
-        return res
