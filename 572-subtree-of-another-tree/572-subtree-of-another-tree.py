@@ -9,8 +9,10 @@ class Solution:
             
         if not root:
             return False
-        if self.isSameTree(root, subRoot):
+        
+        if root and subRoot and root.val == subRoot.val and self.isSameTree(root, subRoot):
             return True
+        
         else:
             return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
         
