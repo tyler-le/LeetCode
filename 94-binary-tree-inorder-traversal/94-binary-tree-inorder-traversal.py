@@ -13,7 +13,6 @@ class Solution:
                 stack.append(root)
                 root = root.left
 
-                
             else:
                 removed = stack.pop()
                 res.append(removed.val)
