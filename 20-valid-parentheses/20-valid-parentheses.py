@@ -6,15 +6,15 @@ class Solution(object):
         """
         stack = []
         
-        for parens in s:
-            if parens == '{': 
+        for ch in s:
+            if ch == '{': 
                 stack.append('}')
-            elif parens == '(': 
+            elif ch == '(': 
                 stack.append(')')
-            elif parens == '[': 
+            elif ch == '[':  
                 stack.append(']')            
             else: 
-                if len(stack) == 0 or parens != stack.pop():
+                if len(stack) == 0 or ch != stack.pop():
                     return False
                 
         return len(stack) == 0
