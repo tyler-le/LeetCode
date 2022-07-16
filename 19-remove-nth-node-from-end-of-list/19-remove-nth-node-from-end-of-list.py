@@ -16,6 +16,8 @@ class Solution(object):
         for _ in range(n):
             fast = fast.next
             
+        # if n >= len(list), this implies we remove head
+        # check the constraints, this case is for n == len(list)
         if not fast:
             return head.next
         
