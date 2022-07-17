@@ -2,14 +2,13 @@ class TrieNode:
     def __init__(self):
         self.letters = {}
         self.is_word = False
-
-class WordDictionary(object):
-
+            
+class WordDictionary:
     def __init__(self):
         self.root = TrieNode()
         
 
-    def addWord(self, word):
+    def addWord(self, word: str) -> None:
         curr = self.root
         for ch in word:
             if ch not in curr.letters:
@@ -19,11 +18,11 @@ class WordDictionary(object):
         curr.is_word = True
         
 
-    def search(self, word):
-        def dfs(root, j):
-            curr = root
+    def search(self, word: str) -> bool:
+        def dfs(node, idx):
+            curr = node
             
-            for i in range(j, len(word)):
+            for i in range(idx, len(word)):
                 if word[i] == '.':
                     for child in curr.letters.values():
                         if dfs(child, i+1):
@@ -39,6 +38,11 @@ class WordDictionary(object):
         return dfs(self.root, 0)
                 
             
+            
+                
+        
+
+
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()
 # obj.addWord(word)
