@@ -16,18 +16,15 @@ class Solution(object):
             
             if not root:
                 return 0
-            if visited and root.val >= max(visited):
-                res = 1 
-            else:
-                res = 0
+            
+            res = 1 if (visited and root.val >= max(visited)) else 0
                 
             visited.append(root.val)
             res += dfs(root.left)
             res += dfs(root.right)
             visited.pop()
             return res
-            
-            
+             
         visited = []
         return dfs(root)+1
         
