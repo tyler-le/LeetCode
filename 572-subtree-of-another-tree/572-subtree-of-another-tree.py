@@ -21,7 +21,7 @@ class Solution(object):
         if not root:
             return False
         
-        if root and subRoot and root.val == subRoot.val:
+        if root.val == subRoot.val:
             if isSameTree(root, subRoot):
                 return True
             
