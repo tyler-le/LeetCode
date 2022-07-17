@@ -4,9 +4,8 @@ class Codec:
         """
         encoded = ""
         for word in strs:
-            encoded += word
-            encoded += '\0'
-            
+            encoded += str(len(word)) + '#' + word
+        
         return encoded
         
 
@@ -14,12 +13,21 @@ class Codec:
         """Decodes a single string to a list of strings.
         """
         res = []
-        new_word = ""
-        for ch in s:
-            if ch == '\0':
-                res.append(new_word)
-                new_word = ""
-            else:
-                new_word += ch
+        i = 0
+        while i < len(s):
+            j = i
+            while s[j] != '#':
+                j+=1
+            print(s[i:j])
+            word_len = int(s[i:j])
+            
+            res.append(s[j+1: j+1+word_len])
+            i = j+1+word_len
+        return res
+            
+                
+                
+                
+            
                 
         return res
