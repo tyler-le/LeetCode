@@ -12,19 +12,17 @@ class Solution(object):
         """
         
         
-        def dfs(root):
-            
+        def dfs(root, max_val):
             if not root:
                 return 0
             
-            res = 1 if (visited and root.val >= max(visited)) else 0
+            res = 1 if (root.val >= max_val) else 0
                 
-            visited.append(root.val)
-            res += dfs(root.left)
-            res += dfs(root.right)
-            visited.pop()
+            #visited.append(root.val)
+            max_val = max(max_val, root.val)
+            res += dfs(root.left, max_val)
+            res += dfs(root.right, max_val)
             return res
              
-        visited = []
-        return dfs(root)+1
+        return dfs(root, root.val)
         
