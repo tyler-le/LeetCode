@@ -18,7 +18,6 @@ class Codec:
             j = i
             while s[j] != '#':
                 j+=1
-
             word_len = int(s[i:j])
             res.append(s[j+1: j+1+word_len])
             i = j+1+word_len
