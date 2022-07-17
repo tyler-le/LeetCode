@@ -5,7 +5,7 @@ class Codec:
         encoded = ""
         for word in strs:
             encoded += word
-            encoded += u'\u00a3' 
+            encoded += '\0'
             
         return encoded
         
@@ -16,17 +16,10 @@ class Codec:
         res = []
         new_word = ""
         for ch in s:
-            if ch == u'\u00a3':
+            if ch == '\0':
                 res.append(new_word)
                 new_word = ""
             else:
                 new_word += ch
                 
         return res
-                
-        
-
-
-# Your Codec object will be instantiated and called as such:
-# codec = Codec()
-# codec.decode(codec.encode(strs))
