@@ -6,28 +6,28 @@ class Solution(object):
         :rtype: bool
         """
         # dfs
-        preMap = { i:[] for i in range(numCourses)} 
+        prereq_map = { i:[] for i in range(numCourses)} 
         
         # map each course to : prereq list
-        for crs, pre in prerequisites:
-            preMap[crs].append(pre)
+        for course, prereq in prerequisites:
+            prereq_map[course].append(prereq)
         
-        visiting = set()
-        def dfs(crs):
-            if crs in visiting:
+        visited = set()
+        def dfs(course):
+            if course in visited:
                 return False
-            if preMap[crs] == []:
+            if prereq_map[course] == []:
                 return True
             
-            visiting.add(crs)
-            for pre in preMap[crs]:
-                if not dfs(pre): return False
-            visiting.remove(crs)
-            preMap[crs] = []
+            visited.add(course)
+            for prereq in prereq_map[course]:
+                if not dfs(prereq): return False
+            visited.remove(course)
+            prereq_map[course] = []
             return True
         
-        for c in range(numCourses):
-            if not dfs(c): return False
+        for i in range(numCourses):
+            if not dfs(i): return False
         return True
 
 
