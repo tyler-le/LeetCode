@@ -17,7 +17,8 @@ class Solution:
             for neighbor in adjacency_list[node]:
                 if neighbor == parent:
                     continue
-                if not backtrack(neighbor, node): return False
+                if not backtrack(neighbor, node):
+                    return False
                 
             return True
         
