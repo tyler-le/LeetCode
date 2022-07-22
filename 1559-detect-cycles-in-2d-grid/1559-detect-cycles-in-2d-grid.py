@@ -9,8 +9,8 @@ class Solution:
             
             visited.add((i,j))
 
-            if (i+1,j) != prev and dfs(i+1,j, char, (i,j)): return True
-            if (i-1,j) != prev and dfs(i-1,j, char, (i,j)): return True
+            if (i+1,j) != prev and dfs(i+1, j, char, (i,j)): return True
+            if (i-1,j) != prev and dfs(i-1, j, char, (i,j)): return True
             if (i,j+1) != prev and dfs(i, j+1, char, (i,j)): return True
             if (i,j-1) != prev and dfs(i, j-1, char, (i,j)): return True
             
