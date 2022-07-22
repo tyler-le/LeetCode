@@ -9,7 +9,8 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
-        old_to_new = {None:None}
+        old_to_new = {}
+        old_to_new[None] = None
         
         # first pass - create a copy of all nodes (unlinked) and map orig to new_node
         curr = head
