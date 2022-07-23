@@ -8,7 +8,7 @@ class Solution(object):
         res = 0
         
         # map bit to frequency
-        count = {0:0, 1:0}
+        count = [0,0]
         
         l = 0
         
