@@ -1,3 +1,4 @@
+
 class Solution(object):
     def threeSumClosest(self, nums, target):
         """
@@ -5,7 +6,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        min_dist = sys.maxint
+        min_dist = float('inf')
         curr_sum = 0
         nums.sort()
         
