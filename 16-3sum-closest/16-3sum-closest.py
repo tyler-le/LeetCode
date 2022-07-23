@@ -5,8 +5,8 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        closest = float('inf')
-        res = 0
+        closest = sys.maxint
+        curr_sum = 0
         nums.sort()
         
         for index in range(0, len(nums)-1):
@@ -20,14 +20,14 @@ class Solution(object):
                 elif nums[index] + nums[l] + nums[r] < target:
                     if abs(target - (nums[index] + nums[l] + nums[r])) < closest:
                         closest = abs(target - (nums[index] + nums[l] + nums[r]))
-                        res = (nums[index] + nums[l] + nums[r])
+                        curr_sum = (nums[index] + nums[l] + nums[r])
                     l+=1
                     
                 elif nums[index] + nums[l] + nums[r] > target:
                     if abs(target - (nums[index] + nums[l] + nums[r])) < closest:
                         closest = abs(target - (nums[index] + nums[l] + nums[r]))
-                        res = (nums[index] + nums[l] + nums[r])    
+                        curr_sum = (nums[index] + nums[l] + nums[r])    
                     r-=1
                     
                     
-        return res
+        return curr_sum
