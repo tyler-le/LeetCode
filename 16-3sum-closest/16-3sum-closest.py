@@ -5,7 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        closest = sys.maxint
+        min_dist = sys.maxint
         curr_sum = 0
         nums.sort()
         
@@ -18,14 +18,14 @@ class Solution(object):
                     return target
                 
                 elif nums[index] + nums[l] + nums[r] < target:
-                    if abs(target - (nums[index] + nums[l] + nums[r])) < closest:
-                        closest = abs(target - (nums[index] + nums[l] + nums[r]))
+                    if abs(target - (nums[index] + nums[l] + nums[r])) < min_dist:
+                        min_dist = abs(target - (nums[index] + nums[l] + nums[r]))
                         curr_sum = (nums[index] + nums[l] + nums[r])
                     l+=1
                     
                 elif nums[index] + nums[l] + nums[r] > target:
-                    if abs(target - (nums[index] + nums[l] + nums[r])) < closest:
-                        closest = abs(target - (nums[index] + nums[l] + nums[r]))
+                    if abs(target - (nums[index] + nums[l] + nums[r])) < min_dist:
+                        min_dist = abs(target - (nums[index] + nums[l] + nums[r]))
                         curr_sum = (nums[index] + nums[l] + nums[r])    
                     r-=1
                     
