@@ -7,7 +7,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        closest = sys.maxint
+        closest = float('inf')
         curr_sum = 0
         nums.sort()
         
