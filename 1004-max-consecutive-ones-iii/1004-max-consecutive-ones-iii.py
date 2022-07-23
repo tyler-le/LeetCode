@@ -1,16 +1,25 @@
-class Solution:
-    def longestOnes(self, nums: List[int], k: int) -> int:
+class Solution(object):
+    def longestOnes(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        res = 0
         
-        count = [0,0]
-        max_len = l = 0
+        # map bit to frequency
+        count = {0:0, 1:0}
         
-        for r in range(len(nums)):
+        l = 0
+        
+        for r in range (len(nums)):
             count[nums[r]] += 1
-            if (r-l+1) - count[1] > k:
-                count[nums[l]] -= 1
-                l += 1
-            max_len = max(max_len, r-l+1)
             
-        return max_len
-        
-        
+            num_replacements = (r-l+1) - count[1]
+            while num_replacements > k:
+                count[nums[l]] -= 1
+                l+=1
+                num_replacements = (r-l+1) - count[1]    
+            res = max(res, r-l+1)
+            
+        return res
