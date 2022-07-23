@@ -13,6 +13,7 @@ class Solution:
                 l+=1
                 most_freq = max(count.values())
                 num_replacements = (r-l+1) - most_freq
+                
             res = max(res, r-l+1)
             
         return res
