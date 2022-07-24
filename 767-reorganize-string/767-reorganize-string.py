@@ -8,24 +8,20 @@ class Solution(object):
         max_heap = [[-count, char] for char, count in count.items()]
         heapify(max_heap)
         
-        res = ""
+        res = []
         prev = None
-        while max_heap or prev:
+        
+        while max_heap:
+            popped = heappop(max_heap)
+            freq, letter = popped[0], popped[1]
+            res += [letter]
             
-            if prev and not max_heap:
-                return ""
-            
-            count, char = heappop(max_heap)
-            res += char
-            count += 1 # because it's negative
-            
-            if prev:
+            if prev and prev[0] < 0:
                 heappush(max_heap, prev)
-                prev = None
                 
-            if count != 0:
-                prev = [count, char]
-
-        return res
-            
-            
+            freq+=1
+            prev = [freq, letter]
+            heappush(prev, max_heap)
+        
+        res = ''.join(res)
+        return res if len(res)==len(s) else ""
