@@ -20,10 +20,11 @@ class Solution(object):
             if prev and prev[0] < 0:
                 heappush(max_heap, prev)
                 
+            # add intead of subtract since it's negative
             curr_freq+=1
             
             # now put the letter that we just inserted on hold
             prev = [curr_freq, curr_letter]
         
         res = ''.join(res)
-        return res if len(res)==len(s) else ""
+        return res if (len(res) == len(s)) else ""
