@@ -9,7 +9,7 @@ class Solution(object):
         heapify(max_heap)
         
         res = []
-        prev = None
+        prev = []
         
         while max_heap:
             popped = heappop(max_heap)
