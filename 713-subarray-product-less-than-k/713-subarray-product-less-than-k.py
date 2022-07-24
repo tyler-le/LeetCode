@@ -9,6 +9,7 @@ class Solution(object):
         res = 0
         l = 0
         prod = 1
+        
         if k == 0: return 0
         
         for r in range (len(nums)):
@@ -16,6 +17,7 @@ class Solution(object):
             while l < r and prod >= k:
                 prod /= nums[l]
                 l+=1
+            
             if prod < k:
                 res += r-l+1
             
