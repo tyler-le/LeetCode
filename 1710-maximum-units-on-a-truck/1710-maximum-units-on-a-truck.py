@@ -15,6 +15,7 @@ class Solution(object):
                 num_boxes -= 1
                 truckSize -= 1
                 
-            if truckSize == 0:
+            if not truckSize:
                 return res
+            
         return res
