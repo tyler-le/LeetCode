@@ -13,7 +13,7 @@ class Solution(object):
         
         while max_heap:
             popped = heappop(max_heap)
-            curr_freq, curr_letter  = popped[0], popped[1]
+            curr_freq, curr_letter = popped
             res += [curr_letter]
             
             # since prev was on hold, put prev back in
