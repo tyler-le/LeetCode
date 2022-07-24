@@ -1,16 +1,18 @@
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        res = collections.defaultdict(list)
+        out = []
+        # map (char count) -> list
         
-        res = {}
-        
-        for word in strs:
-            count = [0] * 26
-            for ch in word:
-                count[ord(ch) - ord('a')] += 1
-                
-            if tuple(count) not in res:
-                res[tuple(count)] = [word]
-            else:
-                res[tuple(count)].append(word)
-                    
-        return res.values()
+        for s in strs:
+            char_count = [0 for i in range(26)]
+            for ch in s:
+                char_count[ord(ch) - ord('a')] += 1
+            res[tuple(char_count)].append(s)
+            
+        return list(res.values())
+            
