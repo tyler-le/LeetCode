@@ -8,8 +8,7 @@ class Solution(object):
         if not intervals: return [newInterval]
         
         intervals.sort(key = lambda i : i[0])
-        START,END = 0,1
-        res = []
+        START,END, res = 0,1, []
         
         for i in range (len(intervals)):
             comes_before = newInterval[END] < intervals[i][START]
@@ -26,6 +25,7 @@ class Solution(object):
             else:
                 newInterval = [min(newInterval[START], intervals[i][START]),
                                max(newInterval[END], intervals[i][END])]
+                
         res.append(newInterval)        
         return res
             
