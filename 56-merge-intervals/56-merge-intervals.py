@@ -5,17 +5,16 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         intervals.sort(key = lambda i : i[0])
-        
         res = [intervals[0]]
-        
-        for start, end in intervals[1:]:
-            has_overlap = start >= res[-1][0] and start <= res[-1][1]
+        start,end = 0,1
+        for interval in intervals:
+            has_overlap = interval[start] <= res[-1][end] and interval[start] >= res[-1][start]
             
             if has_overlap:
-                res[-1][0] = min(res[-1][0], start)
-                res[-1][1] = max(res[-1][1], end)
-            
+                res[-1] = [min(interval[start], res[-1][start]), max(interval[end], res[-1][end])]
             else:
-                res.append([start, end])
-        
+                res.append(interval)
+                
         return res
+        
+        
