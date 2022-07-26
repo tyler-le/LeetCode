@@ -5,10 +5,7 @@ class Solution:
         while len(stones) > 1:
             y = -heappop(stones)
             x = -heappop(stones)
+            if x != y: heappush(stones, -(y-x))
             
-            if x == y: continue
-            if x != y:
-                y -= x
-                heappush(stones, -y)
                 
         return -stones[0] if stones else 0
