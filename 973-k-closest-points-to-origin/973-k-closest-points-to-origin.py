@@ -5,8 +5,7 @@ class Solution:
         
         for x,y in points:
             dist = math.sqrt(x**2 + y**2) # euclidean distance
-            tupl = (dist,x, y) # create tuple (dist, x, y)
-            heap.append(tupl)
+            heap.append([dist,x, y])
             
         heapify(heap) # heapify at end is faster than heappush
         
