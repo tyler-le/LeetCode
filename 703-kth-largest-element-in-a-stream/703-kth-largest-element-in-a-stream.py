@@ -5,11 +5,11 @@ class KthLargest(object):
         :type k: int
         :type nums: List[int]
         """
-        self.max_heap, self.k = nums, k
-        heapify(self.max_heap)
+        self.heap, self.k = nums, k
+        heapify(self.heap)
         
-        while len(self.max_heap) > self.k:
-            heappop(self.max_heap)
+        while len(self.heap) > self.k:
+            heappop(self.heap)
         
 
     def add(self, val):
@@ -17,12 +17,12 @@ class KthLargest(object):
         :type val: int
         :rtype: int
         """
-        heappush(self.max_heap, val)
+        heappush(self.heap, val)
         
-        if len(self.max_heap) > self.k: 
-            heappop(self.max_heap)
+        if len(self.heap) > self.k: 
+            heappop(self.heap)
         
-        return self.max_heap[0]
+        return self.heap[0]
 
 
 # Your KthLargest object will be instantiated and called as such:
