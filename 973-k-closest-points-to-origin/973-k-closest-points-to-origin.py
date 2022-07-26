@@ -4,12 +4,11 @@ class Solution:
         res = []
         
         for x,y in points:
-            # euclidean distance
-            dist = math.sqrt(x**2 + y**2)
+            dist = math.sqrt(x**2 + y**2) # euclidean distance
+            tupl = (dist,x, y) # create tuple (dist, x, y)
+            heap.append(tupl)
             
-            # create tuple (dist, x, y)
-            tupl = (dist,x, y)
-            heappush(heap, tupl)
+        heapify(heap) # heapify at end is faster than heappush
         
         for i in range(k):
             _, x, y = heappop(heap)
