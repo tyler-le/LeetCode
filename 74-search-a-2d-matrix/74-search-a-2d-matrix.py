@@ -7,18 +7,17 @@ class Solution(object):
         """
         
         # binary search to find appropriate row
-        num_rows = len(matrix) - 1
-        low, high = 0, num_rows
+        top, bottom = 0, len(matrix) - 1
         
-        while low <= high:
-            mid = low + ((high - low) // 2)
+        while top <= bottom:
+            mid = top + ((bottom - top) // 2)
             row = matrix[mid]
             
-            if target < row[0]: high = mid - 1
-            elif target > row[-1]: low = mid + 1
+            if target < row[0]: bottom = mid - 1
+            elif target > row[-1]: top = mid + 1
             else: break
 
-                
+        # now we have appropriate row so we can look for target        
         low, high = 0, len(row) - 1
         while low <= high:
             mid = low + ((high - low) // 2)
