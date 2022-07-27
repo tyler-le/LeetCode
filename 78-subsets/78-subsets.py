@@ -1,21 +1,22 @@
-class Solution(object):
-    def subsets(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        # BFS Approach
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        # DFS Approach
         
-        res = []
-        res.append([])
-        
-        for num in nums:
-            res_len = len(res)
+        def backtrack(index):
+            if index >= len(nums):
+                return res.append(subset.copy())
+                        
+            # include nums[index]
+            subset.append(nums[index])
+            backtrack(index+1)
             
-            for i in range(res_len):
-                new_set = res[i] + [num]
-                res.append(new_set)
-                       
+            # exclude nums[index]
+            subset.pop()
+            backtrack(index+1)
+            
+                    
+            
+        res = []
+        subset = []
+        backtrack(0)
         return res
-                
-                
