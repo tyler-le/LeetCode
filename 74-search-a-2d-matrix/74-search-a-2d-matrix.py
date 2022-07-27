@@ -7,7 +7,6 @@ class Solution:
                 nums.append(matrix[i][j])
         
         # run binary search on resulting array
-        print(nums)
         low, high = 0, len(nums)-1
         while low <= high:
             mid = low + ((high - low) // 2)
