@@ -1,21 +1,31 @@
-class Solution:
-    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        # Note: The solution in 'Python' tab is faster than this one
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        """
+        :type matrix: List[List[int]]
+        :type target: int
+        :rtype: bool
+        """
         
-        # create an array of the elems in sorted order
-        nums = []
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                nums.append(matrix[i][j])
+        # binary search to find appropriate row
+        top, bottom = 0, len(matrix) - 1
         
-        # run binary search on resulting array
-        low, high = 0, len(nums)-1
+        while top <= bottom:
+            mid = top + ((bottom - top) // 2)
+            row = matrix[mid]
+            
+            if target < row[0]: bottom = mid - 1
+            elif target > row[-1]: top = mid + 1
+            else: break
+
+        # now we have appropriate row so we can look for target        
+        low, high = 0, len(row) - 1
         while low <= high:
             mid = low + ((high - low) // 2)
-            if nums[mid] == target: return True
-            if nums[mid] < target: low = mid + 1
-            if nums[mid] > target: high = mid - 1
+            
+            if row[mid] == target: return True
+            if row[mid] < target: low = mid + 1
+            if row[mid] > target: high = mid - 1
+                
         return False
-    
-        
+            
         
