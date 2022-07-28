@@ -8,15 +8,13 @@ class Solution:
                 res.append(perm.copy()) 
                 return
                 
-            
-            
             for num in nums:
-                if num not in visited:
-                    visited.add(num)
-                    perm.append(num)
-                    backtrack(num, perm)
-                    perm.pop()
-                    visited.remove(num)
+                if num in visited: continue
+                visited.add(num)
+                perm.append(num)
+                backtrack(num, perm)
+                perm.pop()
+                visited.remove(num)
             
         perm = []
         backtrack(nums[0], perm)
