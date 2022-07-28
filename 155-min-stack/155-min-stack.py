@@ -1,14 +1,13 @@
 class MinStack:
-
+    # (val, min so far) tuple
+    
     def __init__(self):
-        self.stack = []
+        self.stack = [] 
 
     def push(self, val: int) -> None:
-        if self.stack:
-            curr_min = self.stack[-1][1]
-            self.stack.append((val, min(val, curr_min)))
-        else:
-            self.stack.append((val, val))
+        min_so_far = min(self.stack[-1][1], val) if self.stack else val
+        self.stack.append((val, min_so_far))
+            
 
     def pop(self) -> None:
         self.stack.pop()
