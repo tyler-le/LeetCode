@@ -3,7 +3,7 @@ class Solution:
         visited = set()
         res = []
         
-        def backtrack(num, perm):
+        def backtrack(perm):
             if len(perm) == len(nums):
                 res.append(perm.copy()) 
                 return
@@ -12,10 +12,10 @@ class Solution:
                 if num in visited: continue
                 visited.add(num)
                 perm.append(num)
-                backtrack(num, perm)
+                backtrack(perm)
                 perm.pop()
                 visited.remove(num)
             
         perm = []
-        backtrack(nums[0], perm)
+        backtrack(perm)
         return res
