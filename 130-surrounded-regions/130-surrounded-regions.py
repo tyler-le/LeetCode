@@ -8,8 +8,8 @@ class Solution:
         def dfs(i,j):
             if i < 0 or j < 0 or i == len(board) or j == len(board[0]) or board[i][j] != 'O':
                 return
-            if board[i][j] == 'O':
-                board[i][j] = 'T'
+            
+            if board[i][j] == 'O': board[i][j] = 'T'
                 
             dfs(i-1,j)
             dfs(i+1,j)
@@ -21,13 +21,7 @@ class Solution:
                 on_border = (i == 0) or (i == len(board) - 1) or (j == 0) or (j == len(board[0]) - 1)
                 if on_border and board[i][j] == 'O': dfs(i,j)
                     
-        print (board)        
         for i in range(len(board)):
             for j in range(len(board[0])):
                 if board[i][j] == 'O': board[i][j] = 'X'
                 if board[i][j] == 'T': board[i][j] = 'O'
-                    
-#         for i in range(len(board)):
-#             for j in range(len(board[0])):
-#                 if board[i][j] == 'T': board[i][j] = 'O'
-      
