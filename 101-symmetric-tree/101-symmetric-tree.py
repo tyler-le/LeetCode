@@ -7,14 +7,12 @@
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         def is_mirror(node1, node2):
-            if not node1 and not node2:
-                return True
-            if (not node1 and node2) or (node1 and not node2):
-                return False
-            if node1.val == node2.val:
-                return is_mirror(node1.left, node2.right) and \
-                        is_mirror(node1.right, node2.left)
-            return False
+            if not node1 and not node2: return True
+            if (not node1 and node2) or (node1 and not node2): return False
+            
+            return node1.val == node2.val and \
+                    is_mirror(node1.left, node2.right) and \
+                    is_mirror(node1.right, node2.left)
         
         return is_mirror(root, root)
         
