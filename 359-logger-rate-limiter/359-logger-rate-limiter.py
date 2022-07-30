@@ -4,7 +4,6 @@ class Logger:
         self.log = dict()
 
     def shouldPrintMessage(self, timestamp: int, message: str) -> bool:
-        print(self.log)
         if message not in self.log:
             self.log[message] = timestamp + 10
             return True
