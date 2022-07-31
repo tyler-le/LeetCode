@@ -9,7 +9,6 @@ class Solution:
                 start+=1
                 end-=1
                 
-        if len(nums)==1: return nums
         k = k%len(nums)
         reverse(nums,0,len(nums)-1)
         reverse(nums, 0, k-1)
