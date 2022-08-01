@@ -9,12 +9,11 @@ class Solution(object):
         char_count = Counter(chars)
         
         for word in words:
-            word_count = Counter(word)            
+            word_count = Counter(word)   
+            
             for c in word_count:
-                if word_count[c] > char_count[c]:
-                    break
-            else:
-                res += len(word)
+                if word_count[c] > char_count[c]: break
+            else: res += len(word)
                     
                 
         return res
