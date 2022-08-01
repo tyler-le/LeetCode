@@ -1,9 +1,10 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
         res = 0
+        x = Counter(chars)
         
         for word in words:
-            flag, char_count = True, Counter(chars)
+            flag, char_count = True, x.copy()
             
             for ch in word:
                 char_count[ch]-=1
