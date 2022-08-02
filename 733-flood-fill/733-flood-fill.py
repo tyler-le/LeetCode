@@ -10,7 +10,8 @@ class Solution(object):
         val = image[sr][sc]
         
         def dfs(i, j, val):
-            if i < 0 or j < 0 or i >= len(image) or j >= len(image[0]) or image[i][j] != val or image[i][j] == color: 
+            if i < 0 or j < 0 or i >= len(image) or j >= len(image[0]) \
+                or image[i][j] != val or image[i][j] == color: 
                 return
             
             image[i][j] = color
