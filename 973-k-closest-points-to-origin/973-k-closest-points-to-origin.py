@@ -15,8 +15,8 @@ class Solution(object):
             
         heapify(min_heap)
         
-        for i in range(k):
-            popped = heappop(min_heap)
-            res.append([popped[1], popped[2]])
+        for _ in range(k):
+            dist, x, y = heappop(min_heap)
+            res.append([x, y])
         
         return res
