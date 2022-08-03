@@ -1,18 +1,22 @@
-class Solution:
-    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        heap = []
+class Solution(object):
+    def kClosest(self, points, k):
+        """
+        :type points: List[List[int]]
+        :type k: int
+        :rtype: List[List[int]]
+        """
+        
+        min_heap = []
         res = []
         
         for x,y in points:
-            dist = math.sqrt(x**2 + y**2) # euclidean distance
-            heap.append([dist,x, y])
+            dist = math.sqrt(x**2 + y**2)
+            min_heap.append((dist, x, y))
             
-        heapify(heap) # heapify at end is faster than heappush
+        heapify(min_heap)
         
         for i in range(k):
-            _, x, y = heappop(heap)
-            res.append([x,y])
-            
-        return res
+            popped = heappop(min_heap)
+            res.append([popped[1], popped[2]])
         
-            
+        return res
