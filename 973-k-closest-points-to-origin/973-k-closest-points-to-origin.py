@@ -11,7 +11,7 @@ class Solution(object):
         
         for x,y in points:
             dist = math.sqrt(x**2 + y**2)
-            min_heap.append((dist, x, y))
+            min_heap.append([dist, x, y])
             
         heapify(min_heap)
         
