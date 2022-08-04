@@ -11,11 +11,13 @@ class Solution(object):
         for i in range(rows):
             for j in range(cols):
                 if grid[i][j] == 1:
-                    fresh+=1
+                    fresh+=1 # mark num fresh oranges
                 elif grid[i][j] == 2:
                     visited.add((i,j))
                     q.append((i,j))
+                    
         while q and fresh:
+            
             # process current level of neighbors
             for _ in range(len(q)):
                 x, y = q.popleft()
@@ -25,13 +27,15 @@ class Solution(object):
                         or grid[x+dx][y+dy] != 1:
                         continue
                         
+                    # curr cell must be fresh orange, so we turn it rotten
                     grid[x+dx][y+dy] = 2
                     q.append((x+dx, y+dy))
                     fresh-=1
+                    
             time+=1
 
     
-                
+        # if there are fresh oranges remaining, we cannot reach them so return -1
         return time if fresh == 0 else -1
                     
             
