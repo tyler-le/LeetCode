@@ -18,10 +18,9 @@ class Solution:
                     or (new_x, new_y) in visited:
                     continue
 
-                if mat[new_x][new_y] == 1:
-                    mat[new_x][new_y] = 1 + mat[i][j]
-                    q.append((new_x, new_y))
-                    visited.add((new_x, new_y))
+                mat[new_x][new_y] = 1 + mat[i][j]
+                q.append((new_x, new_y))
+                visited.add((new_x, new_y))
         return mat
                     
                     
