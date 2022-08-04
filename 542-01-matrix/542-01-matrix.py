@@ -1,29 +1,29 @@
-class Solution(object):
-    def updateMatrix(self, mat):
-        """
-        :type mat: List[List[int]]
-        :rtype: List[List[int]]
-        """
-        ROWS, COLS, visited, q = len(mat), len(mat[0]), set(), deque()
+class Solution:
+    def updateMatrix(self, mat: List[List[int]]) -> List[List[int]]:
+        q, visited = deque(), set()
         
-        for i in range (ROWS):
-            for j in range (COLS):
-                if mat[i][j] == 0:
+        for i in range(len(mat)):
+            for j in range(len(mat[0])):
+                if mat[i][j] == 0: 
                     q.append((i,j))
                     visited.add((i,j))
-        
+                
         while q:
-            x, y = q.popleft()
-            for direction in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
-                new_x, new_y = x+direction[0], y+direction[1]
+            i, j = q.popleft()
+            for x, y in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                new_x, new_y = i + x, j + y
+
                 if new_x < 0 or new_y < 0 \
-                    or new_x == ROWS or new_y == COLS \
+                    or new_x == len(mat) or new_y == len(mat[0]) \
                     or (new_x, new_y) in visited:
                     continue
-                mat[new_x][new_y] = mat[x][y]+1
-                q.append((new_x, new_y))
-                visited.add((new_x, new_y))
-                
+
+                if mat[new_x][new_y] == 1:
+                    mat[new_x][new_y] = 1 + mat[i][j]
+                    q.append((new_x, new_y))
+                    visited.add((new_x, new_y))
         return mat
-                
-            
+                    
+                    
+                    
+                        
