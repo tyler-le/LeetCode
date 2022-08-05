@@ -3,13 +3,10 @@ class Solution:
         """
         Do not return anything, modify rooms in-place instead.
         """
-        if not rooms:
-            return
+        if not rooms: return
         
-        ROWS = len(rooms)
-        COLS = len(rooms[0])
-        GATE, OBSTACLE, EMPTY = 0, -1, 2147483647
-        q = deque()
+        q, ROWS, COLS, GATE, OBSTACLE, EMPTY = deque(), len(rooms), len(rooms[0]), 0, -1, 2147483647
+
         for i in range(ROWS):
             for j in range(COLS):
                 if rooms[i][j] == GATE:
