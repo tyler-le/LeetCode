@@ -4,12 +4,10 @@ class Solution:
         
         for r in range(len(s2)):
             s2_count[s2[r]] = 1 + s2_count.get(s2[r], 0)
-            while r-l+1 > len(s1):
+            if r-l+1 > len(s1):
                 s2_count[s2[l]]-=1
+                if s2_count[s2[l]] == 0: del s2_count[s2[l]]
                 l+=1
-            substrs.append(s2[l:r+1])
+            if s1_count == s2_count: return True
         
-        for substr in substrs:
-            if s1_count == Counter(substr): return True
-            
         return False
