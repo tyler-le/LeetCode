@@ -6,8 +6,7 @@ class Solution:
         for num in nums:
             if num in butts:
                 return True
-            else:
-                butts.add(num)
+            butts.add(num)
             
         return False
             
