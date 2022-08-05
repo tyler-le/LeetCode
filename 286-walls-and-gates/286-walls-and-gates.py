@@ -8,7 +8,7 @@ class Solution:
         
         ROWS = len(rooms)
         COLS = len(rooms[0])
-        GATE, WALL, OBSTACLE = 0, -1, 2147483647
+        GATE, OBSTACLE, EMPTY = 0, -1, 2147483647
         q = deque()
         for i in range(ROWS):
             for j in range(COLS):
@@ -21,6 +21,6 @@ class Solution:
             for dy, dx in (-1, 0), (1, 0), (0, -1), (0, 1):
                 r = row + dy
                 c = col + dx
-                if 0 <= r < ROWS and 0 <= c < COLS and rooms[r][c] == OBSTACLE:
+                if 0 <= r < ROWS and 0 <= c < COLS and rooms[r][c] == EMPTY:
                     rooms[r][c] = dist
                     q.append((r,c))
