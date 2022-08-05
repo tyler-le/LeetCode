@@ -1,42 +1,35 @@
-class Solution(object):
-    def orangesRotting(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def orangesRotting(self, grid: List[List[int]]) -> int:
+        ROWS, COLS, fresh, time = len(grid), len(grid[0]), 0, 0
+        q, visited = deque(), set()
+        EMPTY, FRESH, ROTTEN = 0, 1, 2
         
-        rows, cols, q, visited = len(grid), len(grid[0]), deque(), set()
-        fresh, time = 0, 0
-        
-        for i in range(rows):
-            for j in range(cols):
-                if grid[i][j] == 1:
-                    fresh+=1 # mark num fresh oranges
-                elif grid[i][j] == 2:
-                    visited.add((i,j))
+        for i in range(ROWS):
+            for j in range(COLS):
+                if grid[i][j] == FRESH: 
+                    fresh+=1
+                if grid[i][j] == ROTTEN:
                     q.append((i,j))
-                    
+                    visited.add((i,j))
+
         while q and fresh:
-            
-            # process current level of neighbors
+            time+=1
             for _ in range(len(q)):
                 x, y = q.popleft()
-                for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                    if x+dx < 0 or y+dy < 0 \
-                        or x+dx == rows or y+dy == cols \
-                        or grid[x+dx][y+dy] != 1:
+                
+                for dx, dy in (-1,0), (1,0), (0,-1), (0,1):
+                    r, c = x + dx, y + dy
+                    if r < 0 or c < 0 \
+                        or r == ROWS or c == COLS \
+                        or grid[r][c] != FRESH or (r,c) in visited:
                         continue
                         
-                    # curr cell must be fresh orange, so we turn it rotten
-                    grid[x+dx][y+dy] = 2
-                    q.append((x+dx, y+dy))
+                    grid[r][c] = ROTTEN
                     fresh-=1
-                    
-            time+=1
-
-    
-        # if there are fresh oranges remaining, we cannot reach them so return -1
-        return time if fresh == 0 else -1
-                    
+                    q.append((r,c))
+                    visited.add((r,c))
             
                 
+        return time if fresh == 0 else -1
+                
+        
