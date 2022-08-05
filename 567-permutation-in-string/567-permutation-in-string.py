@@ -11,4 +11,5 @@ class Solution:
         
         for substr in substrs:
             if s1_count == Counter(substr): return True
+            
         return False
