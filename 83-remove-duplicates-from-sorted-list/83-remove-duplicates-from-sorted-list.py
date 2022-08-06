@@ -9,20 +9,14 @@ class Solution:
         dummy = ListNode()
         dummy.next = head
         
-        curr = head
-        while curr:
-            count[curr.val] = 1 + count.get(curr.val, 0)
-            curr = curr.next
-            
-            
         curr = dummy
         while curr and curr.next:
+            count[curr.next.val] = 1 + count.get(curr.next.val, 0)
             if count[curr.next.val] >= 2:
                 count[curr.next.val]-=1
                 curr.next = curr.next.next
             else:
                 curr = curr.next
-                
             
         return dummy.next
         
