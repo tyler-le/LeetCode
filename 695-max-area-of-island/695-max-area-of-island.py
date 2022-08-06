@@ -9,8 +9,10 @@ class Solution(object):
         def dfs(i,j):
             if i < 0 or j < 0 or i == ROWS or j == COLS or grid[i][j] == 0:
                 return 0
+            
             area = 1
             grid[i][j] = 0
+            
             area += dfs(i+1, j)
             area += dfs(i-1, j)
             area += dfs(i, j+1)
