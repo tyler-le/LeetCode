@@ -1,31 +1,26 @@
-class Solution(object):
-    def insert(self, intervals, newInterval):
-        """
-        :type intervals: List[List[int]]
-        :type newInterval: List[int]
-        :rtype: List[List[int]]
-        """
-        if not intervals: return [newInterval]
-        
-        intervals.sort(key = lambda i : i[0])
-        START,END, res = 0,1, []
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        res = []
         
         for i in range (len(intervals)):
-            comes_before = newInterval[END] < intervals[i][START]
-            comes_after = newInterval[START] > intervals[i][END]
-            
-            if comes_before: 
+            # if newInterval comes before current interval and is disjoint, 
+            # put it up front and attach the rest of intervals (which is nonoverlapping) and return
+            if newInterval[1] < intervals[i][0]:
                 res.append(newInterval)
-                res += intervals[i:]
+                res+=intervals[i:]
                 return res
             
-            if comes_after:
+            # else if the newInterval is not connected to curr interval, we can add the interval[i] 
+            # and continue without appending
+            elif newInterval[0] > intervals[i][1]:
                 res.append(intervals[i])
                 
+            # else there is overlap, so we update the newInterval continue without appending
             else:
-                newInterval = [min(newInterval[START], intervals[i][START]),
-                               max(newInterval[END], intervals[i][END])]
-                
-        res.append(newInterval)        
+                newInterval = [min(intervals[i][0], newInterval[0]), max(intervals[i][1], newInterval[1])]
+        
+        res.append(newInterval)
         return res
+                            
             
+        
