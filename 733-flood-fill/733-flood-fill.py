@@ -7,19 +7,34 @@ class Solution(object):
         :type color: int
         :rtype: List[List[int]]
         """
-        val = image[sr][sc]
         
-        def dfs(i, j, val):
-            if i < 0 or j < 0 or i >= len(image) or j >= len(image[0]) \
-                or image[i][j] != val or image[i][j] == color: 
-                return
+        ROWS, COLS, matching_color = len(image), len(image[0]), image[sr][sc]
+        q, visited = deque(), set()
+        
+        q.append((sr, sc))
+        visited.add((sr, sc))
+        
+        image[sr][sc] = color
+        
+        while q:
+            x, y = q.popleft()
             
-            image[i][j] = color
-            
-            dfs(i-1, j, val)
-            dfs(i+1, j, val)
-            dfs(i, j-1, val)
-            dfs(i, j+1, val)
-
-        dfs(sr, sc, val)
+            for dx, dy in (-1,0), (1,0), (0,-1), (0,1):
+                r, c = x+dx, y+dy
+                if r < 0 or c < 0 \
+                    or r == ROWS or c == COLS \
+                    or image[r][c] != matching_color or (r,c) in visited:
+                    continue
+                    
+                image[r][c] = color
+                q.append((r,c))
+                visited.add((r,c))
+                
         return image
+                
+                
+                
+                
+                
+            
+            
