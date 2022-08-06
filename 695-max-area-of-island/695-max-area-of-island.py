@@ -5,25 +5,34 @@ class Solution(object):
         :rtype: int
         """
         ROWS, COLS = len(grid), len(grid[0])
+        visited = set()
         
-        def dfs(i,j):
-            if i < 0 or j < 0 or i == ROWS or j == COLS or grid[i][j] == 0:
-                return 0
-            
-            area = 1
-            grid[i][j] = 0
-            
-            area += dfs(i+1, j)
-            area += dfs(i-1, j)
-            area += dfs(i, j+1)
-            area += dfs(i, j-1)
-            
+        def bfs(i,j):
+            q, area = deque(), 1
+            q.append((i,j))
+            visited.add((i,j))
+
+            while q:
+                x, y = q.popleft()
+                
+                for dx, dy in (-1,0), (1,0), (0,-1), (0,1):
+                    r, c = x+dx, y+dy
+                    if r < 0 or c < 0 \
+                        or r == ROWS or c == COLS \
+                        or grid[r][c] == 0 or (r,c) in visited:
+                        continue
+                        
+                    area+=1
+                    q.append((r,c))
+                    visited.add((r,c))
+                    
             return area
-            
+                    
+
         res = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if grid[i][j] == 1:
-                    res = max(dfs(i,j), res)
+        for i in range(ROWS):
+            for j in range(COLS):
+                if grid[i][j] == 1 and (i,j) not in visited:
+                    res = max(bfs(i,j), res)
                     
         return res
