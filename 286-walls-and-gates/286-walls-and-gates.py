@@ -20,7 +20,9 @@ class Solution(object):
             for dx, dy in (1,0), (-1,0), (0,1), (0,-1):
                 r, c = x+dx, y+dy
                 
-                if r < 0 or c < 0 or r == ROWS or c == COLS or rooms[r][c] != EMPTY or (r,c) in visited:
+                if r < 0 or c < 0 \
+                or r == ROWS or c == COLS \
+                or rooms[r][c] != EMPTY or (r,c) in visited:
                     continue
                 
                 rooms[r][c] = dist
