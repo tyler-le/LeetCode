@@ -4,15 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        res = curr_sum = nums[0]
+        curr_sum, max_sum = nums[0], nums[0]
         
-        for i in range(1, len(nums)):
-            if curr_sum + nums[i] < nums[i]:
-                curr_sum = nums[i]
-            else:
-                curr_sum += nums[i]
+        for num in nums[1:]:
+            curr_sum+=num
+            
+            if curr_sum < num:
+                curr_sum = num
+            max_sum = max(max_sum, curr_sum)
                 
-            res = max(curr_sum, res)
-                
-        res = max(curr_sum, res)
-        return res
+        return max_sum
+            
