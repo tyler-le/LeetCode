@@ -1,4 +1,5 @@
 class Node:
+    # Construct Doubly LL
     def __init__(self, key, val):
         self.key, self.val = key, val
         self.next = self.prev = None
@@ -11,9 +12,10 @@ class LRUCache(object):
         """
         self.capacity, self.cache = capacity, {} # key : node
         
-        self.lru = Node(0, 0)
-        self.mru = Node(0,0)
+        # Create LRU and MRU nodes
+        self.lru, self.mru = Node(0, 0), Node(0, 0)
         
+        # Connect LRU and MRU
         self.lru.next = self.mru
         self.mru.prev = self.lru
         
@@ -33,6 +35,7 @@ class LRUCache(object):
         :type key: int
         :rtype: int
         """
+        # If in cache, remove the node and insert at MRU
         if key in self.cache:
             self.remove(self.cache[key])
             self.insert_at_mru(self.cache[key])
@@ -47,7 +50,7 @@ class LRUCache(object):
         :type value: int
         :rtype: None
         """
-        
+        # If in cache, remove it and 
         if key in self.cache:
             self.remove(self.cache[key])
         
@@ -59,7 +62,6 @@ class LRUCache(object):
             # remove from the list and delete the LRU from hashmap
             lru = self.lru.next
             self.remove(lru)
-            print(lru in self.cache)
             del self.cache[lru.key]
         
 
