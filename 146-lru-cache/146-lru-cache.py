@@ -15,15 +15,16 @@ class LRUCache(object):
         # Create LRU and MRU nodes
         self.lru, self.mru = Node(0, 0), Node(0, 0)
         
-        # Connect LRU and MRU
+        # Connect LRU and MRU pointers
         self.lru.next = self.mru
         self.mru.prev = self.lru
         
-        
+    # Removed a node at any position    
     def remove(self, node):
         prev, nxt = node.prev, node.next
         prev.next, nxt.prev = nxt, prev
     
+    # Inserts a node at MRU
     def insert_at_mru(self, node):
         prev, nxt = self.mru.prev, self.mru
         prev.next = nxt.prev = node
@@ -50,17 +51,18 @@ class LRUCache(object):
         :type value: int
         :rtype: None
         """
-        # If in cache, remove it for updating purposes
+        # If in cache, remove, update, reinsert at MRU
         if key in self.cache:
             self.remove(self.cache[key])
             self.cache[key].val = value
             self.insert_at_mru(self.cache[key])
+       
+        # Else create a new node and insert at MRU
         else:
-        # Update / Create new node and reinsert at MRU
             self.cache[key] = Node(key, value)
             self.insert_at_mru(self.cache[key])
             
-        
+        # If we exceed capacity, delete from LRU and dict
         if len(self.cache) > self.capacity:
             # remove from the list and delete the LRU from hashmap
             lru = self.lru.next
