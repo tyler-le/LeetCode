@@ -4,7 +4,7 @@ class Solution(object):
         :type temperatures: List[int]
         :rtype: List[int]
         """
-        res, stack, TEMP = [0]*len(temperatures), [], 0
+        res, stack, TEMP = [0 for _ in temperatures], [], 0
        
         for index, temp in enumerate(temperatures):
             while stack and temp > stack[-1][TEMP]:
