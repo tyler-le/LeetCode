@@ -4,15 +4,9 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        
-        if not lists or len(lists) == 0:
-            return None
-        
-        def merge(list1, list2):
+    def merge(self, list1, list2):
             dummy = ListNode()
             l1, l2, curr = list1, list2, dummy
-
             while l1 and l2:
                 if l1.val < l2.val: 
                     curr.next = l1
@@ -21,15 +15,21 @@ class Solution:
                     curr.next = l2
                     l2 = l2.next
                 curr = curr.next
-
             if l1 and not l2: curr.next = l1
             elif not l1 and l2: curr.next = l2
-
             return dummy.next
-
+        
+        
+        
+    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+        
+        if not lists:
+            return None
+    
         while len(lists) > 1:
             first, second = lists.pop(), lists.pop()
-            lists.append(merge(first, second))
+            merged = self.merge(first, second)
+            lists.append(merged)
             
         return lists[0]
             
