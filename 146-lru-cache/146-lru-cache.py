@@ -50,12 +50,15 @@ class LRUCache(object):
         :type value: int
         :rtype: None
         """
-        # If in cache, remove it and 
+        # If in cache, remove it for updating purposes
         if key in self.cache:
             self.remove(self.cache[key])
-        
-        self.cache[key] = Node(key, value)
-        self.insert_at_mru(self.cache[key])
+            self.cache[key].val = value
+            self.insert_at_mru(self.cache[key])
+        else:
+        # Update / Create new node and reinsert at MRU
+            self.cache[key] = Node(key, value)
+            self.insert_at_mru(self.cache[key])
             
         
         if len(self.cache) > self.capacity:
