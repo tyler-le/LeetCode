@@ -9,6 +9,6 @@ class Solution(object):
         mag = Counter(magazine)
         
         for key, value in ransom.items():
-            if key not in mag: return False
-            elif mag[key] < value: return False
+            if key not in mag or mag[key] < value: 
+                return False
         return True
