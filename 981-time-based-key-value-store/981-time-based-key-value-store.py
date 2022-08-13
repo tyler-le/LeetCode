@@ -11,7 +11,6 @@ class TimeMap:
         if key not in self.hmap: return ""
         
         vals = self.hmap[key]
-        
         low, high = 0, len(vals)-1
         
         while low <= high:
