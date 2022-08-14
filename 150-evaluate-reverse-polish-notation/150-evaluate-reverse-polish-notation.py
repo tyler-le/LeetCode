@@ -1,10 +1,8 @@
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
-        #tokens = deque(tokens)
         
         for tok in tokens:
-        
             if tok == '+': 
                 stack.append(stack.pop() + stack.pop())
             elif tok == '-': 
