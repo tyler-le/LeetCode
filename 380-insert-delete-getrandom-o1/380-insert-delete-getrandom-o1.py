@@ -6,15 +6,20 @@ class RandomizedSet:
 
     def insert(self, val: int) -> bool:
         if val in self.pos: return False
+
+        # add to end of list
         self.vals.append(val)
+        
+        # mark pos in map (val : index)
         self.pos[val] = len(self.vals)-1
+        
         return True
         
 
     def remove(self, val: int) -> bool:
         if val not in self.pos: return False
         
-        # update pos map
+        # update pos map prior to swap 
         self.pos[self.vals[-1]] = self.pos[val]
         
         # swap last elem with position of val
