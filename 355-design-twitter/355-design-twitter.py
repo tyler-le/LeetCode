@@ -31,8 +31,6 @@ class Twitter:
             
 
     def follow(self, followerId: int, followeeId: int) -> None:
-        if followerId not in self.user_map[followerId].following:
-            self.user_map[followerId].following.add(followerId)
         self.user_map[followerId].following.add(followeeId)
 
     def unfollow(self, followerId: int, followeeId: int) -> None:
