@@ -20,12 +20,11 @@ class Twitter:
             
 
     def getNewsFeed(self, userId: int) -> List[int]:
-        if userId not in self.user_map[userId].following:
-            self.user_map[userId].following.add(userId)
         count, res = 0, []
         for i in range(len(self.all_tweets)-1, -1, -1):
             if count == 10: break
-            if self.all_tweets[i].user_id in self.user_map[userId].following:
+            if self.all_tweets[i].user_id in self.user_map[userId].following \
+                or self.all_tweets[i].user_id == userId:
                 res.append(self.all_tweets[i].tweet_id)
                 count+=1
         return res
