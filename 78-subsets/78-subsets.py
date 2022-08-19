@@ -1,22 +1,16 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        # DFS Approach
-        
-        def backtrack(index):
-            if index >= len(nums):
+        def dfs(i, subset):
+            if i >= len(nums):
                 return res.append(subset.copy())
-                        
-            # include nums[index]
-            subset.append(nums[index])
-            backtrack(index+1)
             
-            # exclude nums[index]
+            subset.append(nums[i])
+            dfs(i+1, subset)
+            
             subset.pop()
-            backtrack(index+1)
+            dfs(i+1, subset)
             
-                    
             
-        res = []
-        subset = []
-        backtrack(0)
+        visited, res = set(), []
+        dfs(0, [])
         return res
