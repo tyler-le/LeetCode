@@ -7,18 +7,14 @@ class MyCalendar:
     def book(self, start: int, end: int) -> bool:
         self.intervals.sort(key = lambda i : i[0])
 
-        flag = True
         
         for s, e in self.intervals:
             if (start >= s and start < e) or (s >= start and s < end): 
-                flag = False
-                break
+                return False
             
-        if flag: 
-            self.intervals.append([start, end])
-            return True
+        self.intervals.append([start, end])
+        return True
         
-        return False
 
 # Your MyCalendar object will be instantiated and called as such:
 # obj = MyCalendar()
