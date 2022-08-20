@@ -19,7 +19,8 @@ class MyCalendar:
         return res
 
     def book(self, start: int, end: int) -> bool:
-        self.intervals.sort(key = lambda i : i[0])
+        #self.intervals.sort(key = lambda i : i[0])
+        if self.intervals: self.merge(self.intervals)
         flag = True
         
         for s, e in self.intervals:
