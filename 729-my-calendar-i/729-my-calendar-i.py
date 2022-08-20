@@ -5,7 +5,7 @@ class MyCalendar:
         
     
     def book(self, start: int, end: int) -> bool:
-        self.intervals.sort(key = lambda i : i[0])
+        #self.intervals.sort(key = lambda i : i[0])
 
         
         for s, e in self.intervals:
