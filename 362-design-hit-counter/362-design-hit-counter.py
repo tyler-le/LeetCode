@@ -18,9 +18,9 @@ class HitCounter:
         # get high boundary
         while high >= 0 and self.hits[high] > (timestamp):
             high-=1
-        print(low, high)
+
         # since in chronological order, we can get rid of hits[0:low-1]
-        
+        self.hits = self.hits[low:]
         # return number of elements within this window
         return high - low + 1
         
