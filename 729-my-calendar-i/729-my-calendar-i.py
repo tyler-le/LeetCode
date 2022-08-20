@@ -5,13 +5,13 @@ class MyCalendar:
         
     
     def book(self, start: int, end: int) -> bool:
-        #self.intervals.sort(key = lambda i : i[0])
 
-        
+        # if overlapping intervals, early exit
         for s, e in self.intervals:
             if (start >= s and start < e) or (s >= start and s < end): 
                 return False
             
+        # if we get through entire calendar w/out conflicts, we can append
         self.intervals.append([start, end])
         return True
         
