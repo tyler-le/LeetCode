@@ -18,7 +18,7 @@ class HitCounter:
             high-=1
 
         # since in chronological order, we can get rid of hits[0:low-1] to free space
-        # self.hits = self.hits[low:]
+        self.hits = self.hits[low:]
         
         # return number of elements within this window
         return high - low + 1
