@@ -39,6 +39,6 @@ class Solution(object):
         
         for i in range(ROWS):
             for j in range(COLS):
-                if board[i][j] == word[0] and backtrack(i, j, 0): 
+                if backtrack(i, j, 0): 
                     return True
         return False
