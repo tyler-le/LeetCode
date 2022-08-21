@@ -6,6 +6,7 @@ class MovingAverage(object):
         """
         self.window_size = size
         self.nums = deque()
+        self.curr_sum = 0
         
         
 
@@ -15,9 +16,11 @@ class MovingAverage(object):
         :rtype: float
         """
         if len(self.nums) >= self.window_size: 
+            self.curr_sum-=self.nums[0]
             self.nums.popleft()
         self.nums.append(val)
-        return float(sum(self.nums)) / float(len(self.nums))
+        self.curr_sum+=val
+        return float(self.curr_sum) / float(len(self.nums))
             
         
         
