@@ -21,14 +21,14 @@ class FileSystem(object):
         path_exists = True
         
         for i in range(1, len(directories)):
-            name = directories[i]
+            direc = directories[i]
             
-            if name not in curr.children: 
+            if direc not in curr.children: 
                 if i == len(directories)-1:
-                    curr.children[name] = MultiWayTrieNode(name)
+                    curr.children[direc] = MultiWayTrieNode(direc)
                 else:
                     return False
-            curr = curr.children[name]
+            curr = curr.children[direc]
         if curr.value != -1: return False
         curr.value = value
         return True
@@ -43,11 +43,10 @@ class FileSystem(object):
         directories = path.split('/')
         curr = self.root
         
-        for i in range(1, len(directories)):
-            name = directories[i]
-            if name not in curr.children: 
+        for direc in directories[1:]:
+            if direc not in curr.children: 
                 return -1
-            curr = curr.children[name]
+            curr = curr.children[direc]
         return curr.value
 
 # Your FileSystem object will be instantiated and called as such:
