@@ -8,13 +8,18 @@ class Solution(object):
         res = []
         
         def backtrack(combination, nums, curr_sum, index):
+            # if target found, add to res and backtrack
             if curr_sum == target:
                 res.append(combination[::])
                 return
+            
+            # if sum too big, backtrack
             if curr_sum > target: 
                 return
             
+            # we need 'i' to avoid duplicates
             for i in range(len(nums)):
+                
                 combination.append(nums[i])
                 curr_sum+=nums[i]
                 
