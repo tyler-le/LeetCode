@@ -8,9 +8,9 @@ class Solution(object):
         ROWS, COLS = len(board), len(board[0])
         visited = set()
         
-        def backtrack(r, c, index):
-            # we found the word
-            if index == len(word): return True
+        def backtrack(r, c, word):
+            # we found match for each letter in the word
+            if len(word) == 0: return True
             
             # out of bounds
             if r < 0 or c < 0 or r == ROWS or c == COLS: return False
@@ -19,16 +19,16 @@ class Solution(object):
             if (r,c) in visited: return False
             
             # the current position in the board is not the correct char
-            if board[r][c] != word[index]: return False
+            if board[r][c] != word[0]: return False
             
             # mark current cell as visited
             visited.add((r,c))
             
             # visit all neighbors
-            res = backtrack(r+1,c,index+1) \
-                or backtrack(r-1,c,index+1) \
-                or backtrack(r,c+1,index+1) \
-                or backtrack(r,c-1,index+1)
+            res = backtrack(r+1,c,word[1:]) \
+                or backtrack(r-1,c,word[1:]) \
+                or backtrack(r,c+1,word[1:]) \
+                or backtrack(r,c-1,word[1:])
             
             # unvisit neighbor
             visited.remove((r,c))
@@ -39,6 +39,6 @@ class Solution(object):
         
         for i in range(ROWS):
             for j in range(COLS):
-                if backtrack(i, j, 0): 
+                if backtrack(i, j, word): 
                     return True
         return False
