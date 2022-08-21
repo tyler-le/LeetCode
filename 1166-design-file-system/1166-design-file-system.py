@@ -24,12 +24,20 @@ class FileSystem(object):
             direc = directories[i]
             
             if direc not in curr.children: 
-                if i == len(directories)-1:
+                # if last directory, create new
+                if i == len(directories)-1: 
                     curr.children[direc] = MultiWayTrieNode(direc)
-                else:
-                    return False
+                    
+                # if not last directory, this IS the missing parent
+                else: return False
+            
+            # advance to next dir
             curr = curr.children[direc]
+        
+        # path already exists
         if curr.value != -1: return False
+        
+        # associate value and return true
         curr.value = value
         return True
         
@@ -44,8 +52,7 @@ class FileSystem(object):
         curr = self.root
         
         for direc in directories[1:]:
-            if direc not in curr.children: 
-                return -1
+            if direc not in curr.children: return -1
             curr = curr.children[direc]
         return curr.value
 
