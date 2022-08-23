@@ -22,7 +22,7 @@ class BrowserHistory(object):
         new_page.prev = self.position
         self.position.next = new_page
         
-        self.position = self.position.next
+        self.position = new_page
         
         
                 
