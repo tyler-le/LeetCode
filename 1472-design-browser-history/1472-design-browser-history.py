@@ -10,7 +10,7 @@ class BrowserHistory(object):
         """
         :type homepage: str
         """
-        self.root = Node(homepage)
+        self.position = Node(homepage)
             
 
     def visit(self, url):
@@ -19,10 +19,10 @@ class BrowserHistory(object):
         :rtype: None
         """
         new_page = Node(url)
-        new_page.prev = self.root
-        self.root.next = new_page
+        new_page.prev = self.position
+        self.position.next = new_page
         
-        self.root = self.root.next
+        self.position = self.position.next
         
         
                 
@@ -32,10 +32,10 @@ class BrowserHistory(object):
         :type steps: int
         :rtype: str
         """
-        while self.root.prev and steps:
-            self.root = self.root.prev
+        while self.position.prev and steps:
+            self.position = self.position.prev
             steps-=1
-        return self.root.url
+        return self.position.url
         
         
 
@@ -45,10 +45,10 @@ class BrowserHistory(object):
         :rtype: str
         """
         
-        while self.root.next and steps:
-            self.root = self.root.next
+        while self.position.next and steps:
+            self.position = self.position.next
             steps-=1
-        return self.root.url
+        return self.position.url
         
         
 
