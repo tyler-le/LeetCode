@@ -17,4 +17,5 @@ class Solution:
                 res-=values[s[i]]
             else:
                 res+=values[s[i]]
+                
         return res
