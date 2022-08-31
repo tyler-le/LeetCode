@@ -1,15 +1,16 @@
-class Solution:
-    def rob(self, nums: List[int]) -> int:
+class Solution(object):
+    def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         if not nums: return 0
-        one_house_down, two_houses_down = 0, 0
-        
-        for curr_house in nums:
-            temp = one_house_down
+        if len(nums) == 1: return nums[0]
+        memo = [-1 for _ in range(len(nums))]
+        memo[0], memo[1] = nums[0], max(nums[0], nums[1])
+    
+        for i in range(2, len(nums)):
+            memo[i] = max(memo[i-1], memo[i-2] + nums[i])
             
-            # calculate new previous house for next iteration
-            one_house_down = max(two_houses_down + curr_house, one_house_down)
+        return memo[-1]
             
-            # set new two_houses_down for next iteration
-            two_houses_down = temp
-            
-        return one_house_down
