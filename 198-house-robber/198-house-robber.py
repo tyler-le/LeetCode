@@ -1,21 +1,19 @@
-class Solution(object):
-    def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+'''
+Concept: In each choice, we can either rob two houses down and the current house OR keep the loot from one house down.
+'''
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
         if not nums: return 0
-        if len(nums) == 1: return nums[0]
+        one_house_down, two_houses_down = 0, 0
         
-        memo = [-1 for _ in range(len(nums))]
-        memo[0], memo[1] = nums[0], max(nums[0], nums[1])
-    
-        for i in range(2, len(nums)):
-            one_house_before = memo[i-1]
-            two_houses_before = memo[i-2]
-            current_house = nums[i]
-            # curr house is the max(loot of prev house, loot of two houses down and rob current house )
-            memo[i] = max(one_house_before, two_houses_before + current_house)
+        for curr_house in nums:
+            temp = one_house_down
             
-        return memo[-1]
+            # calculate new previous house for next iteration
+            one_house_down = max(two_houses_down + curr_house, one_house_down)
             
+            # set new two_houses_down for next iteration
+            two_houses_down = temp
+            
+        return one_house_down
