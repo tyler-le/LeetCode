@@ -8,6 +8,8 @@ class Solution(object):
         if len(nums) == 1: return nums[0]
         
         memo = [-1 for _ in range(len(nums))]
+        
+        # base cases
         memo[0], memo[1] = nums[0], max(nums[0], nums[1])
     
         for i in range(2, len(nums)):
@@ -27,5 +29,6 @@ class Solution(object):
         """
         if len(nums) == 0: return 0
         if len(nums) == 1: return nums[0]
+        
         return max(self.rob_linear(nums[0:len(nums)-1]), self.rob_linear(nums[1:]))
         
