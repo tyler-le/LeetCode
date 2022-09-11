@@ -1,16 +1,7 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
         
-        '''
-        Checks if all chars in t_map are in s_map
-        '''
-        def is_valid(window, t_map):
-            # checks if t_map is a subset of s_map
-            flag = True
-            for key, value in t_map.items():
-                if key not in window or window[key] < value: 
-                    flag = False
-            return flag
+        
         
         # [min window len, left index, right index]
         res = [float('inf'), -1, -1]
@@ -18,20 +9,23 @@ class Solution:
         
         # e.g. if t is "AABC" then the window must have two A's, one B and one C. Thus formed would be = 3 when all these conditions are met.
         conditions_met = 0
+        required = len(t_map) # how many conditions need to be met
 
         for r in range(len(s)):
             # extend the window
             window[s[r]]+=1
+            if s[r] in t_map and window[s[r]] == t_map[s[r]]:
+                conditions_met+=1
             
-            while is_valid(window, t_map):
+            while l <= r and conditions_met == required:
                 # update min
                 if r-l+1 < res[0]:
-                    res[0] = r-l+1
-                    res[1], res[2] = l, r
+                    res = [r-l+1, l, r]
                     
                 # shrink window
                 window[s[l]]-=1
-                if window[s[l]] == 0: del window[s[l]]
+                if s[l] in t_map and window[s[l]] < t_map[s[l]]:
+                    conditions_met-=1
                 l+=1
             
         
