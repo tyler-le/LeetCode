@@ -1,35 +1,38 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        l = r = 0
-        res, min_len = [], float('inf')
-        t_map, s_map = Counter(t), {}
         
-        
-        for r in range(len(s)):
-            s_map[s[r]] = 1 + s_map.get(s[r], 0)
-            
-            is_valid = True
-            
-            # check if valid
+        '''
+        Checks if all chars in t_map are in s_map
+        '''
+        def is_valid(window, t_map):
+            # checks if t_map is a subset of s_map
+            flag = True
             for key, value in t_map.items():
-                if key not in s_map or s_map[key] < value:
-                    is_valid = False
-                
-            # shrink window until no longer valid and record min
-            while is_valid:
-                if r-l+1 < min_len:
-                    min_len = r-l+1
-                    res=[l,r]
+                if key not in window or window[key] < value: 
+                    flag = False
+            return flag
+        
+        # [min window len, left index, right index]
+        res = [float('inf'), -1, -1]
+        window, t_map, l = collections.defaultdict(int), Counter(t), 0
+        
+        # e.g. if t is "AABC" then the window must have two A's, one B and one C. Thus formed would be = 3 when all these conditions are met.
+        conditions_met = 0
+
+        for r in range(len(s)):
+            # extend the window
+            window[s[r]]+=1
+            
+            while is_valid(window, t_map):
+                # update min
+                if r-l+1 < res[0]:
+                    res[0] = r-l+1
+                    res[1], res[2] = l, r
                     
-                s_map[s[l]]-=1
-                
-                if s_map[s[l]] == 0:
-                    del s_map[s[l]]
-                    
-                for key, value in t_map.items():
-                    if key not in s_map or s_map[key] < value:
-                        is_valid = False
-                
+                # shrink window
+                window[s[l]]-=1
+                if window[s[l]] == 0: del window[s[l]]
                 l+=1
-                
-        return "" if len(res) == 0 else s[res[0]:res[1]+1]
+            
+        
+        return "" if [res[1], res[2]] == [-1, -1] else s[res[1]: res[2] + 1]
