@@ -17,7 +17,7 @@ class Solution:
             window[s[r]]+=1
             
             # check if s[r] causes a met condition
-            if s[r] in t_map and window[s[r]] == t_map[s[r]]:
+            if window[s[r]] == t_map[s[r]]:
                 conditions_met+=1
             
             # shrink window until conditions arent met
