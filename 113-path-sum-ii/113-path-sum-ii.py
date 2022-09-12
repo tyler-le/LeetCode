@@ -11,24 +11,20 @@ class Solution(object):
         :type targetSum: int
         :rtype: List[List[int]]
         """
-        res = []
-        self.path_sum_helper(root, targetSum, [], res)
+        
+        res, curr_path = [], []
+        
+        def dfs(node, curr_path, targetSum):
+            if not node: return
+            if node.left is None and node.right is None:
+                if targetSum == node.val: res.append(curr_path[::] + [node.val])
+                return
+            
+            curr_path.append(node.val)
+            dfs(node.left, curr_path, targetSum - node.val)
+            dfs(node.right, curr_path, targetSum - node.val)
+            curr_path.pop()
+            
+        dfs(root, curr_path, targetSum)
         return res
-        
-    def path_sum_helper(self,root, targetSum, curr_path, res):
-        if not root:
-            return
-        
-        curr_path.append(root.val)
-        is_leaf = root.left is None and root.right is None
-        
-        if is_leaf and root.val==targetSum:
-            res.append(list(curr_path))
-        
-        else:          
-            self.path_sum_helper(root.left, targetSum-root.val, curr_path,res)
-            self.path_sum_helper(root.right, targetSum-root.val,curr_path,res)
-        
-        del curr_path[-1]
-
-        
+            
