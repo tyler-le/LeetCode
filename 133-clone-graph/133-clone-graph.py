@@ -12,20 +12,19 @@ class Solution(object):
         :type node: Node
         :rtype: Node
         """
+        
         old2new = {}
         
         def dfs(node):
-            if node in old2new: 
-                return old2new[node]
+            if not node: return None
+            if node in old2new: return old2new[node]
             
-            copy = Node(node.val)
-            old2new[node] = copy
+            old2new[node] = Node(node.val)
             
-            for n in node.neighbors:
-                copy.neighbors.append(dfs(n))
-                
-            return copy
-                
-                
-        if not node: return None
-        return dfs(node)
+            for nbor in node.neighbors:
+                old2new[node].neighbors.append(dfs(nbor))
+            
+            return old2new[node]
+        
+        dfs(node)       
+        return old2new[node] if node else None
