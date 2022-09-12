@@ -1,19 +1,13 @@
-class Solution(object):
-    def climbStairs(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n <= 1: return n
         
-        if n == 0: return 0
-        if n == 1: return 1
-        if n == 2: return 2
+        memo = [-1 for _ in range (n)]
+        memo[0], memo[1] = 1, 2
         
-        memoized = [0 for _ in range(n+1)]
-        memoized[0], memoized[1], memoized[2] = 0,1,2
+        for i in range(2, n):       
+                memo[i] = memo[i-1] + memo[i-2]
+                
+        return memo[-1]
+    
         
-        res = 0
-        for i in range(3, n+1):
-            memoized[i] = (memoized[i-2] + memoized[i-1])
-            
-        return memoized[n]
