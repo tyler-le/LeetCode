@@ -1,30 +1,31 @@
 # Definition for a binary tree node.
-# class TreeNode(object):
+# class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution(object):
-    def pathSum(self, root, targetSum):
-        """
-        :type root: TreeNode
-        :type targetSum: int
-        :rtype: List[List[int]]
-        """
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
+        allPaths = []
+        self.find_paths_recursive(root, targetSum, [], allPaths)
+        return allPaths
         
-        res, curr_path = [], []
-        
-        def dfs(node, curr_path, targetSum):
-            if not node: return
-            if node.left is None and node.right is None:
-                if targetSum == node.val: res.append(curr_path[::] + [node.val])
-                return
-            
-            curr_path.append(node.val)
-            dfs(node.left, curr_path, targetSum - node.val)
-            dfs(node.right, curr_path, targetSum - node.val)
-            curr_path.pop()
-            
-        dfs(root, curr_path, targetSum)
-        return res
-            
+    def find_paths_recursive(self,currentNode, targetSum, currentPath, allPaths):
+        if currentNode is None: return
+
+        # add the current node to the path
+        currentPath.append(currentNode.val)
+
+        # if the current node is a leaf and its value is equal to required_sum, save the 
+        # current path
+        if currentNode.val == targetSum and currentNode.left is None and currentNode.right is None:
+            allPaths.append(list(currentPath))
+        else:
+            # traverse the left sub-tree
+            self.find_paths_recursive(currentNode.left, targetSum - currentNode.val, currentPath, allPaths)
+            # traverse the right sub-tree
+            self.find_paths_recursive(currentNode.right, targetSum - currentNode.val, currentPath, allPaths)
+
+        # remove the current node from the path to backtrack,
+        # we need to remove the current node while we are going up the recursive call stack.
+        currentPath.pop()
