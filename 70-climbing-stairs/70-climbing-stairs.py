@@ -1,21 +1,13 @@
-class Solution(object):
-    def climbStairs(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # Base cases start at n = 1, 2
         
-        # Recursion w/ memoization
-        memo = [-1 for _ in range(n+1)]
+        if n <= 2: return n
         
-        def helper(n):
-            if n == 1: return 1
-            if n == 2: return 2
-            if memo[n] != -1: return memo[n]
-            
-            res = helper(n-1) + helper(n-2)
-            memo[n] = res
-            return memo[n]
+        memo = [-1 for _ in range (n+1)]
+        memo[1], memo[2] = 1, 2
         
-        return helper(n)
-        
+        for i in range(3, n+1):       
+                memo[i] = memo[i-1] + memo[i-2]
+                
+        return memo[-1]
