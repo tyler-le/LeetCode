@@ -1,30 +1,31 @@
 """
 # Definition for a Node.
-class Node(object):
+class Node:
     def __init__(self, val = 0, neighbors = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
 """
 
-class Solution(object):
-    def cloneGraph(self, node):
-        """
-        :type node: Node
-        :rtype: Node
-        """
+class Solution:
+    
+    # BFS
+    
+    def cloneGraph(self, node: 'Node') -> 'Node':
+        if not node: return None
+        q = deque([node])
+        visited = {node: Node(node.val)}
         
-        old2new = {}
+        while q:
+            popped = q.popleft()
+            
+            for nbor in popped.neighbors:
+                if nbor in visited:
+                    visited[popped].neighbors.append(visited[nbor])
+                else:
+                    visited[nbor] = Node(nbor.val)
+                    q.append(nbor)
+                    visited[popped].neighbors.append(visited[nbor])                    
+                    
+                
+        return visited[node] 
         
-        def dfs(node):
-            if not node: return None
-            if node in old2new: return old2new[node]
-            
-            old2new[node] = Node(node.val)
-            
-            for nbor in node.neighbors:
-                old2new[node].neighbors.append(dfs(nbor))
-            
-            return old2new[node]
-        
-        dfs(node)       
-        return old2new[node] if node else None
