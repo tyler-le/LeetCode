@@ -23,8 +23,8 @@ class Solution:
                     visited[popped].neighbors.append(visited[nbor])
                 else:
                     visited[nbor] = Node(nbor.val)
+                    visited[popped].neighbors.append(visited[nbor])       
                     q.append(nbor)
-                    visited[popped].neighbors.append(visited[nbor])                    
                     
                 
         return visited[node] 
