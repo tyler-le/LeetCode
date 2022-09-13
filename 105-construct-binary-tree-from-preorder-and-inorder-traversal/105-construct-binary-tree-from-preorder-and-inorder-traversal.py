@@ -1,26 +1,22 @@
 # Definition for a binary tree node.
-# class TreeNode:
+# class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        preorder_index = 0
-        hmap = {}
-        for index, val in enumerate(inorder):
-            hmap[val] = index
-            
-        def helper(left, right):
-            nonlocal preorder_index
-            if left > right: return None
-            root = TreeNode(preorder[preorder_index])
-            preorder_index+=1
-            
-            root.left = helper(left, hmap[root.val]-1)
-            root.right = helper(hmap[root.val]+1, right)
-            
-            return root
-            
-        return helper(0, len(preorder)-1)
-            
+class Solution(object):
+    def buildTree(self, preorder, inorder):
+        """
+        :type preorder: List[int]
+        :type inorder: List[int]
+        :rtype: TreeNode
+        """
+        if not preorder or not inorder: return None
+        
+        root = TreeNode(preorder[0])
+        root_index = inorder.index(root.val)
+        root.left = self.buildTree(preorder[1:root_index+1], inorder[:root_index])
+        root.right = self.buildTree(preorder[root_index+1:], inorder[root_index+1:])
+        return root
+        
+        
