@@ -13,10 +13,16 @@ class Solution(object):
         """
         if not preorder or not inorder: return None
         
-        root = TreeNode(preorder[0])
-        root_index = inorder.index(root.val)
-        root.left = self.buildTree(preorder[1:root_index+1], inorder[:root_index])
-        root.right = self.buildTree(preorder[root_index+1:], inorder[root_index+1:])
+        # inorder_index_map = {}
+        # for index, elem in enumerate(inorder):
+        #     inorder_index_map[elem] = index
+        # print(inorder_index_map)
+        
+        root_value = preorder[0]
+        root = TreeNode(root_value)
+        preorder_index = inorder.index(root_value)
+        
+        root.left = self.buildTree(preorder[1:preorder_index+1], inorder[0:preorder_index])
+        root.right = self.buildTree(preorder[preorder_index+1:], inorder[preorder_index+1:])
+        
         return root
-        
-        
