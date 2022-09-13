@@ -45,12 +45,12 @@ class Solution:
     def depthSumInverse(self, nestedList: List[NestedInteger]) -> int:
         
         # first find max_depth. needed to calc weight
-        def max_depth_finder(nestedList, curr_depth):
-            max_depth = curr_depth
+        def max_depth_finder(nestedList, depth):
+            max_depth = depth
         
             for nested in nestedList:
                 if nested.getList():
-                    max_depth = max(max_depth, max_depth_finder(nested.getList(), curr_depth + 1))
+                    max_depth = max(max_depth, max_depth_finder(nested.getList(), depth + 1))
 
             return max_depth
             
