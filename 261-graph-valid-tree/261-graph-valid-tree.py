@@ -1,25 +1,28 @@
-class Solution:
-    def validTree(self, n: int, edges: List[List[int]]) -> bool:
-        visited = set()
+class Solution(object):
+    def validTree(self, n, edges):
+        """
+        :type n: int
+        :type edges: List[List[int]]
+        :rtype: bool
+        """
+        
         adjacency_list = collections.defaultdict(list)
         
-        for edge in edges:
-            source, dest = edge[0], edge[1]
-            adjacency_list[source].append(dest)
-            adjacency_list[dest].append(source)
+        for u, v in edges:
+            adjacency_list[u].append(v)
+            adjacency_list[v].append(u)
+        
+        visited = set()
+        
+        def dfs(i, prev):
+            if i in visited: return False
+            visited.add(i)
             
-        def backtrack(node, parent):
-            if node in visited:
-                return False
-            
-            visited.add(node)
-            
-            for neighbor in adjacency_list[node]:
-                if neighbor == parent:
-                    continue
-                if not backtrack(neighbor, node):
+            for neighbor in adjacency_list[i]:
+                if neighbor != prev and not dfs(neighbor, i): 
                     return False
                 
             return True
         
-        return backtrack(0, -1) and len(visited) == n
+        
+        return dfs(0, 0) and len(visited) == n
