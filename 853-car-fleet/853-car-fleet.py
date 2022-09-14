@@ -1,17 +1,24 @@
-class Solution:
-    def carFleet(self, target: int, position: List[int], speed: List[int]) -> int:
-        pairs = [(p, s) for p, s in zip(position, speed)]
-        pairs.sort()
+class Solution(object):
+    def carFleet(self, target, position, speed):
+        """
+        :type target: int
+        :type position: List[int]
+        :type speed: List[int]
+        :rtype: int
+        """
         
-        fleet_time = -float('inf')
+        
+        times = [float(target - p) / s for p, s in sorted(zip(position, speed))]
+        
+        fleet_time = 0
         res = 0
         
-        for pos, speed in reversed(pairs):
-            time = float(target - pos) / speed
+        for time in reversed(times):
+            
             if time > fleet_time: 
                 res+=1
                 fleet_time = time
                 
         return res
-            
-            
+        
+        
