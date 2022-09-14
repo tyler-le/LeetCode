@@ -8,7 +8,6 @@ class Solution(object):
         
         people.sort()
         res = 0
-        
         l, r = 0, len(people)-1
         
         while l <= r:
