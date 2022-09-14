@@ -12,7 +12,7 @@ class Solution(object):
         l, r = 0, len(people)-1
         
         while l <= r:
-            # put heavy people[r] on boat
+            # put heavy person on boat
             if people[l] + people[r] > limit:
                 r-=1
                 
