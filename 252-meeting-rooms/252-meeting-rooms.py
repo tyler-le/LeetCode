@@ -1,17 +1,13 @@
-class Solution(object):
-    def canAttendMeetings(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: bool
-        """
+class Solution:
+    def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
         intervals.sort(key = lambda i : i[0])
         
-        start, end = 0, 1
-        
+        print(intervals)
         for i in range(1, len(intervals)):
-            has_overlap = intervals[i][start] >= intervals[i-1][start] \
-                            and intervals[i][start] < intervals[i-1][end]
+            start1, end1 = intervals[i-1]
+            start2, end2 = intervals[i]
             
+            has_overlap = (start1 <= start2 < end1)
             if has_overlap: return False
-            
         return True
+            
