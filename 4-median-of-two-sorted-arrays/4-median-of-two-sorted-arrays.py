@@ -15,9 +15,6 @@ class Solution(object):
             l+=1
             r-=1
         
-        if l > r: 
-            median = (nums[l] + nums[r]) / 2.0
-        else:
-            median = nums[r]
+        median = nums[r] if (l == r) else (nums[l] + nums[r]) / 2.0
             
         return median
