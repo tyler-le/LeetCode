@@ -37,11 +37,12 @@ class Solution:
             return res
         
         
-        
+        # get the number of alive neighbors and map (i,j) : # live neighbors
         for i in range(rows):
             for j in range(cols):
                 hmap[(i,j)] = num_neighbors_live(i, j)
-                                
+                               
+        # second pass through board and kill/live based on conditions
         for i in range(rows):
             for j in range(cols):
                 num_live_neighbors = hmap[(i, j)]
