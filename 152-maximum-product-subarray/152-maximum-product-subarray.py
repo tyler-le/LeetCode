@@ -1,9 +1,23 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        A = nums
-        B = A[::-1]
-        for i in range(1, len(A)):
-            A[i] *= A[i - 1] or 1
-            B[i] *= B[i - 1] or 1
-        return max(A + B)
+        curr_prod = 1
+        pre_product, post_product = [], []
+        max_product = nums[0]
+        
+        for num in nums:
+            curr_prod*=num
+            pre_product.append(curr_prod)
+            max_product = max(max_product, curr_prod)
+            if not curr_prod: curr_prod = 1
             
+        
+        curr_prod = 1    
+        for num in reversed(nums):
+            curr_prod*=num
+            post_product.append(curr_prod)
+            max_product = max(max_product, curr_prod)
+            if not curr_prod: curr_prod = 1
+            
+        print(pre_product, post_product)
+        
+        return max(nums+pre_product+post_product)
