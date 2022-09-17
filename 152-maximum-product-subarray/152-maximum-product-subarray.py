@@ -12,12 +12,10 @@ class Solution:
             
         
         curr_prod = 1    
-        for num in reversed(nums):
+        for num in nums[::-1]:
             curr_prod*=num
             post_product.append(curr_prod)
             max_product = max(max_product, curr_prod)
             if not curr_prod: curr_prod = 1
-            
-        print(pre_product, post_product)
-        
+                    
         return max(nums+pre_product+post_product)
