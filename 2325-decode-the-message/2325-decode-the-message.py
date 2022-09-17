@@ -1,10 +1,6 @@
 class Solution:
     def decodeMessage(self, key: str, message: str) -> str:
-        hmap = {}
-        hmap[' '] = ' '
-        alphabet = {}
-        res = ""
-        alph = 97
+        hmap, res, alph = {' ': ' '}, "", 97
         
         # map each letter in key to nth letter of the alphabet
         for k in key:
@@ -12,7 +8,7 @@ class Solution:
                 hmap[k] = chr(alph)
                 alph+=1
             
-            
+        # decode msg using map
         for m in message:
             res+=(hmap[m])
             
