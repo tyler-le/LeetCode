@@ -8,6 +8,7 @@ class Solution(object):
         
         for num in nums[1:]:
             curr_sum+=num
+            # if the curr sum is too small, we restart at num
             if curr_sum < num: curr_sum = num
             max_sum = max(max_sum, curr_sum)
                 
