@@ -1,8 +1,5 @@
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        #if m == 1 or n == 1: return 1
-        #res = self.uniquePaths(m, n-1) + self.uniquePaths(m-1, n)
-        
         
         # memo[i][j] is the number of paths from [0,0] to [i,j]
         memo = [[1 for j in range(n)]for i in range(m)]
