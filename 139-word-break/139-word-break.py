@@ -10,4 +10,5 @@ class Solution:
             for word in wordDict:
                 if s[i:i + len(word)] == word and dp[i+len(word)]:
                     dp[i] = True
+                if dp[i]: break # early exit
         return dp[0]
