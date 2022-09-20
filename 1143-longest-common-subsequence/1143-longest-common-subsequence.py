@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: int
         """
         
-        dp = [[0] * (len(text2) + 1) for _ in range(len(text1) + 1)]
+        dp = [[0 for _ in range(len(text2)+1)]  for _ in range(len(text1) + 1)]
         
         for i in reversed(range(len(text1))):
             for j in reversed(range(len(text2))):
@@ -16,17 +16,3 @@ class Solution(object):
                     dp[i][j] = max(dp[i][j+1], dp[i+1][j])
                     
         return dp[0][0]
-        
-        
-#         def helper(i, j):
-#             if i >= len(text1) or j >= len(text2): 
-#                 return 0
-#             if memo[i][j] != -1: 
-#                 return memo[i][j]
-#             if text1[i] == text2[j]: 
-#                 memo[i][j] = max(memo[i][j], helper(i+1, j+1) + 1)
-#             else:
-#                 memo[i][j] = max(helper(i, j+1), helper(i+1, j))
-#             return memo[i][j]
-            
-#         return helper(0, 0)
