@@ -1,21 +1,32 @@
-class Solution:
-    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        res = 0
-        memo = [[-1 for x in text2] for y in text1]
+class Solution(object):
+    def longestCommonSubsequence(self, text1, text2):
+        """
+        :type text1: str
+        :type text2: str
+        :rtype: int
+        """
+        
+        dp = [[0] * (len(text2) + 1) for _ in range(len(text1) + 1)]
+        
+        for i in reversed(range(len(text1))):
+            for j in reversed(range(len(text2))):
+                if text1[i] == text2[j]:
+                    dp[i][j] = max(dp[i][j], dp[i+1][j+1]+1)
+                else:
+                    dp[i][j] = max(dp[i][j+1], dp[i+1][j])
+                    
+        return dp[0][0]
         
         
-        def helper(i, j):
-            if i >= len(text1) or j >= len(text2): 
-                return 0
+#         def helper(i, j):
+#             if i >= len(text1) or j >= len(text2): 
+#                 return 0
+#             if memo[i][j] != -1: 
+#                 return memo[i][j]
+#             if text1[i] == text2[j]: 
+#                 memo[i][j] = max(memo[i][j], helper(i+1, j+1) + 1)
+#             else:
+#                 memo[i][j] = max(helper(i, j+1), helper(i+1, j))
+#             return memo[i][j]
             
-            if memo[i][j] != -1: 
-                return memo[i][j]
-            
-            if text1[i] == text2[j]: 
-                memo[i][j] = max(memo[i][j], helper(i+1, j+1) + 1)
-            else:
-                memo[i][j] = max(helper(i, j+1), helper(i+1, j))
-                
-            return memo[i][j]
-            
-        return helper(0, 0)
+#         return helper(0, 0)
