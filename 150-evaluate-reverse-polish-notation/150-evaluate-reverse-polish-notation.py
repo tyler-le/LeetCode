@@ -10,20 +10,12 @@ class Solution(object):
         for tok in tokens:
             if tok not in operations: 
                 stack.append(int(tok))
-                continue
-                
-            y, x = stack.pop(), stack.pop()
-            if tok == '+':
-                stack.append(x+y)
-                
-            elif tok == '-':
-                stack.append(x-y)       
-                
-            elif tok == '*':
-                stack.append(x*y)
-                             
-            elif tok == '/':
-                stack.append(int(x / float(y)))   
-                             
-                
+            else:
+                y, x = stack.pop(), stack.pop()
+                if tok == '+': stack.append(x + y)
+                elif tok == '-': stack.append(x-y)
+                elif tok == '*': stack.append(x*y)
+                elif tok == '/': stack.append(int(x / float(y)))
+            
         return stack[0]
+                
