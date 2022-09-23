@@ -1,39 +1,32 @@
-class MinStack(object):
-
+class MinStack:
+# Two stack approach:
+# 1. One to store the numbers
+# 2. One to store the current minimum
     def __init__(self):
-        self.stack = []
+        self.nums = []
+        self.curr_min = [] # (curr_min, count)
 
-    def push(self, val):
-        """
-        :type val: int
-        :rtype: None
-        """
-        if not self.stack: 
-            self.stack.append((val, val))
-        else:
-            min_so_far = min(val, self.stack[-1][1])
-            self.stack.append((val, min_so_far))
+    def push(self, val: int) -> None:
+        self.nums.append(val)
+        
+        if not self.curr_min or val < self.curr_min[-1][0]: 
+            self.curr_min.append([val, 1])
+        elif val == self.curr_min[-1][0]:
+            self.curr_min[-1][1]+=1
+
+    def pop(self) -> None:
+        popped = self.nums.pop()
+        if self.curr_min and self.curr_min[-1][0] == popped: 
+            self.curr_min[-1][1]-=1
+        if self.curr_min[-1][1] == 0:
+            self.curr_min.pop()
+
+    def top(self) -> int:
+        return self.nums[-1]
         
 
-    def pop(self):
-        """
-        :rtype: None
-        """
-        self.stack.pop()
-        
-
-    def top(self):
-        """
-        :rtype: int
-        """
-        return self.stack[-1][0]
-        
-
-    def getMin(self):
-        """
-        :rtype: int
-        """
-        return self.stack[-1][1]
+    def getMin(self) -> int:
+        return self.curr_min[-1][0]
         
 
 
