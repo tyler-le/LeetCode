@@ -6,16 +6,22 @@ class Solution(object):
         """
         res = 0
         m, n = len(grid), len(grid[0])
+        visited = set()
         
         def dfs(x, y):
-            if x < 0 or y < 0 or x >= len(grid) or y >= len(grid[0]) or grid[x][y] == '0':
-                return
+            if x < 0 or y < 0 or x == m or y == n or grid[x][y] =='0' or (x,y) in visited: return
             grid[x][y] = '0'
-            dfs(x+1, y)
-            dfs(x-1, y)
-            dfs(x, y+1)
-            dfs(x, y-1)
+            visited.add((x,y))
             
+            for dx, dy in [(-1, 0), (1,0), (0,-1), (0,1)]:
+                r = x+dx
+                c = y+dy
+                
+                dfs(r, c)
+                
+            
+            return
+        
         
         
         
