@@ -17,6 +17,5 @@ class Solution:
             elif i == n - 1: res[i] = prefix[i - 1]
             else: res[i] = prefix[i-1]*postfix[n - i - 2]
             
-        print(prefix, postfix)
         return res
         
