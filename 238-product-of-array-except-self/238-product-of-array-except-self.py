@@ -13,7 +13,7 @@ class Solution:
             postfix.append(postfix_prod)
             
         for i in range(n):
-            if i == 0: res[i] = postfix[-2]
+            if i == 0: res[i] = postfix[n - 2]
             elif i == n - 1: res[i] = prefix[i - 1]
             else: res[i] = prefix[i-1]*postfix[n - i - 2]
             
