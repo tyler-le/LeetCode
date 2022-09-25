@@ -5,10 +5,8 @@ class Solution(object):
         :rtype: int
         """
         FRESH, ROTTEN = 1, 2
-        q = deque()
-        m, n = len(grid), len(grid[0])
-        res = 0
-        num_fresh = 0
+        q, m, n = deque(), len(grid), len(grid[0])
+        res, num_fresh = 0, 0
         
         for i in range(m):
             for j in range(n):
