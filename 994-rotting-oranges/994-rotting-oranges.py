@@ -1,35 +1,37 @@
-class Solution:
-    def orangesRotting(self, grid: List[List[int]]) -> int:
-        ROWS, COLS, fresh, time = len(grid), len(grid[0]), 0, 0
-        q, visited = deque(), set()
-        EMPTY, FRESH, ROTTEN = 0, 1, 2
+class Solution(object):
+    def orangesRotting(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        FRESH, ROTTEN = 1, 2
+        q = deque()
+        m, n = len(grid), len(grid[0])
+        res = 0
+        num_fresh = 0
         
-        for i in range(ROWS):
-            for j in range(COLS):
-                if grid[i][j] == FRESH: 
-                    fresh+=1
-                if grid[i][j] == ROTTEN:
-                    q.append((i,j))
-                    visited.add((i,j))
-
-        while q and fresh:
-            time+=1
-            for _ in range(len(q)):
-                x, y = q.popleft()
-                
-                for dx, dy in (-1,0), (1,0), (0,-1), (0,1):
-                    r, c = x + dx, y + dy
-                    if r < 0 or c < 0 \
-                        or r == ROWS or c == COLS \
-                        or grid[r][c] != FRESH or (r,c) in visited:
-                        continue
-                        
-                    grid[r][c] = ROTTEN
-                    fresh-=1
-                    q.append((r,c))
-                    visited.add((r,c))
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == ROTTEN: q.append((i, j))
+                if grid[i][j] == FRESH: num_fresh+=1
+                    
+        while q and num_fresh:
+            res+=1
+            num_rotten = len(q)
             
-                
-        return time if fresh == 0 else -1
-                
+            for _ in range(num_rotten):
+                x, y = q.popleft()
+                for dx, dy in [(-1,0),(1,0),(0,-1),(0,1)]:
+                    r = x+dx
+                    c = y+dy
+                    if r < 0 or c < 0 or r == m or c == n: continue
+                    if grid[r][c] == FRESH: 
+                        grid[r][c] = ROTTEN
+                        num_fresh-=1
+                        q.append((r,c))                    
+            
+        
+        return res if num_fresh == 0 else -1
+        
+        
         
