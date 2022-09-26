@@ -14,7 +14,9 @@ class Solution:
             
             # else for every other number, try to dfs
             for i in range(len(nums)):
-                dfs(combination + [nums[i]], nums[i:])
+                combination.append(nums[i])
+                dfs(combination, nums[i:])
+                combination.pop()
                 
         dfs([], candidates)
         return res
