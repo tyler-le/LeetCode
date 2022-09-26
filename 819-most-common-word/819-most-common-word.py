@@ -1,9 +1,8 @@
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
-        paragraph = re.sub(r'[^\w\s]',' ',paragraph)
-                            
+        paragraph = re.sub(r'[^\w\s]',' ',paragraph)      
         paragraph = paragraph.split(" ")
-        print(paragraph)
+        
         hmap = collections.defaultdict(int)
         banned = set(banned)
         
@@ -16,5 +15,6 @@ class Solution:
         
         for word, freq in hmap.items():
             max_heap.append((-freq, word))
+            
         heapify(max_heap)
         return heappop(max_heap)[1]
