@@ -20,7 +20,7 @@ class Solution(object):
                 else: low = mid + 1
                 
             # mid to high portion is sorted
-            elif nums[mid] < nums[high]:
+            elif nums[mid] <= nums[high]:
                 # adjust ranges accordingly
                 if nums[mid] < target <= nums[high]: low = mid + 1
                 else: high = mid - 1
