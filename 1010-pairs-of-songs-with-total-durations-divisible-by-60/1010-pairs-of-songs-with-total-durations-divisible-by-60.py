@@ -6,16 +6,14 @@ class Solution(object):
         """
         res = 0
         hmap = collections.defaultdict(int)
-        #each elem % 60 == 0 or 60
-        # for t in time:
-        #     hmap[t % 60] = t
-            
+       
         for t in time:
-            if t % 60 == 0:
-                res+=hmap[0]
-            else:
-                res+=hmap[60 - t % 60]
+            # look for a remainder s.t. r + (t % 60) == 0
+            if t % 60 == 0: res+=hmap[0]
                 
+            # look for a remainder s.t. r + (t % 60) == 60
+            else: res+=hmap[60 - (t % 60)]
+              
             hmap[t % 60]+=1
             
         return res
