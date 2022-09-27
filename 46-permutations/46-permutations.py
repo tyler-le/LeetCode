@@ -1,19 +1,25 @@
-class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
+class Solution(object):
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        visited = set()
+        perms = []
         
-        def backtrack():
-            if len(perm) == len(nums):
-                res.append(perm.copy()) 
+        
+        def backtrack(perm):
+            if len(perm) == len(nums): 
+                perms.append(perm[::])
                 return
-                
+            
             for num in nums:
                 if num in visited: continue
                 visited.add(num)
                 perm.append(num)
-                backtrack()
-                perm.pop()
+                backtrack(perm)
                 visited.remove(num)
-                
-        visited, res, perm = set(), [], []
-        backtrack()
-        return res
+                perm.pop()
+        
+        backtrack([])
+        return perms
