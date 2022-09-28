@@ -7,7 +7,9 @@ class Solution(object):
         hmap = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
         res = []
 
-        if digits == "": return []
+        if digits == "": 
+            return []
+        
         def backtrack(index, combination):
             if len(combination) > len(digits): 
                 return
@@ -21,8 +23,7 @@ class Solution(object):
                 backtrack(index+1, combination)
                 combination.pop()
                 
-                
-                
         digits = [int(d) for d in str(digits)]
         backtrack(0, [])
+        
         return res
