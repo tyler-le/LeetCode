@@ -4,7 +4,7 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
-        hmap = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
+        letters = ["", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]
         res = []
 
         if digits == "": return []
@@ -20,7 +20,7 @@ class Solution(object):
                 return
             
             # loop thu each char in the corresponding digit and perform backtracking on the next digit and its chars
-            for ch in hmap[digits[index]]:
+            for ch in letters[digits[index]]:
                 combination.append(ch)
                 backtrack(index+1, combination)
                 combination.pop()
