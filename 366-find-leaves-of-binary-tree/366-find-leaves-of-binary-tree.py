@@ -14,22 +14,13 @@ class Solution(object):
         heights = collections.defaultdict(list)
         
         def dfs(node):
-            
-            
             if not node: return 0
-                
             height = 1 + max(dfs(node.left), dfs(node.right))
             heights[height].append(node.val)
             return height
                 
-                
-        res = []
         dfs(root)
-        # for height, vals in heights.items():
-        #     res.append(vals)
         res = [vals for vals in heights.values()]
         return res
             
     
-                
-        return res
