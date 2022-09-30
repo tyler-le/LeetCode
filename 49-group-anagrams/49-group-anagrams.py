@@ -4,13 +4,15 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        res = collections.defaultdict(list)
+        # map count -> list
+        hmap = collections.defaultdict(list)
         
-        # map (char count) -> list
-        for s in strs:
-            char_count = [0 for i in range(26)]
-            for ch in s: char_count[ord(ch) - ord('a')] += 1
-            res[tuple(char_count)].append(s)
+        for word in strs:
+            count = [0] * 26
             
-        return list(res.values())
+            for ch in word:
+                count[ord('a') - ord(ch)]+=1
+                
+            hmap[tuple(count)].append(word)
             
+        return hmap.values()
