@@ -4,13 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        curr_sum, max_sum = nums[0], nums[0]
+        res = nums[0]
+        curr_sum = nums[0]
         
         for num in nums[1:]:
-            curr_sum+=num
-            # if the curr sum is too small, we restart at num
-            if curr_sum < num: curr_sum = num
-            max_sum = max(max_sum, curr_sum)
+            if curr_sum + num < num: 
+                curr_sum = num
+            else:
+                curr_sum+=num
                 
-        return max_sum
-            
+            res = max(res, curr_sum)
+                
+        return res
+        
