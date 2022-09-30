@@ -9,7 +9,7 @@ class Solution(object):
         curr_num = 1
         num_iters = 0
         
-        while curr_num <= n**2:
+        while curr_num <= n*n:
             
             # go left to right
             for col in range(left, right+1):
