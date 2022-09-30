@@ -25,9 +25,9 @@ class Solution(object):
                 
         res = []
         dfs(root)
-        #print(heights)
-        for height, vals in heights.items():
-            res.append(vals)
+        # for height, vals in heights.items():
+        #     res.append(vals)
+        res = [vals for vals in heights.values()]
         return res
             
     
