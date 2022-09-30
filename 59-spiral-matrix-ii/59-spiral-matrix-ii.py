@@ -9,16 +9,15 @@ class Solution(object):
         curr_num = 1
         num_iters = 0
         
-        while curr_num <= n*n:
+        while curr_num <= n**2:
+            
             # go left to right
             for col in range(left, right+1):
-                #if curr_num > n**2: return res
                 res[top][col] = curr_num
                 curr_num+=1
                 
-            # go down
+            # go up to down
             for row in range(top+1, bottom+1):
-                #if curr_num > n**2: return res
                 res[row][right] = curr_num
                 curr_num+=1
                 
@@ -26,14 +25,12 @@ class Solution(object):
             # go right to left
             if top != bottom:
                 for col in range(right-1, left-1, -1):
-                    #if curr_num > n**2: return res
                     res[bottom][col] = curr_num
                     curr_num+=1
             
-            # go up
+            # go down to up
             if left != right:
                 for row in range(bottom-1, top, -1):
-                    #if curr_num > n**2: return res
                     res[row][left] = curr_num
                     curr_num+=1
             
