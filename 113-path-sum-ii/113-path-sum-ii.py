@@ -1,31 +1,33 @@
 # Definition for a binary tree node.
-# class TreeNode:
+# class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
-        allPaths = []
-        self.find_paths_recursive(root, targetSum, [], allPaths)
-        return allPaths
+class Solution(object):
+    def pathSum(self, root, targetSum):
+        """
+        :type root: TreeNode
+        :type targetSum: int
+        :rtype: List[List[int]]
+        """
         
-    def find_paths_recursive(self,currentNode, targetSum, currentPath, allPaths):
-        if currentNode is None: return
-
-        # add the current node to the path
-        currentPath.append(currentNode.val)
-
-        # if the current node is a leaf and its value is equal to required_sum, save the 
-        # current path
-        if currentNode.val == targetSum and currentNode.left is None and currentNode.right is None:
-            allPaths.append(list(currentPath))
-        else:
-            # traverse the left sub-tree
-            self.find_paths_recursive(currentNode.left, targetSum - currentNode.val, currentPath, allPaths)
-            # traverse the right sub-tree
-            self.find_paths_recursive(currentNode.right, targetSum - currentNode.val, currentPath, allPaths)
-
-        # remove the current node from the path to backtrack,
-        # we need to remove the current node while we are going up the recursive call stack.
-        currentPath.pop()
+        res = []
+        
+        def backtrack(curr_node, targetSum, path):
+            if not curr_node: return
+            
+            is_leaf = curr_node.left is None and curr_node.right is None
+            
+            if is_leaf and curr_node.val == targetSum:
+                res.append(path[::] + [curr_node.val])
+                return
+            
+            path.append(curr_node.val)
+            backtrack(curr_node.left, targetSum - curr_node.val, path)
+            backtrack(curr_node.right, targetSum - curr_node.val, path)
+            path.pop()
+            
+        backtrack(root, targetSum, [])
+        return res
+        
