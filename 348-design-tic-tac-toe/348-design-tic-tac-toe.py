@@ -25,12 +25,10 @@ class TicTacToe(object):
         self.cols[col]+=current_player
         
         if row == col: self.diag+=current_player
-            
         if row == n-col-1: self.anti_diag+=current_player
             
         if (abs(self.rows[row]) == n or abs(self.cols[col]) == n 
             or abs(self.diag) == n or abs(self.anti_diag) == n):
-            
             return player
         
         return 0
