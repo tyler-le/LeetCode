@@ -9,7 +9,7 @@ class Solution(object):
         n = len(matrix)
         for row in range(n):
             min_heap.append((matrix[row][0], row, 0))
-        heapify(min_heap)
+        #heapify(min_heap)
         
         while k:
             val, r, c = heappop(min_heap)
