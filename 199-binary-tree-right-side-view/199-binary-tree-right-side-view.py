@@ -10,24 +10,18 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        
-        q, res = deque(), []
-        if not root: return res
+        if not root: return []
+        q = deque()
         q.append(root)
+        res = []
         
         while q:
             level_size = len(q)
-
+            res.append(q[-1].val)
             for i in range(level_size):
                 popped = q.popleft()
-                
-                if popped.left: 
-                    q.append(popped.left)
-                if popped.right:
-                    q.append(popped.right)
+                if popped.left: q.append(popped.left)
+                if popped.right: q.append(popped.right)
                     
-            res.append(popped.val)
-            
         return res
-                    
         
