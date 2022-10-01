@@ -12,7 +12,7 @@ class Solution(object):
         
         min_heap = []
         n = len(matrix)
-        for row in range(n):
+        for row in range(min(n,k)):
             min_heap.append((matrix[row][0], row, 0))
         
         # technically don't need to heapify since sorted
