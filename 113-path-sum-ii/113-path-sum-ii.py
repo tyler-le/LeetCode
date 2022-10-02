@@ -13,21 +13,16 @@ class Solution(object):
         """
         
         res = []
-        
-        def backtrack(curr_node, targetSum, path):
-            if not curr_node: return
+        def dfs(node, curr_path):
+            if not node: return
             
-            is_leaf = curr_node.left is None and curr_node.right is None
-            
-            if is_leaf and curr_node.val == targetSum:
-                res.append(path[::] + [curr_node.val])
+            if not node.left and not node.right:
+                if sum(curr_path + [node.val]) == targetSum: 
+                    res.append(curr_path[::] + [node.val])
                 return
             
-            path.append(curr_node.val)
-            backtrack(curr_node.left, targetSum - curr_node.val, path)
-            backtrack(curr_node.right, targetSum - curr_node.val, path)
-            path.pop()
-            
-        backtrack(root, targetSum, [])
-        return res
+            if node.left: dfs(node.left, curr_path + [node.val])
+            if node.right: dfs(node.right, curr_path + [node.val])
         
+        dfs(root, [])
+        return res
