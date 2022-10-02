@@ -9,38 +9,30 @@ class Solution(object):
         :type head: ListNode
         :rtype: None Do not return anything, modify head in-place instead.
         """
-        
         slow = fast = head
-        
-        # get middle of linked list
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-            
-        # reverse linked list from fast to end
-        prev, curr, next_node = None, slow, None
+        
+        curr = slow
+        prev = None
+        
         while curr:
-            next_node = curr.next
+            nxt = curr.next
             curr.next = prev
-            
             prev = curr
-            curr = next_node
+            curr = nxt
             
-        # inter-leave pointers
-        l,r = head, prev
-        while l and r:
-            temp_l = l.next
-            l.next = r
-            l = temp_l
-            temp_r = r.next
-            r.next = l
-            r = temp_r
-            
-        if not l and r:
-            r.next = l
-        if l and not r:
-            l.next = r
-            
+        left = head
+        right = prev
         
+        l_next, r_next = head.next, prev.next
+        while (left != r_next) and (right != l_next):            
+            left.next = right
+            right.next = l_next
+            left = l_next
+            right = r_next
+            if left == right: break
+            l_next = left.next
+            r_next = right.next
             
-        
