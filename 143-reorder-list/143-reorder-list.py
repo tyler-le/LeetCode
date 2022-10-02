@@ -9,23 +9,27 @@ class Solution(object):
         :type head: ListNode
         :rtype: None Do not return anything, modify head in-place instead.
         """
+        
+        # find middle
         slow, fast = head, head.next
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         
+        # disconnect left list from right list
         curr = slow.next
         prev = slow.next = None
         
+        # reverse the right side
         while curr:
             nxt = curr.next
             curr.next = prev
             prev = curr
             curr = nxt
             
+        # reconnect 
         left = head
         right = prev
-
         while right:
             l_next = left.next
             r_next = right.next
