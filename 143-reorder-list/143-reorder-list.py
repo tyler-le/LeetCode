@@ -9,13 +9,13 @@ class Solution(object):
         :type head: ListNode
         :rtype: None Do not return anything, modify head in-place instead.
         """
-        slow = fast = head
+        slow, fast = head, head.next
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         
-        curr = slow
-        prev = None
+        curr = slow.next
+        prev = slow.next = None
         
         while curr:
             nxt = curr.next
@@ -25,14 +25,12 @@ class Solution(object):
             
         left = head
         right = prev
-        
-        l_next, r_next = head.next, prev.next
-        while (left != r_next) and (right != l_next):            
-            left.next = right
-            right.next = l_next
-            left = l_next
-            right = r_next
-            if left == right: break
+
+        while right:
             l_next = left.next
             r_next = right.next
+            left.next = right
+            right.next = l_next
+            left, right = l_next, r_next
             
+                        
