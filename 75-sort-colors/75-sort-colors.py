@@ -1,23 +1,22 @@
-class Solution(object):
-    def sortColors(self, nums):
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
         """
-        :type nums: List[int]
-        :rtype: None Do not return anything, modify nums in-place instead.
+        Do not return anything, modify nums in-place instead.
         """
-        l,r, index = 0, len(nums)-1, 0
         
-        while index <= r:
-            if nums[index] == 0:
-                temp = nums[l]
-                nums[l] = nums[index]
-                nums[index] = temp
-                l+=1
-                
-            elif nums[index] == 2:
-                temp = nums[r]
-                nums[r] = nums[index]
-                nums[index] = temp
-                r-=1
-                index-=1
-                    
-            index+=1
+       # 2 pass solution
+        # first move all zeroes to left
+        # second more twos to right
+        
+        zero_pos = 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                nums[zero_pos], nums[i] = nums[i], nums[zero_pos]
+                zero_pos+=1
+        
+        two_pos = len(nums)-1
+        for i in range(len(nums)-1, -1, -1):
+            if nums[i] == 2:
+                nums[two_pos], nums[i] = nums[i], nums[two_pos]
+                two_pos-=1
+        
