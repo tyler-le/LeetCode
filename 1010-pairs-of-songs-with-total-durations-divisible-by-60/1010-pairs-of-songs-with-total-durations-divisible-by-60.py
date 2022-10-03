@@ -1,20 +1,18 @@
-class Solution(object):
-    def numPairsDivisibleBy60(self, time):
-        """
-        :type time: List[int]
-        :rtype: int
-        """
+class Solution:
+    def numPairsDivisibleBy60(self, time: List[int]) -> int:
+        # to be valid, their remainders have to add up to 60 or to 0
+        
+        # map remainder to number of times it happens
+        hmap = collections.defaultdict(int) 
         res = 0
-        hmap = collections.defaultdict(int)
-       
+        
         for t in time:
-            # look for a remainder s.t. r + (t % 60) == 0
-            if t % 60 == 0: res+=hmap[0]
-                
-            # look for a remainder s.t. r + (t % 60) == 60
-            else: res+=hmap[60 - (t % 60)]
-              
-            hmap[t % 60]+=1
+            remainder = t % 60
+            
+            if remainder == 0: res+=hmap[0]
+            else: res+=hmap[60 - remainder]
+            
+            hmap[remainder]+=1
             
         return res
-                
+            
