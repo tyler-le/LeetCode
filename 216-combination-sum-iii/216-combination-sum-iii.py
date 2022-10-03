@@ -1,20 +1,26 @@
-class Solution:
-    def combinationSum3(self, k: int, n: int) -> List[List[int]]:
+class Solution(object):
+    def combinationSum3(self, k, n):
+        """
+        :type k: int
+        :type n: int
+        :rtype: List[List[int]]
+        """
         res = []
-        nums = [1,2,3,4,5,6,7,8,9]
         
-        def dfs(combination, next_num):
-            if sum(combination) > n or len(combination) > k: 
+        def dfs(path, next_num):
+            
+            if sum(path) == n and len(path) == k: 
+                res.append(path[::])
                 return
             
-            if sum(combination) == n and len(combination) == k:
-                res.append(combination.copy())
-                return
+            if len(path) >= k or sum(path) > n: return
             
             for i in range(next_num, 9):
-                combination.append(nums[i])
-                dfs(combination, i+1)
-                combination.pop()
+                path.append(i+1)
+                dfs(path, i+1)
+                path.pop()
             
+                
         dfs([], 0)
         return res
+            
