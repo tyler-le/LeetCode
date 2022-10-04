@@ -1,21 +1,25 @@
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
-        l = r = 0
-        window_size = len(p)
-        p_count, substr_count, res = Counter(p), {}, []
+class Solution(object):
+    def findAnagrams(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        hmap, p_map = collections.defaultdict(int), Counter(p)
+        l, window_size, res = 0, len(p), []
         
-        while r < len(s):
-            substr_count[s[r]] = 1 + substr_count.get(s[r], 0)
+        for r in range(len(s)):
+            hmap[s[r]]+=1
             
-            while r-l+1 > window_size:
-                substr_count[s[l]]-=1
-                if substr_count[s[l]] == 0: 
-                    del substr_count[s[l]]
+            if r-l+1 > window_size:
+                hmap[s[l]]-=1
+                if not hmap[s[l]]: del hmap[s[l]]
                 l+=1
-                
-            if p_count == substr_count:
+            
+            if hmap == p_map: 
                 res.append(l)
                 
-            r+=1
-            
         return res
+            
+            
+                
