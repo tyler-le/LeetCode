@@ -1,24 +1,13 @@
 class Solution:
     def minimumHealth(self, damage: List[int], armor: int) -> int:
-        maxi = max(damage)
-        health = 0
+        max_damage = max(damage)
         
-        dmg_without_maxi = sum(damage) - maxi
-        use_armor = max(maxi-armor, 0)
+        # get all occurrences where we WONT use armor
+        dmg_without_max = sum(damage) - max_damage
         
-        return dmg_without_maxi + use_armor + 1
+        # get the occurrence where we DO use armor
+        # return the max of max_damage - armor or 0 (if armor > max_damage)
+        use_armor = max(max_damage - armor, 0)
         
-        
-        armor_used = False
-        for dmg in damage:
-            if dmg == maxi:
-                if not armor_used:
-                    armor_used = True
-                    health+=(max(dmg - armor, 0))
-                else:
-                    health+=dmg
-            else:
-                health+=dmg
-                
-        
-        return health+1
+        return dmg_without_max + use_armor + 1
+    
