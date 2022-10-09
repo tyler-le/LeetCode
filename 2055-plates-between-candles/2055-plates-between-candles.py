@@ -6,6 +6,7 @@ class Solution:
         for f,t in queries: 
             l = bisect.bisect_left(p, f)
             r = bisect.bisect_right(p, t)
-            res.append(p[r-1] - p[l] - (r-l-1) if r > l else 0)
+            print(l,r)
+            res.append(p[r-1] - p[l] + 1 - (r - l) if r > l else 0)
 
         return res
