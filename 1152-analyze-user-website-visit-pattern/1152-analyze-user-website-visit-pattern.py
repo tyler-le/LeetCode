@@ -18,5 +18,7 @@ class Solution(object):
         for user, history in hmap.items():
             for pattern in (set(combinations(history, 3))):
                 patterns[pattern]+=1
-        print(patterns)
+
+        # max will take the first element with the max count. 
+        # So if you sort by patterns first u get the lexicographically smallest pattern of the most common patterns
         return max(sorted(patterns), key=patterns.get)
