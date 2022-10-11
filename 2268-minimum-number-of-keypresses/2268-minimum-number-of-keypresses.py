@@ -4,15 +4,12 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        res = 0
-        count = Counter(s)
-        max_heap = []
+        res, count, max_heap = 0, Counter(s), []
         
-        for k, v in count.items():
-            max_heap.append((-v, k))
+        for ch, freq in count.items():
+            max_heap.append((-freq, ch))
             
         heapify(max_heap)
-        print(max_heap)
         
         # most freq go in first position
         for i in range(len(max_heap)):
