@@ -7,7 +7,7 @@ class Solution(object):
         n = len(nums)
         dp = [0]*n;
 
-        dp[0] = nums[0];
+        dp[0] = nums[0]
         
         for i in range (1,n):
             IN = nums[i] + dp[i-2] if (i > 1) else nums[i]
