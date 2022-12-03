@@ -8,11 +8,9 @@ class Solution:
         
         A = [[INF for x in range(m+1)] for y in range(n+1)] 
         
-        for row in range(n+1):
-            A[row][0] = row
+        for row in range(n+1): A[row][0] = row
             
-        for col in range(m+1):
-            A[0][col] = col
+        for col in range(m+1): A[0][col] = col
 
         for i in range(1, n+1):
             for j in range(1, m+1):
