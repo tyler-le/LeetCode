@@ -1,18 +1,18 @@
-class Solution(object):
-    def longestCommonSubsequence(self, text1, text2):
-        """
-        :type text1: str
-        :type text2: str
-        :rtype: int
-        """
+class Solution:
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         
-        dp = [[0] * (len(text2) + 1) for _ in range(len(text1) + 1)]
+        x, y = text1, text2
+        n, m = len(x), len(y)
         
-        for i in range(len(text1) - 1, -1, -1):
-            for j in range(len(text2) - 1, -1, -1):
-                if text1[i] == text2[j]:
-                    dp[i][j] = dp[i+1][j+1] + 1
+        A = [[0 for _ in range(m+1)] for _ in range(n+1)] 
+        
+        A[0][0] = 0
+        
+        for i in range (0, n): 
+            for j in range(0, m):
+                if x[i] == y[j]:
+                    A[i+1][j+1] = 1 + A[i][j]
                 else:
-                    dp[i][j] = max(dp[i][j+1], dp[i+1][j])
-                    
-        return dp[0][0]
+                    A[i+1][j+1] = max(A[i][j+1], A[i+1][j])
+        print(A)   
+        return A[n][m]
