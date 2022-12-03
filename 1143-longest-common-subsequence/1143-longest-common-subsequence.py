@@ -13,6 +13,6 @@ class Solution:
                 if x[i] == y[j]:
                     A[i+1][j+1] = 1 + A[i][j]
                 else:
-                    A[i+1][j+1] = max(A[i][j+1], A[i+1][j])
+                    A[i+1][j+1] = max(A[i][j+1], A[i+1][j], A[i][j])
         print(A)   
         return A[n][m]
