@@ -8,6 +8,6 @@ class Solution:
                 else: IN = 0
                 OUT = A[i-1][j]
                 A[i][j] = IN + OUT
-        print(A)
+
         return A[-1][-1]
         
