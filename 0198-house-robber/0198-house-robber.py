@@ -14,4 +14,4 @@ class Solution(object):
             OUT = dp[i-1];
             dp[i] = max(IN, OUT);
         
-        return dp[n-1];
+        return dp[-1];
