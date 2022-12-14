@@ -5,13 +5,18 @@ class Solution(object):
         :rtype: int
         """
         n = len(nums)
-        dp = [0]*n;
-
-        dp[0] = nums[0]
+        A = [0] * (n+1)
         
-        for i in range (1,n):
-            IN = nums[i] + dp[i-2] if (i > 1) else nums[i]
-            OUT = dp[i-1];
-            dp[i] = max(IN, OUT);
+        if n == 1: return nums[0]
+        if n == 2: return max(nums[0], nums[1])
         
-        return dp[-1];
+        A[0] = nums[0]
+        A[1] = max(nums[0], nums[1])
+        
+        for i in range(2, n+1):
+            if (i < n): IN = A[i-2] + nums[i]
+            else: IN = A[i-2]
+            OUT = A[i-1]
+            A[i] = max(IN, OUT)
+        
+        return A[n]
