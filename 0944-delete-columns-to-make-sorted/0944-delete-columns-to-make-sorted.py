@@ -4,7 +4,7 @@ class Solution:
         
         for i in range(m):
             for j in range(1, n):
-                if ord(strs[j][i]) < ord(strs[j-1][i]):
+                if strs[j][i] < strs[j-1][i]:
                     res+=1
                     break
         return res
