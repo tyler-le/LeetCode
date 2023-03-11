@@ -9,7 +9,5 @@ class Solution:
                 count[ord("a") - ord(ch)]+=1
             hmap[tuple(count)].append(s)
         
-        for _, value in hmap.items():
-            res.append(value)
+        return hmap.values()
             
-        return res
