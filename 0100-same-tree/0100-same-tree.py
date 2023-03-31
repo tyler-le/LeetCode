@@ -16,11 +16,8 @@ class Solution(object):
             if not p1 and not q1: return True
             if (not p1 and q1) or (p1 and not q1) or (p1.val != q1.val):
                 return False
-            
             return helper(p1.left, q1.left) and helper(p1.right, q1.right)
-            
-            return True
-        
+                    
         return helper(p, q)
         
         
