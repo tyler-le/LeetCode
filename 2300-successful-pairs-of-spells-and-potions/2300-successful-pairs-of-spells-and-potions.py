@@ -8,10 +8,10 @@ class Solution(object):
         """
         out = []
         potions.sort()
-        p = len(potions)
+        m = len(potions)
         
         for spell in spells:
-            low, high = 0, p
+            low, high = 0, m
             
             while low < high:
                 mid = (high + low) // 2
@@ -21,6 +21,6 @@ class Solution(object):
                     high = mid
                     
             
-            out.append(p - low)
+            out.append(m - low)
             
         return out
