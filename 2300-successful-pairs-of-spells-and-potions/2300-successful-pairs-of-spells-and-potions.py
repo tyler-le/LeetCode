@@ -7,16 +7,14 @@ class Solution:
         for spell in spells:
             low, high = 0, p - 1
             
-            while low < high:
+            while low <= high:
                 mid = (high + low) // 2
                 if potions[mid] * spell < success:
                     low = mid + 1
                 elif potions[mid] * spell >= success:
-                    high = mid
+                    high = mid - 1
                     
-            if low == p or potions[low] * spell < success: 
-                ret.append(0)
-            else: 
-                ret.append(p - low)
+            
+            ret.append(p - low)
             
         return ret
