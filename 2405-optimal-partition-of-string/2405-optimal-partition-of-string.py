@@ -1,8 +1,7 @@
 class Solution:
     def partitionString(self, s: str) -> int:
         hmap = collections.defaultdict(int)
-        out = 0
-        l = 0
+        out, l = 0, 0
         
         for r in range(len(s)):
             if hmap[s[r]] > 0:
