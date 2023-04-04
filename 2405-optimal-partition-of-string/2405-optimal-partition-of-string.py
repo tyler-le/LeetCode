@@ -13,6 +13,6 @@ class Solution:
             else:
                 hmap[s[r]]+=1
                 
-        print(out)
-        return len(out)+1
+        out.append(s[l:r])
+        return len(out)
                 
