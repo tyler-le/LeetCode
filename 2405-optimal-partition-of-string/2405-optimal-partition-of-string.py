@@ -1,16 +1,16 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        hmap = collections.defaultdict(int)
+        count = set()
         out, l = 0, 0
         
         for r in range(len(s)):
-            if hmap[s[r]] > 0:
+            if s[r] in count:
                 out+=1
-                hmap.clear()
+                count.clear()
                 l = r
-                hmap[s[l]]+=1
+                count.add(s[l])
             else:
-                hmap[s[r]]+=1
+                count.add(s[r])
                 
         out+=1
         return out
