@@ -1,33 +1,21 @@
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        # binary search on the inflection point
-        # [4,5,6,7,0,1,2]
-        [4,5,6,7,0,1,2]
+class Solution(object):
+    def findMin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        l, r = 0, len(nums)-1
+        curr_min = float("inf")
         
-        low, high = 0, len(nums)-1
-        
-        while low < high:
-            mid = low + (high - low) // 2
+        while l < r:
             
-            # check inflection points on both sides
-            if nums[mid] > nums[mid+1]: 
-                return nums[mid+1]
+            mid = r + l // 2
+            curr_min = min(curr_min, nums[mid])
             
-            if nums[mid-1] > nums[mid]:
-                return nums[mid]
-            
-            # left portion is sorted
-            # so search right for inflection point
-            elif nums[low] < nums[mid]:
-                low = mid + 1
-                
-            # right portion is sorted
-            # so search left for inflection point
+            if nums[mid] > nums[r]:
+                l = mid + 1
             else:
-                high = mid - 1
+                r = mid - 1
                 
-        # it is fully sorted already, min is at nums[0]
-        return nums[0]
-                
-            
+        return min(curr_min,nums[l])
             
