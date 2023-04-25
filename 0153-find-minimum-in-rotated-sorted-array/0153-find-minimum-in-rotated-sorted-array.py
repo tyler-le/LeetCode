@@ -9,18 +9,24 @@ class Solution:
         while low < high:
             mid = low + (high - low) // 2
             
+            # check inflection points on both sides
             if nums[mid] > nums[mid+1]: 
                 return nums[mid+1]
+            
             if nums[mid-1] > nums[mid]:
                 return nums[mid]
             
-            # left portion is sorted, so search right
+            # left portion is sorted
+            # so search right for inflection point
             elif nums[low] < nums[mid]:
                 low = mid + 1
+                
+            # right portion is sorted
+            # so search left for inflection point
             else:
                 high = mid - 1
                 
-        # it is fully sorted already
+        # it is fully sorted already, min is at nums[0]
         return nums[0]
                 
             
