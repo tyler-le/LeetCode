@@ -1,21 +1,22 @@
-class Solution(object):
-    def findMin(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        l, r = 0, len(nums)-1
-        curr_min = float("inf")
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
         
-        while l < r:
+        low, high = 0, len(nums) - 1
+        
+        while low < high:
+            mid = (low + high) // 2
             
-            mid = r + l // 2
-            curr_min = min(curr_min, nums[mid])
+            # Check if the pivot occurs near mid
+            if nums[mid-1] > nums[mid]:
+                return nums[mid]
             
-            if nums[mid] > nums[r]:
-                l = mid + 1
+            elif nums[mid] > nums[mid+1]:
+                return nums[mid+1]
+            
+            if nums[low] < nums[mid]:
+                low = mid + 1
+            
             else:
-                r = mid - 1
-                
-        return min(curr_min,nums[l])
-            
+                high = mid - 1
+        
+        return nums[0]
