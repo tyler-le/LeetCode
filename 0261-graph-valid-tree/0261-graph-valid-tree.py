@@ -13,18 +13,12 @@ class Solution(object):
             adjacency_list[end].append(start)
             
         def dfs(prev, curr):
-            
-            if curr in visited: 
-                return False
+            if curr in visited: return False
             visited.add(curr)
             for nbor in adjacency_list[curr]:            
-                if nbor == prev:
-                    continue
-                
-                res = dfs(curr, nbor)
-                if not res: return False
+                if nbor == prev: continue 
+                if not dfs(curr, nbor): return False
             return True
         
-        print(visited)
         return dfs(0, 0) and n == len(visited)
             
