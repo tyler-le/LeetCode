@@ -17,7 +17,4 @@ class Solution(object):
                 counts[ord(ch) - ord('a')]+=1
             hmap[tuple(counts)].append(s)
         
-        for group in hmap.values():
-            ret.append(group)
-        
-        return ret
+        return hmap.values()
