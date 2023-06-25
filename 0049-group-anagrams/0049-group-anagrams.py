@@ -1,13 +1,23 @@
-class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        
+        # group the anagrams using a hashmap and return a list of all the values
+        # [character counts] : [list of words]
+        
         hmap = collections.defaultdict(list)
-        res = []
+        ret = []
         
         for s in strs:
-            count = [0] * 26
+            counts = [0]*26
             for ch in s:
-                count[ord("a") - ord(ch)]+=1
-            hmap[tuple(count)].append(s)
+                counts[ord(ch) - ord('a')]+=1
+            hmap[tuple(counts)].append(s)
         
-        return hmap.values()
-            
+        for group in hmap.values():
+            ret.append(group)
+        
+        return ret
