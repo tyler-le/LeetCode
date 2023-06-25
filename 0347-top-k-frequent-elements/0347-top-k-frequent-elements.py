@@ -1,34 +1,28 @@
 class Solution(object):
     def topKFrequent(self, nums, k):
+        
         """
         :type nums: List[int]
         :type k: int
         :rtype: List[int]
         """
-        
-        
-        hmap = collections.defaultdict(int)
+        # (frequency, num)
         heap = []
-        ret = []
+        res = []
+        count = collections.defaultdict(int)
         
-        # Map (Number : Frequency)
         for num in nums:
-            hmap[num]+=1
-            
-        # Populate Heap
-        for num, freq in hmap.items():
-            heappush(heap, (-freq, num))
-            
-        # Get Top K Frequent
-        for i in range(k):
-            _, num = heappop(heap)
-            ret.append(num)
-            
-        return ret
+            count[num]+=1   
         
-            
+        for num, freq in count.items():
+            heap.append((-freq, num))
+        
+        heapify(heap)
+        
+        for i in range (k):
+            _, popped = heappop(heap)
+            res.append(popped)
+        
+        return res
             
         
-        
-        
-            
