@@ -1,25 +1,25 @@
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        
-        low, high = 0, len(nums) - 1
-        
-        while low < high:
-            mid = (low + high) // 2
+class Solution(object):
+    def findMin(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        def binary_search(lo, hi):
+            mid = lo + (hi - lo) // 2
             
-            # Check if the pivot occurs near mid
-            if nums[mid-1] > nums[mid]:
-                return nums[mid]
+            # base case: list is sorted
+            if (nums[lo] < nums[mid] and nums[mid] < nums[hi]):
+                return nums[lo]
             
-            # Check if the pivot occurs near mid
-            elif nums[mid] > nums[mid+1]:
-                return nums[mid+1]
+            # base case: list only two elems
+            if hi - lo + 1 <= 2:
+                return min(nums[lo], nums[hi])
             
-            # Left portion is sorted, search for pivot on right
-            if nums[low] < nums[mid]:
-                low = mid + 1
-            # Right portion is sorted, search for pivot on left
+            # recursive call
+            if nums[lo] < nums[mid]:
+                return binary_search(mid+1, hi)
             else:
-                high = mid - 1
+                return binary_search(lo, mid)
+            
+        return binary_search(0, len(nums) - 1)
                 
-        # Pivot never found, array is already sorted
-        return nums[0]
