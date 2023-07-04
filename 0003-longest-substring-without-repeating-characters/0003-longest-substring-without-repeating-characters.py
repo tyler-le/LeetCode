@@ -1,27 +1,21 @@
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        # two pointer + set
-        if s == "":
-            return 0
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
         
-        l = 0
         hmap = collections.defaultdict(int)
-        res = 0
+        l, res = 0, 0
         
         for r in range(len(s)):
-            curr = s[r]
-            hmap[curr]+=1
+            hmap[s[r]]+=1
             
-            while hmap[curr] > 1:
-                # keep incrementing left pointer until hmap[curr] == 0
+            while hmap[s[r]] > 1:
                 hmap[s[l]]-=1
                 l+=1
-                
+
             res = max(res, r-l+1)
         
-        return max(res, r-l+1)
-                
-            
-            
-            
-            
+        return res
+        
