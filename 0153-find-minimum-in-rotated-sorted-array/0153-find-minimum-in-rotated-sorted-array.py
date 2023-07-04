@@ -8,7 +8,7 @@ class Solution(object):
             mid = lo + (hi - lo) // 2
             
             # base case: list is sorted
-            if (nums[lo] < nums[mid] and nums[mid] < nums[hi]):
+            if (nums[lo] < nums[mid] < nums[hi]):
                 return nums[lo]
             
             # base case: list only two elems
