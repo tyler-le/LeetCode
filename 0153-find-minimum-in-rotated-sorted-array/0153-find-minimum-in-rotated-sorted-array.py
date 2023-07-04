@@ -1,3 +1,5 @@
+# THIS IS A GOOD SOL. DO NOT DELETE
+
 class Solution(object):
     def findMin(self, nums):
         """
@@ -11,15 +13,19 @@ class Solution(object):
             if (nums[lo] < nums[mid] < nums[hi]):
                 return nums[lo]
             
-            # base case: list only two elems
+            # base case: list has 1 or 2 elems
             if hi - lo + 1 <= 2:
                 return min(nums[lo], nums[hi])
             
-            # recursive call
+            # recursive call. 
+            # search part where nums[lo] is greater than nums[hi], 
+            # indicating the pivot
             if nums[lo] < nums[mid]:
                 return binary_search(mid+1, hi)
             else:
                 return binary_search(lo, mid)
-            
-        return binary_search(0, len(nums) - 1)
+
+        # start the recursion
+        lo, hi = 0, len(nums)-1
+        return binary_search(lo, hi)
                 
