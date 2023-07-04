@@ -2,7 +2,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         # map closed : open
         hmap = {")":"(", "}":"{", "]":"["}
-        opens = set(["(", "[", "{"])
+        opens = set(hmap.values())
         stack = []
         
         for ch in s:
