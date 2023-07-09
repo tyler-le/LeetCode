@@ -18,12 +18,12 @@ class Solution(object):
         
         def dfs(node):
             hmap[node] = Node(node.val, [])
-
             for nbor in node.neighbors:
                 if nbor not in hmap:
                     dfs(nbor)
                 hmap[node].neighbors.append(hmap[nbor])
-                
-            return hmap[node]
-            
-        return dfs(node)
+
+        dfs(node)
+        return hmap[node]
+    
+    
