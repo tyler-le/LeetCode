@@ -8,9 +8,6 @@ class Solution:
             if i < 0 or j < 0 or i >= n or j >= m or (i,j) in visited:
                 return False
             
-            if len(word) == 0:
-                return True
-            
             if len(word) == 1 and word[0] == board[i][j]:
                 return True
             
