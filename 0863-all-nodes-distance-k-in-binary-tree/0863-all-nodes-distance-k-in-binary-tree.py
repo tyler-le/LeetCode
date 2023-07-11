@@ -30,8 +30,7 @@ class Solution:
             popped, dist = q.popleft()
             visited.add(popped)
             
-            if dist == k:
-                res.append(popped.val)
+            if dist == k: res.append(popped.val)
 
             for nbor in graph[popped]:
                 if nbor not in visited:
