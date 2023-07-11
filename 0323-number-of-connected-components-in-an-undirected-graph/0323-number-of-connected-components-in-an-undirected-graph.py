@@ -18,10 +18,10 @@ class Solution:
                 dfs(nbor)
         
         for v in range(n):
-            if v not in visited and v in graph:
+            if v not in visited:
                 dfs(v)
                 res+=1
         
-        return res + (n - len(visited))
+        return res
             
             
