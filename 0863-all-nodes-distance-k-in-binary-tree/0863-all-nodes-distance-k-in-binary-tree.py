@@ -22,23 +22,20 @@ class Solution:
                 
         build_graph(root, None)
 
-        # run bfs on target node and record dist > 2
-        q = deque([(target,0)]) # (node, dist)
-        dist = 0
-        visited = set()
-        res = []
+        # run bfs on target node and record dist == 2
+        q = deque([(target,0)]) # (node, dist) pairs
+        dist, visited, res = 0, set(), []
         
         while q:
-            
             popped, dist = q.popleft()
             visited.add(popped)
+            
             if dist == k:
                 res.append(popped.val)
 
             for nbor in graph[popped]:
                 if nbor not in visited:
                     q.append((nbor, dist+1))
-                    
-                
+                          
         return res
             
