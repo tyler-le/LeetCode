@@ -10,7 +10,7 @@ class Solution:
             if (r,c) in s:
                 return
             
-            if heights[r][c] < prev:
+            if prev > heights[r][c]:
                 return
             
             s.add((r,c))
