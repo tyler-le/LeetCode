@@ -8,24 +8,10 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         
         def helper(node):
-            if not node:
-                return
-            
-            left, right = None, None
-            
-            if node.left: left = helper(node.left)
-            if node.right: right = helper(node.right)
-                
-            if node.left and node.right:
-                node.left = right
-                node.right = left
-            elif not node.left and node.right:
-                node.left = right
-                node.right = None
-            else:
-                node.right = left
-                node.left = None
-            
+            if not node: return
+            node.left, node.right = node.right, node.left
+            helper(node.left)
+            helper(node.right)
             return node
                 
         return helper(root)
