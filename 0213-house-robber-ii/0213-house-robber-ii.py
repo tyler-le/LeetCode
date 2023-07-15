@@ -1,7 +1,6 @@
 class Solution:
     def rob(self, nums: List[int]) -> int:
         def house_robber_original(nums):
-            
             n = len(nums)
             if n == 1: return nums[0]
             if n == 2: max(nums[0], nums[1])
