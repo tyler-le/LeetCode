@@ -1,40 +1,28 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        res = [0, [-1,-1]]
+        n = len(s)
+        dp = [[False]*n for _ in range(n)]
+        ans = [-1,-1]
         
-        def palindrome_helper(i):
-    
-            res = [0, [-1,-1]]
+        
+        # dp[i][j] = True when s[i][j] is a palindrome
+        for i in range(n):
+            dp[i][i] = True
+            ans = [i,i]
             
-            # check odd length palindromes
-            l = r = i
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                l-=1
-                r+=1
-                if r-l-1 > res[0]:
-                    res[1] = [l+1, r-1]
-                    
-            res[0] = max(res[0], r-l-1)
-                
-            # check even length palindromes
-            l, r = i, i+1
-            while l >= 0 and r < len(s) and s[l] == s[r]:
-                l-=1
-                r+=1
-                if r-l-1 > res[0]:
-                    res[1] = [l+1, r-1]
-            res[0] = max(res[0], r-l-1)
-            
-            return res
-                
-                
-        for i in range(len(s)):
-            
-            count, pos = palindrome_helper(i)
-            if count > res[0]:
-                res[0] = count
-                res[1] = pos
-            
-        left, right = res[1][0], res[1][1]+1
-        return s[left:right]
-            
+        for i in range(n-1):
+            if s[i] == s[i+1]:
+                dp[i][i+1] = True
+                ans = [i, i+1]
+        
+        
+        for diff in range(2,n):
+            for i in range(n - diff):
+                j = i + diff
+                if s[i] == s[j] and dp[i+1][j-1]:
+                    dp[i][j] = True
+                    ans = [i,j]
+        
+        i,j = ans
+        return s[i:j+1]
+        
