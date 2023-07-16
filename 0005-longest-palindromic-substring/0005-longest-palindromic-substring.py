@@ -35,7 +35,6 @@ class Solution:
                 res[0] = count
                 res[1] = pos
             
-            
-        
-        return s[res[1][0]:res[1][1]+1]
+        left, right = res[1][0], res[1][1]+1
+        return s[left:right]
             
