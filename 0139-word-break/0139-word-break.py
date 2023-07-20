@@ -1,17 +1,14 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        n = len(s)
-        dp = [False] * (n+1)
+        dp = [False for _ in range(len(s) + 1)]
         dp[-1] = True
-
-        for i in range(n-1, -1, -1):
+        
+        for i in range(len(s)-1, -1, -1):
             for word in wordDict:
-                m = len(word)
-                if i+m <= n and s[i:i+m] in wordDict and dp[i+m]:
-                    dp[i]=True
-                    break
-                    
+                # if there is a word from i:i+len(word) 
+                # and there exists a valid solution from i+len(word) onward, 
+                # then we can successfully break from i onward
+                if s[i:i + len(word)] == word and dp[i+len(word)]: 
+                    dp[i] = True
+                if dp[i]: break # early exit
         return dp[0]
-        
-        
-        
