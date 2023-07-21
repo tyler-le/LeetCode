@@ -6,7 +6,7 @@ class Solution:
         for ch in s:
             if ch.lower() in vowels:
                 occurrences.append(ch)
-        print(occurrences)
+
         for i in range(len(s)):
             if s[i].lower() in vowels:
                 new_s+=occurrences.pop()
