@@ -4,7 +4,5 @@ class Solution:
             if word == "": return False
             return True
         
-        words = s.split(" ")
-        words = list(filter(predicate, words))
-
+        words = s.split()
         return len(words[-1])
