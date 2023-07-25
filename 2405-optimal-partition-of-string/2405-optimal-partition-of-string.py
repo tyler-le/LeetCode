@@ -1,15 +1,13 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        count = set()
-        out = 0
+        res = 1
+        visited = set()
         
-        for i in range(len(s)):
-            if s[i] in count:
-                out+=1
-                count.clear()
-                
-            count.add(s[i])
-                
-        out+=1
-        return out
-                
+        for ch in s:
+            if ch in visited:
+                res+=1
+                visited = set()
+            visited.add(ch)
+            
+        return res
+        
