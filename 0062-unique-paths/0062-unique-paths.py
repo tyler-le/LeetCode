@@ -1,14 +1,15 @@
-class Solution(object):
-    def uniquePaths(self, m, n):
-        """
-        :type m: int
-        :type n: int
-        :rtype: int
-        """
-        memo = [[1 for j in range(n)]for i in range(m)]
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        dp = collections.defaultdict(int)
         
-        for i in range(1, m):
-            for j in range(1, n):
-                memo[i][j] = memo[i][j-1] + memo[i-1][j]
+        def dfs(row, col):
+            if row < 0 or col < 0 or row >= m or col >= n : return 0
+            if row == m-1 and col == n-1: return 1
+            
+            if (row,col) in dp: return dp[(row,col)]
+            dp[(row,col)] = dfs(row+1, col) + dfs(row, col+1)
+            return dp[(row, col)]
         
-        return memo[m-1][n-1]
+        return dfs(0,0)
+        
+        
