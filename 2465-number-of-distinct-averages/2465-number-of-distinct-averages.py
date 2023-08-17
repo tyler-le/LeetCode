@@ -19,5 +19,5 @@ class Solution:
             recurse(sublist[1:-1])
             
         recurse(nums)
-        print(averages)
+        
         return len(averages)
