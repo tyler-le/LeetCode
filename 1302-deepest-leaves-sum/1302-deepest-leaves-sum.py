@@ -1,25 +1,36 @@
 # Definition for a binary tree node.
-# class TreeNode:
+# class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
-    def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
-        # deepest leaves are in the last layer of BFS
+class Solution(object):
+    def deepestLeavesSum(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
         
-        q = [root]
+        context = {"max_depth":0, "res":0}
         
-        while q:
-            level_sum, level_size = 0, len(q)
-
-            for i in range(level_size):
-                popped = q.pop(0)
-                level_sum+=popped.val
-                
-                if popped.left: q.append(popped.left)
-                if popped.right: q.append(popped.right)
+        def dfs(depth, node):
+            
+            if not node: return
+            
+            if not node.left and not node.right:
+                if depth == context["max_depth"]:
+                    context["res"]+=node.val
                     
-        return level_sum
+                elif depth > context["max_depth"]:
+                    context["max_depth"] = depth
+                    context["res"] = node.val
+                    
+                else:
+                    return
                 
+            if node.left: dfs(depth+1, node.left)
+            if node.right: dfs(depth+1, node.right)
+        
+        dfs(0, root)
+        return context["res"]
         
