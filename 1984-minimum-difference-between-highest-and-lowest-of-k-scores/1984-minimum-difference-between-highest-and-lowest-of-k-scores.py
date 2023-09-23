@@ -4,9 +4,8 @@ class Solution:
         res = float('inf')
 
         for i in range(len(nums) - k + 1):
-            sublist = nums[i:i + k]
-            mini, maxi = min(sublist), max(sublist)
-            diff = abs(mini - maxi)
+        
+            diff = abs(nums[i] - nums[i+k-1])
             res = min(res, diff)
             
         return res if res != float('inf') else 0
