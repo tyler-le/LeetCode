@@ -1,18 +1,18 @@
 class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
         
+        # val 1 : occurrences 3
+        # val 2 : occurrences 1
+        # val 3 : occurrences 2
+        
+        
         hmap = Counter(nums)
-        num_sets = max(hmap.values())
-        sets = [set() for _ in range(num_sets)]
+        res = [[] for _ in range(max(hmap.values()))]
         
-        for num in nums:
-            for s in sets:
-                if num not in s:
-                    s.add(num)
-                    break
-                    
-        return [list(s) for s in sets]
-        
+        for num, occ in hmap.items():
+            for i in range(occ):
+                res[i].append(num)
+        return res
         
         
         
