@@ -6,9 +6,7 @@ class Solution:
         sets = [set() for _ in range(num_sets)]
         
         for num in nums:
-            
             for s in sets:
-                
                 if num not in s:
                     s.add(num)
                     break
