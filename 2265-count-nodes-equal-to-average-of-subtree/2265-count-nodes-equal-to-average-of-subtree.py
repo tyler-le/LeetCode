@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
-        # two pass post order traversal
         
         res = 0
         
