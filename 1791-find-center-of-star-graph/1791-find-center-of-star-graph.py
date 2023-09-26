@@ -5,8 +5,10 @@ class Solution:
         for u,v in edges:
             hmap[u]+=1
             hmap[v]+=1
-        
-        for k, v in hmap.items():
-            if v == len(edges):
-                return k
+            
+            if hmap[u] > 1:
+                return u
+            if hmap[v] > 1:
+                return v
+    
         
