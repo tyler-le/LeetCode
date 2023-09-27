@@ -4,7 +4,6 @@ class Solution:
         res = 0
         
         def dfs(u):
-            
             for v in range(n):
                 if isConnected[u][v] == 1:
                     isConnected[u][v] = 0
