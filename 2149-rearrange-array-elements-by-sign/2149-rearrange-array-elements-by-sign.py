@@ -1,19 +1,14 @@
 class Solution:
     def rearrangeArray(self, nums: List[int]) -> List[int]:
-        pos, neg = 0, 0
-        res = []
-        n = len(nums)
+        pos, neg = 0, 1
+        res = [0 for _ in range(len(nums))]
         
-        for i in range(n):
-            while pos < n and nums[pos] < 0: pos+=1
-            while neg < n and nums[neg] >= 0:neg+=1
-                
-            if i % 2 == 0:
-                res.append(nums[pos])
-                pos+=1
+        for num in nums:
+            if num >= 0:
+                res[pos] = num
+                pos+=2
             else:
-                res.append(nums[neg])
-                neg+=1
-        
+                res[neg] = num
+                neg+=2
+                
         return res
-            
