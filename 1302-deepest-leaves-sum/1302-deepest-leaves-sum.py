@@ -11,26 +11,22 @@ class Solution(object):
         :rtype: int
         """
         
-        context = {"max_depth":0, "res":0}
+        # bfs solution , adding all nodes in the last layer
+        ret = 0
+        q = deque([root])
         
-        def dfs(depth, node):
+        while q:
+            ret = 0
+            layer_size = len(q)
             
-            if not node: return
-            
-            if not node.left and not node.right:
-                if depth == context["max_depth"]:
-                    context["res"]+=node.val
-                    
-                elif depth > context["max_depth"]:
-                    context["max_depth"] = depth
-                    context["res"] = node.val
-                    
-                else:
-                    return
+            for _ in range(layer_size):
+                popped = q.popleft()
+                if popped.left: q.append(popped.left)
+                if popped.right: q.append(popped.right)
+                ret+=popped.val
                 
-            if node.left: dfs(depth+1, node.left)
-            if node.right: dfs(depth+1, node.right)
+        return ret
+    
         
-        dfs(0, root)
-        return context["res"]
+        
         
