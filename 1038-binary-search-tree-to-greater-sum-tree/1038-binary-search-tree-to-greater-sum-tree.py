@@ -6,25 +6,21 @@
 #         self.right = right
 class Solution:
     def bstToGst(self, root: TreeNode) -> TreeNode:
+        acc = 0
         
-        # traverse tree from largest to greatest
-        # accumulate sum
+        def dfs(root):
+            
+            nonlocal acc
+            if not root: return
+            
+            if root.right: dfs(root.right)
+            root.val += acc
+            acc = root.val
+            if root.left: dfs(root.left)
+            
+            return
         
-        total = 0
-        def reverse_inorder(node):
-            
-            nonlocal total
-            if not node: return
-            
-            reverse_inorder(node.right)    
-            
-            total+=node.val
-            node.val=total
-            
-            reverse_inorder(node.left)
-            
-        reverse_inorder(root)
+        dfs(root)
         return root
-
-            
+        
         
