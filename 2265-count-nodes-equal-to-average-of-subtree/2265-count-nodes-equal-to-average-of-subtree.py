@@ -6,23 +6,24 @@
 #         self.right = right
 class Solution:
     def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
-        
         res = 0
         
-        def dfs(curr):
+        def dfs(root):
             nonlocal res
-            if not curr: return [0,0]
+            if not root: return [0,0]
             
-            left_size, left_sum = dfs(curr.left)
-            right_size, right_sum = dfs(curr.right)
+            left_size, left_sum = dfs(root.left)
+            right_size, right_sum = dfs(root.right)
             
-            total_size = left_size + right_size + 1
-            total_sum = left_sum + right_sum + curr.val
+            curr_size = left_size + right_size + 1
+            curr_sum = left_sum + right_sum + root.val
+            curr_avg = curr_sum // curr_size
             
-            average = total_sum // total_size
-            if average == curr.val: res+=1
+            res += (1 if curr_avg == root.val else 0)
             
-            return [total_size, total_sum]
-            
+            return [curr_size, curr_sum]
+        
         dfs(root)
         return res
+            
+        
