@@ -12,10 +12,10 @@ class Solution:
                 elif tok == "-": val = x - y
                 elif tok == "*": val = x * y
                 else: val = int(x / y)
+                    
                 stack.append(val)
                 
-            else:
-                stack.append(tok)
+            else: stack.append(tok)
                 
         return int(stack.pop())
         
