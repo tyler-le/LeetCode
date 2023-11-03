@@ -2,7 +2,6 @@ class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         operators = set(['+', '-', '*', '/'])
-        if len(tokens) == 1: return int(tokens[0])
         
         for tok in tokens:
             if tok in operators:
@@ -18,5 +17,5 @@ class Solution:
             else:
                 stack.append(tok)
                 
-        return stack.pop()
+        return int(stack.pop())
         
