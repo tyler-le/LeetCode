@@ -2,10 +2,12 @@ class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         
         num_wins = collections.defaultdict(int)
+        maxi = max(arr)
         
         while True:
 
             first, second = arr[0], arr[1]
+            if first == maxi: return maxi
             
             if first > second:
                 # move second to end
@@ -20,7 +22,11 @@ class Solution:
                 arr[0] = second
                 num_wins[second]+=1
                 
-            if num_wins[arr[0]] == k or num_wins[arr[0]] == len(arr): 
+            if num_wins[arr[0]] == k:
+                return arr[0]
+            
+            # early exit
+            if num_wins[arr[0]] == len(arr): 
                 return arr[0]
             
             
