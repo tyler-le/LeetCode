@@ -1,7 +1,7 @@
 class Solution:
     def getWinner(self, arr: List[int], k: int) -> int:
         
-        num_wins = collections.defaultdict(int)
+        winstreak = 0
         maxi = max(arr)
         
         while True:
@@ -13,20 +13,20 @@ class Solution:
                 # move second to end
                 arr.remove(second)
                 arr.append(second)
-                num_wins[first]+=1
+                winstreak+=1
                 
             else:
                 # move first to end and second to first
                 arr.remove(first)
                 arr.append(first)
                 arr[0] = second
-                num_wins[second]+=1
+                winstreak = 1
                 
-            if num_wins[arr[0]] == k:
+            if winstreak == k:
                 return arr[0]
             
             # early exit
-            if num_wins[arr[0]] == len(arr): 
+            if winstreak == len(arr): 
                 return arr[0]
             
             
