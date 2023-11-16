@@ -14,13 +14,13 @@ class Solution:
                 return 1 if (acc == target) else 0
             
             # make the choice
-            add = backtrack(acc+nums[index], index+1)   
+            num_ways_add = backtrack(acc+nums[index], index+1)   
             
             # make the second choice
-            sub = backtrack(acc-nums[index], index+1)
+            num_ways_sub = backtrack(acc-nums[index], index+1)
             
             # cache the result
-            dp[(acc, index)] = add + sub
+            dp[(acc, index)] = num_ways_add + num_ways_sub
             
             return dp[(acc, index)]
             
