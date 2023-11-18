@@ -14,6 +14,5 @@ class Solution(object):
                 if (i - len(w) >= 0) and (dp[i - len(w)]) and (s[i-len(w):i] == w):
                     dp[i] = True
                     
-        print(dp)
         return dp[-1]
             
