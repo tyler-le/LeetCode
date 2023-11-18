@@ -10,9 +10,7 @@ class Solution(object):
         if sum(nums) % 2: return False
         
         dp = [[False for _ in range(cols)] for _ in range(rows)]
-        
-        for c in range(cols): dp[0][c] = False
-            
+                    
         for r in range(rows): dp[r][0] = True
             
         for i in range(1, rows):
