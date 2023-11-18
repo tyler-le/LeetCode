@@ -10,27 +10,25 @@ class Solution:
         hmap["8"] = ["t", "u", "v"]
         hmap["9"] = ["w", "x", "y", "z"]
         
-        # visited = set()
         n = len(digits)
         res = []
         
         def backtrack(i, perm):
+            
+            if not n: 
+                return []
             
             if len(perm) == n:
                 res.append("".join(perm))
                 return
             
             candidates = hmap[digits[i]]
-
+            
             for cand in candidates:
-                # visited.add(cand)
                 perm.append(cand)
                 backtrack(i+1, perm)
-            
-                # visited.remove(cand)
                 perm.pop()
             
-        if not n: return []
         backtrack(0, [])
         
         return res
