@@ -7,12 +7,13 @@ class Solution(object):
         """
         n = len(s)
         dp = [False for _ in range(n+1)]
-        dp[-1] = True
+        dp[0] = True
         
-        for i in range(n-1, -1, -1):
-            for word in wordDict:
-                m = len(word)
-                if s[i:i+m] == word and dp[i+m]:
+        for i in range(n+1):
+            for w in wordDict:
+                if (i - len(w) >= 0) and (dp[i - len(w)]) and (s[i-len(w):i] == w):
                     dp[i] = True
-                    break
-        return dp[0]
+                    
+        print(dp)
+        return dp[-1]
+            
