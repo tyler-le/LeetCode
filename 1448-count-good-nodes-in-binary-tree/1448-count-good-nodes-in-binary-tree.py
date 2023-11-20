@@ -6,20 +6,16 @@
 #         self.right = right
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
-        # keep track of the max of the path
-        self.res = 0
-        def dfs(node, path):
-            if not node: return
-            if not path or node.val >= max(path): 
-                self.res+=1
+        
+        res = 0
+        
+        def dfs(node, path_max):
+            nonlocal res
+            if node.val >= path_max: res+=1
+            path_max = max(node.val, path_max)
             
-            path.append(node.val)
-        
-            if node.left: dfs(node.left, path)
-            if node.right: dfs(node.right, path)
+            if node.left: dfs(node.left, path_max)
+            if node.right: dfs(node.right, path_max)
                 
-            path.pop()
-        
-        
-        dfs(root, [])
-        return self.res
+        dfs(root, root.val)
+        return res
