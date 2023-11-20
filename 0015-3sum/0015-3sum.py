@@ -1,33 +1,28 @@
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        res = []
-        # [-1, 0, 1, 2, -1, -4]
-        #   ^
-        #   i
         
-        # check for a PAIR where pair = 0 - nums[i] 
         nums.sort()
-        print(nums)
-        for i in range(len(nums)):
+        n = len(nums)
+        res = []
+        
+        for i in range(n):
             if i > 0 and nums[i] == nums[i-1]: continue
-            curr = nums[i]
+            target = -nums[i]
+            l, r = i+1, n-1
             
-            left = i+1
-            right = len(nums)-1
-            while(left < right):
-                
-                if nums[left] + nums[right] + curr == 0:
-                    res.append([curr, nums[left], nums[right]])
-                    while left < right and nums[left] == nums[left+1]:
-                        left+=1
-                    while left < right and nums[right] == nums[right-1]:
-                        right-=1
-                        
-                    left+=1
-                    right-=1
-                elif nums[left] + nums[right] + curr < 0:
-                    left+=1
-                else:
-                    right-=1
+            while l < r:
+                if nums[l] + nums[r] == target:
+                    res.append([nums[i], nums[l], nums[r]])
+                    while (l+1 < n) and nums[l+1] == nums[l]: l+=1
+                    while (r-1 >= 0) and nums[r-1] == nums[r]: r-=1
+                    l+=1
+                    r-=1
                     
+                elif nums[l] + nums[r] < target:
+                    l+=1
+                else:
+                    r-=1
         return res
+            
+        
+            
