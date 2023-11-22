@@ -7,8 +7,10 @@ class Solution:
             for j in range(len(nums[i])):
                 hmap[i+j].appendleft(nums[i][j])
                         
-        for v in hmap.values():
-            res+=list(v)
+        curr = 0
+        while curr in hmap:
+            res+=hmap[curr]
+            curr+=1
         
         return res
         
