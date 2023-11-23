@@ -1,31 +1,14 @@
-# THIS IS A GOOD SOL. DO NOT DELETE
-
-class Solution(object):
-    def findMin(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        def binary_search(lo, hi):
-            mid = lo + (hi - lo) // 2
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        n = len(nums)
+        low, high = 0, n - 1
+        
+        while low < high:
+            mid = low + ((high - low) // 2)
+            if mid+1 < n and nums[mid] > nums[mid+1]: return nums[mid+1]
+            if mid-1 >= 0 and nums[mid] < nums[mid-1]: return nums[mid]
             
-            # base case: list is sorted
-            if (nums[lo] < nums[mid] < nums[hi]):
-                return nums[lo]
-            
-            # base case: list has 1 or 2 elems
-            if hi - lo + 1 <= 2:
-                return min(nums[lo], nums[hi])
-            
-            # recursive call. 
-            # search part where nums[lo] is greater than nums[hi], 
-            # indicating the pivot
-            if nums[lo] < nums[mid]:
-                return binary_search(mid+1, hi)
-            else:
-                return binary_search(lo, mid)
-
-        # start the recursion
-        lo, hi = 0, len(nums)-1
-        return binary_search(lo, hi)
+            if nums[low] < nums[mid]: low = mid + 1
+            else: high = mid - 1
                 
+        return nums[0]
