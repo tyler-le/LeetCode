@@ -11,5 +11,5 @@ class Solution:
             if can_plant:
                 flowerbed[i] = 1
                 acc+=1
-                
+                if acc >= n: return True
         return acc >= n
