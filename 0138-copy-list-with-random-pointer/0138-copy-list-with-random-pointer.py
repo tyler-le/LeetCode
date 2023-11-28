@@ -11,10 +11,9 @@ class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         
         hmap = collections.defaultdict(lambda: Node(0))
-        hmap[None] = None
         
         def rec(orig):
-
+            if not orig: return None
             if orig in hmap: return hmap[orig]
             
             copy = Node(orig.val)
