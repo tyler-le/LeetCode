@@ -1,12 +1,13 @@
 class Solution:
     def balancedStringSplit(self, s: str) -> int:
-        count = res = 0
+        res = 0
+        hmap = collections.defaultdict(int)
         
         for ch in s:
-            if ch == "R": count+=1
-            else: count-=1
+            hmap[ch]+=1
             
-            if not count: res+=1
+            if hmap["R"] == hmap["L"]:
+                res+=1
+                hmap["R"], hmap["L"] = 0, 0
                 
         return res
-            
