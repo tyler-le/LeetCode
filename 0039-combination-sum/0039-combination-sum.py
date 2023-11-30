@@ -13,7 +13,8 @@ class Solution:
                 return
             
             for i in range(len(cands)):
-                backtrack(path + [cands[i]], cands[i:])
+                cand = cands[i]
+                backtrack(path + [cand], cands[i:])
                 
         backtrack([], candidates)
         return res
