@@ -1,27 +1,20 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        
         res = []
         
-        def helper(combination, cands):
-
-            curr_sum = sum(combination)
+        def backtrack(path, cands):
             
-            if curr_sum == target: 
-                res.append(combination.copy())
+            if sum(path) == target:
+                res.append(path.copy())
                 return
             
-            elif curr_sum > target: 
+            if sum(path) > target:
                 return
             
-            else:
-                for i in range(len(cands)):
-                    combination.append(cands[i])
-                    helper(combination, cands[i:])
-                    
-                    # backtrack step
-                    combination.pop()
-
+            for i in range(len(cands)):
+                backtrack(path + [cands[i]], cands[i:])
                 
-        
-        helper([], candidates)
+        backtrack([], candidates)
         return res
+            
