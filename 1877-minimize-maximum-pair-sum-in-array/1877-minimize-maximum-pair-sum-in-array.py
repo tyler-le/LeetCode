@@ -1,13 +1,13 @@
 class Solution:
     def minPairSum(self, nums: List[int]) -> int:
-
         nums.sort()
-        res = 0
-        left, right = 0, len(nums)-1
+        n = len(nums)
+        l, r = 0, n-1
+        res = -float("inf")
         
-        while left < right:
-            res = max(res, nums[left] + nums[right])
-            left+=1
-            right-=1
+        while l < r:
+            res = max(res, nums[l] + nums[r])
+            l+=1
+            r-=1
             
         return res
