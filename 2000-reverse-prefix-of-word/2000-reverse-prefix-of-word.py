@@ -3,8 +3,10 @@ class Solution:
         
         for i in range(len(word)):
             if word[i] == ch:
-                rest = word[i+1:]
-                rvsd = word[:i+1][::-1]
-                return rvsd+rest
+                # rest = word[i+1:]
+                # rvsd = word[:i+1][::-1]
+                # return rvsd+rest
+                return word[:i+1][::-1] + word[i+1:]
+            
         return word
                 
