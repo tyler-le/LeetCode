@@ -14,9 +14,6 @@ class Solution:
             elif hmap_s_t[s1] != t1 or hmap_t_s[t1] != s1: 
                 return False
         
-        for ch in s:
-            res+=hmap_s_t[ch]
-        
-        return res == t
+        return True
         
         
