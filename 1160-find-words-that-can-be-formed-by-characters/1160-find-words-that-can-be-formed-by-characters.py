@@ -1,18 +1,21 @@
 class Solution:
     def countCharacters(self, words: List[str], chars: str) -> int:
+        
         res = 0
-        char_count = Counter(chars)
         
         for word in words:
+            my_set = Counter(chars)
             flag = True
-            word_count = Counter(word)
-            
             for ch in word:
-                if ch not in char_count or char_count[ch] < word_count[ch]: 
+                if ch not in my_set: 
                     flag = False
+                    break
+                if not my_set[ch]: 
+                    flag = False
+                    break
                     
-            if flag: 
-                res+=len(word)
+                my_set[ch]-=1
+            
+            if flag: res+=len(word)
                 
         return res
-            
