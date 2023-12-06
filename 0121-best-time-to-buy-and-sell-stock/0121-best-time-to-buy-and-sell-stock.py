@@ -1,14 +1,16 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        curr_min = prices[0]
+        # if we encounter a smaller number, we have a new buy day
+        # treat every day as a sell day
+        
+        buy_price = float("inf")
         res = 0
         
-        for i in range(1, len(prices)):
-            curr_min = min(curr_min, prices[i])
-            res = max(res, prices[i] - curr_min)
-        
+        for i in range(len(prices)):
+    
+            if prices[i] < buy_price:
+                buy_price = prices[i]
+            res = max(res, prices[i] - buy_price)
+            
         return res
-            
-            
-            
             
