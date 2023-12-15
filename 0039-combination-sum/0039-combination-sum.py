@@ -13,7 +13,10 @@ class Solution:
             
             cand = candidates[i]
             
-            backtrack(i, path + [cand])
+            # find all paths rooted at candidates[i]
+            backtrack(i, path + [cand]) 
+            
+            # find all paths excluding candidates[i] to avoid dupes
             backtrack(i+1, path)
         
         backtrack(0, [])
