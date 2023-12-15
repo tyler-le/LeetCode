@@ -1,12 +1,12 @@
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
-        graph = collections.defaultdict(list)
-        cities = set()
-        for src, dest in paths:
-            cities.add(src)
-            cities.add(dest)
-            graph[src].append(dest)
+        graph = dict()
         
-        for city in cities:
-            if not graph[city]: return city
+        for src, dest in paths:
+            if src not in graph: graph[src] = [dest]
+            else: graph[src].append(dest)
+            if dest not in graph: graph[dest] = []
+        
+        for src, dests in graph.items():
+            if not dests: return src
             
