@@ -3,19 +3,18 @@ class Solution:
         
         res = []
         
-        def backtrack(path, start):
-            nonlocal res
-            
-            if sum(path) == target: 
+        def backtrack(i, path):
+            if sum(path) == target:
                 res.append(path.copy())
                 return
-            if sum(path) > target:
-                return
             
-            for i in range(start, len(candidates)):
-                cand = candidates[i]
-                backtrack(path + [cand], i)
-                
-    
-        backtrack([], 0)
+            if sum(path) > target: return
+            if i >= len(candidates): return
+            
+            cand = candidates[i]
+            
+            backtrack(i, path + [cand])
+            backtrack(i+1, path)
+        
+        backtrack(0, [])
         return res
