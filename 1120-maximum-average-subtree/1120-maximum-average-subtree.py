@@ -11,9 +11,11 @@ class Solution:
         def rec(node):
             nonlocal res
             if not node: return (0, 0)
+            left_sum, left_size = 0, 0
+            right_sum, right_size = 0, 0
             
-            left_sum, left_size = rec(node.left)
-            right_sum, right_size = rec(node.right)
+            if node.left: left_sum, left_size = rec(node.left)
+            if node.right: right_sum, right_size = rec(node.right)
             
             sumi = node.val + left_sum + right_sum
             size = 1 + left_size + right_size
