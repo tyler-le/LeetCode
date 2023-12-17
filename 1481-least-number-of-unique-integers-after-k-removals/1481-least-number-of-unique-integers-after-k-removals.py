@@ -1,15 +1,18 @@
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
-        # min-heap => (freq, val)
+        cnt = list(Counter(arr).values())
+        cnt.sort()
         
-        cnt = Counter(arr)
-        min_heap = [(v,k) for (k,v) in cnt.items()]
-        heapify(min_heap)
+        i = 0
+        res = 0
         
-        for _ in range(k):
-            popped_freq, popped_val = heappop(min_heap)
-            
-            if popped_freq > 1:
-                heappush(min_heap, (popped_freq-1, popped_val))
+        while k:
+            if not cnt[i]: 
+                i+=1
+            else:
+                cnt[i]-=1
+                k-=1
         
-        return len(min_heap)
+        for f in cnt:
+            if f: res+=1
+        return res
