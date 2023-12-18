@@ -5,25 +5,24 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
+    def averageOfSubtree(self, root: TreeNode) -> int:
         res = 0
         
-        def dfs(root):
+        def rec(node):
             nonlocal res
-            if not root: return [0,0]
+            if not node: return (0, 0)
             
-            left_size, left_sum = dfs(root.left)
-            right_size, right_sum = dfs(root.right)
+            left_sum, left_size = rec(node.left)
+            right_sum, right_size = rec(node.right)
             
-            curr_size = left_size + right_size + 1
-            curr_sum = left_sum + right_sum + root.val
-            curr_avg = curr_sum // curr_size
+            curr_sum = left_sum + right_sum + node.val
+            curr_total = 1 + left_size + right_size
+            average = curr_sum // curr_total
             
-            res += (1 if curr_avg == root.val else 0)
+            if average == node.val: 
+                res+=1
             
-            return [curr_size, curr_sum]
+            return (curr_sum, curr_total)
         
-        dfs(root)
+        rec(root)
         return res
-            
-        
