@@ -1,18 +1,17 @@
 class Solution:
     def maxOperations(self, nums: List[int], k: int) -> int:
-        # [1, 3, 3, 3, 4]
         
-        nums.sort()
+        hmap = collections.defaultdict(int)
         res = 0
-        l, r = 0, len(nums)-1
         
-        while l < r:
-            if nums[l] + nums[r] == k:
+        for num in nums:
+            target = k - num
+            if hmap[target] > 0:
+                hmap[target]-=1
                 res+=1
-                l+=1
-                r-=1
-            elif nums[l] + nums[r] < k:
-                l+=1
             else:
-                r-=1
+                hmap[num]+=1
+            
         return res
+        
+        
