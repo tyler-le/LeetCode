@@ -1,17 +1,16 @@
 class Solution:
     def maxOperations(self, nums: List[int], k: int) -> int:
-        
-        hmap = collections.defaultdict(int)
+        cnt = collections.defaultdict(int)
         res = 0
         
         for num in nums:
-            target = k - num
-            if hmap[target] > 0:
-                hmap[target]-=1
+            complement = k - num
+            if complement in cnt:
                 res+=1
+                cnt[complement]-=1
+                if not cnt[complement]: del cnt[complement]
+                    
             else:
-                hmap[num]+=1
-            
+                cnt[num]+=1
+        
         return res
-        
-        
