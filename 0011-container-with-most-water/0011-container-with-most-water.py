@@ -1,21 +1,17 @@
 class Solution:
     def maxArea(self, height: List[int]) -> int:
+        l, r = 0, len(height) - 1
+        res = -float('inf')
         
-        res = 0
-        def rec(left, right):
+        while l < r:
+            width = r-l
+            h = min(height[l], height[r])
+            area = width*h
             
-            # base case
-            if left >= right: return 0
+            res = max(res, area)
             
-            # calculate area
-            w, h = right - left, min(height[left], height[right])
-            area = w * h
-
-            # recursive call
-            if height[left] < height[right]:
-                return max(area, rec(left+1, right))
-            else:
-                 return max(area, rec(left, right-1))
+            if height[l] > height[r]: r-=1
+            else: l+=1
                 
-        
-        return rec(0, len(height) - 1)
+        return res
+            
