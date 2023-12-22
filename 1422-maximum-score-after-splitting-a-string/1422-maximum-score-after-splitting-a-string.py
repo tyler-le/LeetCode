@@ -8,8 +8,8 @@ class Solution:
         
         left_score, right_score = 0, num_ones
         
-        for i in range(len(s)):
-            if s[i] == "0" and i < len(s)-1:
+        for i in range(len(s) - 1):
+            if s[i] == "0":
                 left_score+=1
             else:
                 right_score-=1
