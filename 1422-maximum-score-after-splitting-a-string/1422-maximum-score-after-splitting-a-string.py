@@ -4,12 +4,9 @@ class Solution:
         num_ones, num_zeros = 0, 0
         res = 0
         
-        for ch in s:
-            if ch == "1": num_ones+=1
-            else: num_zeros+=1
+        num_ones = s.count("1")
         
         left_score, right_score = 0, num_ones
-        
         
         for i in range(len(s)):
             if s[i] == "0" and i < len(s)-1:
