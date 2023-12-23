@@ -2,7 +2,7 @@ class Solution:
     def isPathCrossing(self, path: str) -> bool:
         
         curr = [0,0]
-        visited = set([tuple(curr)])
+        visited = set([(0,0)])
         
         for p in path:
             if p == "N": curr[0]+=1
