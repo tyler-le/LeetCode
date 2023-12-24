@@ -13,10 +13,11 @@ class Solution:
             prefix_sum+=num
             r = prefix_sum % k
             
-            if r not in hmap:
+            if r in hmap and (i - hmap[r] > 1):
+                return True
+            elif r not in hmap:
                 hmap[r] = i
             
-            elif i - hmap[r] > 1: 
-                return True
+    
                         
         return False
