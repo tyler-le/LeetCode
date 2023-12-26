@@ -1,21 +1,16 @@
 class Solution:
-    def minDeletions(self, s: str) -> int:
-        # ceabaacb
-        # aaabbbcce
+    def minDeletions(self, s: str) -> int:      
         
-        count = collections.Counter(s)
-        seen_counts = set()
+        cnt = Counter(s)
+        seen = set()
         res = 0
-                
-        for key, value in count.items():
-            while value != 0 and value in seen_counts:
+        freqs = sorted(cnt.values(), reverse = True)
+        
+        for f in freqs:
+            while f in seen: 
+                f-=1
                 res+=1
-                value-=1
-            seen_counts.add(value)
-        
+            if f: seen.add(f)
+            
         return res
-        
-                
-                
-            
-            
+   
