@@ -3,10 +3,10 @@ class Solution:
               
         rows, cols = len(heights), len(heights[0])
         visited = set()
-        min_heap = [(0, 0, 0, 0)] # (max_diff, x, y, diff)
+        min_heap = [(0, 0, 0)] # (max_diff, x, y)
         
         while min_heap:
-            max_diff, x, y, diff = heappop(min_heap)
+            max_diff, x, y = heappop(min_heap)
             if (x,y) in visited: continue
             if (x,y) == (rows-1, cols-1): return max_diff
             visited.add((x,y))
@@ -15,7 +15,7 @@ class Solution:
                 r, c = x+dx, y+dy
                 if 0 <= r < rows and 0 <= c < cols: 
                     new_diff = abs(heights[r][c] - heights[x][y])
-                    el = (max(max_diff, new_diff), r, c, new_diff)
+                    el = (max(max_diff, new_diff), r, c)
                     heappush(min_heap, el)
         
                 
