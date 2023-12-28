@@ -6,10 +6,11 @@ class Solution:
         
         # for each nbor of the capital, add the result of ceil(size / seats)
         
-        def dfs(curr, people=1):
+        def dfs(curr):
             nonlocal res
             if curr in visited: return 0
             
+            people = 1
             visited.add(curr)
             
             for nbor in adjacency[curr]:
