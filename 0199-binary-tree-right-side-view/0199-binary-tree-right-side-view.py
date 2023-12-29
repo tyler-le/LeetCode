@@ -6,7 +6,9 @@
 #         self.right = right
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-        if not root: return []
+        
+        if not root: return None
+        
         q = deque([root])
         res = []
         
@@ -15,13 +17,8 @@ class Solution:
             
             for i in range(level_size):
                 popped = q.popleft()
-                if popped.left: 
-                    q.append(popped.left)
-                if popped.right:
-                    q.append(popped.right)
-                if i == (level_size-1):
-                    res.append(popped.val)
+                if i == level_size - 1: res.append(popped.val)
+                if popped.left: q.append(popped.left)
+                if popped.right: q.append(popped.right)
+        
         return res
-                
-                
-                
