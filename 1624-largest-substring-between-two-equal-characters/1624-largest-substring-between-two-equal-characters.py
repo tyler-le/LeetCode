@@ -1,16 +1,17 @@
 class Solution:
     def maxLengthBetweenEqualCharacters(self, s: str) -> int:
-        # map char : list of indices
-        # take the min and max position of each char
+        # map char : first index appeared
         
-        hmap = collections.defaultdict(list)
+        hmap = collections.defaultdict(int)
         res = -1
         
         for i in range(len(s)):
-            hmap[s[i]].append(i)
+            if s[i] in hmap:
+                res = max(res, i - hmap[s[i]] - 1)
+            else:
+                hmap[s[i]] = i
         
-        for _, indices in hmap.items():
-            res = max(res, indices[-1] - indices[0] - 1)
-            
         return res
+        
+        
             
