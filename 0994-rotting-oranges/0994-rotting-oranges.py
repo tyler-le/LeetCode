@@ -1,40 +1,30 @@
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
-        q, time = deque(), 0
         EMPTY, FRESH, ROTTEN = 0, 1, 2
-        m, n = len(grid), len(grid[0])
-        num_fresh = 0
+        n, m = len(grid), len(grid[0])
+        q = deque()
+        res, num_fresh = 0, 0
         
-        for row in range(m):
-            for col in range(n):
-                if grid[row][col] == FRESH: 
-                    num_fresh+=1
-                
-                if grid[row][col] == ROTTEN:
-                    q.append((row, col))
-        
+        for i in range(n):
+            for j in range(m):
+                if grid[i][j] == ROTTEN: q.append((i,j))
+                if grid[i][j] == FRESH: num_fresh+=1
                     
         while q and num_fresh:
-            time+=1
+            res+=1 
             level_size = len(q)
-
+            
             for _ in range(level_size):
                 x, y = q.popleft()
                 
-                for r, c in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-                    if (x+r < 0) or (x+r >= m) \
-                    or (y+c < 0) or (y+c >= n) \
-                    or (grid[x+r][y+c] != FRESH): 
-                        continue
+                for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                    r, c = x + dx, y + dy
                     
+                    if r < 0 or c < 0 or r >= n or c >= m or grid[r][c] != FRESH: continue
                     
-                    grid[x+r][y+c] = ROTTEN
+                    grid[r][c] = ROTTEN
                     num_fresh-=1
-                    q.append((x+r, y+c))
+                    q.append((r,c))
             
-
-                
-                
-        return -1 if (num_fresh) else time
-        
-                
+            
+        return res if not num_fresh else -1
