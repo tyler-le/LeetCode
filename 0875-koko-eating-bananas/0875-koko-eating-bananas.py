@@ -21,6 +21,6 @@ class Solution:
             # increase the eating speed
             else: low = mid + 1
                 
-        return low
+        return high
         
  
