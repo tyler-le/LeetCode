@@ -23,7 +23,7 @@ class Solution:
         
         dfs(root)
         q = deque([start])
-        res = 0
+        res = -1
         visited = set([start])
         
         while q:
@@ -39,7 +39,4 @@ class Solution:
                         visited.add(nbor)
             res+=1
 
-                    
-            
-            
-        return res - 1
+        return res 
