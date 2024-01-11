@@ -1,12 +1,15 @@
 class Solution:
     def makeEqual(self, words: List[str]) -> bool:
-        chars = defaultdict(int)
+        
+        # the trick is to make sure count(each char) % n == 0
+        
+        freqs = [0] * 26
         
         for word in words:
             for ch in word:
-                chars[ch]+=1
+                freqs[ord(ch) - ord("a")]+=1
         
-        for ch in chars.values():
-            if ch % len(words): return False
+        for f in freqs:
+            if f and f % len(words): return False
         
         return True
