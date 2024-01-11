@@ -1,27 +1,23 @@
-class Solution:
-    def equalPairs(self, grid: List[List[int]]) -> int:
-     
-        rows = collections.defaultdict(int)
-        cols = collections.defaultdict(int)
+class Solution(object):
+    def equalPairs(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        hmap = defaultdict(int)
+        n = len(grid)
         res = 0
         
-        # loop thru rows
         for row in grid:
-            rows[tuple(row)]+=1
+            hmap[tuple(row)]+=1
         
-        for c in range(len(grid[0])):
-            col = []
-            for r in range(len(grid)):
-                col.append(grid[r][c])
-                
-            if tuple(col) in rows:
-                res+= (rows[tuple(col)])
-            
+        for i in range(n):
+            column = []
+            for j in range(n):
+                column.append(grid[j][i])
+            column = tuple(column)
+            res+=(hmap[column])
                 
         return res
-        
-        
-     
-        
                 
-   
+            
