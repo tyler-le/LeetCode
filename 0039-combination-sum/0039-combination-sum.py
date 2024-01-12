@@ -1,23 +1,24 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        
         res = []
         
-        def backtrack(i, path):
+        def backtrack(path, idx):
+            nonlocal res
+            
             if sum(path) == target:
                 res.append(path.copy())
                 return
             
-            if sum(path) > target: return
-            if i >= len(candidates): return
+            elif sum(path) > target:
+                return
             
-            cand = candidates[i]
+            elif idx >= len(candidates):
+                return
             
-            # find all paths rooted at candidates[i]
-            backtrack(i, path + [cand]) 
-            
-            # find all paths excluding candidates[i] to avoid dupes
-            backtrack(i+1, path)
+            else:
+                cand = candidates[idx]
+                backtrack(path + [cand], idx)
+                backtrack(path, idx+1)
         
-        backtrack(0, [])
+        backtrack([], 0)
         return res
