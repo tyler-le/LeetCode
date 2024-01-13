@@ -1,13 +1,16 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
         
+        q = deque([(0,0)])
         n = len(nums)
-        dp = [float("inf")] * n
-        dp[0] = 0
+        visited = set()
         
-        for i in range(n):
-            for x in range(1, nums[i]+1):
-                if i + x < n:
-                    dp[i+x] = min(dp[i+x], 1 + dp[i])
-        
-        return dp[n-1]
+        while q:
+            idx, steps = q.popleft()
+    
+            if idx == n-1: return steps
+            for x in range(1, nums[idx]+1):
+                if (idx+x) < n and (idx+x) not in visited: 
+                    q.append((idx+x, steps+1))
+                    visited.add(idx+x)
+            
