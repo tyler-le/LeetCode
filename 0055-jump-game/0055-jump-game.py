@@ -1,13 +1,9 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         n = len(nums)
-        dp = [False] * n
-        dp[-1] = True
+        goal = n-1
         
-        for i in range(n-2, -1, -1):
-            for x in range(1, nums[i]+1):
-                if x + i < n:
-                    dp[i] = dp[x+i] or dp[i]
-                    if dp[i]: break
-        
-        return dp[0]
+        for i in range(n-1, -1, -1):
+            if i + nums[i] >= goal:
+                goal = i
+        return goal == 0
