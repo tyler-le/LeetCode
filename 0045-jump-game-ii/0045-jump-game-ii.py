@@ -10,5 +10,4 @@ class Solution:
                 if i + x < n:
                     dp[i+x] = min(dp[i+x], 1 + dp[i])
         
-        print(dp)
         return dp[n-1]
