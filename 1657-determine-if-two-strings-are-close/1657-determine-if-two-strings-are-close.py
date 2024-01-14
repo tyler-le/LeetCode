@@ -1,11 +1,10 @@
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
-        if len(word1) != len(word2): return False
-        if set(word1) != set(word2): return False
+        cnt1, cnt2 = Counter(word1), Counter(word2)
         
-        c1, c2 = Counter(word1), Counter(word2)
+        if set(cnt1.keys()) != set(cnt2.keys()): return False
         
-        for p1, p2 in zip(sorted(c1.values()), sorted(c2.values())):
-            if p1 != p2: return False
+        for c1, c2 in zip(sorted(cnt1.values()), sorted(cnt2.values())):
+            if c1 != c2: return False
         
         return True
