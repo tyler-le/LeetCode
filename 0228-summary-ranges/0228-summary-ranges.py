@@ -3,23 +3,22 @@ class Solution:
         
         if not nums: return []
         n = len(nums)
-        interval, res = [nums[0], nums[0]], []
+        i = 0
+        res = []
         
-        for i in range(1, n):
-            if nums[i] == interval[1] + 1:
-                interval[1] = nums[i]
+        while i < n:
+            start = nums[i]
+            while i + 1 < n and nums[i] + 1 == nums[i+1]:
+                i+=1
+            
+            if start == nums[i]:
+                res.append(str(start))
             else:
-                if interval[0] != interval[1]: 
-                    res.append(f"{interval[0]}->{interval[1]}")
-                else: 
-                    res.append(str(interval[0]))
-                
-                interval = [nums[i], nums[i]]
-                
-        if interval[0] != interval[1]: res.append(f"{interval[0]}->{interval[1]}")  
-        else: res.append(str(interval[0]))
-
+                res.append(f"{start}->{nums[i]}")
+            
+            i+=1
         return res
+ 
                 
             
             
