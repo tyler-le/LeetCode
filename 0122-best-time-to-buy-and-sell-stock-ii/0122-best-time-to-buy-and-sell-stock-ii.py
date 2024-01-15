@@ -7,10 +7,8 @@ class Solution:
         res = 0
         
         for sell in prices[1:]:
-            if sell < buy:
-                buy = sell
-            else:
+            if sell >= buy:
                 res+=(sell-buy)
-                buy = sell
+            buy = sell
         return res
             
