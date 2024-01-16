@@ -10,18 +10,20 @@ class Node:
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         
-        hmap = collections.defaultdict(lambda: Node(0))
+        hmap = defaultdict(lambda x : Node(0))
         
-        def rec(orig):
-            if not orig: return None
-            if orig in hmap: return hmap[orig]
+        def rec(curr):
+            if not curr: return None
+            if curr in hmap: return hmap[curr]
             
-            copy = Node(orig.val)
-            hmap[orig] = copy
-
-            copy.next = rec(orig.next)
-            copy.random = rec(orig.random)
+            copy = Node(curr.val)
+            hmap[curr] = copy
+            
+            copy.next = rec(curr.next)
+            copy.random = rec(curr.random)
             
             return copy
         
         return rec(head)
+        
+        
