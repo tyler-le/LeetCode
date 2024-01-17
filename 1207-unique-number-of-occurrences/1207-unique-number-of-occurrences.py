@@ -1,7 +1,5 @@
 class Solution:
     def uniqueOccurrences(self, arr: List[int]) -> bool:
-        count = Counter(arr)
+        cnt = Counter(arr)
         
-        seen = set(count.values())
-        
-        return len(seen) == len(count.values())
+        return len(set(cnt.values())) == len(cnt.values())
