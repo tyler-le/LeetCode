@@ -5,7 +5,6 @@ class Solution:
         """
         
         def bfs(i, j):
-            q = deque([(i, j, 0)])
             visited = set()
             
             while q:
@@ -22,11 +21,13 @@ class Solution:
                     
         
         # for each gate, run bfs and update accordingly
-        n, m = len(rooms), len(rooms[0])
+        n, m, q = len(rooms), len(rooms[0]), deque()
         GATE, WALL, EMPTY = 0, -1, 2**31 - 1
         
         for i in range(n):
             for j in range(m):
                 if rooms[i][j] == GATE:
-                    bfs(i, j)
+                    q.append((i, j, 0))
+        
+        bfs(i, j)
                     
