@@ -5,6 +5,7 @@ class Solution:
         """
         
         def bfs(i, j):
+            visited = set()
             
             while q:
                 x, y, dist = q.popleft()
@@ -13,7 +14,9 @@ class Solution:
                 for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
                     if x+dx < 0 or y+dy < 0 or x+dx >= n or y+dy >= m: continue   
                     if rooms[x+dx][y+dy] != EMPTY: continue
+                    if (x+dx, y+dy) in visited: continue
                     q.append((x+dx, y+dy, dist+1))
+                    visited.add((x+dx, y+dy))
                     
         
         # for each gate, run bfs and update accordingly
