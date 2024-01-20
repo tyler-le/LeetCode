@@ -10,8 +10,6 @@ class Solution:
         # build graph
         for u, v in prerequisites:
             graph[v].append(u)
-            if v not in indegree: indegree[v] = 0
-            if u not in indegree: indegree[u] = 0
             indegree[u]+=1
             
         # get all courses with indegree 0
