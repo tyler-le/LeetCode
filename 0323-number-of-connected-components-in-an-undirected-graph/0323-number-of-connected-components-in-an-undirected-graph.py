@@ -1,27 +1,26 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
         
-        # create adjacency list
-        graph = collections.defaultdict(list)
-        for src, dest in edges:
-            graph[src].append(dest)
-            graph[dest].append(src)
+        def dfs(node):
+            if node in visited: return
             
-        visited = set()
-        res = 0
-        
-        def dfs(vertex):
-            if vertex in visited or vertex not in graph:
-                return
-            visited.add(vertex)
-            for nbor in graph[vertex]:
+            visited.add(node)
+            
+            for nbor in graph[node]:
                 dfs(nbor)
         
-        for v in range(n):
-            if v not in visited:
-                dfs(v)
-                res+=1
+        res = 0
+        graph = defaultdict(list)
+        visited = set()
         
+        for u, v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
+        
+        for i in range(n):
+            if i not in visited:
+                res+=1
+                dfs(i)
+            
         return res
-            
-            
+        
