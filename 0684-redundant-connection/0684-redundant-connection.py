@@ -22,10 +22,10 @@ class Solution:
         rank = [1 for i in range(len(edges)+1)]
         
         for u, v in edges:
-            if find(u) == find(v): res.append([u,v])
+            if find(u) == find(v): return [u,v]
             union(u,v)
         
-        return res[-1]
+        # return res[-1]
             
                 
                 
