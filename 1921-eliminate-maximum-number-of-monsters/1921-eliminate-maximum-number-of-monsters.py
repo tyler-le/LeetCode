@@ -1,12 +1,25 @@
 class Solution:
     def eliminateMaximum(self, dist: List[int], speed: List[int]) -> int:
-        n, res = len(dist), 0
-        arrival_times = [(d/s) for d,s in zip(dist, speed)]
         
-        arrival_times.sort()
+#         dist = [3,2,4]              speed = [5,3,2]
+#         miles                       miles/hr
         
-        for i in range(n):
-            if i >= arrival_times[i]: return res
-            else: res+=1
+#         1 hr (index) 
+#         2 miles away (dist)
+#         3 miles/hr
+        
+        arrivals = []
+        n = len(dist)
+        
+        for i, (dist, speed) in enumerate(zip(dist, speed)):
+            arrivals.append(dist / speed)
+        
+        arrivals.sort()
+        
+        
+        for i, a in enumerate(arrivals):
+            if i >= a:
+                return i
             
-        return res
+
+        return n
