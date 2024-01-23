@@ -4,16 +4,17 @@ class Solution:
         
         def backtrack(i, curr):
             nonlocal res
-            if i >= len(arr): 
+            # Adjusted base case for stopping recursion
+            if i == len(arr): 
+                cnt = Counter(curr).values()
+                if len(cnt) == len(curr):
+                    res = max(res, len(curr))
                 return
 
-            cnt = Counter(curr).values()
-            if len(cnt) == len(curr):
-                res = max(res, len(curr))
-                
-            backtrack(i+1, curr+arr[i])
-            backtrack(i+1, curr)
+            # Include the current string in the set
+            backtrack(i + 1, curr + arr[i])
+            # Do not include the current string in the set
+            backtrack(i + 1, curr)
             
-        
-        backtrack(-1, "")
+        backtrack(0, "")
         return res
