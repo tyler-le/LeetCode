@@ -6,8 +6,7 @@ class Solution:
             nonlocal res
             
             if i == len(arr): 
-                cnt = Counter(curr).values()
-                if len(cnt) == len(curr):
+                if len(curr) == len(set(curr)):
                     res = max(res, len(curr))
                 return
 
