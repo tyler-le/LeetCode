@@ -1,34 +1,32 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         
-        def dfs(course):
-            if course in visited: return False
-            if graph[course] == []: return True
-            
-            visited.add(course)
-            
-            for nbor in graph[course]: 
-                if not dfs(nbor):
-                    return False
-                
-            visited.remove(course)
-            
-            graph[course] = []
-            
-            return True
-            
-                
+        # initialize vars
         graph = defaultdict(list)
+        indegrees = defaultdict(int)
+        q = deque()
         visited = set()
-        num_visited = 0
         
-        for u, v in prerequisites:            
+        # convert to adjacency matrix
+        for u, v in prerequisites:
             graph[v].append(u)
-            
-        for course in range(numCourses):
-            if not dfs(course): return False
+            indegrees[u]+=1
+                    
+        # add all source nodes to queue
+        for crs in range(numCourses):
+            if indegrees[crs] == 0: 
+                q.append(crs)
         
-        return True
+        # for each outgoing edge from source node u -> v, decrement indegree[v]
+        while q:
+            popped = q.popleft()
+            visited.add(popped)
             
-            
+            for nbor in graph[popped]:
+                if nbor in visited: continue
+                indegrees[nbor]-=1
+                if indegrees[nbor] == 0:
+                    q.append(nbor)
+                    
         
+        return len(visited) == numCourses
