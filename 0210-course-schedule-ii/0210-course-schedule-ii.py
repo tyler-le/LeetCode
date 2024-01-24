@@ -1,30 +1,33 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
-        res = []
+        # initialize vars
         graph = defaultdict(list)
-        indegree = defaultdict(int)
+        indegrees = defaultdict(int)
         q = deque()
-        num_visited = 0
+        visited = set()
+        res = []
         
-        
-        # build graph
+        # convert to adjacency matrix
         for u, v in prerequisites:
             graph[v].append(u)
-            indegree[u]+=1
-            
-        # get all courses with indegree 0
-        for i in range (numCourses):
-            if not indegree[i]: 
-                q.append(i)
-                
+            indegrees[u]+=1
+                    
+        # add all source nodes to queue
+        for crs in range(numCourses):
+            if indegrees[crs] == 0: 
+                q.append(crs)
+        
+        # for each outgoing edge from source node u -> v, decrement indegree[v]
         while q:
             popped = q.popleft()
+            visited.add(popped)
             res.append(popped)
-            for crs in graph[popped]:
-                indegree[crs]-=1
-                if not indegree[crs]:
-                    q.append(crs)
-
-        return res if len(res) == numCourses else []
             
+            for nbor in graph[popped]:
+                if nbor in visited: continue
+                indegrees[nbor]-=1
+                if indegrees[nbor] == 0:
+                    q.append(nbor)
+                    
         
+        return res if len(visited) == numCourses else []
