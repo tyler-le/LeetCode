@@ -25,13 +25,14 @@ class Solution:
             nonlocal res
             
             if node is None: return
-            
             path[node.val]+=1
             
-            if not node.left and not node.right: res+=is_palindrome(path)
+            if not node.left and not node.right: 
+                res+=is_palindrome(path)
+                return
             
-            dfs(node.left, path)
-            dfs(node.right, path)
+            dfs(node.left, path.copy())
+            dfs(node.right, path.copy())
             
             path[node.val]-=1
             
