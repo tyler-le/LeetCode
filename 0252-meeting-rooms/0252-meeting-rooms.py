@@ -1,17 +1,15 @@
-class Solution(object):
-    def canAttendMeetings(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: bool
-        """
+class Solution:
+    def canAttendMeetings(self, intervals: List[List[int]]) -> bool:
+        
         if not intervals: return True
         
-        intervals.sort(key = lambda x : x[1])
-        curr_start, curr_end = intervals[0]
+        intervals.sort(key = lambda x : x[0])
         
-        for next_start, next_end in intervals[1:]:
-            if next_start < curr_end <= next_end:
-                return False
-            curr_start, curr_end = next_start, next_end
-            
+        prev_start, prev_end = intervals[0]
+        
+        for curr_start, curr_end in intervals[1:]:
+            if prev_start <= curr_start < prev_end: return False
+            prev_start, prev_end = curr_start, curr_end
+        
         return True
+            
