@@ -1,5 +1,6 @@
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
+        
         if not intervals: return 0
         
         intervals.sort(key = lambda x : x[0])
@@ -8,11 +9,17 @@ class Solution:
         
         for curr_start, curr_end in intervals[1:]:
             prev_end = min_heap[0] 
-            if prev_end<=curr_start: heappop(min_heap)
-            else: res+=1
-                
-            heappush(min_heap, curr_end)
             
+            # meeting room is freed up, so curr interval can take it
+            if prev_end <= curr_start: 
+                heappop(min_heap)
+                heappush(min_heap, curr_end)
+            
+            # otherwise we create a new meeting room
+            else: 
+                res+=1
+                heappush(min_heap, curr_end)
+                
         return len(min_heap)
             
         
