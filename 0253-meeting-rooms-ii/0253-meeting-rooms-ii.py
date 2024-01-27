@@ -1,6 +1,8 @@
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         
+        # keep a min-heap of end times signifying booked rooms that end the earliest
+        
         if not intervals: return 0
         
         intervals.sort(key = lambda x : x[0])
