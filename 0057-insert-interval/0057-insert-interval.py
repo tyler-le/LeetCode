@@ -9,13 +9,11 @@ class Solution:
             # Base case: when all intervals are processed
             if i == len(intervals):
                 res.append(newInterval)
-                return
             
             # newInterval comes before intervals[index]
-            if newInterval[1] < intervals[i][0]:
+            elif newInterval[1] < intervals[i][0]:
                 res+=[newInterval]
                 res.extend(intervals[i:])
-                return 
             
             # newInterval comes after intervals[index]
             elif intervals[i][1] < newInterval[0]:
