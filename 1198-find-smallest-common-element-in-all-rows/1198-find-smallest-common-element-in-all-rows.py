@@ -1,15 +1,15 @@
 class Solution:
     def smallestCommonElement(self, mat: List[List[int]]) -> int:
         hmap = defaultdict(int)
-        res = []
-        
+        n = len(mat)
+
         for row in mat:
-            my_set = set(row)
-            for x in my_set:
+            for x in row:
                 hmap[x]+=1
         
-        for k, v in hmap.items():
-            if v == len(mat):
-                res.append(k)
-        res.sort()
-        return res[0] if res else -1
+        for x in mat[0]:
+            if hmap[x] == n: return x
+        
+        return -1
+        
+        
