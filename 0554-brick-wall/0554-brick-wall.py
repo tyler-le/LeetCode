@@ -1,19 +1,14 @@
-class Solution(object):
-    def leastBricks(self, wall):
-        """
-        :type wall: List[List[int]]
-        :rtype: int
-        """
-        
-        # map position : number of gaps
-        count = defaultdict(int)
+class Solution:
+    def leastBricks(self, wall: List[List[int]]) -> int:
+        # map position to number of gaps
+        hmap = defaultdict(int)
         
         for w in wall:
-            curr = 0
+            pos = 0
             for x in w[:-1]:
-                curr+=x
-                count[curr]+=1
-        if not count: return len(wall)
-        return len(wall) - max(count.values())
+                pos+=x
+                if pos == sum(w): continue
+                hmap[pos]+=1
         
-        
+        if not hmap: return len(wall)
+        return len(wall) - max(hmap.values())
