@@ -16,10 +16,10 @@ class Solution:
                 
                 if nums[l] + nums[r] == target:
                     res.append([nums[i], nums[l], nums[r]])
-                    while l+1 < n and nums[l] == nums[l+1]: l+=1
-                    while r > 0 and nums[r] == nums[r-1]: r-=1
                     l+=1
                     r-=1
+                    while l<r and nums[l] == nums[l-1]: l+=1
+                    while l<r and nums[r] == nums[r+1]: r-=1
                         
                 elif nums[l] + nums[r] < target:
                     l+=1
