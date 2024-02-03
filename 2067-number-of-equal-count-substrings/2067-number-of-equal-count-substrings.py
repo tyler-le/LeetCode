@@ -10,7 +10,8 @@ class Solution:
             
             for r in range(n):
                 hmap[s[r]]+=1
-                if r-l+1 > width:
+                
+                while r-l+1 > width:
                     hmap[s[l]]-=1
                     if not hmap[s[l]]: del hmap[s[l]]
                     l+=1
