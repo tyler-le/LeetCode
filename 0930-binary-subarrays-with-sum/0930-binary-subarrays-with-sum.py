@@ -1,17 +1,23 @@
 class Solution:
     def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
         
-        hmap = defaultdict(int)
-        hmap[0] = 1
-
-        prefix_sum = 0
-        res = 0
-        
-        for num in nums:
-            prefix_sum+=num
+        # subarrays that have sum <= k, using sliding window
+        def at_most(k):
+            if k < 0: return 0           
+            l, res, curr_sum, n = 0, 0, 0, len(nums)
             
-            res+=hmap[prefix_sum - goal]
-            
-            hmap[prefix_sum]+=1
+            for r in range(n):
+                curr_sum += nums[r]
+                    
+                while curr_sum > k:
+                    curr_sum-=nums[l]
+                    l+=1
+                
+                res+=(r-l+1)
+                    
+                    
+            return res
+                
         
-        return res
+        return at_most(goal) - at_most(goal-1)
+            
