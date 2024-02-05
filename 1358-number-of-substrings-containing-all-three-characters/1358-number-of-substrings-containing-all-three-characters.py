@@ -1,26 +1,27 @@
 class Solution:
     def numberOfSubstrings(self, s: str) -> int:
         
-        # find total number of subarrays for length n
-        # find number of subarrays that DON'T have all 3 chars
-        # subtract the two
+        """ 
+        find total number of subarrays 
+        find number of subarrays that DON'T have all 3 chars
+        then subtract the two
+        """
         
-        hmap = defaultdict(int)
-        res = 0
-        l = 0
-        n = len(s)
-        bad_subarrs = 0
+        hmap, n = defaultdict(int), len(s)
+        res, l, invalid_arrs = 0, 0, 0
+        total_arrs = (n*(n+1)) // 2
         
         for r in range(n):
             hmap[s[r]]+=1
             
-            # shrink window until condition is not met
+            # find a window that does not contain all three characters
             while len(hmap) == 3:
                 res+=1
                 hmap[s[l]]-=1
                 if not hmap[s[l]]: del hmap[s[l]]
                 l+=1
             
-            bad_subarrs += (r-l+1)
+            # number of invalid subarrs that end in index r
+            invalid_arrs += (r-l+1) 
             
-        return (n*(n+1)) // 2 - bad_subarrs
+        return total_arrs - invalid_arrs
