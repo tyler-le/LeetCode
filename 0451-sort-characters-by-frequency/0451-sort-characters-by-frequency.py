@@ -1,12 +1,21 @@
 class Solution:
     def frequencySort(self, s: str) -> str:
-        freqs = Counter(s)
-        
-        arr = [(cnt,ch) for (ch,cnt) in freqs.items()]
-        arr.sort(reverse=True)
+        n = len(s)
         res = ""
-        for freq, ch in arr:
-            res+=ch * freq
+        
+        # each index i is the frequency of all the characters in that bucket
+        buckets = [[] for _ in range(n+1)]
+        
+        hmap = Counter(s)
+        
+        for ch, freq in hmap.items():
+            buckets[freq].append(ch)
+        
+        for i in range(n, -1, -1):
+            for ch in buckets[i]:
+                res+=(ch*i)
+                
         return res
+        
         
         
