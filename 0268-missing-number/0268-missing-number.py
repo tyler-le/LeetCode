@@ -1,11 +1,7 @@
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
         n = len(nums)
-        visited = set(nums)
+        seen = set(nums)
         
         for i in range(n+1):
-            if i not in visited:
-                return i
-            
-            
-        
+            if i not in seen: return i
