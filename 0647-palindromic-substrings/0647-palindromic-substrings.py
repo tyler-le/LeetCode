@@ -1,31 +1,32 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
-        n = len(s)
-        res = 0
         
-        def helper(i):
-            count = 0
+        def check_even(i):
+            cnt = 0
+            left, right = i, i+1
+            while left >= 0 and right < n and s[left] == s[right]:
+                cnt+=1
+                left-=1
+                right+=1
+            return cnt
+        
+        def check_odd(i):
+            cnt = 0
+            left, right = i, i
+            while left >= 0 and right < n and s[left] == s[right]:
+                cnt+=1
+                left-=1
+                right+=1
+            return cnt
             
-            # odd length palindromes
-            l = r = i
-            while l >= 0 and r < n and s[l] == s[r]:
-                count+=1
-                l-=1
-                r+=1
-            
-            # even length palindromes
-            l, r = i, i+1
-            while l >= 0 and r < n and s[l] == s[r]:
-                count+=1
-                l-=1
-                r+=1
-            
-            return count
-            
+        
+        res = 0
+        n = len(s)
         for i in range(n):
-            res+=helper(i)
+            # even length
+            res+=check_even(i)
+            
+            # odd length
+            res+=check_odd(i)
         
         return res
-            
-                
-        
