@@ -1,28 +1,25 @@
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
+        # dp[i][j] = number of unique paths to reach [i][j]
+        n, m = len(obstacleGrid), len(obstacleGrid[0])
         
-        m, n, OBSTACLE = len(obstacleGrid), len(obstacleGrid[0]), 1
-        dp = [[0 for c in range(n)] for r in range(m)]
-        
-        # edge case - if start/goal is an obstacle
-        if obstacleGrid[0][0] == OBSTACLE: return 0
-        if obstacleGrid[m-1][n-1] == OBSTACLE: return 0
-        
-        # Set the first cell
-        dp[0][0] = 0 if obstacleGrid[0][0] == OBSTACLE else 1
+        dp = [[0 for _ in range(m)] for _ in range(n)]
 
-        # Initialize the first column
-        for r in range(1, m): 
-            dp[r][0] = 0 if obstacleGrid[r][0] == OBSTACLE or dp[r-1][0] == 0 else 1
+        if obstacleGrid[0][0] or obstacleGrid[-1][-1]:
+            return 0
 
-        # Initialize the first row
-        for c in range(1, n): 
-            dp[0][c] = 0 if obstacleGrid[0][c] == OBSTACLE or dp[0][c-1] == 0 else 1
-        
-        for i in range(1,m):
-            for j in range(1,n):
-                left = 0 if obstacleGrid[i-1][j] == OBSTACLE else dp[i-1][j]
-                up = 0 if obstacleGrid[i][j-1] == OBSTACLE else dp[i][j-1]
-                dp[i][j] = left + up
-                
-        return dp[m-1][n-1]
+        # Initialize the first row and column
+        dp[0][0] = 1 - obstacleGrid[0][0]
+        for r in range(1, n):
+            dp[r][0] = dp[r-1][0] * (1 - obstacleGrid[r][0])
+        for c in range(1, m):
+            dp[0][c] = dp[0][c-1] * (1 - obstacleGrid[0][c])
+
+        for i in range(1, n):
+            for j in range(1, m):
+                if obstacleGrid[i][j]:
+                    dp[i][j] = 0
+                else:
+                    dp[i][j] = dp[i-1][j] + dp[i][j-1]
+
+        return dp[n-1][m-1]
