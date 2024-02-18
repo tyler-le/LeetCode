@@ -18,12 +18,11 @@ class Solution:
             popped_node, popped_dist, popped_steps = q.popleft()
             
             # Update distance only if it's less than the current distance
-            if popped_dist < distances[popped_node]:
-                distances[popped_node] = popped_dist
+            distances[popped_node] = min(popped_dist, distances[popped_node])
                 
-                # Explore neighbors
-                for nbor, weight in graph[popped_node]:
-                    if popped_steps < k and popped_dist + weight < distances[nbor]:
-                        q.append((nbor, popped_dist + weight, popped_steps + 1))
+            # Explore neighbors
+            for nbor, weight in graph[popped_node]:
+                if popped_steps < k and popped_dist + weight < distances[nbor]:
+                    q.append((nbor, popped_dist + weight, popped_steps + 1))
         
         return distances[dst] if distances[dst] != math.inf else -1
