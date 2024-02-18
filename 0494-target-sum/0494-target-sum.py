@@ -1,28 +1,29 @@
 class Solution:
-    def findTargetSumWays(self, nums: List[int], target: int) -> int:        
+    def findTargetSumWays(self, nums: List[int], target: int) -> int:
+        # backtracking
         # map (acc, index) : number of ways target can be formed
-        dp = collections.defaultdict(int)
+        # each choice, we can (+) the current num or (-) the current num
         
-        def backtrack(acc, index):
+        def backtrack(index, acc):
             
-            # check cache
-            if (acc, index) in dp: 
-                return dp[(acc, index)]
+            if (acc, index) in hmap: 
+                return hmap[(acc, index)]
             
-            # base case
-            if index == len(nums):
-                return 1 if (acc == target) else 0
+            if index >= n:
+                if acc == target: 
+                    return 1
+                return 0
+                
+            # make a current choice for the index
+            add = backtrack(index+1, acc + nums[index])
+            sub = backtrack(index+1, acc - nums[index])
             
-            # make the choice
-            num_ways_add = backtrack(acc+nums[index], index+1)   
+            hmap[(acc, index)] = (add + sub)
             
-            # make the second choice
-            num_ways_sub = backtrack(acc-nums[index], index+1)
+            return hmap[(acc, index)]
             
-            # cache the result
-            dp[(acc, index)] = num_ways_add + num_ways_sub
             
-            return dp[(acc, index)]
-            
+        
+        n = len(nums)
+        hmap = defaultdict(int)
         return backtrack(0, 0)
-            
