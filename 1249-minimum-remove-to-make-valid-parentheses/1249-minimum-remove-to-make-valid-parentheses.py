@@ -3,17 +3,24 @@ class Solution:
         stack = []
         indices_to_remove = set()
         res = ""
+        num_open = 0
         
         for i, ch in enumerate(s):
-            if ch not in "()": continue
-            elif ch == "(": stack.append(i)
-            elif stack and ch == ")": stack.pop()
-            else: indices_to_remove.add(i)
+            if ch == "(":
+                stack.append(i)
+                num_open+=1
+            elif ch == ")":
+                if not num_open:
+                    indices_to_remove.add(i)
+                else:
+                    stack.pop()
+                    num_open-=1
         
-        indices_to_remove = indices_to_remove.union(set(stack))
+        indices_to_remove.update(set(stack))
         
-        for i, ch in enumerate(s):
-            if i in indices_to_remove: continue
-            res+=ch
         
+        for i in range(len(s)):
+            if i not in indices_to_remove:
+                res+=s[i]
+                        
         return res
