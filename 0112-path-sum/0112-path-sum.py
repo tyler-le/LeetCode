@@ -9,16 +9,13 @@ class Solution:
         
         
         def dfs(node, curr_sum):
+            
             if not node: return False
-            if not node.left and not node.right:
-                return curr_sum - node.val == 0
+            curr_sum-=node.val
+            if not node.left and not node.right: return curr_sum == 0
             
-            return dfs(node.left, curr_sum - node.val) or dfs(node.right, curr_sum - node.val)
+            return dfs(node.left, curr_sum) or dfs(node.right, curr_sum)
             
-            
-            
-            
-            
-            
+    
         if not root: return False
         return dfs(root, targetSum)
