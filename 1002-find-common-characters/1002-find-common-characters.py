@@ -1,25 +1,17 @@
 class Solution:
     def commonChars(self, words: List[str]) -> List[str]:
-        # min(ch count from prev word, ch count from current word)
-        counters = [Counter(words[0])]
-        commons = set(counters[0].keys())
-        res = dict() # ch to int
-        res2 = []
         
-        for word in words[1:]:
-            counters.append(Counter(word))
+        commons = [math.inf for _ in range(26)]
+        res = ""
         
-        for cnt in counters:
-            commons = commons.intersection(set(cnt.keys()))
+        for word in words:
+            cnt = Counter(word)
             
-        for com in commons:
-            for cnt in counters:
-                if com not in res:
-                    res[com] = cnt[com]
-                else:
-                    res[com] = (min(cnt[com], res[com]))
+            for i in range(26):
+                commons[i] = min(commons[i], cnt[chr(i + ord('a'))])
+            
+        for i in range(len(commons)):
+            if commons[i]:
+                res+=(chr(i + ord('a'))) * commons[i]
         
-        for k,v in res.items():
-            res2+=([k] * v)
-        
-        return res2
+        return res
