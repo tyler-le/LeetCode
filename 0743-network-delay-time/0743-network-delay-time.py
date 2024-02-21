@@ -1,27 +1,22 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         
-        # BFS (time, node) pairs
-            
-        visited = {}
-        
-        # build adjacency matrix node : [(nbor, weight)]
         graph = defaultdict(list)
+        hmap = defaultdict(lambda : math.inf)
+        visited = set()
+        q = deque([(k, 0)]) # (node : time)
         
+        # create adjacency list
         for u, v, w in times:
             graph[u].append((v, w))
             
-        q = deque([(k, 0)])
-        
-        
         while q:
-            node, time = q.popleft()
-            if node not in visited or time < visited[node]:
-                visited[node] = time
-
-                for nbor, weight in graph[node]:
-                    q.append((nbor, time + weight))
-        
-        return -1 if len(visited) < n else max(visited.values())
+            popped_node, popped_time = q.popleft()
+            if popped_node not in visited or popped_time < hmap[popped_node]:
+                hmap[popped_node] = popped_time
+                visited.add(popped_node)
             
-        
+                for nbor, t in graph[popped_node]:
+                    q.append((nbor, popped_time + t))
+                
+        return max(hmap.values()) if len(visited) == n else -1
