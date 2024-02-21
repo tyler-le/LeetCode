@@ -13,7 +13,7 @@ class Solution:
         while q:
             popped_node, popped_time = q.popleft()
             if popped_node not in visited or popped_time < hmap[popped_node]:
-                hmap[popped_node] = popped_time
+                hmap[popped_node] = min(popped_time, hmap[popped_node])
                 visited.add(popped_node)
             
                 for nbor, t in graph[popped_node]:
