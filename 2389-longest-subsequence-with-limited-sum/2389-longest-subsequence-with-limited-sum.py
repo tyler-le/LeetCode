@@ -7,12 +7,9 @@ class Solution:
             prefix_sum , count = 0, 0
             
             for num in nums:
-                if query >= num:
-                    query-=num
+                if prefix_sum + num <= query:
+                    prefix_sum+=num
                     count+=1
-                else:
-                    break
-            
             res.append(count)
-        
+                    
         return res
