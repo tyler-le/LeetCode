@@ -6,7 +6,7 @@ class Solution:
             graph[u].append((v, w))
             
         # (node, weight, steps)
-        q = deque([(src, 0, -1)])
+        q = deque([(src, 0, 0)])
         
         # node : distance from src map
         distances = defaultdict(lambda : math.inf)
@@ -18,7 +18,7 @@ class Solution:
             if popped_node == dst: res = min(res, popped_dist)
             
             for nbor, weight in graph[popped_node]:
-                if popped_steps < k and popped_dist + weight < distances[nbor]: 
+                if popped_steps < k+1 and popped_dist + weight < distances[nbor]: 
                     q.append((nbor, popped_dist + weight, popped_steps + 1))
             
         return res if res != math.inf else -1
