@@ -1,16 +1,26 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+#         p1 tracks next position of ~val
+#         p2 tracks next position of val
+#         set nums[p2] = nums[p1]
+        
+        val_ptr, non_val_ptr = 0, 0
         n = len(nums)
-        left, right = 0, n - 1
         
-        while left <= right:
-            while left < n and nums[left] != val: left+=1
-                
-            while right >= 0 and nums[right] == val: right-=1
+        while non_val_ptr < n:
             
-            if left <= right and left < n and right >= 0: 
-                nums[left], nums[right] = nums[right], nums[left]
-        
-        return right + 1
+            # set val_ptr
+            while val_ptr < n and nums[val_ptr] != val:
+                val_ptr+=1
             
-    
+            non_val_ptr = val_ptr + 1
+            
+            while non_val_ptr < n and nums[non_val_ptr] == val:
+                non_val_ptr+=1
+            
+            if val_ptr < n and non_val_ptr < n:
+                nums[val_ptr], nums[non_val_ptr] = nums[non_val_ptr], nums[val_ptr]
+            
+        return val_ptr
+            
+            
