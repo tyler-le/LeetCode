@@ -8,8 +8,8 @@ class Solution:
             for j in range(m):
                 cnt[mat[i][j]]+=1
         
-        for num, freq in cnt.items():
-            if freq == len(mat):
+        for num in mat[0]:
+            if cnt[num] == len(mat):
                 return num
         
         return -1
