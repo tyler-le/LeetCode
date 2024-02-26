@@ -1,17 +1,15 @@
 class Solution:
     def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
-
-        nums.sort()
-        
-        res = defaultdict(int)
-        
         acc = 0
-        for i, num in enumerate(nums):
+        prefix = []
+        nums.sort()
+        res = []
+        
+        for num in nums:
             acc+=num
-            for query in queries:
-                if acc <= query:
-                    res[query] = max(res[query], i+1)
+            prefix.append(acc)
+        
+        for query in queries:
+            res.append( bisect_right(prefix, query) )
             
-                
-        return [res[query] for query in queries]
-            
+        return res
