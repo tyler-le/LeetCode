@@ -1,22 +1,21 @@
 class Solution:
     def minCost(self, colors: str, neededTime: List[int]) -> int:
-        # for each contiguous group of colors, we need to remove all except one
-        # we will choose to keep the most time consuming one for optimality reasons
-        # hence cost = sum(group) - max(group)
         
-        l, r, n = 0, 0, len(colors)
-        res = 0
+        l, r = 0, 0
+        n = len(colors)
+        cnt = 0
         
         while l < n and r < n:
+            curr_max = neededTime[l]
             
-            group_max = 0
-            group_sum = 0
-            while l < n and r < n and colors[r] == colors[l]: 
-                group_max = max(group_max, neededTime[r])
-                group_sum+=neededTime[r]
+            while r+1 < n and colors[l] == colors[r+1]:
                 r+=1
+                curr_max = max(curr_max, neededTime[r])
                 
-            res+=(group_sum - group_max)
-            l = r
+            cnt+=curr_max
+            
+            l = r + 1
+            r = l
         
-        return res
+        return sum(neededTime) - cnt
+                
