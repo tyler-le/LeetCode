@@ -1,15 +1,15 @@
 class Solution:
     def smallestCommonElement(self, mat: List[List[int]]) -> int:
-        hmap = defaultdict(int)
-        n = len(mat)
-
-        for row in mat:
-            for x in row:
-                hmap[x]+=1
+        # count the frequencies and take the min element with count len(mat)
+        cnt = defaultdict(int)
+        n, m = len(mat), len(mat[0])
         
-        for x in mat[0]:
-            if hmap[x] == n: return x
+        for i in range(n):
+            for j in range(m):
+                cnt[mat[i][j]]+=1
+        
+        for num, freq in cnt.items():
+            if freq == len(mat):
+                return num
         
         return -1
-        
-        
