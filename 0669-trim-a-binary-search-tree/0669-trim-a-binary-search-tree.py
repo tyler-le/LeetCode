@@ -11,10 +11,8 @@ class Solution:
             if not node: return None
             elif node.val < low: return rec(node.right)
             elif node.val > high: return rec(node.left)
-            else:
-                node.left = rec(node.left)
-                node.right = rec(node.right)
-            
+            else: node.left, node.right = rec(node.left), rec(node.right)
+               
             
             
             return node
