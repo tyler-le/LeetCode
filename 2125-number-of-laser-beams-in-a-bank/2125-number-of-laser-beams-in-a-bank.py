@@ -3,11 +3,8 @@ class Solution:
         res = 0
         prev_cnt = 0
         
-        for row in bank:
-            cnt = 0
-            
-            for ch in row:
-                if ch == "1": cnt+=1
+        for row in bank:        
+            cnt = row.count("1")
             
             if cnt:
                 res+=(prev_cnt * cnt)
