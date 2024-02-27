@@ -1,17 +1,19 @@
 class Solution:
     def numberOfBeams(self, bank: List[str]) -> int:
-
-        counts = []
         res = 0
+        prev_cnt = 0
         
-        for i, row in enumerate(bank):
-            cnt = row.count("1")
-            if cnt: 
-                counts.append(cnt)
-                        
-                if len(counts) >= 2:
-                    res+=(counts[-1] * counts[-2])
+        for row in bank:
+            cnt = 0
+            
+            for ch in row:
+                if ch == "1": cnt+=1
+            
+            if cnt:
+                res+=(prev_cnt * cnt)
+                prev_cnt = cnt
             
         return res
-    
-    [1, 1]
+            
+            
+                
