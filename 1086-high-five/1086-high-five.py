@@ -6,11 +6,11 @@ class Solution:
         res = []
         
         for student, score in items:
-            hmap[student].append(score)
+            heappush(hmap[student], score)
+            if len(hmap[student]) > 5: heappop(hmap[student])
             
         for student, scores in hmap.items():
-            scores.sort()
-            res.append([student, sum(scores[-5:]) // 5])
+            res.append([student, sum(scores) // 5])
         
         res.sort(key = lambda x : x[0])
         return res
