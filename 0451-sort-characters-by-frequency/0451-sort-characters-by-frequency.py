@@ -9,7 +9,7 @@ class Solution:
         
         cnt = Counter(s)
         res = ""
-        arr = [[] for _ in range(1 + max(cnt.values()))]
+        arr = [[] for _ in range(len(s)+1)]
         
         for ch, freq in cnt.items():
             arr[freq].append(ch)
