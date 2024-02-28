@@ -1,21 +1,23 @@
 class Solution:
     def frequencySort(self, s: str) -> str:
-        n = len(s)
+        # frequency of characters is limited by 26*2 total characters, so we can use bucket sort
+        
+        
+        # arr[i] = list of characters with frequency i
+        # traverse arr in reverse to build output
+        
+        
+        cnt = Counter(s)
         res = ""
+        arr = [[] for _ in range(1 + max(cnt.values()))]
         
-        # each index i is the frequency of all the characters in that bucket
-        buckets = [[] for _ in range(n+1)]
-        
-        hmap = Counter(s)
-        
-        for ch, freq in hmap.items():
-            buckets[freq].append(ch)
-        
-        for i in range(n, -1, -1):
-            for ch in buckets[i]:
-                res+=(ch*i)
+        for ch, freq in cnt.items():
+            arr[freq].append(ch)
+            
+        for i in range(len(arr)-1, -1, -1):
+            if not arr[i]: continue
+            
+            for x in arr[i]:
+                res+=(x*i)
                 
         return res
-        
-        
-        
