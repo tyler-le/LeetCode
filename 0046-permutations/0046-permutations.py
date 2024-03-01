@@ -1,5 +1,6 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
+        
         res = []
         
         def backtrack(path):
@@ -10,7 +11,6 @@ class Solution:
             for num in nums:
                 if num not in path:
                     backtrack(path + [num])
-
-            
+                    
         backtrack([])
         return res
