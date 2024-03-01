@@ -1,39 +1,17 @@
 class Solution:
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
-        # at the least, there is 1 group
-        # at the most, there are n groups
+        # map group size -> list of groups
         
-        # groupSizes = [2,1,3,3,3,2,4,4]
-        
-        # |Group Size| == 1 -> P1
-        # |Group Size| == 2 -> P0, P5, P6, P7
-        # |Group Size| == 3 -> P2, P3, P4
-        
-        # map "Group Size" : [People]
-        hmap = collections.defaultdict(list)
+        hmap = defaultdict(list)
+        res = []
         
         for i in range(len(groupSizes)):
-            person, size = i, groupSizes[i]
-            hmap[size].append(person)
+            gs = groupSizes[i]
             
-        res = []
-
-        for groupSize, peoples in hmap.items():
-            count = 0
-            grouping = []
+            hmap[gs].append(i)
             
-            for person in peoples:
-                
-                grouping.append(person)
-                count+=1
-                
-                if count == groupSize:
-                    res.append(grouping)
-                    count = 0
-                    grouping = []
+            if len(hmap[gs]) == gs:
+                res.append(hmap[gs])
+                hmap[gs] = []
         
         return res
-                
-            
-            
-        
