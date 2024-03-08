@@ -4,11 +4,7 @@ class Solution:
         # frequencies range from 0 -> len(nums)
         
         n = len(nums)
-        freqs = [0 for _ in range(n+1)]
         cnt = Counter(nums)
+        max_freq = max(cnt.values())
         
-        for num, freq in cnt.items():
-            freqs[freq]+=freq
-        
-        for freq in freqs[::-1]:
-            if freq: return freq
+        return sum(freq for freq in cnt.values() if freq == max_freq)
