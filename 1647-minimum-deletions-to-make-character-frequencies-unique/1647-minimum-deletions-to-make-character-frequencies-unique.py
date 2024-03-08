@@ -20,8 +20,7 @@ class Solution:
                 res+=1
                 popped_freq-=1
             
-            if popped_freq:
-                seen_freqs.add(popped_freq)
+            seen_freqs.add(popped_freq)
         
         return res
         
