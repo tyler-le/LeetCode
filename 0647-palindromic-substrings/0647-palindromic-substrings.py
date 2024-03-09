@@ -1,32 +1,32 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
+        # for each position, check if it is part of a palindrome
         
         def check_even(i):
             cnt = 0
-            left, right = i, i+1
-            while left >= 0 and right < n and s[left] == s[right]:
+            j = i
+            
+            while i >= 0 and j < n and s[i] == s[j]:
                 cnt+=1
-                left-=1
-                right+=1
+                i-=1
+                j+=1
+            
             return cnt
         
         def check_odd(i):
             cnt = 0
-            left, right = i, i
-            while left >= 0 and right < n and s[left] == s[right]:
+            j = i+1
+            while i >= 0 and j < n and s[i] == s[j]:
                 cnt+=1
-                left-=1
-                right+=1
+                i-=1
+                j+=1
+                
             return cnt
-            
         
-        res = 0
         n = len(s)
+        res = 0
         for i in range(n):
-            # even length
-            res+=check_even(i)
-            
-            # odd length
-            res+=check_odd(i)
+            res+=(check_even(i) + check_odd(i))
         
         return res
+            
