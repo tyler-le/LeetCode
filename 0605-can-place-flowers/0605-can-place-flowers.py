@@ -1,15 +1,16 @@
 class Solution:
     def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
         
-        acc = 0
+        # count how many flowers we can place and check if >= n
+        
+        res = 0
         
         for i in range(len(flowerbed)):
-            left_empty = (i == 0) or (flowerbed[i-1] == 0)
-            right_empty = (i == len(flowerbed) - 1) or (flowerbed[i+1] == 0)
-            can_plant = left_empty and right_empty and flowerbed[i] == 0
-            
-            if can_plant:
+            before = flowerbed[i-1] if i > 0 else 0
+            after = flowerbed[i+1] if i+1 < len(flowerbed) else 0
+                
+            if not before and not after and not flowerbed[i]: 
                 flowerbed[i] = 1
-                acc+=1
-                if acc >= n: return True
-        return acc >= n
+                res +=1
+        
+        return res >= n
