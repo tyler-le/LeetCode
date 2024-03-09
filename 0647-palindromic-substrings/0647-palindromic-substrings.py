@@ -23,10 +23,7 @@ class Solution:
                 
             return cnt
         
-        n = len(s)
-        res = 0
-        for i in range(n):
-            res+=(check_even(i) + check_odd(i))
-        
-        return res
+        n = len(s)        
+    
+        return sum(check_even(i) + check_odd(i) for i in range(n)) 
             
