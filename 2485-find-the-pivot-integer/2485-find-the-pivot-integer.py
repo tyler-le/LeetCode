@@ -1,22 +1,22 @@
 class Solution:
     def pivotInteger(self, n: int) -> int:
-        left, right = 1, n
-        
-        sum_left, sum_right = left, right
         
         if n == 1: return 1
         
-        while left < right:
+        sum_left = 1
+        sum_right = n
+        l, r = 1, n
+        
+        while l < r:
             if sum_left < sum_right:
-                sum_left += left + 1
-                left += 1
-
+                l+=1
+                sum_left+=l
+            
             else:
-                sum_right += right - 1
-                right -= 1
+                r-=1
+                sum_right+=r
             
-            if sum_left == sum_right and left + 1 == right - 1:
-                return left + 1
-            
+            if sum_left == sum_right and l+1 == r-1:
+                return l+1
         
         return -1
