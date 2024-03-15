@@ -1,22 +1,24 @@
 class Solution:
     def numSubarraysWithSum(self, nums: List[int], goal: int) -> int:
         
-        # subarrays that have sum <= k, using sliding window
+        # number of nonempty subarrays with AT MOST 'k' ones
         def at_most(k):
-            if k < 0: return 0           
-            l, res, curr_sum, n = 0, 0, 0, len(nums)
+            if k < 0: return 0
+            
+            num_ones = 0
+            l = 0
+            n = len(nums)
+            res = 0
             
             for r in range(n):
-                curr_sum += nums[r]
-                    
-                while curr_sum > k:
-                    curr_sum-=nums[l]
-                    l+=1
-                    
-                res+=(r-l+1) # number of subarrays ending at nums[r]
-                    
-            return res
+                num_ones+=nums[r]
                 
-        # (num subarrays with sum <= k) - (num subarrays with sum <= k-1) = (num subarrays with sum k)
-        return at_most(goal) - at_most(goal-1)
+                while num_ones > k:
+                    num_ones-=nums[l]
+                    l+=1
+                
+                res+=(r-l+1)
             
+            return res
+            
+        return at_most(goal) - at_most(goal - 1)
