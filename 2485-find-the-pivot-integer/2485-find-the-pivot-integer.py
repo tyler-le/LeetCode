@@ -8,13 +8,14 @@ class Solution:
         l, r = 1, n
         
         while l < r:
-            if sum_left < sum_right:
-                l+=1
-                sum_left+=l
-            
-            else:
+            if sum_left >= sum_right:
                 r-=1
                 sum_right+=r
+                
+            else:
+                l+=1
+                sum_left+=l
+        
             
             if sum_left == sum_right and l+1 == r-1:
                 return l+1
