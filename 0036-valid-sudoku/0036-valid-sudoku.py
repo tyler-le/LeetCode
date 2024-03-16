@@ -1,25 +1,24 @@
-class Solution(object):
-    def isValidSudoku(self, board):
-        """
-        :type board: List[List[str]]
-        :rtype: bool
-        """
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
         
-        rows = [set() for _ in range(len(board))]
-        cols = [set() for _ in range(len(board[0]))]
-        subgrids = collections.defaultdict(set)
+        # hash map problem
+        rows = defaultdict(set)
+        cols = defaultdict(set)
+        section = defaultdict(set)
         
+        n, m = len(board), len(board[0])
         
-        for r in range (len(board)):
-            for c in range(len(board[0])):
-                if board[r][c] == ".": continue
-                if board[r][c] in rows[r] or board[r][c] in cols[c] or board[r][c] in subgrids[(r//3, c//3)]: 
+        for i in range(n):
+            for j in range(m):
+                curr = board[i][j]
+                if curr == '.': 
+                    continue
+                if curr in rows[i] or curr in cols[j] or curr in section[(i//3, j//3)]:
                     return False
-
-                rows[r].add(board[r][c])
-                cols[c].add(board[r][c])
-                subgrids[(r//3, c//3)].add(board[r][c])
+                
+                rows[i].add(curr)
+                cols[j].add(curr)
+                section[(i//3, j//3)].add(curr)
                 
         return True
-    
                 
