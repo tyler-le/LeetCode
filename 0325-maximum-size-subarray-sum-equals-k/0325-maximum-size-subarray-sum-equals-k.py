@@ -1,27 +1,24 @@
-class Solution(object):
-    def maxSubArrayLen(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: int
-        """
-        hmap = defaultdict(int)
-        hmap[0] = -1
-        
-        # map prefix sum to where that prefix sum occurs
-        curr_sum = 0
-        total_sum = sum(nums)
+class Solution:
+    def maxSubArrayLen(self, nums: List[int], k: int) -> int:
+        prefix_sums = {}
+        prefix_sums[0] = -1
+        acc = 0
         res = 0
         
-        for i, num in enumerate(nums):
-            curr_sum+=num
+        for i in range(len(nums)):
+            num = nums[i]
+            acc+=num
             
-            if curr_sum - k in hmap:
-                res = max(res, i - hmap[curr_sum-k])
-            
-            if curr_sum not in hmap:
-                hmap[curr_sum] = i
-            
+            if acc - k in prefix_sums:
+                res = max(res, i - prefix_sums[acc - k])
+                
+            if acc not in prefix_sums:
+                prefix_sums[acc] = i
+                
         return res
-       
-    
+                
+            
+            
+            
+            
+            
