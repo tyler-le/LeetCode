@@ -1,33 +1,26 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        
         res = []
         
-        def rec(i):
-            nonlocal newInterval, res
+        
+        for i in range(len(intervals)):
+            curr_start, curr_end = intervals[i]
             
-            # Base case: when all intervals are processed
-            if i == len(intervals):
+            # case 1 - new interval comes before most previous
+            if newInterval[1] < curr_start:
                 res.append(newInterval)
+                res+=intervals[i:]
+                return res
             
-            # newInterval comes before intervals[index]
-            elif newInterval[1] < intervals[i][0]:
-                res+=[newInterval]
-                res.extend(intervals[i:])
-            
-            # newInterval comes after intervals[index]
-            elif intervals[i][1] < newInterval[0]:
+            # new interval comes after most previous
+            elif curr_end < newInterval[0] :
                 res.append(intervals[i])
-                rec(i+1)
+                
             
-            # newInterval conflicts with intervals[index]
+            # new interval overlaps with most previous
             else:
-                mn = min(newInterval[0], intervals[i][0])
-                mx = max(newInterval[1], intervals[i][1])
-                newInterval = [mn, mx]
-                rec(i+1)
-            
-        rec(0)
+                newInterval = [min(curr_start, newInterval[0]), max(curr_end, newInterval[1])]
+        
+        res.append(newInterval)
+        
         return res
-    
-    
