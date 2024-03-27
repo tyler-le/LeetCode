@@ -12,7 +12,7 @@ class Solution:
                 acc/=nums[l]
                 l+=1
             
-            if l<=r and acc < k: res+=(r-l+1)
+            if acc < k: res+=(r-l+1)
         
         return res
             
