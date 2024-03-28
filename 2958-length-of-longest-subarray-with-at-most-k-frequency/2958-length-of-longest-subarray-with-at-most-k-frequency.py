@@ -8,7 +8,7 @@ class Solution:
         for r in range(n):
             cnt[nums[r]]+=1
             
-            while l < r and cnt[nums[r]] > k:
+            while cnt[nums[r]] > k:
                 cnt[nums[l]]-=1
                 if not cnt[nums[l]]: del cnt[nums[l]]
                 l+=1
