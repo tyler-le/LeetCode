@@ -1,23 +1,22 @@
 class Solution:
     def longestEqualSubarray(self, nums: List[int], k: int) -> int:
-        # window size - take max freq
         
-        hmap = defaultdict(int)
         l = 0
-        n = len(nums)
         res = 0
-        max_freq = 0
+        cnt = defaultdict(int)
+        n = len(nums)
+        max_freq = -math.inf
         
         for r in range(n):
-            hmap[nums[r]]+=1
-            max_freq = max(max_freq, hmap[nums[r]])
+            cnt[nums[r]]+=1
+            max_freq = max(max_freq, cnt[nums[r]])
             
-            while (r-l+1) - (max_freq) > k:
-                hmap[nums[l]]-=1
+            # while max(cnt.values()) - (r-l+1) > k:
+            while r-l+1 - max_freq > k:
+                cnt[nums[l]]-=1
+                if not cnt[nums[l]]: del cnt[nums[l]]
                 l+=1
             
             res = max(res, max_freq)
         
         return res
-                      
-                    
