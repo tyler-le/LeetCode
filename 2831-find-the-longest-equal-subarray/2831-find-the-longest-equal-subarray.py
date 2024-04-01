@@ -11,7 +11,6 @@ class Solution:
             cnt[nums[r]]+=1
             max_freq = max(max_freq, cnt[nums[r]])
             
-            # while max(cnt.values()) - (r-l+1) > k:
             while r-l+1 - max_freq > k:
                 cnt[nums[l]]-=1
                 if not cnt[nums[l]]: del cnt[nums[l]]
