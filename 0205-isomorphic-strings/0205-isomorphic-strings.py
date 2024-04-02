@@ -1,15 +1,13 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        hmap_s_t = defaultdict(str)
-        hmap_t_s = defaultdict(str)
+        s_to_t = defaultdict(str)
+        t_to_s = defaultdict(str)
         
-        for s1, t1 in zip(s,t):
-            if s1 not in hmap_s_t and t1 not in hmap_t_s:
-                hmap_s_t[s1] = t1
-                hmap_t_s[t1] = s1
-                
-            else:
-                if hmap_s_t[s1] != t1 or hmap_t_s[t1] != s1:
-                    return False
+        for ch1, ch2 in zip(s, t):
+            if ch1 not in s_to_t and ch2 not in t_to_s:
+                s_to_t[ch1] = ch2
+                t_to_s[ch2] = ch1
+            elif s_to_t[ch1] != ch2 or t_to_s[ch2] != ch1:
+                return False
         
         return True
