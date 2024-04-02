@@ -1,32 +1,48 @@
 class Solution:
     def numEnclaves(self, grid: List[List[int]]) -> int:
-        
-        # for each 1 on the border, run dfs and change to 0
-        # then count the number of remaining 1's
-        
-        n, m, res = len(grid), len(grid[0]), 0
-        
-        def dfs(i, j):
-            
+        # turn all 1 connected to the boundary to 0
+        def handle_boundary(i, j):
             if i < 0 or j < 0 or i >= n or j >= m: return
             if not grid[i][j]: return
             
             grid[i][j] = 0
             
-            left = dfs(i,j-1)
-            right = dfs(i,j+1)
-            up = dfs(i-1,j)
-            down = dfs(i+1,j)
+            for di, dj in [(-1,0), (1,0), (0,-1), (0,1)]:
+                handle_boundary(i + di, j + dj)
+                
+        
+        # run number of islands
+        def dfs(i, j):
+            ans = 0
+            if i < 0 or j < 0 or i >= n or j >= m: return ans
+            if not grid[i][j]: return ans
+            
+            grid[i][j] = 0
+            ans+=1
+            
+            for di, dj in [(-1,0), (1,0), (0,-1), (0,1)]:
+                ans+=dfs(i + di, j + dj)
+            
+            return ans
             
             
-        for i in range(n):
-            for j in range(m):
-                if grid[i][j] and i == 0 or i == n-1 or j == 0 or j == m-1:
-                    dfs(i, j)
-                      
-        for i in range(n):
-            for j in range(m):
-                res+=grid[i][j]
-
+            
+        
+        n = len(grid)
+        m = len(grid[0])
+        res = 0
+        
+        for r in range(n):
+            if grid[r][0]: handle_boundary(r, 0)
+            if grid[r][m-1]: handle_boundary(r, m-1)
+        
+        for c in range(m):
+            if grid[0][c]: handle_boundary(0, c)
+            if grid[n-1][c]: handle_boundary(n-1, c)
+        
+        for r in range(n):
+            for c in range(m):
+                if grid[r][c]:
+                    res+=dfs(r, c)
+        
         return res
-            
