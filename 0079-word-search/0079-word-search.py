@@ -1,29 +1,28 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         
-        def backtrack(r, c, idx):
-            nonlocal visited
-            
+        def dfs(i, j, idx):
             if idx >= len(word): return True
-            if r < 0 or c < 0 or r >= len(board) or c >= len(board[0]): return False
-            if (r,c) in visited: return False
-            if board[r][c] != word[idx]: return False
+            if i < 0 or j < 0 or i >= n or j >= m: return False
+            if word[idx] != board[i][j]: return False
+            if (i,j) in visited: return False
             
-            visited.add((r,c))
+            visited.add((i,j))
             
-            res = backtrack(r+1, c, idx+1) or backtrack(r-1, c, idx+1) or backtrack(r, c+1, idx+1) or backtrack(r, c-1, idx+1)
+            for di, dj in [(-1,0), (1,0), (0,-1), (0,1)]:
+                if dfs(i+di, j+dj, idx+1):
+                    return True
+            
+            visited.remove((i,j))
+            return False
         
-            visited.remove((r,c))
         
-            return res
-            
-            
+        n, m = len(board), len(board[0])
         visited = set()
-        
-        for i in range(len(board)):
-            for j in range(len(board[0])):
-                if board[i][j] == word[0]:
-                    if backtrack(i, j, 0): 
+        for r in range(n):
+            for c in range(m):
+                
+                if board[r][c] == word[0]:
+                    if dfs(r, c, 0):
                         return True
-        
         return False
