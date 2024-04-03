@@ -19,10 +19,11 @@ class Solution:
         
         n, m = len(board), len(board[0])
         visited = set()
+        
         for r in range(n):
             for c in range(m):
-                
                 if board[r][c] == word[0]:
+                    visited = set()
                     if dfs(r, c, 0):
                         return True
         return False
