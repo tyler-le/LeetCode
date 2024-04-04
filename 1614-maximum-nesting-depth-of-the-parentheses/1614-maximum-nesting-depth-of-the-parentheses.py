@@ -8,7 +8,7 @@ class Solution:
         for ch in s:
             if ch == "(":
                 curr_depth+=1
-                stack.append(("(", curr_depth))
+                stack.append("(")
                 
             elif ch == ")":
                 if stack:
