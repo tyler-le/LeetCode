@@ -16,7 +16,13 @@ class Solution:
                 popped, parent = q.popleft()
                 seen.add(popped)
                 
-                if popped.right and popped.right in seen:
+                if popped.right in seen:
+                    # this is the tricky part -- 
+                    # from example 1 -- 
+                    # we need to remove the "2" node
+                    # we can do this by looking at the parent ("1")
+                    # and checking the parents left and right
+                    # and look for "popped" and set it to None
                     if parent.left == popped: parent.left = None
                     elif parent.right == popped: parent.right = None
                     return root
