@@ -13,7 +13,10 @@ class Solution:
                 cnt[nums[l]]-=1
                 if not cnt[nums[l]]: del cnt[nums[l]]
                 l+=1
-            res+=l
+                res+=n-r
+            
+            # # res+=l is counting the number of subarrays that END AT index r
+            # res+=l
                 
                 
         return res
