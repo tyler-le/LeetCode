@@ -5,12 +5,13 @@ class Solution:
         res = 0
         mx = max(nums)
         cnt = defaultdict(int)
+        freq_max = 0
         
         for r in range(n):
-            cnt[nums[r]]+=1
+            if nums[r] == mx: freq_max+=1
             
-            while cnt[mx] == k:
-                cnt[nums[l]]-=1
+            while freq_max == k:
+                if nums[l] == mx: freq_max-=1
                 l+=1
             
             res+=l
