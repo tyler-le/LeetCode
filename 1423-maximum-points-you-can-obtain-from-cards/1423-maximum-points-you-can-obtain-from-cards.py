@@ -1,21 +1,24 @@
 class Solution:
     def maxScore(self, cardPoints: List[int], k: int) -> int:
-        # find the minimum window of size n-k
-        # subtract from sum(cardPoints)
+        # sliding window of length n-k
+        # minimize sum within window
+        # produces maximum sum of length k outside window 
         
-        total = sum(cardPoints)
-        
-        l, n = 0, len(cardPoints)
-        mini = float("inf")
-        curr_sum = 0
+        n = len(cardPoints)
+        window_size = n-k
+        res = math.inf
+        sumi = sum(cardPoints)
+        l = 0
+        curr = 0
         
         for r in range(n):
-            curr_sum+=cardPoints[r]
-            while (r-l+1) > (n-k):
-                curr_sum-=cardPoints[l]
-                l+=1
-            if r-l+1 == n-k:
-                mini = min(mini, curr_sum)
-        
-        return total - mini
+            curr+=cardPoints[r]
             
+            if r-l+1 > window_size:
+                curr-=cardPoints[l]
+                l+=1
+            
+            if r-l+1 == window_size:
+                res = min(res, curr)
+        
+        return sumi - res
