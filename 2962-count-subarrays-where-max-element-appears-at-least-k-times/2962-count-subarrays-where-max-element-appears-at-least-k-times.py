@@ -4,7 +4,6 @@ class Solution:
         n = len(nums)
         res = 0
         mx = max(nums)
-        cnt = defaultdict(int)
         freq_max = 0
         
         for r in range(n):
