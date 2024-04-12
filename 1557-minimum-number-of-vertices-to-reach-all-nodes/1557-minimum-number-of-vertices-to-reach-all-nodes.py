@@ -1,14 +1,15 @@
 class Solution:
     def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:
+        # return all the source nodes?
+        indegrees = {}
+        res = []
         
-        # map node to incoming edges
-        hmap = defaultdict(int)
+        for u, v in edges:
+            if u not in indegrees: indegrees[u] = 0
+            if v not in indegrees: indegrees[v] = 1
+            else: indegrees[v]+=1
         
-        for u, _ in edges:
-            hmap[u] = 0
-                
-        for _, v in edges:
-            hmap[v]+=1
+        for n, x in indegrees.items():
+            if not x: res.append(n)
         
-        return [node for node, incoming in hmap.items() if incoming == 0]
-        
+        return res
