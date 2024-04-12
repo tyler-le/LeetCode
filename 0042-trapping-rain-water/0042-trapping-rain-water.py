@@ -11,7 +11,7 @@ class Solution:
             else: max_from_left[i] = max(max_from_left[i-1], height[i])
     
         for i in range(n-1, -1, -1):
-            if i == n-1: max_from_right[-1] = height[-1]
+            if i == n-1: max_from_right[n-1] = height[n-1]
             else: max_from_right[i] = max(max_from_right[i+1], height[i])
                 
         for i in range(n):
