@@ -1,17 +1,9 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hmap = {}
         
-        # map value : index
-        hmap = dict()
-        
-        for i in range(len(nums)):
-            complement = target - nums[i]
+        for i, num in enumerate(nums):
+            complement = target - num
             if complement in hmap:
                 return [hmap[complement], i]
-            hmap[nums[i]] = i
-            
+            hmap[num] = i
