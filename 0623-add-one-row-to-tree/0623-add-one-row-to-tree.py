@@ -10,23 +10,17 @@ class Solution:
         if depth == 1:
             return TreeNode(val, root, None)
         
-        q = deque([(root, 1)])
-        
-        while q:
-                        
-            popped_node, popped_depth = q.popleft()
-
-            if popped_depth == depth - 1:
-                left = popped_node.left
-                right = popped_node.right
-                popped_node.left = TreeNode(val, left, None)
-                popped_node.right = TreeNode(val, None, right)
-                continue
-
-            if popped_node.left:
-                q.append((popped_node.left, popped_depth + 1))
-
-            if popped_node.right:
-                q.append((popped_node.right, popped_depth + 1))
-                    
+        def dfs(node, d):
+            if not node: return
+            left, right = node.left, node.right
+            if d == depth - 1:
+                node.left = TreeNode(val, left, None)
+                node.right = TreeNode(val, None, right)
+            
+            dfs(left, d+1)
+            dfs(right, d+1)
+            
+            
+        dfs(root, 1)
         return root
+            
