@@ -6,26 +6,20 @@
 #         self.right = right
 class Solution:
     def smallestFromLeaf(self, root: Optional[TreeNode]) -> str:
-        strings = []
+        res = "~"
         
-        def dfs(node, path):
-            if not node: 
-                return
+        def dfs(node, curr):
+            nonlocal res
+            
+            curr += chr(node.val + ord('a'))
             
             if not node.left and not node.right:
-                path.append(chr(node.val + ord('a')))
-                strings.append("".join(path.copy()[::-1]))
+                res = min(res, curr[::-1])
                 return
 
-            
-            dfs(node.left, path + [chr(node.val + ord('a'))])
-            dfs(node.right, path + [chr(node.val + ord('a'))])
+            if node.left: dfs(node.left, curr)
+            if node.right: dfs(node.right, curr)
         
-        dfs(root, [])
-        res = strings[0]
-        
-        for s in strings:
-            res = min(res, s)
-        
+        dfs(root, "")
         return res
             
