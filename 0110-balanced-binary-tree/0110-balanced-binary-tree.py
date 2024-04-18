@@ -12,18 +12,18 @@ class Solution:
         
         
         def dfs(node):
-            nonlocal res
-            if not node: return 0
+
+            is_balanced = True
+            if not node: return [0, True]
             
-            left = dfs(node.left)
-            right = dfs(node.right)
+            left_height, left_balanced = dfs(node.left)
+            right_height, right_balanced = dfs(node.right)
+                
+            if not left_balanced or not right_balanced or abs(left_height - right_height) > 1:
+                is_balanced = False
             
-            if abs(left - right) > 1:
-                res = False
-            
-            return 1 + max(left, right)
+            return [1 + max(left_height, right_height), is_balanced]
         
-        res = True
-        dfs(root)
-        return res
+      
+        return dfs(root)[1]
         
