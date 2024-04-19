@@ -8,13 +8,15 @@ class Solution:
     def goodNodes(self, root: TreeNode) -> int:
         res = 0
         
-        def rec(node, maxi):
+        def dfs(node, mx_in_path):
             nonlocal res
-            if not node: return
-            if node.val >= maxi: res+=1
-            rec(node.left, max(maxi, node.val))
-            rec(node.right, max(maxi, node.val))
             
+            if not node: return
+            
+            if node.val >= mx_in_path: res+=1
+            
+            dfs(node.left, max(node.val, mx_in_path))
+            dfs(node.right, max(node.val, mx_in_path))
         
-        rec(root, root.val)
+        dfs(root, root.val)
         return res
