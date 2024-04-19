@@ -7,9 +7,7 @@
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         
-        # bfs from right to left, storing first node encountered
         if not root: return []
-        
         res = []
         q = deque([root])
         
@@ -18,8 +16,11 @@ class Solution:
             
             for i in range(level_size):
                 popped = q.popleft()
-                if i == 0: res.append(popped.val)
-                if popped.right: q.append(popped.right)
-                if popped.left: q.append(popped.left)
-            
+                if not i:
+                    res.append(popped.val)
+                
+                if popped.right:
+                    q.append(popped.right)
+                if popped.left:
+                    q.append(popped.left)
         return res
