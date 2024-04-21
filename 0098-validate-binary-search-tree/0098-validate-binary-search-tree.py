@@ -10,15 +10,16 @@ class Solution:
         inord = []
         def inorder(node):
             nonlocal inord
-            if not node: return
-            
+            if not node:
+                return 
             inorder(node.left)
             inord.append(node.val)
             inorder(node.right)
-            
-        inorder(root)
         
-        for r in range(1, len(inord)):
-            if inord[r-1] >= inord[r]: return False
+        inorder(root)
+
+        for i in range(1, len(inord)):
+            if inord[i] <= inord[i-1]:
+                return False
             
         return True
