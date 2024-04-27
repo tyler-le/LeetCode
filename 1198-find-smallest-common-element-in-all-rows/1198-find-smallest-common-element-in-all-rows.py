@@ -1,15 +1,8 @@
 class Solution:
     def smallestCommonElement(self, mat: List[List[int]]) -> int:
-        # count the frequencies and take the min element with count len(mat)
-        cnt = defaultdict(int)
-        n, m = len(mat), len(mat[0])
+        subset = set(mat[0])
         
-        for i in range(n):
-            for j in range(m):
-                cnt[mat[i][j]]+=1
+        for m in mat[1:]:
+            subset = subset.intersection(set(m))
         
-        for num in mat[0]:
-            if cnt[num] == len(mat):
-                return num
-        
-        return -1
+        return min(subset) if subset else -1
