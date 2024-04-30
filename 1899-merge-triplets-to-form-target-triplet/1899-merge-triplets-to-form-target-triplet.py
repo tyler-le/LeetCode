@@ -8,4 +8,6 @@ class Solution:
                 curr[1] = max(curr[1], b)
                 curr[2] = max(curr[2], c)
                 
-        return curr == target
+                if curr == target: return True
+                
+        return False
