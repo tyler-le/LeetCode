@@ -9,13 +9,19 @@ class Solution:
         res = 0
         
         def dfs(node):
+            
             nonlocal res
-            if not node: return
+            
+            if not node: 
+                return
             
             dfs(node.left)
-            res+=(node.val if low <= node.val <= high else 0)
+            
+            if low <= node.val <= high:
+                res+=node.val
+                
             dfs(node.right)
         
         dfs(root)
-        
         return res
+            
