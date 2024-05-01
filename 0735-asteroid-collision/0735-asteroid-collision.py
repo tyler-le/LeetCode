@@ -1,26 +1,30 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        
         stack = []
+        
         for ast in asteroids:
-            survives = True
+            
+            survived = True
+            
             while stack and stack[-1] > 0 and ast < 0:
-                # ast is lt
+                
+                # top ast is smaller than curr ast
                 if stack[-1] < abs(ast):
                     stack.pop()
                 
-                # ast is gt
+                # top as is bigger than curr ast
                 elif stack[-1] > abs(ast):
-                    survives = False
+                    survived = False
                     break
                 
-                # ast is eq
+                # they tie
                 else:
-                    survives = False
                     stack.pop()
+                    survived = False
                     break
                     
-            if survives: 
+            if survived:
                 stack.append(ast)
-                    
+                
         return stack
+                
