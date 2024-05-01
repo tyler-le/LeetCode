@@ -18,5 +18,5 @@ class Solution:
             if window_sum == sumi - x:
                 res = max(res, r-l+1)
         
-        return n - res if res != -1 else res
+        return n - res if res != -1 else -1
             
