@@ -1,33 +1,22 @@
 class Solution:
     def minOperations(self, nums: List[int], x: int) -> int:
-        # sliding window of n - x - 1
         
-        
-        
-#         sum(nums) - x
-        
-#         prefix sum
-        
-#         find max subarray that equals sum(nums) - x
-        
-        
+        # largest window that equals (sumi - x)
         sumi = sum(nums)
-        curr_sum = 0
         l = 0
-        target = sumi - x
         res = -1
-        if not target: return len(nums)
-        for r in range(len(nums)):
-            curr_sum+=nums[r]
+        n = len(nums)
+        window_sum = 0
+        
+        for r in range(n):
+            window_sum+=nums[r]
             
-            while l < len(nums) and curr_sum > target:
-                curr_sum-=nums[l]
+            while l < n and window_sum > sumi - x:
+                window_sum-=nums[l]
                 l+=1
             
-            if l < len(nums) and curr_sum == target:
+            if window_sum == sumi - x:
                 res = max(res, r-l+1)
-                
-                
-        return len(nums) - res if res!=-1 else res
-            
         
+        return n - res if res != -1 else res
+            
