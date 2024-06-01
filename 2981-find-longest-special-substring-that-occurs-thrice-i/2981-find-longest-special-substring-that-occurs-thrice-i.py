@@ -1,9 +1,9 @@
 class Solution:
     def maximumLength(self, s: str) -> int:
-        # sliding window 
-        # map a -> [list of all special substrings for 'a']
-        # filter result to all hmap.values() that are >= 3
-        # take max length one
+        # sliding window of fixed length 1...n
+        # each sliding window iteration -> map substring to number of occurrences
+        # filter substrings that occur >= 3 times
+        # record max length one
         
         def sliding_window(k):
             nonlocal res
@@ -11,7 +11,6 @@ class Solution:
             n = len(s)
             curr = deque()
             cnt = defaultdict(int)
-            
             
             for r in range(n):
                 curr.append(s[r])
@@ -29,7 +28,6 @@ class Solution:
                     res = max(res, len(substr))
                     
         n = len(s)
-        st = set()
         res = -1
         for i in range(1, n):
             sliding_window(i)
