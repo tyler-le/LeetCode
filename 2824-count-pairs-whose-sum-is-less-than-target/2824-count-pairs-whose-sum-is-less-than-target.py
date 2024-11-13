@@ -1,14 +1,29 @@
 class Solution:
     def countPairs(self, nums: List[int], target: int) -> int:
-        nums.sort()
-        res = 0
-        l, r = 0, len(nums)-1
         
-        while l < r:
-            sumi = nums[l] + nums[r]
-            if sumi < target:
-                res+= (r - l)
-                l+=1
-            else:
-                r-=1
+        
+#         curr = -1
+#         right_index = 3
+#         i = 0
+        
+#         -1, 1, 1, 2, 3
+        
+        n = len(nums)
+        nums.sort()
+        right = n - 1
+        res = 0
+        
+        for i in range(n):
+            curr = nums[i]
+            
+            while i < right and curr + nums[right] >= target:
+                right -= 1
+                
+            if curr + nums[right] < target:
+                res+=(right - i)
+        
         return res
+            
+            
+                
+            
