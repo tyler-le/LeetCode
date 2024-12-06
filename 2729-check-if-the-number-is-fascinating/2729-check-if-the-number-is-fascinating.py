@@ -1,14 +1,7 @@
 class Solution:
     def isFascinating(self, n: int) -> bool:
-        double = str(2*n)
-        triple = str(3*n)
+        arr = list(str(n) + str(2*n) + str(3*n))
         
-        res = str(n) + double + triple
+        arr.sort()
         
-        cnt = Counter(res)
-        
-        for i in range(10):
-            if i == 0 and cnt["0"] > 0: return False
-            elif cnt[str(i)] > 1: return False
-        
-        return True
+        return arr == ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
