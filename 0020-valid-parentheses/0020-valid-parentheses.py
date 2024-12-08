@@ -1,19 +1,22 @@
 class Solution:
     def isValid(self, s: str) -> bool:
+        opens = set(["(", "[", "{"])
+        closed = set([")", "]", "}"])
         stack = []
-        OPEN = set(['(', '[', '{'])
-        CLOSED = set([')', ']', '}'])
-        hmap = {}
+        
+        hmap = dict()
         hmap[")"] = "("
-        hmap["}"] = "{"
         hmap["]"] = "["
+        hmap["}"] = "{"
         
         for ch in s:
-            if ch in OPEN:
+            if ch in opens:
                 stack.append(ch)
             else:
-                if not stack: return False
-                popped = stack.pop()
-                if hmap[ch] != popped: return False
-                
-        return not stack
+                if stack:
+                    popped = stack.pop()
+                    if popped != hmap[ch]:
+                        return False
+                else:
+                    return False
+        return not len(stack)
