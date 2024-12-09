@@ -12,9 +12,9 @@ class Solution:
             
             if (p.val <= node.val <= q.val) or (q.val <= node.val <= p.val):
                 return node
-            elif p.val <= node.val and q.val <= node.val:
+            elif p.val < node.val and q.val < node.val:
                 return rec(node.left)
-            elif p.val >= node.val and q.val >= node.val:
+            elif p.val > node.val and q.val > node.val:
                 return rec(node.right)
         
         return rec(root)
