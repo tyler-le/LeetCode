@@ -1,27 +1,24 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # hashmap of sets
         rows = defaultdict(set)
         cols = defaultdict(set)
-        subgrid = defaultdict(set) 
-        
+        subgrid = defaultdict(set) # (i, j) pairs
+
         n, m = len(board), len(board[0])
-        
+        EMPTY = "."
+
         for i in range(n):
             for j in range(m):
-                elem = board[i][j]
-                
-                if elem == ".": continue
-                if elem in rows[i] or elem in cols[j] or elem in subgrid[(i//3, j//3)]:
-                    return False
-                
-                rows[i].add(elem)
-                cols[j].add(elem)
-                subgrid[(i//3,j//3)].add(elem)
+                if board[i][j] == ".": continue
+
+                num = int(board[i][j])
+
+                if num in rows[i]: return False
+                if num in cols[j]: return False
+                if num in subgrid[(i//3,j//3)]: return False
+
+                rows[i].add(num)
+                cols[j].add(num)
+                subgrid[(i//3, j//3)].add(num)
         
         return True
-                
-                
-                    
-        
-        
