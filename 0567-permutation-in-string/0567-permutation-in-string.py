@@ -1,19 +1,20 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        # sliding window of size len(s1) + hashmap
-        
-        s1_map = Counter(s1)
-        s2_map = Counter()
-        window_size = len(s1)
+        # sliding window of length len(s1)
+        hmap = dict()
         l = 0
-        
-        for r in range (len(s2)):
-            s2_map[s2[r]]+=1
-            
-            while r-l+1 > window_size:
-                s2_map[s2[l]]-=1
-                if s2_map[s2[l]] == 0: del s2_map[s2[l]]
+        s1_cnt = Counter(s1)
+
+        for r in range(len(s2)):
+            if s2[r] in hmap: hmap[s2[r]]+=1
+            else: hmap[s2[r]] = 1
+
+            while r-l+1 > len(s1):
+                hmap[s2[l]]-=1
+                if hmap[s2[l]] == 0: del hmap[s2[l]]
                 l+=1
-            if s1_map == s2_map: return True
             
+            if hmap == s1_cnt: return True
+
         return False
+            
