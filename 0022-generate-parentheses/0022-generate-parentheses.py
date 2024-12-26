@@ -1,10 +1,11 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
 
-        # need to place n//2
+        # base case
+        # - have n open and n closed parens
 
         # in each step, we have two choices
-        # - place "(" only if num_open < n/2
+        # - place "(" only if num_open < n
         # - place ")" only if num_open > num_closed
 
 
