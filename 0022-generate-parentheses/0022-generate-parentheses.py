@@ -1,22 +1,34 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        
-        
-        def backtrack(num_open, num_closed, curr):
 
-            if num_closed > num_open: 
-                return
-        
-            if num_open > n or num_closed > n:
-                return
-            
-            if num_open == n and num_closed == n:
-                res.append(curr)
-                return
-            
-            backtrack(num_open + 1, num_closed, curr + "(")
-            backtrack(num_open, num_closed + 1, curr + ")")
-            
+        # need to place n//2
+
+        # in each step, we have two choices
+        # - place "(" only if num_open < n/2
+        # - place ")" only if num_open > num_closed
+
+
         res = []
-        backtrack(0, 0, "")
+
+        def backtrack(path, num_open, num_closed):
+
+            if num_open == n and num_closed == n:
+                res.append("".join(path))
+                return
+            
+            if num_open < n:
+                path.append("(")
+                backtrack(path, num_open+1, num_closed)
+                path.pop()
+
+            if num_open > num_closed:
+                path.append(")")
+                backtrack(path, num_open, num_closed+1)
+                path.pop()
+            
+
+
+        backtrack([], 0, 0)
         return res
+
+        
