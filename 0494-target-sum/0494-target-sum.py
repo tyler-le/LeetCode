@@ -1,29 +1,26 @@
 class Solution:
     def findTargetSumWays(self, nums: List[int], target: int) -> int:
-        
-        # for each num, we can backtrack o +num and -num
-        res = 0
         n = len(nums)
-        state = defaultdict(int) # (curr_sum, index) -> number of ways
+        res = 0
+        state = defaultdict(int) # (path, index) : num ways to solve that state
         
-        
-        def backtrack(curr, i):
+        def backtrack(curr, index):
             nonlocal res
             acc = 0
-            if (curr, i) in state: return state[(curr, i)]
             
-            if i >= n: 
+            if (curr, index) in state:
+                return state[(curr, index)]
+            
+            if index == n:
                 if curr == target: return 1
-                else: return 0            
-                
-            acc+=backtrack(curr + nums[i], i+1)
-            acc+=backtrack(curr - nums[i], i+1)
+                else: return 0
             
-            state[(curr, i)] = acc
+            acc+=backtrack(curr + nums[index], index+1)
+            acc+=backtrack(curr - nums[index], index+1)
+            
+            state[(curr, index)] = acc
+            
             return acc
-            
-            
-            
+        
         return backtrack(0, 0)
             
-        
