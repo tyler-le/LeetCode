@@ -1,23 +1,21 @@
-class Solution(object):
-    def equalPairs(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
-        hmap = defaultdict(int)
-        n = len(grid)
-        res = 0
+class Solution:
+    def equalPairs(self, grid: List[List[int]]) -> int:
+        n, m = len(grid), len(grid[0])
+
+        rows_map = defaultdict(int)
+        cols = [[] for _ in range (m)]
         
         for row in grid:
-            hmap[tuple(row)]+=1
+            rows_map[tuple(row)]+=1
         
         for i in range(n):
-            column = []
-            for j in range(n):
-                column.append(grid[j][i])
-            column = tuple(column)
-            res+=(hmap[column])
-                
+            for j in range(m):
+                cols[j].append(grid[i][j])
+        
+        res = 0
+
+        for col in cols:
+            res+=rows_map[tuple(col)]
+        
         return res
-                
-            
+
