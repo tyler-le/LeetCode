@@ -6,6 +6,7 @@ My collection of LeetCode solutions.
 ## Array
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 ## Hash Table
 |  |
@@ -31,4 +32,12 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
+## Greedy
+|  |
+| ------- |
+| [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 <!---LeetCode Topics End-->
