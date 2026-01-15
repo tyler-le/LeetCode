@@ -7,6 +7,8 @@
 class Solution:
     def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
 
+        # key: the column
+        # value: [(row, node.val)]
         hmap = defaultdict(list)
         min_col, max_col = 0, 0
         res = []
@@ -24,7 +26,7 @@ class Solution:
             if node.right: q.append((node.right, row + 1, col + 1))
 
         for i in range(min_col, max_col + 1):
-            
+            # sort first by row, second by value
             hmap[i].sort(key = lambda x : (x[0], x[1]))
             sublist = []
 
