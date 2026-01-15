@@ -11,6 +11,7 @@ My collection of LeetCode solutions.
 ## Hash Table
 |  |
 | ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 ## Matrix
 |  |
@@ -23,14 +24,17 @@ My collection of LeetCode solutions.
 ## Tree
 |  |
 | ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
 ## Depth-First Search
 |  |
 | ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
 ## Binary Tree
 |  |
 | ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
 ## Dynamic Programming
 |  |
@@ -40,4 +44,12 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+## Sorting
+|  |
+| ------- |
+| [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 <!---LeetCode Topics End-->
