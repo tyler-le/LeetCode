@@ -1,25 +1,17 @@
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
-        
-        if not nums: return []
-        n = len(nums)
-        i = 0
-        res = []
-        
-        while i < n:
-            start = nums[i]
-            while i + 1 < n and nums[i] + 1 == nums[i+1]:
-                i+=1
-            
-            if start == nums[i]:
-                res.append(str(start))
+        l, n, res = 0, len(nums), []
+
+        for r in range(1, n):
+            # add to the window
+            if nums[r] - 1 == nums[r-1]:
+                continue
             else:
-                res.append(f"{start}->{nums[i]}")
-            
-            i+=1
+                if r-l == 1: res.append(f"{nums[l]}")
+                else: res.append(f"{nums[l]}->{nums[r-1]}")
+                l = r
+
+        if l == n-1: res.append(f"{nums[l]}")
+        else: res.append(f"{nums[l]}->{nums[n-1]}")
         return res
- 
-                
-            
-            
-            
+
