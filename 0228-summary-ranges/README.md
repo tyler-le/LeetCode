@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/summary-ranges/">228. Summary Ranges</a></h2><h3>Easy</h3><hr><div><p>You are given a <strong>sorted unique</strong> integer array <code>nums</code>.</p>
+<h2><a href="https://leetcode.com/problems/summary-ranges">228. Summary Ranges</a></h2><h3>Easy</h3><hr><p>You are given a <strong>sorted unique</strong> integer array <code>nums</code>.</p>
 
 <p>A <strong>range</strong> <code>[a,b]</code> is the set of all integers from <code>a</code> to <code>b</code> (inclusive).</p>
 
@@ -7,30 +7,32 @@
 <p>Each range <code>[a,b]</code> in the list should be output as:</p>
 
 <ul>
-	<li><code>"a-&gt;b"</code> if <code>a != b</code></li>
-	<li><code>"a"</code> if <code>a == b</code></li>
+	<li><code>&quot;a-&gt;b&quot;</code> if <code>a != b</code></li>
+	<li><code>&quot;a&quot;</code> if <code>a == b</code></li>
 </ul>
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> nums = [0,1,2,4,5,7]
-<strong>Output:</strong> ["0-&gt;2","4-&gt;5","7"]
+<pre>
+<strong>Input:</strong> nums = [0,1,2,4,5,7]
+<strong>Output:</strong> [&quot;0-&gt;2&quot;,&quot;4-&gt;5&quot;,&quot;7&quot;]
 <strong>Explanation:</strong> The ranges are:
-[0,2] --&gt; "0-&gt;2"
-[4,5] --&gt; "4-&gt;5"
-[7,7] --&gt; "7"
+[0,2] --&gt; &quot;0-&gt;2&quot;
+[4,5] --&gt; &quot;4-&gt;5&quot;
+[7,7] --&gt; &quot;7&quot;
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> nums = [0,2,3,4,6,8,9]
-<strong>Output:</strong> ["0","2-&gt;4","6","8-&gt;9"]
+<pre>
+<strong>Input:</strong> nums = [0,2,3,4,6,8,9]
+<strong>Output:</strong> [&quot;0&quot;,&quot;2-&gt;4&quot;,&quot;6&quot;,&quot;8-&gt;9&quot;]
 <strong>Explanation:</strong> The ranges are:
-[0,0] --&gt; "0"
-[2,4] --&gt; "2-&gt;4"
-[6,6] --&gt; "6"
-[8,9] --&gt; "8-&gt;9"
+[0,0] --&gt; &quot;0&quot;
+[2,4] --&gt; &quot;2-&gt;4&quot;
+[6,6] --&gt; &quot;6&quot;
+[8,9] --&gt; &quot;8-&gt;9&quot;
 </pre>
 
 <p>&nbsp;</p>
@@ -42,4 +44,3 @@
 	<li>All the values of <code>nums</code> are <strong>unique</strong>.</li>
 	<li><code>nums</code> is sorted in ascending order.</li>
 </ul>
-</div>
