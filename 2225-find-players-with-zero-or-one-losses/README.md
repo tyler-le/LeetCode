@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/find-players-with-zero-or-one-losses/">2225. Find Players With Zero or One Losses</a></h2><h3>Medium</h3><hr><div><p>You are given an integer array <code>matches</code> where <code>matches[i] = [winner<sub>i</sub>, loser<sub>i</sub>]</code> indicates that the player <code>winner<sub>i</sub></code> defeated player <code>loser<sub>i</sub></code> in a match.</p>
+<h2><a href="https://leetcode.com/problems/find-players-with-zero-or-one-losses">1354. Find Players With Zero or One Losses</a></h2><h3>Medium</h3><hr><p>You are given an integer array <code>matches</code> where <code>matches[i] = [winner<sub>i</sub>, loser<sub>i</sub>]</code> indicates that the player <code>winner<sub>i</sub></code> defeated player <code>loser<sub>i</sub></code> in a match.</p>
 
 <p>Return <em>a list </em><code>answer</code><em> of size </em><code>2</code><em> where:</em></p>
 
@@ -19,7 +19,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]
+<pre>
+<strong>Input:</strong> matches = [[1,3],[2,3],[3,6],[5,6],[5,7],[4,5],[4,8],[4,9],[10,4],[10,9]]
 <strong>Output:</strong> [[1,2,10],[4,5,7,8]]
 <strong>Explanation:</strong>
 Players 1, 2, and 10 have not lost any matches.
@@ -30,7 +31,8 @@ Thus, answer[0] = [1,2,10] and answer[1] = [4,5,7,8].
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> matches = [[2,3],[1,3],[5,4],[6,4]]
+<pre>
+<strong>Input:</strong> matches = [[2,3],[1,3],[5,4],[6,4]]
 <strong>Output:</strong> [[1,2,5,6],[]]
 <strong>Explanation:</strong>
 Players 1, 2, 5, and 6 have not lost any matches.
@@ -48,4 +50,3 @@ Thus, answer[0] = [1,2,5,6] and answer[1] = [].
 	<li><code>winner<sub>i</sub> != loser<sub>i</sub></code></li>
 	<li>All <code>matches[i]</code> are <strong>unique</strong>.</li>
 </ul>
-</div>
