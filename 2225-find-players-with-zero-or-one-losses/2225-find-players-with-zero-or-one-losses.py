@@ -11,9 +11,11 @@ class Solution:
             max_player = max(max_player, winner, loser)
         
         for player in range(min_player, max_player + 1):
+
+            # this player did not play
             if player not in win_count and player not in lose_count:
                 continue
-                
+
             # all players that have not lost any matches.
             if player not in lose_count:
                 res[0].append(player)
