@@ -1,16 +1,15 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        res = 0
-        curr_profit = 0
-        bought_price = prices[0]
+
+        # if we encounter a lower buying day, buy on that lower day
+
+        buy, res, n = math.inf, 0, len(prices)
+
+        for i in range(n):
+            if prices[i] < buy:
+                buy = prices[i]
+            
+            res = max(res, prices[i] - buy)
         
-        for price in prices:
-            if price < bought_price:
-                bought_price = price
-                
-            curr_profit = price - bought_price
-            res = max(res, curr_profit)
-            
         return res
-            
-            
+
