@@ -1,28 +1,27 @@
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        res, n = [], len(nums)
-        def backtrack(path, index):
+        res = []
+        n = len(nums)
+
+        def backtrack(index, path):
             nonlocal res, n
 
+            # base case
             if index >= n:
-                res.append(path.copy())
+                res.append(path)
                 return
             
-            # include nums[index]
-            backtrack(path + [nums[index]], index + 1)
+            # include
+            backtrack(index + 1, path + [nums[index]])
 
-            # once we've included nums[index] in our subset, 
-            # we've explored all choices with nums[index] anchored 
-            # at this position in our path
-            while (index + 1 < n) and (nums[index] == nums[index + 1]):
+
+            # skip duplicates
+            while index + 1 < n and nums[index] == nums[index + 1]:
                 index+=1
-            
 
-            # so when we exlude nums[index], 
-            # we should not explore any more choices with nums[index]
-            # hence we need to skip them
-            backtrack(path, index + 1)
-
+            # exclude
+            backtrack(index + 1, path)
+        
         nums.sort()
-        backtrack([], 0)
+        backtrack(0, [])
         return res
