@@ -8,6 +8,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0001-two-sum](https://github.com/tyler-le/LeetCode/tree/master/0001-two-sum) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
+| [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
@@ -68,6 +69,7 @@ My collection of LeetCode solutions.
 ## Sorting
 |  |
 | ------- |
+| [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 ## Linked List
