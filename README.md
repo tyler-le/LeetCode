@@ -11,6 +11,7 @@ My collection of LeetCode solutions.
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
+| [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 ## Hash Table
@@ -110,4 +111,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
+## Binary Search
+|  |
+| ------- |
+| [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 <!---LeetCode Topics End-->
