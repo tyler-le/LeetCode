@@ -11,11 +11,9 @@ class Solution:
                 res.append(path.copy())
                 return
             
-            
             for i in range(n):
 
                 if nums[i] in visited: continue
-        
                 visited.add(nums[i])
                 backtrack(path + [nums[i]])
                 visited.remove(nums[i])
