@@ -14,6 +14,7 @@ class Solution:
             for i in range(n):
 
                 if nums[i] in visited: continue
+                
                 visited.add(nums[i])
                 path.append(nums[i])
 
