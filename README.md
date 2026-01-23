@@ -7,6 +7,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/tyler-le/LeetCode/tree/master/0001-two-sum) |
+| [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
@@ -92,6 +93,7 @@ My collection of LeetCode solutions.
 ## Backtracking
 |  |
 | ------- |
+| [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 ## Bit Manipulation
 |  |
