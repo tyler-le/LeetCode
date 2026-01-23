@@ -15,7 +15,11 @@ class Solution:
 
                 if nums[i] in visited: continue
                 visited.add(nums[i])
-                backtrack(path + [nums[i]])
+                path.append(nums[i])
+
+                backtrack(path)
+
+                path.pop()
                 visited.remove(nums[i])
 
         backtrack([])
