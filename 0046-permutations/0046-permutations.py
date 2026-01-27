@@ -1,27 +1,22 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        # for each choice, loop through entirety of nums and backtrack. exclude current number
-
-        res, n, visited = [], len(nums), set()
+        
+        res = []
+        visited = set()
 
         def backtrack(path):
-            nonlocal res, n 
+            nonlocal res, visited
 
-            if len(path) >= n:
+            if len(path) == len(nums):
                 res.append(path.copy())
                 return
-            
-            for i in range(n):
 
-                if nums[i] in visited: continue
-                
-                visited.add(nums[i])
-                path.append(nums[i])
+            for num in nums:
+                if num in visited: continue
+                visited.add(num)
+                backtrack(path + [num])
+                visited.remove(num)
 
-                backtrack(path)
-
-                path.pop()
-                visited.remove(nums[i])
 
         backtrack([])
         return res
