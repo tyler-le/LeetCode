@@ -1,14 +1,17 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # group by their tuple counts
         hmap = defaultdict(list)
 
-        for s in strs:
-            cnt = [0 for _ in range(26)]
+        for word in strs:
+            cnt = Counter(word)
+            arr = [0 for _ in range(26)]
+
+            for ch, freq in cnt.items():
+                arr[ord(ch) - ord('a')]+=freq
             
-            for ch in s:
-                cnt[ord(ch) - ord("a")]+=1
-            
-            hmap[tuple(cnt)].append(s)
-    
-        return list(hmap.values())
+            hmap[tuple(arr)].append(word)
         
+        return list(hmap.values())
+
+
