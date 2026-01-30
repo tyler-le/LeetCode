@@ -11,6 +11,7 @@ My collection of LeetCode solutions.
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
+| [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
@@ -31,6 +32,7 @@ My collection of LeetCode solutions.
 ## Matrix
 |  |
 | ------- |
+| [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 ## Simulation
 |  |
@@ -47,6 +49,7 @@ My collection of LeetCode solutions.
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
@@ -102,6 +105,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
+| [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 ## Bit Manipulation
 |  |
@@ -112,6 +116,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
+| [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 ## Sliding Window
 |  |
 | ------- |
