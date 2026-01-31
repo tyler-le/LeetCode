@@ -53,6 +53,7 @@ My collection of LeetCode solutions.
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
 ## Binary Tree
@@ -69,6 +70,7 @@ My collection of LeetCode solutions.
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 ## Greedy
 |  |
 | ------- |
@@ -76,6 +78,7 @@ My collection of LeetCode solutions.
 ## Breadth-First Search
 |  |
 | ------- |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## Sorting
 |  |
@@ -133,4 +136,16 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
+## Graph Theory
+|  |
+| ------- |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+## Shortest Path
+|  |
+| ------- |
+| [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 <!---LeetCode Topics End-->
