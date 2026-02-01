@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/merge-triplets-to-form-target-triplet/">1899. Merge Triplets to Form Target Triplet</a></h2><h3>Medium</h3><hr><div><p>A <strong>triplet</strong> is an array of three integers. You are given a 2D integer array <code>triplets</code>, where <code>triplets[i] = [a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub>]</code> describes the <code>i<sup>th</sup></code> <strong>triplet</strong>. You are also given an integer array <code>target = [x, y, z]</code> that describes the <strong>triplet</strong> you want to obtain.</p>
+<h2><a href="https://leetcode.com/problems/merge-triplets-to-form-target-triplet">2026. Merge Triplets to Form Target Triplet</a></h2><h3>Medium</h3><hr><p>A <strong>triplet</strong> is an array of three integers. You are given a 2D integer array <code>triplets</code>, where <code>triplets[i] = [a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub>]</code> describes the <code>i<sup>th</sup></code> <strong>triplet</strong>. You are also given an integer array <code>target = [x, y, z]</code> that describes the <strong>triplet</strong> you want to obtain.</p>
 
 <p>To obtain <code>target</code>, you may apply the following operation on <code>triplets</code> <strong>any number</strong> of times (possibly <strong>zero</strong>):</p>
 
@@ -16,7 +16,8 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> triplets = [[2,5,3],[1,8,4],[1,7,5]], target = [2,7,5]
+<pre>
+<strong>Input:</strong> triplets = [[2,5,3],[1,8,4],[1,7,5]], target = [2,7,5]
 <strong>Output:</strong> true
 <strong>Explanation:</strong> Perform the following operations:
 - Choose the first and last triplets [<u>[2,5,3]</u>,[1,8,4],<u>[1,7,5]</u>]. Update the last triplet to be [max(2,1), max(5,7), max(3,5)] = [2,7,5]. triplets = [[2,5,3],[1,8,4],<u>[2,7,5]</u>]
@@ -25,14 +26,16 @@ The target triplet [2,7,5] is now an element of triplets.
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> triplets = [[3,4,5],[4,5,6]], target = [3,2,5]
+<pre>
+<strong>Input:</strong> triplets = [[3,4,5],[4,5,6]], target = [3,2,5]
 <strong>Output:</strong> false
 <strong>Explanation:</strong> It is impossible to have [3,2,5] as an element because there is no 2 in any of the triplets.
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> triplets = [[2,5,3],[2,3,4],[1,2,5],[5,2,3]], target = [5,5,5]
+<pre>
+<strong>Input:</strong> triplets = [[2,5,3],[2,3,4],[1,2,5],[5,2,3]], target = [5,5,5]
 <strong>Output:</strong> true
 <strong>Explanation: </strong>Perform the following operations:
 - Choose the first and third triplets [<u>[2,5,3]</u>,[2,3,4],<u>[1,2,5]</u>,[5,2,3]]. Update the third triplet to be [max(2,1), max(5,2), max(3,5)] = [2,5,5]. triplets = [[2,5,3],[2,3,4],<u>[2,5,5]</u>,[5,2,3]].
@@ -48,4 +51,3 @@ The target triplet [5,5,5] is now an element of triplets.
 	<li><code>triplets[i].length == target.length == 3</code></li>
 	<li><code>1 &lt;= a<sub>i</sub>, b<sub>i</sub>, c<sub>i</sub>, x, y, z &lt;= 1000</code></li>
 </ul>
-</div>
