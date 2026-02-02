@@ -10,10 +10,8 @@ class Solution:
 
             for i in range(card, card + groupSize):
                 if not cnt[i]: 
-                    is_valid = False
+                    return False
                 else:
                     cnt[i]-=1
-            
-            if is_valid: groups+=1
-        
-        return groups * groupSize == len(hand)
+                    
+        return True
