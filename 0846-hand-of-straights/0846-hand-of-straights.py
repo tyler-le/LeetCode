@@ -13,5 +13,7 @@ class Solution:
                     return False
                 else:
                     cnt[i]-=1
-                    
-        return True
+            
+            if is_valid: groups+=1
+        
+        return groups * groupSize == len(hand)
