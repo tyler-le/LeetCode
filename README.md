@@ -17,6 +17,7 @@ My collection of LeetCode solutions.
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
+| [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
@@ -138,6 +139,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
+| [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 ## Graph Theory
 |  |
 | ------- |
