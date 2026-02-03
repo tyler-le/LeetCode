@@ -127,10 +127,12 @@ My collection of LeetCode solutions.
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
+| [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 ## Sliding Window
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 ## Design
 |  |
 | ------- |
