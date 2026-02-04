@@ -7,7 +7,7 @@ class Solution:
         graph = defaultdict(list)
         reachable = defaultdict(set)
 
-        def bfs(node):
+        def dijkstras(node):
             min_heap = [(0, node)] # (curr_dist, node)
             visited = set()
 
@@ -29,7 +29,7 @@ class Solution:
             graph[v].append((u, w))
 
         for i in range(n):
-            bfs(i)
+            dijkstras(i)
         
         min_cities, res = math.inf, None
 
