@@ -1,19 +1,18 @@
 class Solution:
     def isNStraightHand(self, hand: List[int], groupSize: int) -> bool:
         hand.sort()
-        groups = 0
         cnt = Counter(hand)
 
         for card in hand:
+            # only start a sequence if it has cards
             if not cnt[card]: continue
-            is_valid = True
 
+            # check the rest of the sequence for validity
             for i in range(card, card + groupSize):
-                if not cnt[i]: 
-                    return False
-                else:
-                    cnt[i]-=1
-            
-            if is_valid: groups+=1
-        
-        return groups * groupSize == len(hand)
+                if not cnt[i]: return False
+                cnt[i]-=1
+
+        return True
+               
+
+
