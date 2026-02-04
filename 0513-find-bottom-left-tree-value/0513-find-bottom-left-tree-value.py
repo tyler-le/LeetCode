@@ -6,20 +6,17 @@
 #         self.right = right
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
-        # find height
-        # return first node at that height
         q = deque([root])
-        leftmost = None
-        
+        res = None
         while q:
-            level_size = len(q)
-            
-            for i in range(level_size):
+            q_len = len(q)
+
+            for i in range(len(q)):
                 popped = q.popleft()
-                if i == 0: leftmost = popped.val
+
+                if not i: res = popped
+
                 if popped.left: q.append(popped.left)
                 if popped.right: q.append(popped.right)
-            
-                
-        return leftmost
-    
+
+        return res.val
