@@ -6,26 +6,32 @@
 #         self.right = right
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        
+        prefix_sums = defaultdict(int)
+        prefix_sums[0] = 1
         res = 0
-        prefix_sum = collections.defaultdict(int)
-        
-        def rec(node, curr_sum):
-            nonlocal res
+        curr_sum = 0
+        target = targetSum
+
+        def dfs(node):
+            nonlocal res, curr_sum, target
+
             if not node: return
-            
+
+            # pre order traversal
             curr_sum+=node.val
+
+            if prefix_sums[curr_sum - target]:
+                res+=prefix_sums[curr_sum - target]
             
-            if curr_sum == targetSum: res+=1
-            res+=prefix_sum[curr_sum - targetSum]
+            prefix_sums[curr_sum]+=1
+
+
+            dfs(node.left)
+            dfs(node.right)
+
+            # remove from map
+            prefix_sums[curr_sum]-=1
+            curr_sum-=node.val
             
-            prefix_sum[curr_sum]+=1
-            
-            rec(node.left, curr_sum)
-            rec(node.right, curr_sum)
-                
-            prefix_sum[curr_sum]-=1
-            
-            
-        rec(root, 0)
+        dfs(root)
         return res
