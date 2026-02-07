@@ -5,7 +5,7 @@ class Solution:
         high = max(candies)
 
         def can_distribute(i):
-            if not i: return False
+
             cnt = 0
             for candy in candies:
                 cnt+=candy//i
