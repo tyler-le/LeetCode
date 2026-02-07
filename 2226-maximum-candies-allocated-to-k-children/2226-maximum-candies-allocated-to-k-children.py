@@ -4,11 +4,11 @@ class Solution:
         low = 1
         high = max(candies)
 
-        def can_distribute(i):
+        def can_distribute(pile):
 
             cnt = 0
             for candy in candies:
-                cnt+=candy//i
+                cnt+=candy//pile
                 if cnt >= k: return True
             
             return False
