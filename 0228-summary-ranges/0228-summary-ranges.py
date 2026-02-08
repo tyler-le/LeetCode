@@ -1,19 +1,28 @@
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
-
-        l, r, n = 0, 0, len(nums)
+        if not nums: return []
+        prev_interval = [nums[0], nums[0]]
         res = []
 
-        while r < n:
-            l = r
+        for num in nums[1:]:
 
-            # move r until nonsequential
-            while (r + 1 < n) and nums[r] + 1 == nums[r+1]:
-                r+=1
-            
-            if r == l: res.append(f"{nums[r]}")
-            else: res.append(f"{nums[l]}->{nums[r]}")
+            prev_start, prev_end = prev_interval
 
-            r+=1
+            # 1. add it to current interval?
+            if prev_end + 1 == num:
+                prev_interval = [prev_start, num]
 
+            # 2. start a new interval?
+            else:
+                if prev_start == prev_end: 
+                    res.append(f"{prev_start}")
+                else: 
+                    res.append(f"{prev_start}->{prev_end}")
+
+                prev_interval = [num, num]
+        
+
+        prev_start, prev_end = prev_interval
+        if prev_start == prev_end: res.append(f"{prev_start}")
+        else: res.append(f"{prev_start}->{prev_end}")
         return res
