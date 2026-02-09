@@ -55,6 +55,7 @@ My collection of LeetCode solutions.
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -67,6 +68,7 @@ My collection of LeetCode solutions.
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -78,6 +80,7 @@ My collection of LeetCode solutions.
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -92,6 +95,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 ## Breadth-First Search
 |  |
@@ -180,4 +184,9 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
+## Divide and Conquer
+|  |
+| ------- |
+| [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 <!---LeetCode Topics End-->
