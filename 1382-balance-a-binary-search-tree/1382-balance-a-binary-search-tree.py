@@ -5,35 +5,28 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def balanceBST(self, root: TreeNode) -> TreeNode:
+    def balanceBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         
-        # get a sorted list
-        sorted_nodes = []
-        def inorder(curr):
-            nonlocal sorted_nodes
-            if not curr: return
-            
-            inorder(curr.left)
-            sorted_nodes.append(curr.val)
-            inorder(curr.right)
-            
-        # using sorted list, create BST
-        res = []
-        def create(sublist):
-            if not sublist: return None
-            if len(sublist) == 1: return TreeNode(sublist[0], None, None)
-            mid = len(sublist) // 2
-            
-            left = create(sublist[0:mid])
-            right = create(sublist[mid+1:])
-            
-            node = TreeNode(sublist[mid], left, right)
-            
-            return node
-            
+        arr = []
+
+        def inorder(node):
+            nonlocal arr
+            if not node: return
+            inorder(node.left)
+            arr.append(node.val)
+            inorder(node.right)
+
+        def build_tree(low, high):
+            if low > high: return None
+
+            mid = (high + low) // 2
+            root = TreeNode(arr[mid], None, None)
+
+            root.left = build_tree(low, mid - 1)
+            root.right = build_tree(mid + 1, high)
+
+            return root
+
+
         inorder(root)
-        return create(sorted_nodes)
-        
-            
-    
-    
+        return build_tree(0, len(arr) - 1)
