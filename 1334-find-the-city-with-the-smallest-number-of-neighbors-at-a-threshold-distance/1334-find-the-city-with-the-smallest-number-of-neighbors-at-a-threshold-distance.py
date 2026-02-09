@@ -11,13 +11,13 @@ class Solution:
             while min_heap:
                 popped_cost, popped_node = heappop(min_heap)
                 visited.add(popped_node)
-                if node != popped_node: reachable[node].add(popped_node)
                 
                 for nbor_node, nbor_weight in graph[popped_node]:
                     new_cost = nbor_weight + popped_cost
                     if new_cost > distanceThreshold: continue
                     if nbor_node in visited: continue
                     heappush(min_heap, (new_cost, nbor_node))
+                    reachable[node].add(nbor_node)
         
         # 1. build graph
         graph = defaultdict(list) # (nbor, weight)
