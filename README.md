@@ -24,6 +24,7 @@ My collection of LeetCode solutions.
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2226-maximum-candies-allocated-to-k-children](https://github.com/tyler-le/LeetCode/tree/master/2226-maximum-candies-allocated-to-k-children) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
+| [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 ## Hash Table
@@ -37,6 +38,7 @@ My collection of LeetCode solutions.
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
+| [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 ## Matrix
 |  |
@@ -155,6 +157,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
+| [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
 ## Design
 |  |
