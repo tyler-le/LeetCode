@@ -114,6 +114,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
+| [0147-insertion-sort-list](https://github.com/tyler-le/LeetCode/tree/master/0147-insertion-sort-list) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -122,6 +123,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0002-add-two-numbers](https://github.com/tyler-le/LeetCode/tree/master/0002-add-two-numbers) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
+| [0147-insertion-sort-list](https://github.com/tyler-le/LeetCode/tree/master/0147-insertion-sort-list) |
 ## Math
 |  |
 | ------- |
