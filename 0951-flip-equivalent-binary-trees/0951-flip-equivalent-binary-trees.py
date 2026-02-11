@@ -13,6 +13,6 @@ class Solution:
             if not r1 and r2: return False
             if r1.val != r2.val: return False
 
-            return (dfs(r1.left, r2.left) or dfs(r1.left, r2.right)) and (dfs(r1.right, r2.left) or  dfs(r1.right, r2.right))
+            return (dfs(r1.left, r2.left) and dfs(r1.right, r2.right)) or (dfs(r1.left, r2.right) and dfs(r1.right, r2.left))
         
-        return dfs(root1, root2) and dfs(root2, root1)
+        return dfs(root1, root2) 
