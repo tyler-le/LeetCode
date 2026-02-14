@@ -21,8 +21,9 @@ class MedianFinder:
         if len(self.left_heap) < len(self.right_heap):
             heappush_max(self.left_heap, heappop(self.right_heap))
 
-        # left side has more -> move to right
-        # we keep the one extra element in the left heap
+        # left side has too much -> move to right heap
+        # the left side is allowed to have (at-most) one more element than the right
+        # i.e. left can have 5 and right can have 4
         elif len(self.left_heap) - len(self.right_heap) > 1:
             heappush(self.right_heap, heappop_max(self.left_heap))
         
