@@ -23,7 +23,7 @@ class MedianFinder:
 
         # left side has more -> move to right
         # we keep the one extra element in the left heap
-        elif len(self.left_heap) > len(self.right_heap) + 1:
+        elif len(self.left_heap) - len(self.right_heap) > 1:
             heappush(self.right_heap, heappop_max(self.left_heap))
         
     def findMedian(self) -> float:
