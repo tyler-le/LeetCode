@@ -8,9 +8,11 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         
         def backtrack(node, curr_sum):
+            if not node: 
+                return False
+                
             if not node.left and not node.right and curr_sum + node.val == targetSum:
                 return True
-
 
             if node.left and backtrack(node.left, curr_sum + node.val): 
                 return True
@@ -20,5 +22,4 @@ class Solution:
             
             return False
         
-        if not root: return False
         return backtrack(root, 0)
