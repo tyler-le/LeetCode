@@ -24,7 +24,7 @@ class Solution:
             if node.right: dfs(node.right, curr_sum)
 
             prefix_sums[curr_sum]-=1
-            curr_sum-=node.val
+            # curr_sum-=node.val
         
         dfs(root, 0)
         return res
