@@ -18,6 +18,7 @@ My collection of LeetCode solutions.
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
+| [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
@@ -48,6 +49,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
+| [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 ## Simulation
 |  |
@@ -111,6 +113,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
+| [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
 | [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
