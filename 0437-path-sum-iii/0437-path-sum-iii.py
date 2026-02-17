@@ -9,29 +9,22 @@ class Solution:
         prefix_sums = defaultdict(int)
         prefix_sums[0] = 1
         res = 0
-        curr_sum = 0
-        target = targetSum
 
-        def dfs(node):
-            nonlocal res, curr_sum, target
-
-            if not node: return
-
-            # pre order traversal
+        def dfs(node, curr_sum):
+            nonlocal prefix_sums, res
+            if not node: return 0
             curr_sum+=node.val
 
-            if prefix_sums[curr_sum - target]:
-                res+=prefix_sums[curr_sum - target]
+            if curr_sum - targetSum in prefix_sums:
+                res+=prefix_sums[curr_sum - targetSum]
             
             prefix_sums[curr_sum]+=1
 
+            if node.left: dfs(node.left, curr_sum)
+            if node.right: dfs(node.right, curr_sum)
 
-            dfs(node.left)
-            dfs(node.right)
-
-            # remove from map
             prefix_sums[curr_sum]-=1
             curr_sum-=node.val
-            
-        dfs(root)
+        
+        dfs(root, 0)
         return res
