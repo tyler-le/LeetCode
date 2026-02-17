@@ -1,38 +1,36 @@
+from heapq import heappop, heappush, heappop_max, heappush_max
+
 class MedianFinder:
 
     def __init__(self):
-
         self.left_heap = [] # max heap
         self.right_heap = [] # min heap
         
 
     def addNum(self, num: int) -> None:
-        # insert into left heap
-        if self.left_heap and num <= self.left_heap[0]: 
+        # insert num into one of the heaps
+        if not self.left_heap or num <= self.left_heap[0]:
             heappush_max(self.left_heap, num)
-    
-        # or insert into right heap
-        else: 
+        else:
             heappush(self.right_heap, num)
-
-        # rebalance heaps
-
-        # right side has more -> move to left
-        if len(self.left_heap) < len(self.right_heap):
-            heappush_max(self.left_heap, heappop(self.right_heap))
-
-        # left side has too much -> move to right heap
-        # the left side is allowed to have (at-most) one more element than the right
-        # i.e. left can have 5 and right can have 4
-        elif len(self.left_heap) - len(self.right_heap) > 1:
-            heappush(self.right_heap, heappop_max(self.left_heap))
         
+        # rebalance from left to right
+        if len(self.left_heap) > len(self.right_heap) + 1:
+            popped = heappop_max(self.left_heap)
+            heappush(self.right_heap, popped)
+
+        # rebalance from right to left
+        elif len(self.right_heap) > len(self.left_heap):
+            popped = heappop(self.right_heap)
+            heappush_max(self.left_heap, popped)
+        
+
     def findMedian(self) -> float:
-        
         if len(self.left_heap) == len(self.right_heap):
             return (self.left_heap[0] + self.right_heap[0]) / 2
         else:
-            return self.left_heap[0]        
+            return self.left_heap[0]
+        
 
 
 # Your MedianFinder object will be instantiated and called as such:
