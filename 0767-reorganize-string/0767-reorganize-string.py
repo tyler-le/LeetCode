@@ -9,7 +9,7 @@ class Solution:
         while max_heap:
             # process curr
             popped_freq, popped_ch = heappop_max(max_heap)
-            if res and res[-1] == popped_ch: return ""
+            # if res and res[-1] == popped_ch: return ""
 
             res.append(popped_ch)
 
