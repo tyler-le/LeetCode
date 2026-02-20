@@ -1,20 +1,21 @@
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
-        l = 0
+        l, n = 0, len(nums)
+        mx, mx_freq = max(nums), 0
         res = 0
-        n = len(nums)
-        mx, mx_cnt = max(nums), 0
 
         for r in range(n):
-            # add to the window
-            if nums[r] == mx: mx_cnt+=1
-
-            # shrink the window
-            while mx_cnt == k:
-                if nums[l] == mx: mx_cnt-=1
+            num = nums[r]
+            if num == mx:
+                mx_freq+=1
+            
+            while mx_freq >= k:
+                if nums[l] == mx:
+                    mx_freq-=1
                 l+=1
-
-            # record the result
-            res+=l
+            
+            if mx_freq == k-1:
+                res+=l
         
         return res
+            
