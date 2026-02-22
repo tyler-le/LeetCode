@@ -125,6 +125,7 @@ My collection of LeetCode solutions.
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
 | [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
+| [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -190,6 +191,7 @@ My collection of LeetCode solutions.
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
+| [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
 | [3760-maximum-substrings-with-distinct-start](https://github.com/tyler-le/LeetCode/tree/master/3760-maximum-substrings-with-distinct-start) |
 ## Sliding Window
@@ -256,6 +258,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
+| [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 ## Data Stream
 |  |
 | ------- |
