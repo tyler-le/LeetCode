@@ -6,17 +6,22 @@
 #         self.right = right
 class Solution:
     def tree2str(self, root: Optional[TreeNode]) -> str:
-                
-        def preorder(node):
+
+        def dfs(node):
+            # preorder traversal:
+            if not node: return None
             
-            if not node: return ""
-                
-            s = str(node.val)
-            
-            if node.left: s += "(" + preorder(node.left) + ")"
-            elif node.right and not node.left: s+="()"
-            if node.right: s+="(" + preorder(node.right) + ")"
-                
-            return s
-        
-        return preorder(root)
+
+            left = dfs(node.left)
+            right = dfs(node.right)
+
+            if left and right:
+                return f"{node.val}({left})({right})"
+            elif not left and right:
+                return f"{node.val}()({right})"
+            elif left and not right:
+                return f"{node.val}({left})"
+            else:
+                return f"{node.val}"
+
+        return dfs(root)
