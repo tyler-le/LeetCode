@@ -66,6 +66,7 @@ My collection of LeetCode solutions.
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0437-path-sum-iii](https://github.com/tyler-le/LeetCode/tree/master/0437-path-sum-iii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
@@ -81,6 +82,7 @@ My collection of LeetCode solutions.
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0437-path-sum-iii](https://github.com/tyler-le/LeetCode/tree/master/0437-path-sum-iii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
@@ -97,6 +99,7 @@ My collection of LeetCode solutions.
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0437-path-sum-iii](https://github.com/tyler-le/LeetCode/tree/master/0437-path-sum-iii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
@@ -112,6 +115,7 @@ My collection of LeetCode solutions.
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
