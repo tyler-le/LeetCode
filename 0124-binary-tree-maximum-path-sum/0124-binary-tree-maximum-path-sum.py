@@ -19,11 +19,13 @@ class Solution:
             left = max(dfs(node.left), 0)
             right = max(dfs(node.right), 0)
 
-            # calculate the result of the longest path with this node at the root
+            # calculate the result of the longest multi-branch path with this node at the root
+            # multi-branch means we can consider both left and right results 
             res = max(res, node.val + left + right)
 
             # return longest single-branch path starting at this node.
             # because parent CANNOT use both branch-paths. 
+            # single-branch means we have to choose either left or right results
             return node.val + max(left, right)
         
         dfs(root)
