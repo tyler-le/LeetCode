@@ -7,27 +7,30 @@
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         
-        maxi = -float('inf')
+        res = -math.inf
+
+        # return (longest path from this node)
+        def dfs(node):
+            nonlocal res
+
+            if not node: return 0
+            
+            left = max(dfs(node.left), 0)
+            right = max(dfs(node.right), 0)
+
+            
+            res = max(res, node.val + left + right)
+
+            return node.val + max(left, right)
         
-        def rec(root):
-            nonlocal maxi
+        dfs(root)
+        return res
+
+
+
+           
+
             
-            # base case
-            if not root: return 0
-        
-            # recurse
-            left = max(rec(root.left), 0)
-            right = max(rec(root.right), 0)
-            
-            # calculate result for current tree
-            maxi = max(maxi, left + right + root.val)
-            
-            return max(left+root.val, right+root.val)
-            
-                    
-        
-        rec(root)
-        return maxi
-        
-            
-            
+
+
+
