@@ -9,15 +9,18 @@ class Solution:
         UP, LEFT, RIGHT = "U", "L", "R"
         graph = defaultdict(list) # (node, edge type)
 
+        # Build graph with {UP, LEFT, RIGHT} edges between nodes
         def dfs(node, parent):
             nonlocal graph
             if not node: return
 
-            if parent: graph[node.val].append((parent.val, UP))
+            if parent: 
+                graph[node.val].append((parent.val, UP))
 
             if node.left:
                 dfs(node.left, node)
                 graph[node.val].append((node.left.val, LEFT))
+
             if node.right:
                 dfs(node.right, node)
                 graph[node.val].append((node.right.val, RIGHT))
@@ -25,10 +28,9 @@ class Solution:
         dfs(root, None)
         
         
-        # run bfs on start -> dest
+        # Run BFS from Start to Dest
         q = deque([(startValue, "")]) # (node, curr_path)
-        res = []
-        visited = set()
+        res, visited = [], set()
 
         while q:
             popped_node, popped_path = q.popleft()
