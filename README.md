@@ -7,6 +7,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/tyler-le/LeetCode/tree/master/0001-two-sum) |
+| [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
@@ -148,6 +149,7 @@ My collection of LeetCode solutions.
 ## Sorting
 |  |
 | ------- |
+| [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0147-insertion-sort-list](https://github.com/tyler-le/LeetCode/tree/master/0147-insertion-sort-list) |
@@ -273,6 +275,7 @@ My collection of LeetCode solutions.
 ## Two Pointers
 |  |
 | ------- |
+| [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
