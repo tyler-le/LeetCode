@@ -7,6 +7,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/tyler-le/LeetCode/tree/master/0001-two-sum) |
+| [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
@@ -149,6 +150,7 @@ My collection of LeetCode solutions.
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
@@ -275,6 +277,7 @@ My collection of LeetCode solutions.
 ## Two Pointers
 |  |
 | ------- |
+| [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
