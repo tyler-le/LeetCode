@@ -138,6 +138,7 @@ My collection of LeetCode solutions.
 | [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [1509-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/tyler-le/LeetCode/tree/master/1509-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
+| [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 ## Breadth-First Search
 |  |
@@ -176,6 +177,7 @@ My collection of LeetCode solutions.
 | [0002-add-two-numbers](https://github.com/tyler-le/LeetCode/tree/master/0002-add-two-numbers) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
+| [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 ## Recursion
 |  |
 | ------- |
@@ -208,6 +210,7 @@ My collection of LeetCode solutions.
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
+| [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
@@ -308,4 +311,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
+## Game Theory
+|  |
+| ------- |
+| [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 <!---LeetCode Topics End-->
