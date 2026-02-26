@@ -1,14 +1,16 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
         stack = []
-        res = 0
-        
+
         for ch in s:
-            if ch == "(":
-                stack.append("(")
+            if not stack or ch == "(":
+                stack.append(ch)
             else:
-                if stack: stack.pop()
-                else: res+=1
+                top = stack[-1]
+                if top == "(": 
+                    stack.pop()
+                else:
+                    stack.append(ch)
         
-        
-        return len(stack) + res
+        return len(stack)
+
