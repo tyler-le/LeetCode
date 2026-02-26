@@ -77,6 +77,7 @@ My collection of LeetCode solutions.
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
+| [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0951-flip-equivalent-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0951-flip-equivalent-binary-trees) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
@@ -94,6 +95,7 @@ My collection of LeetCode solutions.
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
+| [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0951-flip-equivalent-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0951-flip-equivalent-binary-trees) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
@@ -112,6 +114,7 @@ My collection of LeetCode solutions.
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
 | [0543-diameter-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0543-diameter-of-binary-tree) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
+| [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0951-flip-equivalent-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0951-flip-equivalent-binary-trees) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
@@ -148,6 +151,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
+| [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
