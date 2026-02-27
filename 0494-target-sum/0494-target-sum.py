@@ -10,16 +10,16 @@ class Solution:
             cnt = 0
 
             if index == n:
-                if curr_sum == target: 
-                    return 1
-                else:
-                    return 0
+                if curr_sum == target: return 1
+                else: return 0
 
             if (index, curr_sum) in cache:
-                res+=cache[(index, curr_sum)]
+                return cache[(index, curr_sum)]
 
-            cnt+=backtrack(index + 1, curr_sum + nums[index])
-            cnt+=backtrack(index + 1, curr_sum - nums[index])
+
+            cnt+=backtrack(index + 1, curr_sum + nums[index]) # add
+            cnt+=backtrack(index + 1, curr_sum - nums[index]) # subtract
+
             cache[(index, curr_sum)] = cnt
 
             return cnt
