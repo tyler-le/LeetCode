@@ -16,6 +16,7 @@ My collection of LeetCode solutions.
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
@@ -127,6 +128,7 @@ My collection of LeetCode solutions.
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
