@@ -13,19 +13,17 @@ class Solution:
 
         for course in range(numCourses):
             if not indegrees[course]: 
-                q.append(course)
-
-        if not q: return False
-        
+                q.append(course)        
 
         while q:
             popped = q.popleft()
-            numCourses-=1
-
+            visited.add(popped)
+            
             for nbor in graph[popped]:
                 indegrees[nbor]-=1
                 if not indegrees[nbor]: 
                     q.append(nbor)
+                
         
-        return not numCourses 
+        return len(visited) == numCourses
         
