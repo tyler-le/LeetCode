@@ -1,28 +1,32 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        # 0. sort by start time
+        # 1. check overlap
+        # 2. if not overlap -> insert current interval
+        # 3. if overlap -> new interval is the min starts and max ends
+        # 4. add new interval to list
+
         res = []
-        
-        if not intervals: return [newInterval]
-        
-        for i in range(len(intervals)):
+        n = len(intervals)
+
+        for i in range(n):
             curr_start, curr_end = intervals[i]
-            
-            # case 1 - new interval comes before most previous
+
+            # new_interval comes before curr_interval
             if newInterval[1] < curr_start:
                 res.append(newInterval)
-                res+=intervals[i:]
+                res.extend(intervals[i:])
                 return res
-            
-            # case 2 - new interval comes after curr interval
-            elif curr_end < newInterval[0] :
+
+            # new_interval comes after curr_interval
+            elif newInterval[0] > curr_end:
                 res.append(intervals[i])
-                
-            
-            # case 3 - new interval overlaps with most previous
+
+            # new_interval overlaps with curr_interval
             else:
                 newInterval = [min(curr_start, newInterval[0]), max(curr_end, newInterval[1])]
-            
-        # for cases 2 and 3, where we never added the new interval to the result
-        res.append(newInterval)
         
+        res.append(newInterval)
         return res
+
+
