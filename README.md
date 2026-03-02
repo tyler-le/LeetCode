@@ -47,6 +47,7 @@ My collection of LeetCode solutions.
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
+| [0138-copy-list-with-random-pointer](https://github.com/tyler-le/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
@@ -191,6 +192,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/tyler-le/LeetCode/tree/master/0002-add-two-numbers) |
+| [0138-copy-list-with-random-pointer](https://github.com/tyler-le/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
 | [0147-insertion-sort-list](https://github.com/tyler-le/LeetCode/tree/master/0147-insertion-sort-list) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
