@@ -9,21 +9,30 @@ class Node:
 
 class Solution:
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
+
+        # Key: orig node
+        # Val: copy node
+        hmap = {}
+
+
+        # returns the copy node
+        def dfs(node):
+            nonlocal hmap
+
+            if not node: return None
+
+            if node in hmap: return hmap[node]
+
+            else:
+                copy = Node(node.val)
+                hmap[node] = copy
+                next_copy = dfs(node.next)
+                random_copy = dfs(node.random)
+                hmap[node].next = next_copy
+                hmap[node].random = random_copy
+                
+                return copy
         
-        hmap = defaultdict(lambda x : Node(0))
-        
-        def rec(curr):
-            if not curr: return None
-            if curr in hmap: return hmap[curr]
-            
-            copy = Node(curr.val)
-            hmap[curr] = copy
-            
-            copy.next = rec(curr.next)
-            copy.random = rec(curr.random)
-            
-            return copy
-        
-        return rec(head)
-        
-        
+        return dfs(head)
+
+
