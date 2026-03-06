@@ -244,6 +244,7 @@ My collection of LeetCode solutions.
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
+| [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/tyler-le/LeetCode/tree/master/1784-check-if-binary-string-has-at-most-one-segment-of-ones) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
