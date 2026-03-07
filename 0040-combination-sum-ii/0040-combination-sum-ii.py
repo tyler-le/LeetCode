@@ -1,33 +1,32 @@
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        
-        
-        def backtrack(idx, path):
-            
-            # we found a valid combination 
-            if sum(path) == target: 
+        candidates.sort()
+        res = []
+        n = len(candidates)
+
+        def backtrack(start, path, curr_sum):
+            nonlocal res
+
+            if curr_sum == target:
                 res.append(path.copy())
                 return
-            
-            # we added too much to the combination
-            if sum(path) > target:
+
+            if curr_sum > target:
                 return
+
+            for i in range(start, n):
+                # we do start > n because we don't want to skip on the first element
+                # aka (candidates[start]).
+                # only skip on duplicate elements AFTER first element
+                if (i > start) and (candidates[i] == candidates[i-1]): 
+                    continue
+                    
+                path.append(candidates[i])
+                curr_sum+=candidates[i]
+                backtrack(i + 1, path, curr_sum)
+                path.pop()
+                curr_sum-=candidates[i]
             
-            # we have no more items to consider
-            if idx >= len(candidates):
-                return
-            
-            # dfs on all future elements and include candidates[idx]
-            backtrack(idx+1, path + [candidates[idx]])
-            
-            # after we've considered candidates[idx] at this position, we need to skip over all identical candidates
-            while idx + 1 < len(candidates) and candidates[idx] == candidates[idx+1]:
-                idx+=1
-            
-            # dfs on all future elements and don't include candidates[idx]
-            backtrack(idx+1, path)
         
-        res = []
-        candidates.sort()
-        backtrack(0, [])
+        backtrack(0, [], 0)
         return res
