@@ -9,6 +9,7 @@ My collection of LeetCode solutions.
 | [0001-two-sum](https://github.com/tyler-le/LeetCode/tree/master/0001-two-sum) |
 | [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
+| [0039-combination-sum](https://github.com/tyler-le/LeetCode/tree/master/0039-combination-sum) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
@@ -226,6 +227,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0039-combination-sum](https://github.com/tyler-le/LeetCode/tree/master/0039-combination-sum) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
