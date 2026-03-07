@@ -1,18 +1,19 @@
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
+
         res = []
-        
-        def backtrack(i, path):
+
+        def backtrack(start, path):
+            nonlocal res, n
+
             if len(path) == k:
                 res.append(path.copy())
-                return 
-            
-            if i > n: 
                 return
-            
-            
-            backtrack(i+1, path + [i])  # include
-            backtrack(i+1, path)        # exclude
-            
+
+            for i in range(start, n+1):
+                path.append(i)
+                backtrack(i+1, path)
+                path.pop()
+        
         backtrack(1, [])
         return res
