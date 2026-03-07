@@ -14,6 +14,7 @@ My collection of LeetCode solutions.
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/tyler-le/LeetCode/tree/master/0057-insert-interval) |
+| [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -226,6 +227,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
+| [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
@@ -233,6 +235,7 @@ My collection of LeetCode solutions.
 ## Bit Manipulation
 |  |
 | ------- |
+| [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
 ## String
