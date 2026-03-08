@@ -1,27 +1,20 @@
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        res = []
-        n = len(nums)
-
-        def backtrack(index, path):
-            nonlocal res, n
-
-            # base case
-            if index >= n:
-                res.append(path)
-                return
-            
-            # include
-            backtrack(index + 1, path + [nums[index]])
-
-
-            # skip duplicates
-            while index + 1 < n and nums[index] == nums[index + 1]:
-                index+=1
-
-            # exclude
-            backtrack(index + 1, path)
         
+        n, res = len(nums), []
         nums.sort()
+        def backtrack(start, path):
+            nonlocal n, res
+
+            res.append(path.copy())
+
+            for i in range(start, n):
+                if i > start and nums[i] == nums[i-1]:
+                    continue
+                
+                path.append(nums[i])
+                backtrack(i + 1, path)
+                path.pop()
+        
         backtrack(0, [])
         return res
