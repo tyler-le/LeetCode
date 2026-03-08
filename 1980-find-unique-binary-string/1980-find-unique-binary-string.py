@@ -1,20 +1,19 @@
 class Solution:
     def findDifferentBinaryString(self, nums: List[str]) -> str:
-        res = set()
-        n = len(nums[0])
         nums = set(nums)
-        
-        def backtrack(path, idx):
-            nonlocal n, res
-            if idx == n:
-                res.add("".join(path))
+        n = len(nums)
+
+        def backtrack(index, path):
+            nonlocal nums, n
+
+            if index == n:
+                if "".join(path.copy()) not in nums:
+                    return "".join(path.copy())
+                
                 return
-            
-            backtrack(path + ["0"], idx+1)
-            backtrack(path + ["1"], idx+1)
+
+            return backtrack(index + 1, path + ["0"]) or backtrack(index + 1, path + ["1"])
         
-        backtrack([], 0)
-        
-        for x in res:
-            if x not in nums: return x
-        
+        return backtrack(0, [])
+
+
