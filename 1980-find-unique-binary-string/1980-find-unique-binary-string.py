@@ -3,15 +3,18 @@ class Solution:
         nums = set(nums)
         n = len(nums)
 
-        def backtrack(start, path):
+        def backtrack(index, path):
             nonlocal nums, n
-            if len("".join(path.copy())) == n:
+
+            if index == n:
                 if "".join(path.copy()) not in nums:
                     return "".join(path.copy())
-                return
+                return None
 
-            for i in range(start, n):
-                return backtrack(i + 1, path + ["0"]) or backtrack(i + 1, path + ["1"])
+            for choice in "01":
+                res = backtrack(index + 1, path + [choice])
+                if res: return res
+            
         
         return backtrack(0, [])
 
