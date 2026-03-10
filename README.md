@@ -143,6 +143,7 @@ My collection of LeetCode solutions.
 ## Dynamic Programming
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
@@ -232,6 +233,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0039-combination-sum](https://github.com/tyler-le/LeetCode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
@@ -254,6 +256,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
