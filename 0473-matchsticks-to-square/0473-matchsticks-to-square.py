@@ -3,6 +3,8 @@ class Solution:
         # four choices for one matchstick
         # valid case - all 4 sides have the same sum - sum  // 4
 
+        # place the biggest matches first to allow early fail 
+        # when the side length becomes bigger than target
         matchsticks.sort(reverse=True)
 
         if sum(matchsticks) % 4: return False
