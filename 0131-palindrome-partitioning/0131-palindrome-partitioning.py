@@ -1,7 +1,10 @@
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
-        # at each step, we can append to each choice or we can make a new str
+        # backtrack(start) processes all possible prefixes starting at s[start]. 
+        # i.e. if s = "aab" and start = 0, all possible prefixes are "a", "aa", "aab". 
+        # For each of these prefixes, if it is a palindrome, then we recursively process the suffix 
 
+        # backtrack(start) processes all possible prefixes starting at s[start]. 
         def backtrack(start):
 
             res = []
@@ -9,10 +12,12 @@ class Solution:
             if start >= len(s):
                 return [[]]
 
-            for i in range(start, len(s)):
-                prefix = s[start:i+1]
-                if prefix == prefix[::-1]:
-                    for result in backtrack(i+1):
+            for end in range(start, len(s)):
+                # For each of these prefixes, if it is a palindrome, then we recursively process the suffix 
+                prefix = s[start:end+1]
+
+                if prefix == prefix[::-1]:    
+                    for result in backtrack(end+1):
                         res.append([prefix] + result)
             
             return res
