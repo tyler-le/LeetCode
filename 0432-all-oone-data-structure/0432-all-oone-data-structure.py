@@ -94,12 +94,8 @@ class AllOne:
 
         # early exit if the freq will go to 0
         if curr_node.freq == 1:
-            
             del self.hmap[key]
-
-            if not curr_node.keys: 
-                self._remove(curr_node)
-                
+            if not curr_node.keys: self._remove(curr_node)
             return
 
         # check freq of prev_node
