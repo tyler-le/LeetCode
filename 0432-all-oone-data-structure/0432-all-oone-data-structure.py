@@ -51,7 +51,6 @@ class AllOne:
             return
 
         # else get the node it belongs to
-        
         curr_node = self.hmap[key]
 
         # remove the key from the node
@@ -79,9 +78,9 @@ class AllOne:
         # update hmap with new node
         self.hmap[key] = new_node
 
-        # if the node becomes empty, remove it
+        # if the old node becomes empty, remove it
         if not curr_node.keys:
-             self._remove(curr_node)
+            self._remove(curr_node)
 
 
 
@@ -101,7 +100,7 @@ class AllOne:
         # check freq of prev_node
         prev_node = curr_node.prev
 
-        # if decremented, use that node
+        # if decremented correctly, use that node
         if prev_node.freq == (curr_node.freq - 1):
             # insert key into new_node
             prev_node.keys.add(key)
@@ -126,7 +125,7 @@ class AllOne:
             prev_node.next = new_node
             curr_node.prev = new_node
 
-        # if the node becomes empty, remove it
+        # if the old node becomes empty, remove it
         if not curr_node.keys:
              self._remove(curr_node)
 
@@ -134,8 +133,6 @@ class AllOne:
     def getMaxKey(self) -> str:
         if self._is_empty(): return ""
         return next(iter(self.tail.prev.keys))
-        
-        
 
     def getMinKey(self) -> str:
         if self._is_empty(): return ""
