@@ -1,40 +1,31 @@
 class RandomizedSet:
 
     def __init__(self):
-        self.hmap = {} # map num : index in array
-        self.list = []
+        self.hmap = {}
+        self.arr = []
         
 
     def insert(self, val: int) -> bool:
-        if val not in self.hmap:
-            self.list.append(val)
-            self.hmap[val] = len(self.list) - 1
-            return True
-        return False
+        if val in self.hmap: return False
+        self.arr.append(val)
+        self.hmap[val] = len(self.arr) - 1
+        return True
+        
 
     def remove(self, val: int) -> bool:
-        if val in self.hmap:
-            # Index of the element to be removed
-            idx = self.hmap[val]
+        if val not in self.hmap: return False
 
-            # Swap the element with the last one in the list
-            self.list[idx], self.list[-1] = self.list[-1], self.list[idx]
-
-            # Update the index of the swapped element in the hashmap
-            self.hmap[self.list[idx]] = idx
-
-            # Remove the last element from the list and hashmap
-            self.list.pop()
-            del self.hmap[val]
-
-            return True
-
-        return False
-
-            
+        index = self.hmap[val]
+        self.arr[index], self.arr[len(self.arr) - 1] = self.arr[len(self.arr) - 1], self.arr[index]
+        self.hmap[self.arr[index]] = index
+        self.arr.pop()
+        del self.hmap[val]
+        return True
+        
 
     def getRandom(self) -> int:
-        return random.choice(self.list)
+        index = random.randint(0, len(self.arr) - 1)
+        return self.arr[index]
         
 
 
