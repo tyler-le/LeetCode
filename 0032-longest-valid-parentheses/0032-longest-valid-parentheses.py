@@ -1,31 +1,31 @@
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        stack = [-1]
+        
         OPEN, CLOSED = "(", ")"
         res = 0
 
-
-        # The idea is to keep track of the boundary
+        num_open, num_closed = 0, 0
         for i, ch in enumerate(s):
+            if ch == OPEN: num_open+=1
+            else: num_closed+=1
 
-            if ch == OPEN:
-                stack.append(i)
-            else:
+            if num_closed > num_open:
+                num_open = 0
+                num_closed = 0
 
-                # pop from stack and determine boundary validity
-                stack.pop()
+            elif num_closed == num_open:
+                res = max(res, num_open + num_closed)
 
-                # if popping leads the stack to be empty 
-                # that means it hit the boundary
-                # which means it is invalid, so we update the boundary
-                if not stack:
-                    stack.append(i)
+        num_open, num_closed = 0, 0
+        for i, ch in enumerate(s[::-1]):
+            if ch == OPEN: num_open+=1
+            else: num_closed+=1
 
-                # if popping does not lead the stack to be empty
-                # then we did not hit the boundary
-                # so we update the result
-                else:
-                    res = max(res, i - stack[-1])
+            if num_closed < num_open:
+                num_open = 0
+                num_closed = 0
+
+            elif num_closed == num_open:
+                res = max(res, num_open + num_closed)
         
         return res
-
