@@ -225,6 +225,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/tyler-le/LeetCode/tree/master/0002-add-two-numbers) |
+| [0050-powx-n](https://github.com/tyler-le/LeetCode/tree/master/0050-powx-n) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -234,6 +235,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/tyler-le/LeetCode/tree/master/0002-add-two-numbers) |
+| [0050-powx-n](https://github.com/tyler-le/LeetCode/tree/master/0050-powx-n) |
 ## Counting
 |  |
 | ------- |
