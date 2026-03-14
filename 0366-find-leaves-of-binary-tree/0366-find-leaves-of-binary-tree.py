@@ -28,9 +28,4 @@ class Solution:
             return depth
 
         depth = dfs(root)
-        res = []
-
-        for i in range(depth+1):
-            res.append(depths[i])
-        
-        return res
+        return list(depths.values())
