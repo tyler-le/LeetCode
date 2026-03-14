@@ -12,12 +12,7 @@ class Solution:
         # get height from bottom
 
         def dfs(node):
-            if not node: 
-                return 0
-
-            if not node.left and not node.right:
-                depths[0].append(node.val)
-                return 0
+            if not node: return 0
             
             left = dfs(node.left)
             right = dfs(node.right)
