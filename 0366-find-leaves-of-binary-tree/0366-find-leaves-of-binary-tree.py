@@ -27,5 +27,5 @@ class Solution:
 
             return depth
 
-        depth = dfs(root)
+        dfs(root)
         return list(depths.values())
