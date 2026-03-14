@@ -27,6 +27,7 @@ My collection of LeetCode solutions.
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
@@ -65,6 +66,7 @@ My collection of LeetCode solutions.
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
@@ -236,6 +238,7 @@ My collection of LeetCode solutions.
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 ## Recursion
@@ -317,6 +320,7 @@ My collection of LeetCode solutions.
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
@@ -446,6 +450,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
+| [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 ## Ordered Set
 |  |
 | ------- |
