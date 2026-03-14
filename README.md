@@ -121,6 +121,7 @@ My collection of LeetCode solutions.
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0337-house-robber-iii](https://github.com/tyler-le/LeetCode/tree/master/0337-house-robber-iii) |
+| [0339-nested-list-weight-sum](https://github.com/tyler-le/LeetCode/tree/master/0339-nested-list-weight-sum) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0437-path-sum-iii](https://github.com/tyler-le/LeetCode/tree/master/0437-path-sum-iii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
@@ -196,6 +197,7 @@ My collection of LeetCode solutions.
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
+| [0339-nested-list-weight-sum](https://github.com/tyler-le/LeetCode/tree/master/0339-nested-list-weight-sum) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
 | [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
