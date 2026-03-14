@@ -12,7 +12,9 @@ class Solution:
         # get height from bottom
 
         def dfs(node):
-            if not node: return 0
+            if not node: 
+                return 0
+
             if not node.left and not node.right:
                 depths[0].append(node.val)
                 return 0
@@ -21,8 +23,8 @@ class Solution:
             right = dfs(node.right)
 
             depth = 1 + max(left, right)
-
             depths[depth].append(node.val)
+
             return depth
 
         depth = dfs(root)
