@@ -14,6 +14,7 @@ My collection of LeetCode solutions.
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/tyler-le/LeetCode/tree/master/0047-permutations-ii) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
+| [0053-maximum-subarray](https://github.com/tyler-le/LeetCode/tree/master/0053-maximum-subarray) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
 | [0057-insert-interval](https://github.com/tyler-le/LeetCode/tree/master/0057-insert-interval) |
@@ -156,6 +157,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
+| [0053-maximum-subarray](https://github.com/tyler-le/LeetCode/tree/master/0053-maximum-subarray) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
@@ -367,6 +369,7 @@ My collection of LeetCode solutions.
 ## Divide and Conquer
 |  |
 | ------- |
+| [0053-maximum-subarray](https://github.com/tyler-le/LeetCode/tree/master/0053-maximum-subarray) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 | [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
