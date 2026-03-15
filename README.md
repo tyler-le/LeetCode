@@ -62,6 +62,7 @@ My collection of LeetCode solutions.
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
+| [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0138-copy-list-with-random-pointer](https://github.com/tyler-le/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
@@ -297,6 +298,7 @@ My collection of LeetCode solutions.
 | [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
+| [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/tyler-le/LeetCode/tree/master/0131-palindrome-partitioning) |
@@ -318,6 +320,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
