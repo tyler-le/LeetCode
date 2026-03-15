@@ -1,27 +1,26 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        s_cnt, t_cnt = defaultdict(int), Counter(t)
-        required = len(t_cnt)
-        conditions_met = 0
+        s_map = Counter(s)
+        t_map = Counter(t)
+        window = defaultdict(int)
+        num_valid = 0
+        res = (math.inf, -1, -1)
         l = 0
-        res = [float("inf"), -1, -1]
-        
-        for r in range(len(s)):
-            
-            s_cnt[s[r]]+=1
-            
-            if s_cnt[s[r]] == t_cnt[s[r]]:
-                conditions_met+=1
-            
-            while conditions_met == required:
-                if r-l+1 < res[0]:
-                    res = [r-l+1, l, r]
-                s_cnt[s[l]]-=1
-                
-                if s[l] in t_cnt and s_cnt[s[l]] < t_cnt[s[l]]:
-                    conditions_met-=1
+        needed = len(t_map)
+        n = len(s)
+
+        for r in range(n):
+            window[s[r]]+=1
+            if s[r] in t_map and window[s[r]] == t_map[s[r]]:
+                num_valid+=1
+
+            while l < r and (s[l] not in t_map or window[s[l]] > t_map[s[l]]):
+                window[s[l]]-=1
                 l+=1
-                    
-        left, right = res[1], res[2]+1
-        return s[left:right]
+            
+            if num_valid == needed and r-l+1 < res[0]:
+                res = (r-l+1, l, r)
+        
+        return s[res[1]: res[2]+1]
+
             
