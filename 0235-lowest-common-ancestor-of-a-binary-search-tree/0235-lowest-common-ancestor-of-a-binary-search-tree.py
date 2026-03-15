@@ -23,9 +23,13 @@ class Solution:
             if node.val == q.val: return node
 
             # recurse
-            return dfs(node.left) or dfs(node.right)
-
-
+            left, right = False, False
+            if p.val < node.val and q.val < node.val:
+                left = dfs(node.left)
             
+            if p.val > node.val and q.val > node.val:
+                right = dfs(node.right)
+
+            return left or right
         
         return dfs(root)
