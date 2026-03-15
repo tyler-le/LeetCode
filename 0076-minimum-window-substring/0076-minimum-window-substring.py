@@ -14,7 +14,7 @@ class Solution:
             if s[r] in t_map and window[s[r]] == t_map[s[r]]:
                 num_valid+=1
 
-            while l < r and (s[l] not in t_map or window[s[l]] > t_map[s[l]]):
+            while l < r and (window[s[l]] > t_map[s[l]]):
                 window[s[l]]-=1
                 l+=1
             
