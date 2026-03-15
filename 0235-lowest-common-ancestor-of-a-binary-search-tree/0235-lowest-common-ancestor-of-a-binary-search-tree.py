@@ -25,11 +25,9 @@ class Solution:
             # recurse
             left, right = False, False
             if p.val < node.val and q.val < node.val:
-                left = dfs(node.left)
+                return dfs(node.left)
             
             if p.val > node.val and q.val > node.val:
-                right = dfs(node.right)
-
-            return left or right
+                return dfs(node.right)
         
         return dfs(root)
