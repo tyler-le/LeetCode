@@ -103,6 +103,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0101-symmetric-tree](https://github.com/tyler-le/LeetCode/tree/master/0101-symmetric-tree) |
+| [0104-maximum-depth-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -125,6 +126,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0101-symmetric-tree](https://github.com/tyler-le/LeetCode/tree/master/0101-symmetric-tree) |
+| [0104-maximum-depth-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -151,6 +153,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0101-symmetric-tree](https://github.com/tyler-le/LeetCode/tree/master/0101-symmetric-tree) |
+| [0104-maximum-depth-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0110-balanced-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0110-balanced-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -211,6 +214,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0101-symmetric-tree](https://github.com/tyler-le/LeetCode/tree/master/0101-symmetric-tree) |
+| [0104-maximum-depth-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0104-maximum-depth-of-binary-tree) |
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
