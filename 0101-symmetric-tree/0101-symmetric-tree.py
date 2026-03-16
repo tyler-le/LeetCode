@@ -7,17 +7,12 @@
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         
-        def rec(p1, p2):
+        def dfs(p1, p2):
+            if not p1 and p2: return False
+            if p1 and not p2: return False
             if not p1 and not p2: return True
-            
-            elif (not p1 and p2) or (p1 and not p2): return False
-            
-            elif p1.val != p2.val: return False
-            
-            else:
-                first = rec(p1.left, p2.right)
-                second = rec(p1.right, p2.left)
-            
-            return first and second
-        
-        return rec(root, root)
+            if p1.val != p2.val: return False
+
+            return dfs(p1.left, p2.right) and dfs(p1.right, p2.left)
+
+        return dfs(root, root)
