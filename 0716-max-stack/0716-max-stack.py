@@ -3,32 +3,28 @@ class MaxStack:
     def __init__(self):
         self.stack = []
         self.max_heap = []
-        self.index = 0
         self.deleted = set()
+        self.counter = 0
         
 
     def push(self, x: int) -> None:
         # increment the counter
-        self.index+=1
+        self.counter+=1
 
-        elem = (x, self.index)
+        entry = (x, self.counter)
 
-        # push (val, index) into stack
-        self.stack.append(elem)
+        # push into stack
+        self.stack.append(entry)
 
-        # push (val, index) into heap
-        heappush_max(self.max_heap, elem)
-
+        # push into heap
+        heappush_max(self.max_heap, entry)
         
 
     def pop(self) -> int:
+        # lazy delete
+        self.lazy_delete("stack")
 
-       # lazy_delete()
-        while self.stack and self.stack[-1][1] in self.deleted:
-            self.stack.pop()
-
-
-        # pop (val, index) from stack
+        # pop from stack
         x, index = self.stack.pop()
 
         # mark index as deleted
@@ -38,28 +34,24 @@ class MaxStack:
         
 
     def top(self) -> int:
+        # lazy delete
+        self.lazy_delete("stack")
 
-        # lazy_delete()
-        while self.stack and self.stack[-1][1] in self.deleted:
-            self.stack.pop()
-
-        # get top of stack
+        # return top
         return self.stack[-1][0]
         
 
     def peekMax(self) -> int:
-        # lazy_delete()
-        while self.max_heap and self.max_heap[0][1] in self.deleted:
-            heappop_max(self.max_heap)
+        # lazy delete
+        self.lazy_delete("max_heap")
 
-        # return top
+        # return max
         return self.max_heap[0][0]
         
 
     def popMax(self) -> int:
-        # lazy_delete()
-        while self.max_heap and self.max_heap[0][1] in self.deleted:
-            heappop_max(self.max_heap)
+        # lazy delete
+        self.lazy_delete("max_heap")
 
         # pop from heap
         x, index = heappop_max(self.max_heap)
@@ -68,6 +60,17 @@ class MaxStack:
         self.deleted.add(index)
 
         return x
+
+    def lazy_delete(self, _type):
+        if _type == "stack":
+            # pop from stack
+            while self.stack and self.stack[-1][1] in self.deleted:
+                self.stack.pop()
+
+        else:
+            # pop from heap
+            while self.max_heap and self.max_heap[0][1] in self.deleted:
+                heappop_max(self.max_heap)
         
 
 
