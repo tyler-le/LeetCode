@@ -16,6 +16,8 @@ class Solution:
             elif nums[mid] > target:
                 high = mid - 1
             else:
+                # we found target, so we save it as the current left bound
+                # and continue searching left for future occurrences
                 res[0] = mid
                 high = mid - 1
 
@@ -29,10 +31,10 @@ class Solution:
             elif nums[mid] > target:
                 high = mid - 1
             else:
+                # we found target, so we save it as the current right bound
+                # and continue searching right for future occurrences
                 res[1] = mid
                 low = mid + 1
                 
-
-        print(res)
         return res
         
