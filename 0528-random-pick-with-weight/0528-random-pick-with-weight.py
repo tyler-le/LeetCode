@@ -12,11 +12,7 @@ class Solution:
 
     def pickIndex(self) -> int:
         rand_int = randint(0, max(self.prefix_sum) - 1)
-        index = bisect_right(self.prefix_sum, rand_int)
-        return index
-
-        
-
+        return bisect_right(self.prefix_sum, rand_int)
 
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(w)
