@@ -10,8 +10,10 @@ class Solution:
             acc+=num
             self.prefix_sum.append(acc)
 
+        self.max = max(self.prefix_sum)
+
     def pickIndex(self) -> int:
-        rand_int = randint(0, max(self.prefix_sum) - 1)
+        rand_int = randint(0, self.max - 1)
         return bisect_right(self.prefix_sum, rand_int)
 
 # Your Solution object will be instantiated and called as such:
