@@ -1,31 +1,21 @@
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
-        
+        stack = [-1]
         OPEN, CLOSED = "(", ")"
+        num_open, num_closed = 0, 0
         res = 0
 
-        num_open, num_closed = 0, 0
         for i, ch in enumerate(s):
-            if ch == OPEN: num_open+=1
-            else: num_closed+=1
+            if ch == OPEN:
+                stack.append(i)
+            else:
+                stack.pop()
 
-            if num_closed > num_open:
-                num_open = 0
-                num_closed = 0
-
-            elif num_closed == num_open:
-                res = max(res, num_open + num_closed)
-
-        num_open, num_closed = 0, 0
-        for i, ch in enumerate(s[::-1]):
-            if ch == OPEN: num_open+=1
-            else: num_closed+=1
-
-            if num_closed < num_open:
-                num_open = 0
-                num_closed = 0
-
-            elif num_closed == num_open:
-                res = max(res, num_open + num_closed)
+                if not stack:
+                    stack.append(i)
+                else:
+                    res = max(res, i - stack[-1])
         
         return res
+
+        
