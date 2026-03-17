@@ -7,24 +7,30 @@ class RandomizedSet:
 
     def insert(self, val: int) -> bool:
         if val in self.hmap: return False
+
         self.arr.append(val)
-        self.hmap[val] = len(self.arr) - 1
+        index = len(self.arr) - 1
+        self.hmap[val] = index
         return True
+        
         
 
     def remove(self, val: int) -> bool:
         if val not in self.hmap: return False
 
         index = self.hmap[val]
-        self.arr[index], self.arr[len(self.arr) - 1] = self.arr[len(self.arr) - 1], self.arr[index]
-        self.hmap[self.arr[index]] = index
+        last_index = len(self.arr) - 1
+        last_val = self.arr[last_index]
+
+        self.arr[index], self.arr[last_index] = self.arr[last_index], self.arr[index]
         self.arr.pop()
+
+        self.hmap[last_val] = index
         del self.hmap[val]
         return True
-        
 
     def getRandom(self) -> int:
-        index = random.randint(0, len(self.arr) - 1)
+        index = randint(0, len(self.arr) - 1)
         return self.arr[index]
         
 
