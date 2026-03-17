@@ -34,7 +34,7 @@ class RandomizedCollection:
             del self.hmap[deleted_key]
 
         # update swapped element
-        if deleted_hmap_index != swapped_hmap_index:
+        if arr_index != last_arr_index:
             self.hmap[swapped_key][swapped_hmap_index] = arr_index
 
         return True
