@@ -1,58 +1,43 @@
 class RandomizedCollection:
 
     def __init__(self):
-
-        # (val, idx) where idx is the pos in self.arr
-        # we use the idx here to map the pos in self.arr
-        self.val_to_index = defaultdict(list)
-
-        # (val, idx) where idx is the pos in self.val_to_index[val]
-        # we use the idx here to map to the pos in self.val_to_index[val]
+        # hmap {key : [arr_index]}
+        # arr = [(keys, hmap_index)]
+        self.hmap = defaultdict(list)
         self.arr = []
+
         
 
     def insert(self, val: int) -> bool:
-
-        # insert (val, index) at the end of arr
-        # where index is the position in val_to_idx[val]
-        self.arr.append((val, len(self.val_to_index[val])))
-
-        # insert idx in self.val_to_index to point to the position in self.arr
-        self.val_to_index[val].append(len(self.arr) - 1)
-
-        # if first time, return True
-        if len(self.val_to_index[val]) == 1: return True
-        else: return False
+        res = False
+        if val not in self.hmap: res = True
+        self.hmap[val].append(len(self.arr))
+        self.arr.append((val, len(self.hmap[val]) - 1))
+        return res
         
-        
-        
-
     def remove(self, val: int) -> bool:
-        if not self.val_to_index[val]: return False
+        if val not in self.hmap: return False
 
-        # get the position of val in self.arr using self.val_to_index
-        index = self.val_to_index[val].pop()
-        n = len(self.arr)
+        # find element to swap
+        arr_index = self.hmap[val].pop()
+        last_arr_index = len(self.arr) - 1
 
-        # swap val with the last element
-        self.arr[index], self.arr[n-1] = self.arr[n-1], self.arr[index]
+        deleted_key, deleted_hmap_index = self.arr[arr_index]
+        swapped_key, swapped_hmap_index = self.arr[last_arr_index]
 
-        # remove val by popping
+        # swap in arr
+        self.arr[arr_index], self.arr[last_arr_index] = self.arr[last_arr_index], self.arr[arr_index]
         self.arr.pop()
 
-        # if we did not remove the last element, update swapped element tables
-        if index < len(self.arr):
-            # update the item that was swapped and still remains
-            update_val, update_index = self.arr[index]
+        # delete val from map if empty
+        if not len(self.hmap[deleted_key]):
+            del self.hmap[deleted_key]
 
-            # update self.val_to_index[update_val] 
-            # to point to the correct pos in self.arr
-            self.val_to_index[update_val][update_index] = index
+        # update swapped element
+        if deleted_hmap_index != swapped_hmap_index:
+            self.hmap[swapped_key][swapped_hmap_index] = arr_index
 
         return True
-
-        
-    
 
     def getRandom(self) -> int:
         index = randint(0, len(self.arr) - 1)
