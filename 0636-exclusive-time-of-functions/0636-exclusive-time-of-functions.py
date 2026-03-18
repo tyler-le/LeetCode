@@ -1,7 +1,7 @@
 class Solution:
     def exclusiveTime(self, n: int, logs: List[str]) -> List[int]:
         stack = []  
-        backlog = deque()
+        backlog = []
         times = defaultdict(int)
         min_id, max_id = 0, 0
 
