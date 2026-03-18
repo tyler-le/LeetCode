@@ -38,6 +38,7 @@ My collection of LeetCode solutions.
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0605-can-place-flowers](https://github.com/tyler-le/LeetCode/tree/master/0605-can-place-flowers) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
+| [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
@@ -451,6 +452,7 @@ My collection of LeetCode solutions.
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
+| [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
