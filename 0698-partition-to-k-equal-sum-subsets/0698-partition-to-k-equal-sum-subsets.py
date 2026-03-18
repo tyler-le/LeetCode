@@ -13,8 +13,9 @@ class Solution:
             if index == len(nums):
                 return True
 
-            if tuple(choices) in states: 
-                return states[tuple(choices)]
+            x = tuple(sorted(choices))
+            if x in states: 
+                return states[x]
 
             for i in range(k):
                 num = nums[index]
@@ -22,7 +23,7 @@ class Solution:
 
                 choices[i]+=num
                 if backtrack(index + 1): 
-                    states[tuple(choices)] = True
+                    states[x] = True
                     return True
                 choices[i]-=num
 
