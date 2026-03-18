@@ -1,29 +1,46 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
-        res, n = [], len(digits)
+        # 2 -> [a, b, c]
+        # 3 -> [d, e, f]
+        # 4 -> [g, h, i]
 
-        hmap = defaultdict(str)
-        hmap["2"] = ["a", "b", "c"]
-        hmap["3"] = ["d", "e", "f"]
-        hmap["4"] = ["g", "h", "i"]
-        hmap["5"] = ["j", "k", "l"]
-        hmap["6"] = ["m", "n", "o"]
-        hmap["7"] = ["p", "q", "r", "s"]
-        hmap["8"] = ["t", "u", "v"]
-        hmap["9"] = ["w", "x", "y", "z"]
+        # "234"
+
+        # a + all combinations of "34"
+        # b + all combinations of "34"
+
+        hmap = {
+            "2": ["a", "b", "c"],
+            "3": ["d", "e", "f"],
+            "4": ["g", "h", "i"],
+            "5": ["j", "k", "l"],
+            "6": ["m", "n", "o"],
+            "7": ["p", "q", "r", "s"],
+            "8": ["t", "u", "v"],
+            "9": ["w", "x", "y", "z"]
+        }
+
+        res = []
 
         def backtrack(index, path):
-            nonlocal res, n
-            # base case
-            if index >= n:
-                res.append("".join(path.copy()))
-                return
+            nonlocal res
 
-            # recursive case
-            for ch in hmap[digits[index]]:
-                path.append(ch)
+            # base case
+            if index == len(digits): 
+                res.append("".join(path.copy()))
+                return 
+
+            for choice in hmap[digits[index]]:
+                
+                path.append(choice)
+
                 backtrack(index + 1, path)
+
                 path.pop()
+
+            
+                
+
         
         backtrack(0, [])
         return res
