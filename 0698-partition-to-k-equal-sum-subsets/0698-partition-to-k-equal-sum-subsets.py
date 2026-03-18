@@ -10,11 +10,17 @@ class Solution:
         def backtrack(index):
             nonlocal target, choices
             
+            # if we made it to the end, return true
             if index == len(nums): return True
 
+            # if we've seen this path in the past
+            # it must have not hit the 'return true' path
+            # so immediately return false
             if tuple(sorted(choices)) in seen: return False
             else: seen.add(tuple(sorted(choices)))
 
+
+            # go through each bucket and put nums[index] in that bucket
             for i in range(k):
                 num = nums[index]
                 if choices[i] + num > target: continue
