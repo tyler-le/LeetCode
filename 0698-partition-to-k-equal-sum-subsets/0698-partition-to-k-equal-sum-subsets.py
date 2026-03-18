@@ -5,30 +5,24 @@ class Solution:
         target = _sum // k
         choices = [0] * k
         nums.sort(reverse = True)
-        states = {}
+        seen = set()
 
         def backtrack(index):
             nonlocal target, choices
             
-            if index == len(nums):
-                return True
+            if index == len(nums): return True
 
-            x = tuple(sorted(choices))
-            if x in states: 
-                return states[x]
+            if tuple(sorted(choices)) in seen: return False
+            else: seen.add(tuple(sorted(choices)))
 
             for i in range(k):
                 num = nums[index]
                 if choices[i] + num > target: continue
 
                 choices[i]+=num
-                if backtrack(index + 1): 
-                    states[x] = True
-                    return True
+                if backtrack(index + 1): return True
                 choices[i]-=num
 
-
-            states[tuple(choices)] = False
             return False
 
         return backtrack(0)
