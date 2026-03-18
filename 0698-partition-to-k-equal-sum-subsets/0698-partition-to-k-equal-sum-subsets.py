@@ -1,34 +1,33 @@
 class Solution:
     def canPartitionKSubsets(self, nums: List[int], k: int) -> bool:
-        
-        if sum(nums) % k: return False
+        _sum = sum(nums)
+        if _sum % k: return False
+        target = _sum // k
         choices = [0] * k
-        nums.sort(reverse=True)
-        target = sum(nums) // k
-        states = set()
+        nums.sort(reverse = True)
+        states = {}
 
         def backtrack(index):
-            nonlocal target
-
+            nonlocal target, choices
+            
             if index == len(nums):
                 return True
 
-            # choices [4,0,0,0] is the same as [0,0,4,0] so skip
-            if tuple(sorted(choices)) in states: return False
-            else: states.add(tuple(sorted(choices)))
-            
+            if tuple(choices) in states: 
+                return states[tuple(choices)]
+
             for i in range(k):
-                
-                if choices[i] + nums[index] > target: continue
-                
-                # place nums[index] in the ith bucket
-                choices[i]+=nums[index]
-                
-                if backtrack(index + 1): return True
+                num = nums[index]
+                if choices[i] + num > target: continue
 
-                choices[i]-=nums[index]
+                choices[i]+=num
+                if backtrack(index + 1): 
+                    states[tuple(choices)] = True
+                    return True
+                choices[i]-=num
 
+
+            states[tuple(choices)] = False
             return False
-            
+
         return backtrack(0)
-        
