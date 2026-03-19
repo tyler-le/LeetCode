@@ -4,16 +4,22 @@
 
 class Solution:
     def findCelebrity(self, n: int) -> int:
+        # celebrity is known by everyone
+        # celebrity knows nobody
 
-        celeb = 0
-        
+        # knows(a, b) is true -> a cannot be celebrity
+        # knows(a, b) is false -> b cannot be celebrity
+
+        candidate = 0
+
         for person in range(1, n):
-            if knows(celeb,person): celeb = person
-            
-
+            if knows(candidate, person): 
+                candidate = person
+        
         for person in range(n):
-            if person == celeb: continue
-            if not knows(person, celeb): return -1
-            if knows(celeb, person): return -1
+            if candidate == person: continue
+            if knows(candidate, person): return -1
+            if not knows(person, candidate): return -1
 
-        return celeb
+        return candidate
+
