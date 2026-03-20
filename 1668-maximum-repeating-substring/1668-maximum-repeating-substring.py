@@ -8,10 +8,7 @@ class Solution:
             x = sequence[i-m:i]
             if not x: continue
             if x == word:
-                if i - m >= 0:
-                    dp[i] = 1 + dp[i-m]
-                else:
-                    dp[i] = 1
+                dp[i] = 1 + dp[i-m] if i - m >= 0 else 1
 
-        
+
         return max(dp)
