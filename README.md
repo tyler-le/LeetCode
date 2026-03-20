@@ -194,6 +194,7 @@ My collection of LeetCode solutions.
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0337-house-robber-iii](https://github.com/tyler-le/LeetCode/tree/master/0337-house-robber-iii) |
+| [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
@@ -333,6 +334,7 @@ My collection of LeetCode solutions.
 | [0131-palindrome-partitioning](https://github.com/tyler-le/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
+| [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
@@ -441,6 +443,7 @@ My collection of LeetCode solutions.
 | [0277-find-the-celebrity](https://github.com/tyler-le/LeetCode/tree/master/0277-find-the-celebrity) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0360-sort-transformed-array](https://github.com/tyler-le/LeetCode/tree/master/0360-sort-transformed-array) |
+| [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 ## Data Stream
