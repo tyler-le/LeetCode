@@ -22,6 +22,7 @@ My collection of LeetCode solutions.
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
+| [0118-pascals-triangle](https://github.com/tyler-le/LeetCode/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/tyler-le/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -189,6 +190,7 @@ My collection of LeetCode solutions.
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
+| [0118-pascals-triangle](https://github.com/tyler-le/LeetCode/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/tyler-le/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
