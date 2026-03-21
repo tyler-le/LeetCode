@@ -1,15 +1,33 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        # greedily buy low and sell whenever there is a chance for profit
-        # [7,1,5,3,4,6] --> 4 + 1 + 2 
-        
-        buy = prices[0]
-        res = 0
-        
-        for sell in prices[1:]:
-            if sell > buy:
-                res+=(sell-buy)
-            buy = sell
-            
-        return res
-            
+        cache = {}
+
+        def f(index, can_buy):
+            # if we can buy 
+            # -> -prices[i] + f(index + 1, False)
+            # -> 0 + f(index + 1, True)
+
+            # if we cannot buy
+            # -> prices[i] + f(index + 1, True)
+            # -> 0 + f(index + 1, False)
+
+            if index == len(prices): 
+                return 0
+
+            if (index, can_buy) in cache:
+                return cache[(index, can_buy)]
+
+            if can_buy:
+                buy = -prices[index] + f(index + 1, False)
+                hold = 0 + f(index + 1, True)
+                cache[(index, can_buy)] = max(buy, hold)
+                return cache[(index, can_buy)]
+
+            else:
+                sell = prices[index] + f(index + 1, True)
+                hold = 0 + f(index + 1, False)
+                cache[(index, can_buy)] = max(sell, hold)
+                return cache[(index, can_buy)]
+
+
+        return f(0, True)
