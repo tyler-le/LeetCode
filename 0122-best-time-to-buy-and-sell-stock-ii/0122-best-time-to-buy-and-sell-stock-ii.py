@@ -1,22 +1,33 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        
+
+        hold, free = -prices[0], 0
         n = len(prices)
-        dp = [[0 for _ in range(2)] for _ in range(n)]
-        BUY_STATE, SELL_STATE = 0, 1
 
-        dp[0][BUY_STATE] = -prices[0]
+        for i in range(n):
+            hold = max(hold, free - prices[i])
+            free = max(free, hold + prices[i])
+        
+        return max(hold,free)
 
-        for i in range(1, n):
-            buy = -prices[i] + dp[i-1][SELL_STATE]
-            hold = 0 + dp[i-1][BUY_STATE]
-            dp[i][BUY_STATE] = max(buy, hold)
 
-            sell = prices[i] + dp[i-1][BUY_STATE]
-            hold = 0 + dp[i-1][SELL_STATE]
-            dp[i][SELL_STATE] = max(sell, hold) 
+        
+        # n = len(prices)
+        # dp = [[0 for _ in range(2)] for _ in range(n)]
+        # BUY_STATE, SELL_STATE = 0, 1
 
-        return max(dp[-1][BUY_STATE], dp[-1][SELL_STATE])
+        # dp[0][BUY_STATE] = -prices[0]
+
+        # for i in range(1, n):
+        #     buy = -prices[i] + dp[i-1][SELL_STATE]
+        #     hold = 0 + dp[i-1][BUY_STATE]
+        #     dp[i][BUY_STATE] = max(buy, hold)
+
+        #     sell = prices[i] + dp[i-1][BUY_STATE]
+        #     hold = 0 + dp[i-1][SELL_STATE]
+        #     dp[i][SELL_STATE] = max(sell, hold) 
+
+        # return max(dp[-1][BUY_STATE], dp[-1][SELL_STATE])
 
 
         
