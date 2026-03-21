@@ -1,14 +1,14 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
-        hold, free = -prices[0], 0
+        buy, sell = -prices[0], 0
         n = len(prices)
 
         for i in range(n):
-            hold = max(hold, free - prices[i])
-            free = max(free, hold + prices[i])
+            buy = max(buy, sell - prices[i])
+            sell = max(sell, buy + prices[i])
         
-        return max(hold,free)
+        return max(buy,sell)
 
 
         
