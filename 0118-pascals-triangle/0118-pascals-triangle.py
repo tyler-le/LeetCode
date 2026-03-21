@@ -1,20 +1,24 @@
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
         res = []
-        
-        def rec(numRows):
-            if numRows == 0: return []
-            if numRows == 1: return [[1]]
-            
-            prev_rows = rec(numRows - 1)
-            curr_row = []
 
-            for i in range(1, len(prev_rows)):
-                curr_row.append(prev_rows[-1][i-1] + prev_rows[-1][i])
+        def f(i):
+            nonlocal res
+
+            sublist = [1]
+            if i == 1: 
+                res.append(sublist)
+                return sublist
+
             
-            prev_rows.append([1] + curr_row + [1])
-            return prev_rows
-        
-        
-        return rec(numRows)
+            prev_res = f(i-1)
+
+            for x in range(len(prev_res) - 1):
+                sublist.append(prev_res[x] + prev_res[x+1])
             
+            sublist.append(1)
+            res.append(sublist)
+            return sublist
+        
+        f(numRows)
+        return res
