@@ -1,6 +1,11 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
 
+        """
+        OPTIMIZED DP SOLUTION
+        Take the DP solution and realize you only track one state back. 
+        So keep track of it in single variables.
+        """
         buy, sell = -prices[0], 0
         n = len(prices)
 
@@ -11,7 +16,10 @@ class Solution:
         return max(buy,sell)
 
 
-        
+        """
+        DP SOLUTION
+        Take the recursive solution (top-down) and convert it to DP (bottom-up)
+        """
         # n = len(prices)
         # dp = [[0 for _ in range(2)] for _ in range(n)]
         # BUY_STATE, SELL_STATE = 0, 1
@@ -31,17 +39,25 @@ class Solution:
 
 
         
+        """
+        RECURSIVE SOLUTION
+        f(index, can_buy) = max profit starting on the ith day with buy or sell
+        
+        each index, we can either BUY or SELL 
+
+        if we can buy -> profit = max of:
+            1.) -prices[i] + f(index + 1, False) --> buy on this day
+            2.) 0 + f(index + 1, True) --> can buy but choose not to on this day
+
+
+        else we can sell -> profit = max of:
+            1.) prices[i] + f(index + 1, True) --> sell on this day
+            2.) f(index + 1, False) --> can sell but choose not to on this day
+        """
+
         # cache = {}
 
         # def f(index, can_buy):
-        #     # if we can buy 
-        #     # -> -prices[i] + f(index + 1, False)
-        #     # -> 0 + f(index + 1, True)
-
-        #     # if we cannot buy
-        #     # -> prices[i] + f(index + 1, True)
-        #     # -> 0 + f(index + 1, False)
-
         #     if index == len(prices): 
         #         return 0
 
