@@ -187,6 +187,7 @@ My collection of LeetCode solutions.
 ## Dynamic Programming
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0053-maximum-subarray](https://github.com/tyler-le/LeetCode/tree/master/0053-maximum-subarray) |
@@ -339,6 +340,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/tyler-le/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
@@ -451,6 +453,7 @@ My collection of LeetCode solutions.
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
