@@ -14,32 +14,28 @@ class Solution:
 
         return dp[amount] if dp[amount] != math.inf else -1
 
-
-        # """
+        
+        """
         # RECURSIVE + MEMOIZATION
-        # """
-        # cache = {}
-        # # return min number of ways to get to this target
+        
+        cache = {}
+        # return min number of ways to get to this target, or math.inf if not possible
 
-        # def f(target):
-        #     res = math.inf
+        def f(target):
+            res = math.inf
 
-        #     if target == 0: return 0
-
-        #     if target in cache: 
-        #         return cache[target]
+            if target == 0: return 0
+            if target < 0: return math.inf
+            if target in cache: return cache[target]
             
-        #     for coin in coins:
-        #         if target - coin >= 0:
-        #             subproblem = f(target - coin)
-                    
-        #             if subproblem >= 0: 
-        #                 res = min(res, 1 + subproblem)
+            for coin in coins:
+                subproblem = f(target - coin)    
+                res = min(res, 1 + subproblem)
             
-        #     cache[target] = res
+            cache[target] = res
             
-        #     return res if res != math.inf else -1
+            return res 
 
-
-        # if not amount: return 0
-        # return f(amount)
+        res = f(amount)
+        return res if res != math.inf else -1
+        """
