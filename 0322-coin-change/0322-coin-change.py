@@ -9,7 +9,7 @@ class Solution:
 
         for i in range(1, len(dp)):
             for coin in coins:
-                if i - coin >= 0 and dp[i-coin] != math.inf:
+                if i - coin >= 0:
                     dp[i] = min(dp[i], 1 + dp[i-coin])
 
         return dp[amount] if dp[amount] != math.inf else -1
