@@ -13,9 +13,17 @@ class Solution:
                     dp[i][j] = True
                     
         
-        # Fill out the rest
+        # Fill out the rest of dp. 
+        # we should fill out smaller substrings first since our dp access pattern queries smaller substrings
+        # we will explore fixed windows from length 2 to n+1. i.e. substrings of length 2, then 3, then ...
+        
+        # length is the current substring/window length
         for length in range(2, n+1):
-            for i in range(n - length + 1):
+
+            # i is the the starting index of substring
+            for i in range(0, n - length + 1):
+
+                # j is the ending index of substring/window for a fixed window of size 'length'
                 j = i + length - 1
                 if s[i] == s[j] and dp[i+1][j-1]:
                     dp[i][j] = True
