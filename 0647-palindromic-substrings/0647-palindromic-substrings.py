@@ -1,5 +1,9 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
+
+        """
+        DP SOLUTION
+        """
         n = len(s)
         dp = [[False for j in range(n)] for i in range(n)]
         res = 0
