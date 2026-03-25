@@ -1,26 +1,28 @@
-class Solution(object):
-    def numDecodings(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        n = len(s)
-        dp = {len(s) : 1}
+class Solution:
+    def numDecodings(self, s: str) -> int:
         
-        def helper(i):
-            if i in dp: return dp[i]
-            if s[i] == "0": return 0
+        # f(x) is the number of ways to decode x
 
-            
-            res = helper(i+1)
-            
-            if (i+1 < n) and ((s[i] == "1") or (s[i] == "2" and s[i+1] in "0123456")):
-                res+=helper(i+2)
-            
-            dp[i] = res
-            return res
+        @cache
+        def f(x):
+            print(x)
+            if not x: return 1
+            if len(x) == 1: 
+                if x == "0": return 0
+                else: return 1
+
+            res = 0
+
+            # take x[0] and recurse on x[1:]
+            first, rest = x[0], x[1:]
+            if 1 <= int(first) <= 26 and not (len(first) == 2 and first[0] == "0"): 
+                res += f(rest)
+
+            # tale x[0:2] and recurse on x[2:]     
+            first, rest = x[0:2], x[2:]   
+            if 1 <= int(first) <= 26 and not (len(first) == 2 and first[0] == "0"): 
+                res += f(rest)
+
+            return res    
         
-        print(dp)
-        return helper(0)
-            
-        
+        return f(s)
