@@ -194,6 +194,7 @@ My collection of LeetCode solutions.
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
 | [0070-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0070-climbing-stairs) |
+| [0091-decode-ways](https://github.com/tyler-le/LeetCode/tree/master/0091-decode-ways) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0118-pascals-triangle](https://github.com/tyler-le/LeetCode/tree/master/0118-pascals-triangle) |
 | [0119-pascals-triangle-ii](https://github.com/tyler-le/LeetCode/tree/master/0119-pascals-triangle-ii) |
@@ -348,6 +349,7 @@ My collection of LeetCode solutions.
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
+| [0091-decode-ways](https://github.com/tyler-le/LeetCode/tree/master/0091-decode-ways) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/tyler-le/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
