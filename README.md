@@ -219,6 +219,7 @@ My collection of LeetCode solutions.
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
@@ -303,6 +304,7 @@ My collection of LeetCode solutions.
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
+| [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
 ## Recursion
@@ -532,6 +534,7 @@ My collection of LeetCode solutions.
 | [0070-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0070-climbing-stairs) |
 | [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
+| [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 ## Rolling Hash
 |  |
 | ------- |
