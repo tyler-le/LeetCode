@@ -17,19 +17,13 @@ class Solution:
                 if i + len(word) <= n:
                     prefix = s[i : i+len(word)]
 
-                    if prefix in wordDict:
+                    if prefix == word:
                         if i + len(word) >= len(dp):
                             dp[i] = True
                         elif dp[i + len(word)]:
                             dp[i] = True
-
-        
-        
         
         return dp[0]
-
-
-
 
 
 
