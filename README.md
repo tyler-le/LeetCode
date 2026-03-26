@@ -26,6 +26,7 @@ My collection of LeetCode solutions.
 | [0119-pascals-triangle-ii](https://github.com/tyler-le/LeetCode/tree/master/0119-pascals-triangle-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/tyler-le/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
@@ -76,6 +77,7 @@ My collection of LeetCode solutions.
 | [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0138-copy-list-with-random-pointer](https://github.com/tyler-le/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
@@ -202,6 +204,7 @@ My collection of LeetCode solutions.
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/tyler-le/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/tyler-le/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
@@ -352,6 +355,7 @@ My collection of LeetCode solutions.
 | [0091-decode-ways](https://github.com/tyler-le/LeetCode/tree/master/0091-decode-ways) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/tyler-le/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
@@ -523,6 +527,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0070-climbing-stairs) |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 ## Rolling Hash
 |  |
@@ -550,4 +555,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
+## Trie
+|  |
+| ------- |
+| [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 <!---LeetCode Topics End-->
