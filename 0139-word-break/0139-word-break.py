@@ -18,10 +18,13 @@ class Solution:
                     prefix = s[i : i+len(word)]
 
                     if prefix == word:
-                        if i + len(word) >= len(dp):
+                        if i + len(word) >= len(dp): 
                             dp[i] = True
-                        elif dp[i + len(word)]:
+                            break
+                        elif dp[i + len(word)]: 
                             dp[i] = True
+                            break
+                        
         
         return dp[0]
 
