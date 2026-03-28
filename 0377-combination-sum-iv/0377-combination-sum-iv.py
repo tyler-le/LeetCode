@@ -1,13 +1,39 @@
 class Solution:
     def combinationSum4(self, nums: List[int], target: int) -> int:
-        # dp[i] = number of ways to reach sum i
-        # return dp[target]
-        
-        dp = [0] * (target+1)
+        """
+        DP
+        dp[i] = number of ways to make target i
+        """
+        dp = [0 for _ in range(target + 1)]
         dp[0] = 1
-        
-        for i in range(1, len(dp)):
+
+        for i in range(len(dp)):
             for num in nums:
-                dp[i] += dp[i-num] if i - num >= 0 else 0
+                if i - num >= 0:
+                    dp[i] += dp[i-num]
         
         return dp[target]
+
+
+        """
+        RECURSION + MEMOIZATION
+        f(x) = number of ways to make x
+        """
+        res = 0
+        cache = {}
+        def f(x):
+            cnt = 0
+
+            if x <= 0: 
+                if x == 0: return 1
+                return 0
+            
+            if x in cache: return cache[x]
+
+            for num in nums:
+                cnt+=f(x - num)
+
+            cache[x] = cnt
+            return cnt
+
+        return f(target)
