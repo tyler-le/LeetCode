@@ -1,22 +1,43 @@
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
-        
-        sumi, n = sum(nums), len(nums)
-        dp = [[False for _ in range(sumi + 1)] for _ in range(n+1)]
-        n, m = len(dp), len(dp[0])
-        if sumi % 2: return False
-        for i in range(n):
-            dp[i][0] = True
-            
-        for i in range(1, n):
-            for j in range(1, m):
-                
-                # can we make sum 'j' when including i'th element
-                include = False if j - nums[i-1] < 0 else dp[i-1][j - nums[i-1]]
-                
-                # can we make sum 'j' when excluding i'th element
-                exclude = dp[i-1][j]
-                
-                dp[i][j] = include or exclude
-        
-        return dp[-1][sumi // 2]
+        """
+        DP
+        dp[x] = "can we make sum of x?"
+        return dp[target]
+        """
+
+        if sum(nums) % 2: return False
+
+        target = int(sum(nums) / 2)
+        dp = [False for _ in range(sum(nums))]
+        dp[0] = True
+
+        # fix the number 
+        for num in nums:
+            # can we reach x?
+            # if we can make (x - num), then we can make x by adding num
+            for x in range(target, num - 1, -1):
+                dp[x] = dp[x] or dp[x - num]
+
+
+        return dp[target]
+
+
+        """
+        RECURSION + MEMOIZATION
+        """
+        n = len(nums)
+        cache = {}
+        def f(index, sum1, sum2):
+            if index >= n: return sum1 == sum2
+            if index in cache: return cache[(index, sum1, sum2)]
+
+            cache[(index, sum1, sum2)] = True
+            num = nums[index]
+            if f(index + 1, sum1 + num, sum2): return True
+            if f(index + 1, sum1, sum2 + num): return True
+
+            cache[(index, sum1, sum2)] = False
+            return False
+
+        return f(0, 0, 0)
