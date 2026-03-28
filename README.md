@@ -212,6 +212,7 @@ My collection of LeetCode solutions.
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
+| [0279-perfect-squares](https://github.com/tyler-le/LeetCode/tree/master/0279-perfect-squares) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/tyler-le/LeetCode/tree/master/0322-coin-change) |
 | [0337-house-robber-iii](https://github.com/tyler-le/LeetCode/tree/master/0337-house-robber-iii) |
@@ -255,6 +256,7 @@ My collection of LeetCode solutions.
 | [0112-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0112-path-sum) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
+| [0279-perfect-squares](https://github.com/tyler-le/LeetCode/tree/master/0279-perfect-squares) |
 | [0322-coin-change](https://github.com/tyler-le/LeetCode/tree/master/0322-coin-change) |
 | [0339-nested-list-weight-sum](https://github.com/tyler-le/LeetCode/tree/master/0339-nested-list-weight-sum) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
@@ -305,6 +307,7 @@ My collection of LeetCode solutions.
 | [0070-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0070-climbing-stairs) |
 | [0096-unique-binary-search-trees](https://github.com/tyler-le/LeetCode/tree/master/0096-unique-binary-search-trees) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0279-perfect-squares](https://github.com/tyler-le/LeetCode/tree/master/0279-perfect-squares) |
 | [0360-sort-transformed-array](https://github.com/tyler-le/LeetCode/tree/master/0360-sort-transformed-array) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
