@@ -1,15 +1,23 @@
 class Solution:
     def maxRepeating(self, sequence: str, word: str) -> int:
-        
-        # dp[i] = max number of consecutive repeats that END at index i
-        # so dp[i] = 1 + dp[i - len(word)]
 
-        n, m = len(sequence), len(word)
-        dp = [0 for _ in range(n+1)]
+        # f(i) = max repeating substring that ENDS at index i
+        n = len(sequence)
+        m = len(word)
+        res = 0
 
-        for i in range(m, n+1):
-            x = sequence[i-m:i]
-            if x == word:
-                dp[i] = 1 + dp[i-m] if i - m >= 0 else 1
+        @cache
+        def f(i):
+            if i < 0: return 0
 
-        return max(dp)
+            if sequence[i - m + 1 : i + 1] == word:
+                return 1 + f(i - m)
+            else:
+                return 0
+
+            
+        for x in range(n-1, -1, -1):
+            res = max(res, f(x))
+
+        return res
+
