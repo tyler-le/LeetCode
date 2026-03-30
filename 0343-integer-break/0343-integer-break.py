@@ -15,6 +15,14 @@ class Solution:
 
         return dp[n]
 
+
+        """
+        RECURSION + MEMOIZATION
+        f(x) = the max break for x
+
+        # a valid split of x is in two parts ... i and (x-i)
+        # we can choose to keep the int value (x-i) or to continue breaking (x-i)
+        """
         cache = {}
         def f(x):
             if x <= 0: return 0
