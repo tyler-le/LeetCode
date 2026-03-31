@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/find-the-town-judge/">997. Find the Town Judge</a></h2><h3>Easy</h3><hr><div><p>In a town, there are <code>n</code> people labeled from <code>1</code> to <code>n</code>. There is a rumor that one of these people is secretly the town judge.</p>
+<h2><a href="https://leetcode.com/problems/find-the-town-judge">1039. Find the Town Judge</a></h2><h3>Easy</h3><hr><p>In a town, there are <code>n</code> people labeled from <code>1</code> to <code>n</code>. There is a rumor that one of these people is secretly the town judge.</p>
 
 <p>If the town judge exists, then:</p>
 
@@ -15,19 +15,22 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> n = 2, trust = [[1,2]]
+<pre>
+<strong>Input:</strong> n = 2, trust = [[1,2]]
 <strong>Output:</strong> 2
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> n = 3, trust = [[1,3],[2,3]]
+<pre>
+<strong>Input:</strong> n = 3, trust = [[1,3],[2,3]]
 <strong>Output:</strong> 3
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> n = 3, trust = [[1,3],[2,3],[3,1]]
+<pre>
+<strong>Input:</strong> n = 3, trust = [[1,3],[2,3],[3,1]]
 <strong>Output:</strong> -1
 </pre>
 
@@ -42,4 +45,3 @@
 	<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>
 	<li><code>1 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt;= n</code></li>
 </ul>
-</div>
