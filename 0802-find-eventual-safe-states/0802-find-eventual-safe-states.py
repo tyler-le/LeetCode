@@ -4,40 +4,40 @@ class Solution:
         n = len(graph)
         bad = set()        
         cache = {}
-        states = {}
+        safe_nodes = {}
 
-        def has_cycle(node) -> bool:
+        def dfs(node) -> bool:
 
-            if node in cache: return cache[node]
+            if node in safe_nodes: 
+                return safe_nodes[node]
 
             if node in visited:
-                bad.update(visited)
-                cache[node] = True
-                return True
+                safe_nodes[node] = False
+                return False
             
             if not graph[node]:
-                cache[node] = False
-                return False
+                safe_nodes[node] = True
+                return True
 
             visited.add(node)
 
             for nbor in graph[node]:
-                if has_cycle(nbor):
-                    bad.update(visited)
-                    cache[node] = True
-                    return True
+                if not dfs(nbor):
+                    safe_nodes[node] = False
+                    return False
             
             visited.remove(node)
-            cache[node] = False
-            return False
+            safe_nodes[node] = True
+            return True
             
         
         for node in range(n):
             if node in visited: continue
-            has_cycle(node)
+            dfs(node)
         
         res = []
+
         for i in range(n):
-            if i not in bad: res.append(i)
+            if safe_nodes[i]: res.append(i)
 
         return res
