@@ -4,13 +4,14 @@ class Solution:
         n = len(graph)
         bad = set()        
         cache = {}
+        states = {}
 
         def has_cycle(node) -> bool:
 
             if node in cache: return cache[node]
 
             if node in visited:
-                # bad.update(visited)
+                bad.update(visited)
                 cache[node] = True
                 return True
             
@@ -35,7 +36,8 @@ class Solution:
             if node in visited: continue
             has_cycle(node)
         
-        return sorted(set(range(n)) - bad)
+        res = []
+        for i in range(n):
+            if i not in bad: res.append(i)
 
-
-
+        return res
