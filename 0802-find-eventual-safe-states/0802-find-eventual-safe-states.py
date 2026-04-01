@@ -33,9 +33,9 @@ class Solution:
         
         for node in range(n):
             if node in visited: continue
-            if has_cycle(node):
-                bad.update(visited)
+            has_cycle(node)
         
-        return sorted(list(set([i for i in range(n)]) - bad))
+        return sorted(set(range(n)) - bad)
+
 
 
