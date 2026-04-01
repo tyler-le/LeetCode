@@ -14,10 +14,6 @@ class Solution:
             if node in visited:
                 safe_nodes[node] = False
                 return False
-            
-            if not graph[node]:
-                safe_nodes[node] = True
-                return True
 
             visited.add(node)
 
