@@ -1,38 +1,41 @@
 class Solution:
     def closedIsland(self, grid: List[List[int]]) -> int:
-        def flood_fill(i,j):
-            if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] == 1:
-                return
-            
-            grid[i][j] = 1
-            
-            flood_fill(i+1,j)
-            flood_fill(i-1,j)
-            flood_fill(i,j+1)
-            flood_fill(i,j-1)
-            
-        # perform flood fill on borders
-        for row in range(len(grid)):
-            for col in range(len(grid[0])):
-                if col == 0 or col == len(grid[0]) - 1 or row == 0 or row == len(grid) - 1:
-                    flood_fill(row,col)
-        
-        def dfs(i,j):
-            if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] == 1:
-                return
-            
-            grid[i][j] = 1
-            dfs(i+1,j)
-            dfs(i-1,j)
-            dfs(i,j+1)
-            dfs(i,j-1)
-        
-        # count remaining islands
+
+        n, m = len(grid), len(grid[0])
+        LAND, WATER = 0, 1
+        visited = set()
         res = 0
-        for row in range(len(grid)):
-            for col in range(len(grid[0])):
-                if grid[row][col] == 0:
-                    dfs(row,col)
-                    res += 1
+
+        def dfs(x, y):
+            if x < 0 or y < 0 or x >= n or y >= m: return
+            if (x, y) in visited: return
+            if grid[x][y] == WATER: return
+
+            visited.add((x,y))
+            grid[x][y] = WATER
+
+            for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                r = x + dx
+                c = y + dy
+                dfs(r, c)
+
+        # loop on the boundary and turn all LAND to WATER
+        for i in range(n):
+            dfs(i, 0)
+            dfs(i, m-1)
+    
+        for j in range(m):
+            dfs(0, j)
+            dfs(n-1, j)
+
+        visited = set()
+
+        for i in range(n):
+            for j in range(m):
+                if (i, j) not in visited and grid[i][j] == LAND:
+                    dfs(i, j)
+                    res+=1
+        
         return res
+            
         
