@@ -170,6 +170,7 @@ My collection of LeetCode solutions.
 | [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0951-flip-equivalent-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0951-flip-equivalent-binary-trees) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
@@ -277,6 +278,7 @@ My collection of LeetCode solutions.
 | [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
@@ -449,6 +451,7 @@ My collection of LeetCode solutions.
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
 | [0277-find-the-celebrity](https://github.com/tyler-le/LeetCode/tree/master/0277-find-the-celebrity) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
@@ -545,6 +548,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/tyler-le/LeetCode/tree/master/0207-course-schedule) |
+| [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
 ## Combinatorics
 |  |
 | ------- |
