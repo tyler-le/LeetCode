@@ -10,7 +10,7 @@ class Solution:
             if node in cache: return cache[node]
 
             if node in visited:
-                bad.update(visited)
+                # bad.update(visited)
                 cache[node] = True
                 return True
             
