@@ -17,14 +17,14 @@ class Solution:
 
             visited.add((x,y))
             if direction: path.append(f"{direction} ")
-            else: path.append("START ")
+            else: path.append("Start ")
 
-            dfs(x, y-1, path, "L")
-            dfs(x, y+1, path, "R")
-            dfs(x-1, y, path, "U")
-            dfs(x+1, y, path, "D")
+            dfs(x, y-1, path, "Left")
+            dfs(x, y+1, path, "Right")
+            dfs(x-1, y, path, "Up")
+            dfs(x+1, y, path, "Down")
 
-            path.append("B")
+            path.append("Backtracking")
             return tuple(path)
 
         for i in range(n):
