@@ -6,14 +6,9 @@ class Solution:
         res = set()
         
         def dfs(x, y, path, direction):
-            if x < 0 or y < 0 or x >= n or y >= m:
-                return 
-
-            if (x,y) in visited:
-                return 
-            
-            if grid[x][y] == 0:
-                return 
+            if x < 0 or y < 0 or x >= n or y >= m: return 
+            if (x,y) in visited: return 
+            if grid[x][y] == 0: return 
 
             visited.add((x,y))
             if direction: path.append(f"{direction} ")
@@ -25,12 +20,12 @@ class Solution:
             dfs(x+1, y, path, "Down")
 
             path.append("Backtracking")
-            return tuple(path)
+            return path
 
         for i in range(n):
             for j in range(m):
                 path = dfs(i, j, [], None)
-                if path: res.add(path)
+                if path: res.add(tuple(path))
         
         return len(res)
         
