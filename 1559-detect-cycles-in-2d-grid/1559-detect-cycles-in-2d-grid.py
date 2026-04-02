@@ -1,26 +1,28 @@
 class Solution:
     def containsCycle(self, grid: List[List[str]]) -> bool:
-        
-        def dfs(i, j, char, prev):
-            if i < 0 or j < 0 or i >= len(grid) or j >= len(grid[0]) or grid[i][j] != char:
-                return False
-            
-            if (i,j) in visited: return True
-            
-            visited.add((i,j))
-
-            if (i+1,j) != prev and dfs(i+1, j, char, (i,j)): return True
-            if (i-1,j) != prev and dfs(i-1, j, char, (i,j)): return True
-            if (i,j+1) != prev and dfs(i, j+1, char, (i,j)): return True
-            if (i,j-1) != prev and dfs(i, j-1, char, (i,j)): return True
-            
-            return False
-        
         visited = set()
-        for i in range(len(grid)):
-            for j in range(len(grid[0])):
-                if (i,j) in visited: continue
-                if dfs(i,j, grid[i][j], (i,j)): return True
-                
-        return False
+        n, m = len(grid), len(grid[0])
+
+        def has_cycle(x, y, prev):
+            if (x, y) in visited: return True
+
+            visited.add((x,y))
             
+            for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
+                r = x + dx
+                c = y + dy
+
+                if r < 0 or c < 0 or r >= n or c >= m: continue
+                if prev and (r,c) == prev: continue
+                if grid[r][c] != grid[x][y]: continue
+
+                if has_cycle(r, c, (x,y)): return True
+
+
+        for i in range(n):
+            for j in range(m):
+                if (i, j) in visited: continue
+                if has_cycle(i, j, None): 
+                    return True
+        
+        return False
