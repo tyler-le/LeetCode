@@ -53,6 +53,7 @@ My collection of LeetCode solutions.
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
+| [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
@@ -437,6 +438,7 @@ My collection of LeetCode solutions.
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
+| [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 ## Doubly-Linked List
 |  |
 | ------- |
@@ -451,6 +453,7 @@ My collection of LeetCode solutions.
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
+| [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [2226-maximum-candies-allocated-to-k-children](https://github.com/tyler-le/LeetCode/tree/master/2226-maximum-candies-allocated-to-k-children) |
@@ -494,6 +497,7 @@ My collection of LeetCode solutions.
 ## Segment Tree
 |  |
 | ------- |
+| [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 ## Prefix Sum
@@ -590,6 +594,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
+| [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 ## Interactive
 |  |
 | ------- |
