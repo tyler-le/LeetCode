@@ -10,9 +10,7 @@ class Solution:
         # check if we can book. if not, add a new room, otherwise extend that rooms booking time
 
         for start, end in intervals:
-            if not min_heap:
-                heappush(min_heap, end)
-            elif start < min_heap[0]:
+            if not min_heap or start < min_heap[0]:
                 heappush(min_heap, end)
             else:
                 heappop(min_heap)
