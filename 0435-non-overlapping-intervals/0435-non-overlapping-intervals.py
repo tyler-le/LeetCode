@@ -1,20 +1,25 @@
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        # be greedy and remove the one that ends later
 
-        intervals.sort(key = lambda x : (x[0], x[1]))
-        prev_end = intervals[0][1]
+        intervals.sort(key = lambda x : (x[0]))
+        n = len(intervals)
         res = 0
+        prev_start, prev_end = intervals[0]
 
-        for curr_start, curr_end in intervals[1:]:
+        for i in range(1, n):
+            curr_start, curr_end = intervals[i]
 
-            # if there is overlap - keep the one that ends earlier
-            if curr_start < prev_end:
-                prev_end = min(prev_end, curr_end)
+            has_overlap = prev_start <= curr_start < prev_end
+
+            # if overlap: choose the one that ends earlier
+            if has_overlap:
+                if curr_end < prev_end:
+                    prev_start, prev_end = curr_start, curr_end
                 res+=1
 
-            # else no overlap - keep this interval  
+            # else re-track prev interval
             else:
-                prev_end = curr_end
-                
-
+                prev_start, prev_end = curr_start, curr_end 
+        
         return res
