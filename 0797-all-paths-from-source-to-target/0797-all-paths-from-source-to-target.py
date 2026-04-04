@@ -1,21 +1,22 @@
 class Solution:
     def allPathsSourceTarget(self, graph: List[List[int]]) -> List[List[int]]:
-        
         res = []
-        n = len(graph) - 1
-        
+        n = len(graph)
+
         def dfs(node, path):
             nonlocal res
-            nonlocal n
-            
-            if node == n:
-                res.append(path)
+
+            if node == n-1:
+                res.append(path + [node])
                 return
-            
+
+            path.append(node)
+
             for nbor in graph[node]:
-                path.append(nbor)
-                dfs(nbor, path.copy())
-                path.pop()
-                
-        dfs(0, [0])
+                dfs(nbor, path)
+            
+            path.pop()
+            
+        
+        dfs(0, [])
         return res
