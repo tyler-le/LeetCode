@@ -11,8 +11,10 @@ class Solution:
 
         for start, end in intervals:
             if not min_heap or start < min_heap[0]:
+                # add a new room
                 heappush(min_heap, end)
             else:
+                # extend the room booking
                 heappop(min_heap)
                 heappush(min_heap, end)
         
