@@ -7,34 +7,35 @@
 
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        
-        # convert binary tree to undirected graph
-        graph = collections.defaultdict(list)
-        
-        def build_graph(curr, parent):
-            if curr and parent:
-                graph[curr].append(parent)
-                graph[parent].append(curr)
-            if curr.left:
-                build_graph(curr.left, curr)
-            if curr.right:
-                build_graph(curr.right, curr)
-                
-        build_graph(root, None)
+        # turn to graph and run bfs from target
 
-        # run bfs on target node and record dist == 2
-        q = deque([(target,0)]) # (node, dist) pairs
-        dist, visited, res = 0, set(), []
+        graph = defaultdict(list)
+        res = []
+        visited = set()
+
+        def dfs(node, parent):
+            nonlocal graph
+            if parent:
+                graph[node.val].append(parent.val)
+                graph[parent.val].append(node.val)
+            
+            if node.left: dfs(node.left, node)
+            if node.right: dfs(node.right, node)
         
+        dfs(root, None)
+        q = deque([(target.val, 0)]) # node, distance
+        visited.add(target.val)
+
         while q:
-            popped, dist = q.popleft()
-            visited.add(popped)
-            
-            if dist == k: res.append(popped.val)
+            popped_node, popped_dist = q.popleft()
 
-            for nbor in graph[popped]:
-                if nbor not in visited:
-                    q.append((nbor, dist+1))
-                          
+
+            if popped_dist > k: return res
+            if popped_dist == k: res.append(popped_node)
+
+            for nbor in graph[popped_node]:
+                if nbor in visited: continue
+                visited.add(nbor)
+                q.append((nbor, popped_dist + 1))
+        
         return res
-            
