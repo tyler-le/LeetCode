@@ -4,6 +4,11 @@ class Solution:
         intervals.sort(key = lambda x : x[0])
         min_heap = []
 
+        # keep track of the occupied rooms via their end times
+        # store these end times in a min heap
+        # min heap because we want access to the room that ends first
+        # check if we can book. if not, add a new room, otherwise extend that rooms booking time
+
         for start, end in intervals:
             if not min_heap:
                 heappush(min_heap, end)
@@ -15,4 +20,3 @@ class Solution:
         
         return len(min_heap)
 
-        # keep track of the earliest end time
