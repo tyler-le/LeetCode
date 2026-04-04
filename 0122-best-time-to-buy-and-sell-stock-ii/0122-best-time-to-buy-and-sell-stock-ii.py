@@ -8,11 +8,11 @@ class Solution:
 
         for i in range(n):
 
-            # greedily buy
-            buy_price = min(buy_price, prices[i])
-
+            # greedily buy low
             if buy_price > prices[i]:
                 buy_price = prices[i]
+
+            # encounter a good day to sell (buy < sell)
             else:
                 res+=prices[i] - buy_price
                 buy_price = prices[i]
