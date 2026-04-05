@@ -12,14 +12,12 @@ class Solution:
         events = [] # (time, +/- employee)
         intervals = []
         res = []
-        last_time = None
-
+        stack = []
 
         for sublist in schedule:
             for interval in sublist:
                 intervals.append(interval)
 
-            
         for interval in intervals:
             start, end = interval.start, interval.end
             events.append([start, 1])
@@ -30,12 +28,11 @@ class Solution:
         for time, delta in events:
             count+=delta
 
-            if not count and not last_time:
-                last_time = time
+            if not count and not stack:
+                stack.append(time)
                 
-            elif last_time:
-                res.append(Interval(start=last_time, end=time))
-                last_time = None
+            elif stack:
+                res.append(Interval(start=stack.pop(), end=time))
         
         return res
             
