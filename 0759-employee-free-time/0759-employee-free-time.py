@@ -31,7 +31,7 @@ class Solution:
             if not count and not stack:
                 stack.append(time)
                 
-            elif stack:
+            elif count and stack:
                 res.append(Interval(start=stack.pop(), end=time))
         
         return res
