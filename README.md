@@ -48,6 +48,7 @@ My collection of LeetCode solutions.
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
+| [0540-single-element-in-a-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0605-can-place-flowers](https://github.com/tyler-le/LeetCode/tree/master/0605-can-place-flowers) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
 | [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
@@ -475,6 +476,7 @@ My collection of LeetCode solutions.
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
+| [0540-single-element-in-a-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
