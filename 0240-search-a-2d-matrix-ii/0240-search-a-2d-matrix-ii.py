@@ -1,6 +1,15 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         n, m = len(matrix), len(matrix[0])
+        i, j = 0, m-1
+
+        while i < n and j >= 0:
+            top_right = matrix[i][j]
+            if top_right > target: j-=1
+            elif top_right < target: i+=1
+            else: return True
+        
+        return False
 
         """
         The idea is to look at the top right corner.
