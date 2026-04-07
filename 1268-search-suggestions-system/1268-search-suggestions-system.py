@@ -47,9 +47,6 @@ class Solution:
 
         # sort
         # for every prefix, binary search for that prefix
-
-        print(products)
-
         for i in range(1, m + 1):
             prefix = searchWord[:i]
             l, r = binary_search(prefix)
