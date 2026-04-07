@@ -54,6 +54,7 @@ My collection of LeetCode solutions.
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
 | [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
+| [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0704-binary-search](https://github.com/tyler-le/LeetCode/tree/master/0704-binary-search) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
@@ -128,6 +129,7 @@ My collection of LeetCode solutions.
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0463-island-perimeter](https://github.com/tyler-le/LeetCode/tree/master/0463-island-perimeter) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
+| [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
@@ -189,6 +191,7 @@ My collection of LeetCode solutions.
 | [0617-merge-two-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0617-merge-two-binary-trees) |
 | [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
+| [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/tyler-le/LeetCode/tree/master/0797-all-paths-from-source-to-target) |
@@ -307,6 +310,7 @@ My collection of LeetCode solutions.
 | [0617-merge-two-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0617-merge-two-binary-trees) |
 | [0662-maximum-width-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0662-maximum-width-of-binary-tree) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
+| [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/tyler-le/LeetCode/tree/master/0797-all-paths-from-source-to-target) |
@@ -652,6 +656,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
+| [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
