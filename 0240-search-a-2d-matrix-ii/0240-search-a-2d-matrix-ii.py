@@ -1,6 +1,10 @@
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         n, m = len(matrix), len(matrix[0])
+        
+        """
+        Iterative version of the recursive approach
+        """
         i, j = 0, m-1
 
         while i < n and j >= 0:
