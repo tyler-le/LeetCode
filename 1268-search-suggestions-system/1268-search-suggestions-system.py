@@ -8,29 +8,16 @@ class Solution:
 
         def binary_search(prefix):
 
-            left_bound, right_bound = None, None
             res = []
 
             # find left bound
-            low, high = 0, n-1
-            while low < high:
-                mid = (high + low) // 2
-                word = products[mid]
+            left_bound = bisect_left(products, prefix)
 
-                if prefix <= word[:len(prefix)]:
-                    high = mid
-                else:
-                    low = mid + 1
-
-            if products[low][:len(prefix)] == prefix:
-                left_bound = low
-
-            if left_bound is None:
-                return []
-            else:
-                for i in range(left_bound, min(n, left_bound + 3)):
+            # scan for right bound
+            for i in range(left_bound, min(n, left_bound + 3)):
                     if products[i].startswith(prefix):
                         res.append(products[i])
+                
 
             return res
 
