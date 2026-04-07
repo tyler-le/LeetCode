@@ -18,11 +18,7 @@ class Solution:
                     if products[i].startswith(prefix):
                         res.append(products[i])
                 
-
             return res
-
-                
-                
 
         # sort
         # for every prefix, binary search for that prefix
