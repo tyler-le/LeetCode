@@ -9,6 +9,7 @@ class Solution:
         def binary_search(prefix):
 
             left_bound, right_bound = None, None
+            res = []
 
             # find left bound
             low, high = 0, n-1
@@ -23,25 +24,16 @@ class Solution:
 
             if products[low][:len(prefix)] == prefix:
                 left_bound = low
-            
-            # find right bound
-            low, high = 0, n-1
-            while low < high:
-                mid = (low + high + 1) // 2
 
-                word = products[mid]
+            if left_bound is None:
+                return []
+            else:
+                for i in range(left_bound, min(n, left_bound + 3)):
+                    if products[i].startswith(prefix):
+                        res.append(products[i])
 
-                if prefix < word[:len(prefix)]:
-                    high = mid - 1
-                elif prefix > word[:len(prefix)]:
-                    low = mid + 1
-                else:
-                    low = mid
+            return res
 
-            if products[low][:len(prefix)] == prefix:
-                right_bound = low
-
-            return [left_bound, right_bound]
                 
                 
 
@@ -49,8 +41,7 @@ class Solution:
         # for every prefix, binary search for that prefix
         for i in range(1, m + 1):
             prefix = searchWord[:i]
-            l, r = binary_search(prefix)
-            if l is None or r is None: res.append([])
-            else: res.append(products[l:r+1] if r+1-l <= 3 else products[l:l+3])
+            res.append(binary_search(prefix))
+        
 
         return res
