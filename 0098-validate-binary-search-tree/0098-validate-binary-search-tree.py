@@ -7,19 +7,19 @@
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         
-        inord = []
-        def inorder(node):
-            nonlocal inord
-            if not node:
-                return 
-            inorder(node.left)
-            inord.append(node.val)
-            inorder(node.right)
-        
-        inorder(root)
+        def dfs(node, min_val, max_val):
+            if not node: return True
 
-        for i in range(1, len(inord)):
-            if inord[i] <= inord[i-1]:
-                return False
-            
-        return True
+            if min_val is not None and node.val <= min_val: return False
+            if max_val is not None and node.val >= max_val: return False
+
+            left, right = True, True
+            if node.left:
+                left = dfs(node.left, min_val, node.val)
+            if node.right:
+                right = dfs(node.right, node.val, max_val)
+
+            return left and right
+        
+
+        return dfs(root, None, None)
