@@ -1,22 +1,39 @@
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
         
+        # -------------------------------------------------[0,30]
+        #      ------------ [5,10]
+        #                             ------ [15,20]
+
+        # # sort by start
+
+        # [[0,30],[5,10],[15,20]]
+
+        # data structure min heap - keep track of each rooms end time
+        # [20, 30]
+
+
         intervals.sort(key = lambda x : x[0])
-        min_heap = []
+        min_heap = [] # end times
+        n = len(intervals)
 
-        # keep track of the occupied rooms via their end times
-        # store these end times in a min heap
-        # min heap because we want access to the room that ends first
-        # check if we can book. if not, add a new room, otherwise extend that rooms booking time
+        for i in range(n):
+            curr_start, curr_end = intervals[i]
 
-        for start, end in intervals:
-            if not min_heap or start < min_heap[0]:
-                # add a new room
-                heappush(min_heap, end)
+            if not min_heap:
+                heappush(min_heap, curr_end)
             else:
-                # extend the room booking
-                heappop(min_heap)
-                heappush(min_heap, end)
-        
+                # merge with the best room
+                if min_heap[0] <= curr_start:
+                    heappop(min_heap)
+                    heappush(min_heap, curr_end)
+
+                # create a new room
+                else:
+                    heappush(min_heap, curr_end)
+
         return len(min_heap)
 
+
+
+        
