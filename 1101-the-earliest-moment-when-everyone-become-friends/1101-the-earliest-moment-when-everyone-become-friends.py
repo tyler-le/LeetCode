@@ -13,22 +13,22 @@ class UnionFind:
     
     def find(self, x):
         if x == self.ranks[x]: return x
-        return self.find(self.ranks[x])
+        self.ranks[x] = self.find(self.ranks[x])
+        return self.ranks[x]
 
 
 class Solution:
     def earliestAcq(self, logs: List[List[int]], n: int) -> int:
-        # return earliest time when each node has n-1 connections
 
-        # sort by time
+        """
+        sort by time
 
-        # keep adding edges into the graph
+        run Union Find to add nodes into components
 
-        # return when all nodes have n-1 connections (using a hashmap to track node : num edges)
+        return when a single component has all the nodes
+        """
 
         logs.sort(key = lambda x : x[0])
-
-        # keep adding edges until all nodes are in the same component
         uf = UnionFind(n)
 
         for time, u, v in logs:
