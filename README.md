@@ -453,6 +453,7 @@ My collection of LeetCode solutions.
 | [0647-palindromic-substrings](https://github.com/tyler-le/LeetCode/tree/master/0647-palindromic-substrings) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
+| [0777-swap-adjacent-in-lr-string](https://github.com/tyler-le/LeetCode/tree/master/0777-swap-adjacent-in-lr-string) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
@@ -586,6 +587,7 @@ My collection of LeetCode solutions.
 | [0360-sort-transformed-array](https://github.com/tyler-le/LeetCode/tree/master/0360-sort-transformed-array) |
 | [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
 | [0647-palindromic-substrings](https://github.com/tyler-le/LeetCode/tree/master/0647-palindromic-substrings) |
+| [0777-swap-adjacent-in-lr-string](https://github.com/tyler-le/LeetCode/tree/master/0777-swap-adjacent-in-lr-string) |
 | [0986-interval-list-intersections](https://github.com/tyler-le/LeetCode/tree/master/0986-interval-list-intersections) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
