@@ -1,13 +1,13 @@
+from heapq import heappop_max, heappush_max, heapify_max
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
+
+        heapify_max(stones)
+
+        while len(stones) > 1:
+            first, second = heappop_max(stones), heappop_max(stones)
+
+            if first == second: continue
+            else: heappush_max(stones, first - second)
         
-        max_heap = [-s for s in stones]
-        heapify(max_heap)
-        
-        while len(max_heap) > 1:
-            y, x = -heappop(max_heap), -heappop(max_heap)
-            
-            if x!=y: heappush(max_heap, -(y-x))
-        
-        return -max_heap[0] if len(max_heap) else 0
-            
+        return stones[0] if len(stones) else 0
