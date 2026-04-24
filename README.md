@@ -410,6 +410,7 @@ My collection of LeetCode solutions.
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
+| [2833-furthest-point-from-origin](https://github.com/tyler-le/LeetCode/tree/master/2833-furthest-point-from-origin) |
 ## Backtracking
 |  |
 | ------- |
@@ -474,6 +475,7 @@ My collection of LeetCode solutions.
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
+| [2833-furthest-point-from-origin](https://github.com/tyler-le/LeetCode/tree/master/2833-furthest-point-from-origin) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
 | [3760-maximum-substrings-with-distinct-start](https://github.com/tyler-le/LeetCode/tree/master/3760-maximum-substrings-with-distinct-start) |
