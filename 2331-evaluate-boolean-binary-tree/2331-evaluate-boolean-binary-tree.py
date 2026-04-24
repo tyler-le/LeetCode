@@ -6,15 +6,19 @@
 #         self.right = right
 class Solution:
     def evaluateTree(self, root: Optional[TreeNode]) -> bool:
-        def rec(node):
+        FALSE, TRUE, OR, AND = 0, 1, 2, 3
+
+        def dfs(node):
+
             if not node.left and not node.right:
-                if node.val == 0: return False
-                else: return True
+                return node.val
             
+            left = dfs(node.left)
+            right = dfs(node.right)
+
+            if node.val == AND:
+                return left and right
             else:
-                if node.val == 2:
-                    return rec(node.left) or rec(node.right)
-                else:
-                    return rec(node.left) and rec(node.right)
+                return left or right
         
-        return rec(root)
+        return dfs(root) == TRUE
