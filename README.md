@@ -32,6 +32,7 @@ My collection of LeetCode solutions.
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
+| [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
@@ -485,6 +486,7 @@ My collection of LeetCode solutions.
 | [0003-longest-substring-without-repeating-characters](https://github.com/tyler-le/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
+| [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
@@ -514,6 +516,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
@@ -581,6 +584,7 @@ My collection of LeetCode solutions.
 ## Prefix Sum
 |  |
 | ------- |
+| [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
