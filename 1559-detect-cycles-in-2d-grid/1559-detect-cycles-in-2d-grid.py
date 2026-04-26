@@ -4,7 +4,7 @@ class Solution:
         n, m = len(grid), len(grid[0])
 
         def has_cycle(x, y, parent):
-            
+            visited.add((x,y))
             for dx, dy in [(-1,0), (1,0), (0,-1), (0,1)]:
                 r = x + dx
                 c = y + dy
@@ -13,7 +13,6 @@ class Solution:
                 if grid[x][y] != grid[r][c]: continue
                 if (r,c) == parent: continue
                 if (r,c) in visited: return True
-                visited.add((r,c))
                 if has_cycle(r,c, (x,y)): return True
             
             return False
@@ -21,7 +20,6 @@ class Solution:
         for i in range(n):
             for j in range(m):
                 if (i, j) in visited: continue
-                visited.add((i,j))
                 if has_cycle(i,j, None): return True
 
 
