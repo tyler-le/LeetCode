@@ -3,11 +3,12 @@ class Solution:
         
         n = len(nums)
         res = []
-        left_max = [nums[0]]
+        left_max = []
         right_max = deque()
 
-        for i in range(1, n):
-            left_max.append(max(left_max[i-1], nums[i]))
+        for i in range(n):
+            if not left_max: left_max.append(nums[0])
+            else: left_max.append(max(left_max[i-1], nums[i]))
 
         for i in range(n-1, -1, -1):
             if not right_max: right_max.appendleft(nums[i])
