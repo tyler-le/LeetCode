@@ -80,7 +80,6 @@ class Solution:
                     continue
 
                 visited.add((r,c))
-                print(f"visiting [{r}, {c}]")
                 q.append((r,c,grid[r][c]))
         
         return False
