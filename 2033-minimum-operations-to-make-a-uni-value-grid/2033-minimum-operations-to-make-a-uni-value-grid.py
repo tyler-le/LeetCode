@@ -6,8 +6,6 @@ class Solution:
         n, m = len(grid), len(grid[0])
         res = 0
 
-        # if n == 1 and m == 1: return 0
-
         for i in range(n):
             for j in range(m):
                 nums.append(grid[i][j])
