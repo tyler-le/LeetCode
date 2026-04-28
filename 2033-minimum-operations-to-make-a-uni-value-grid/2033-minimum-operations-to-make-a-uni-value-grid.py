@@ -16,7 +16,7 @@ class Solution:
         for num in nums:
 
             # check if we can reach num to median by adding or subtract x any number of times
-            if ( median - num ) % x:
+            if ( (median - num) % x ) != 0:
                 return -1
 
             # count number of operations to go from num to median in increments of x
