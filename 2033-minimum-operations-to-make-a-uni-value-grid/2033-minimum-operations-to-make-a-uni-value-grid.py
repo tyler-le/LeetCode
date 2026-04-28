@@ -13,14 +13,11 @@ class Solution:
         nums.sort()
         median = nums[len(nums) // 2]
 
-        # check if possible
         for num in nums:
 
-            # cannot reach median by adding or subtract x any number of times
+            # check if we can reach num to median by adding or subtract x any number of times
             if ( median - num ) % x:
                 return -1
-
-        for num in nums:
 
             # count number of operations to go from num to median in increments of x
             res+= ( abs(median - num) // x )
