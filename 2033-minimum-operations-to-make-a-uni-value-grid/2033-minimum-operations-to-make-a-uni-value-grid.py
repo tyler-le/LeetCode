@@ -23,6 +23,6 @@ class Solution:
         for num in nums:
 
             # count number of operations to go from num to median in increments of x
-            res+= ( abs(num - median) // x )
+            res+= ( abs(median - num) // x )
 
         return res
