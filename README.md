@@ -74,6 +74,7 @@ My collection of LeetCode solutions.
 | [1046-last-stone-weight](https://github.com/tyler-le/LeetCode/tree/master/1046-last-stone-weight) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/tyler-le/LeetCode/tree/master/1101-the-earliest-moment-when-everyone-become-friends) |
+| [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
@@ -124,6 +125,7 @@ My collection of LeetCode solutions.
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
+| [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -404,6 +406,7 @@ My collection of LeetCode solutions.
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
+| [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
@@ -496,6 +499,7 @@ My collection of LeetCode solutions.
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
+| [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -597,6 +601,7 @@ My collection of LeetCode solutions.
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
+| [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
