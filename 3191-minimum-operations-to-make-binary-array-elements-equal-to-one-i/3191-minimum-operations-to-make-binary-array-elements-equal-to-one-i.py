@@ -13,5 +13,6 @@ class Solution:
                 nums[i+2]^=1
                 res+=1
         
-        if nums[n-1] == 0 or nums[n-2] == 0: return -1
+        
+        if n != sum(nums): return -1
         return res
