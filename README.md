@@ -97,6 +97,7 @@ My collection of LeetCode solutions.
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
+| [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3637-trionic-array-i](https://github.com/tyler-le/LeetCode/tree/master/3637-trionic-array-i) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 ## Hash Table
@@ -457,6 +458,7 @@ My collection of LeetCode solutions.
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
+| [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
 ## String
 |  |
@@ -510,6 +512,7 @@ My collection of LeetCode solutions.
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
+| [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Design
 |  |
 | ------- |
@@ -610,6 +613,7 @@ My collection of LeetCode solutions.
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
+| [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 ## Two Pointers
 |  |
@@ -750,4 +754,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
+## Queue
+|  |
+| ------- |
+| [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 <!---LeetCode Topics End-->
