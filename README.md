@@ -487,6 +487,7 @@ My collection of LeetCode solutions.
 | [0777-swap-adjacent-in-lr-string](https://github.com/tyler-le/LeetCode/tree/master/0777-swap-adjacent-in-lr-string) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
+| [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/tyler-le/LeetCode/tree/master/1784-check-if-binary-string-has-at-most-one-segment-of-ones) |
@@ -656,6 +657,7 @@ My collection of LeetCode solutions.
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
+| [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 ## Geometry
 |  |
