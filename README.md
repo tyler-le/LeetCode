@@ -92,6 +92,7 @@ My collection of LeetCode solutions.
 | [2226-maximum-candies-allocated-to-k-children](https://github.com/tyler-le/LeetCode/tree/master/2226-maximum-candies-allocated-to-k-children) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
+| [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -134,6 +135,7 @@ My collection of LeetCode solutions.
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
+| [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -304,6 +306,7 @@ My collection of LeetCode solutions.
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
+| [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
 ## Greedy
 |  |
@@ -496,6 +499,7 @@ My collection of LeetCode solutions.
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
+| [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2833-furthest-point-from-origin](https://github.com/tyler-le/LeetCode/tree/master/2833-furthest-point-from-origin) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
