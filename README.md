@@ -101,6 +101,7 @@ My collection of LeetCode solutions.
 | [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3637-trionic-array-i](https://github.com/tyler-le/LeetCode/tree/master/3637-trionic-array-i) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
+| [3865-reverse-k-subarrays](https://github.com/tyler-le/LeetCode/tree/master/3865-reverse-k-subarrays) |
 ## Hash Table
 |  |
 | ------- |
@@ -639,6 +640,7 @@ My collection of LeetCode solutions.
 | [0986-interval-list-intersections](https://github.com/tyler-le/LeetCode/tree/master/0986-interval-list-intersections) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
+| [3865-reverse-k-subarrays](https://github.com/tyler-le/LeetCode/tree/master/3865-reverse-k-subarrays) |
 ## Data Stream
 |  |
 | ------- |
