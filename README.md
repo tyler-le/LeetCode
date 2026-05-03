@@ -91,6 +91,7 @@ My collection of LeetCode solutions.
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2226-maximum-candies-allocated-to-k-children](https://github.com/tyler-le/LeetCode/tree/master/2226-maximum-candies-allocated-to-k-children) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
+| [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
@@ -159,6 +160,7 @@ My collection of LeetCode solutions.
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
+| [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 ## Simulation
 |  |
 | ------- |
@@ -617,6 +619,7 @@ My collection of LeetCode solutions.
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
+| [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
 | [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
