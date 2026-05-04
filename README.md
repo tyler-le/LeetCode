@@ -79,6 +79,7 @@ My collection of LeetCode solutions.
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
+| [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
@@ -156,6 +157,7 @@ My collection of LeetCode solutions.
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
@@ -619,6 +621,7 @@ My collection of LeetCode solutions.
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
+| [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
