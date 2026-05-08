@@ -3,10 +3,43 @@ class Solution:
         
         if not nums: return [-1, -1]
         n = len(nums)
-        left = bisect_left(nums, target)
-        right = bisect_right(nums, target)
+        left_bound, right_bound = -1, -1
+        
+
+        
+        
+        # find left bound
+        low, high = 0, n-1
+
+        while low <= high:
+            mid = low + ((high - low) // 2)
+
+            if nums[mid] < target:
+                low = mid + 1
+            elif nums[mid] > target:
+                high = mid - 1
+            else:
+                left_bound = mid
+                high = mid - 1
+
+        
+        # find right bound
+        low, high = 0, n-1
+
+        while low <= high:
+            mid = low + ((high - low) // 2)
+
+            if nums[mid] < target:
+                low = mid + 1
+            elif nums[mid] > target:
+                high = mid - 1
+            else:
+                right_bound = mid
+                low = mid + 1
 
 
-        if left == n or right - 1 == n or nums[left]!=target or nums[right-1] != target:
+        if left_bound == -1 or right_bound == -1:
             return [-1, -1]
-        return [left, right - 1]
+        else:
+            return [left_bound, right_bound]
+
