@@ -14,10 +14,9 @@ class Solution:
                  = q1*k + r1 - q2*k + r2
 
         IF r1 == r2, then we get:
-
                  = q1*k - q2*k
                  = (q1-q2) * k
-                 
+
         which is a factor of k!
         """
         remainders = {}
