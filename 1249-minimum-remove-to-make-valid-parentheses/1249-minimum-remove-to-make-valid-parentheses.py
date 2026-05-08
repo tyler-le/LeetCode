@@ -1,20 +1,27 @@
 class Solution:
     def minRemoveToMakeValid(self, s: str) -> str:
-        indices_to_remove = set()
-        stack = []
         
+        stack = [] # (char, index)
+        PARENS = set(["(", ")"])
+
         for i, ch in enumerate(s):
-            if ch == "(": stack.append(i)
-            elif ch  == ")":
-                if not stack:
-                    indices_to_remove.add(i)
-                else:
-                    stack.pop()
-        indices_to_remove = indices_to_remove.union(set(stack))
+
+            if ch in PARENS:
+                if not stack or ch == "(": 
+                    stack.append((ch, i))
+                elif ch == ")":
+                    top_ch, _ = stack[-1]
+                    if top_ch == "(":
+                        stack.pop()
+                    else:
+                        stack.append((ch, i))
+
+
+        s = list(s)
+        for _, index in stack:
+            s[index] = ""
         
-        res = ""
-        for i in range(len(s)):
-            if i in indices_to_remove: continue
-            else: res+=s[i]
-        
-        return res
+        return "".join(s)
+
+
+
