@@ -507,6 +507,7 @@ My collection of LeetCode solutions.
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [0981-time-based-key-value-store](https://github.com/tyler-le/LeetCode/tree/master/0981-time-based-key-value-store) |
 | [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
+| [1249-minimum-remove-to-make-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/1249-minimum-remove-to-make-valid-parentheses) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1405-longest-happy-string](https://github.com/tyler-le/LeetCode/tree/master/1405-longest-happy-string) |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
@@ -688,6 +689,7 @@ My collection of LeetCode solutions.
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
+| [1249-minimum-remove-to-make-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/1249-minimum-remove-to-make-valid-parentheses) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2390-removing-stars-from-a-string](https://github.com/tyler-le/LeetCode/tree/master/2390-removing-stars-from-a-string) |
 ## Geometry
