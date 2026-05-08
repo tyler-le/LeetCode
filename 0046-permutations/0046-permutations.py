@@ -1,26 +1,26 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         
-        visited = set()
         res = []
-        n = len(nums)
+        visited = set()
 
-        def backtrack(path):
-            # base case
-            if len(path) == n:
-                res.append(path.copy())
+        def backtrack(i, sublist):
+            nonlocal res, visited
+
+            if len(sublist) == len(nums):
+                res.append(sublist.copy())
                 return
             
-            for num in nums:
-                if num in visited: continue
+            for x in nums: 
+                if x in visited: continue
 
-                visited.add(num)
-                path.append(num)
+                sublist.append(x)
+                visited.add(x)
 
-                backtrack(path)
+                backtrack(i+1, sublist)
 
-                path.pop()
-                visited.remove(num)
-        
-        backtrack([])
+                sublist.pop()
+                visited.remove(x)
+            
+        backtrack(0, [])
         return res
