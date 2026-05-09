@@ -9,17 +9,25 @@ class Solution:
 
             for i in range(n - substr_len):
                 j = i + substr_len
+
+                # base case: length 0,1 strings always true
                 if j-i+1 <= 1: 
                     dp[i][j] = True
                     continue
 
+                # base case: length 2 substrings just compare their chars
+                # can't be found via dp[i+1][j-1] because j will be > than i
                 elif j-i+1 == 2:
                     if s[i] == s[j]:
                         dp[i][j] = True
 
+                # recursive call: length 3+ substrings compare chars at the end 
+                # AND check if the inner substring is a palindrome
+
                 elif s[i] == s[j] and dp[i+1][j-1]:
                     dp[i][j] = True
                 
+                # update result
                 if dp[i][j] and j-i+1 > res[0]: 
                     res = (j-i+1, (i,j))
 
