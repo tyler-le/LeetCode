@@ -26,6 +26,7 @@ My collection of LeetCode solutions.
 | [0119-pascals-triangle-ii](https://github.com/tyler-le/LeetCode/tree/master/0119-pascals-triangle-ii) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/tyler-le/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/tyler-le/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0128-longest-consecutive-sequence](https://github.com/tyler-le/LeetCode/tree/master/0128-longest-consecutive-sequence) |
 | [0130-surrounded-regions](https://github.com/tyler-le/LeetCode/tree/master/0130-surrounded-regions) |
 | [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
@@ -117,6 +118,7 @@ My collection of LeetCode solutions.
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0127-word-ladder](https://github.com/tyler-le/LeetCode/tree/master/0127-word-ladder) |
+| [0128-longest-consecutive-sequence](https://github.com/tyler-le/LeetCode/tree/master/0128-longest-consecutive-sequence) |
 | [0138-copy-list-with-random-pointer](https://github.com/tyler-le/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
 | [0139-word-break](https://github.com/tyler-le/LeetCode/tree/master/0139-word-break) |
 | [0146-lru-cache](https://github.com/tyler-le/LeetCode/tree/master/0146-lru-cache) |
@@ -762,6 +764,7 @@ My collection of LeetCode solutions.
 ## Union-Find
 |  |
 | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/tyler-le/LeetCode/tree/master/0128-longest-consecutive-sequence) |
 | [0130-surrounded-regions](https://github.com/tyler-le/LeetCode/tree/master/0130-surrounded-regions) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
