@@ -127,6 +127,7 @@ My collection of LeetCode solutions.
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
+| [0424-longest-repeating-character-replacement](https://github.com/tyler-le/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0523-continuous-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0523-continuous-subarray-sum) |
@@ -505,6 +506,7 @@ My collection of LeetCode solutions.
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
+| [0424-longest-repeating-character-replacement](https://github.com/tyler-le/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0606-construct-string-from-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0606-construct-string-from-binary-tree) |
 | [0647-palindromic-substrings](https://github.com/tyler-le/LeetCode/tree/master/0647-palindromic-substrings) |
@@ -538,6 +540,7 @@ My collection of LeetCode solutions.
 | [0076-minimum-window-substring](https://github.com/tyler-le/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
+| [0424-longest-repeating-character-replacement](https://github.com/tyler-le/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
