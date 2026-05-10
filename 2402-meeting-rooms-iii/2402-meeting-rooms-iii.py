@@ -33,7 +33,7 @@ class Solution:
                 prev_end, room = heappop(occupied_rooms)
                 print(f"room {room} is taking {[start, end]}")
                 cnt[room]+=1
-                heappush(occupied_rooms, (max(prev_end, start) + (end - start), room))
+                heappush(occupied_rooms, (prev_end + end - start, room))
 
         mx = max(cnt.values())
         for i in range(n):
