@@ -75,6 +75,7 @@ My collection of LeetCode solutions.
 | [0948-bag-of-tokens](https://github.com/tyler-le/LeetCode/tree/master/0948-bag-of-tokens) |
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
+| [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [0986-interval-list-intersections](https://github.com/tyler-le/LeetCode/tree/master/0986-interval-list-intersections) |
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
@@ -325,6 +326,7 @@ My collection of LeetCode solutions.
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1372-longest-zigzag-path-in-a-binary-tree) |
@@ -549,6 +551,7 @@ My collection of LeetCode solutions.
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0424-longest-repeating-character-replacement](https://github.com/tyler-le/LeetCode/tree/master/0424-longest-repeating-character-replacement) |
+| [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
