@@ -9,6 +9,7 @@ class Solution:
         LEFT, RIGHT = 0, 1
         res = 0
         
+        @cache
         def dfs(node, prev_dir, dist):
             nonlocal res
             longest = 0
