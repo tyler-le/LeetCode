@@ -95,6 +95,7 @@ My collection of LeetCode solutions.
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
+| [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2226-maximum-candies-allocated-to-k-children](https://github.com/tyler-le/LeetCode/tree/master/2226-maximum-candies-allocated-to-k-children) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
@@ -355,6 +356,7 @@ My collection of LeetCode solutions.
 | [1509-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/tyler-le/LeetCode/tree/master/1509-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
+| [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
 ## Breadth-First Search
