@@ -146,6 +146,7 @@ My collection of LeetCode solutions.
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
+| [1930-unique-length-3-palindromic-subsequences](https://github.com/tyler-le/LeetCode/tree/master/1930-unique-length-3-palindromic-subsequences) |
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -494,6 +495,7 @@ My collection of LeetCode solutions.
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
+| [1930-unique-length-3-palindromic-subsequences](https://github.com/tyler-le/LeetCode/tree/master/1930-unique-length-3-palindromic-subsequences) |
 | [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
 ## String
@@ -532,6 +534,7 @@ My collection of LeetCode solutions.
 | [1405-longest-happy-string](https://github.com/tyler-le/LeetCode/tree/master/1405-longest-happy-string) |
 | [1668-maximum-repeating-substring](https://github.com/tyler-le/LeetCode/tree/master/1668-maximum-repeating-substring) |
 | [1784-check-if-binary-string-has-at-most-one-segment-of-ones](https://github.com/tyler-le/LeetCode/tree/master/1784-check-if-binary-string-has-at-most-one-segment-of-ones) |
+| [1930-unique-length-3-palindromic-subsequences](https://github.com/tyler-le/LeetCode/tree/master/1930-unique-length-3-palindromic-subsequences) |
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
@@ -665,6 +668,7 @@ My collection of LeetCode solutions.
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
+| [1930-unique-length-3-palindromic-subsequences](https://github.com/tyler-le/LeetCode/tree/master/1930-unique-length-3-palindromic-subsequences) |
 | [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
