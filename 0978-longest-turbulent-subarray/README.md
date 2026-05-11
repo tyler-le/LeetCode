@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/longest-turbulent-subarray/">978. Longest Turbulent Subarray</a></h2><h3>Medium</h3><hr><div><p>Given an integer array <code>arr</code>, return <em>the length of a maximum size turbulent subarray of</em> <code>arr</code>.</p>
+<h2><a href="https://leetcode.com/problems/longest-turbulent-subarray">1020. Longest Turbulent Subarray</a></h2><h3>Medium</h3><hr><p>Given an integer array <code>arr</code>, return <em>the length of a maximum size turbulent subarray of</em> <code>arr</code>.</p>
 
 <p>A subarray is <strong>turbulent</strong> if the comparison sign flips between each adjacent pair of elements in the subarray.</p>
 
@@ -23,20 +23,23 @@
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
 
-<pre><strong>Input:</strong> arr = [9,4,2,10,7,8,8,1,9]
+<pre>
+<strong>Input:</strong> arr = [9,4,2,10,7,8,8,1,9]
 <strong>Output:</strong> 5
 <strong>Explanation:</strong> arr[1] &gt; arr[2] &lt; arr[3] &gt; arr[4] &lt; arr[5]
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
 
-<pre><strong>Input:</strong> arr = [4,8,12,16]
+<pre>
+<strong>Input:</strong> arr = [4,8,12,16]
 <strong>Output:</strong> 2
 </pre>
 
 <p><strong class="example">Example 3:</strong></p>
 
-<pre><strong>Input:</strong> arr = [100]
+<pre>
+<strong>Input:</strong> arr = [100]
 <strong>Output:</strong> 1
 </pre>
 
@@ -47,4 +50,3 @@
 	<li><code>1 &lt;= arr.length &lt;= 4 * 10<sup>4</sup></code></li>
 	<li><code>0 &lt;= arr[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
-</div>
