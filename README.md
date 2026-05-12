@@ -21,6 +21,7 @@ My collection of LeetCode solutions.
 | [0057-insert-interval](https://github.com/tyler-le/LeetCode/tree/master/0057-insert-interval) |
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
+| [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0118-pascals-triangle](https://github.com/tyler-le/LeetCode/tree/master/0118-pascals-triangle) |
 | [0119-pascals-triangle-ii](https://github.com/tyler-le/LeetCode/tree/master/0119-pascals-triangle-ii) |
@@ -404,6 +405,7 @@ My collection of LeetCode solutions.
 | [0047-permutations-ii](https://github.com/tyler-le/LeetCode/tree/master/0047-permutations-ii) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/tyler-le/LeetCode/tree/master/0056-merge-intervals) |
+| [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0147-insertion-sort-list](https://github.com/tyler-le/LeetCode/tree/master/0147-insertion-sort-list) |
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
@@ -691,6 +693,7 @@ My collection of LeetCode solutions.
 | [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
+| [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
