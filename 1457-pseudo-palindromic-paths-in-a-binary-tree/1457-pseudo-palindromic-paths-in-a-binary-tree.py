@@ -9,17 +9,34 @@ class Solution:
         
 
         def is_palindrome(freqs):
-            # a string is pseudo palindromic if at least one char has odd cnt
 
-            num_odds = 0
-            for freq in freqs.values():
-                num_odds+= (freq % 2)
-            
-            return num_odds <= 1
+            if sum(freqs.values()) % 2:
+                
+                # count odd (one char has odd count. rest have even counts)
+                num_odds = 0
+                num_evens = 0
+                for freq in freqs.values():
+                    if freq % 2:
+                        num_odds+=1
+                    else:
+                        num_evens+=1
+                    
+                return num_odds == 1
 
 
+            else:
+                # count even (all chars have even count)
+                num_odds = 0
+                num_evens = 0
+                for freq in freqs.values():
+                    if freq % 2:
+                        num_odds+=1
+                    else:
+                        num_evens+=1
+                    
+                return num_odds == 0
 
-            
+                
 
 
             
