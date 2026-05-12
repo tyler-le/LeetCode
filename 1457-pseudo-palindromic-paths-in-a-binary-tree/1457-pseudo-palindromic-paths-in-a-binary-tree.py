@@ -7,35 +7,41 @@
 class Solution:
     def pseudoPalindromicPaths (self, root: Optional[TreeNode]) -> int:
         
-        
-        def is_palindrome(count):
-            has_one_odd = False
+
+        def is_palindrome(freqs):
+            # a string is pseudo palindromic if at least one char has odd cnt
+
+            num_odds = 0
+            for freq in freqs.values():
+                num_odds+= (freq % 2)
             
-            for cnt in count.values():
-                if cnt % 2 == 1:
-                    if has_one_odd: return False
-                    has_one_odd = True
+            return num_odds <= 1
+
+
+
             
-            return True
-        
-        
-        
-        def dfs(node, path):
+
+
             
+        res = 0
+        def dfs(node, path, freqs):
             nonlocal res
-            
-            if node is None: return
-            path[node.val]+=1
-            
-            if not node.left and not node.right: 
-                res+=is_palindrome(path)
+            path.append(str(node.val))
+            freqs[str(node.val)]+=1
+
+            if not node.left and not node.right:
+
+                # print(freqs)
+                res+=is_palindrome(freqs.copy())
+                path.pop()
+                freqs[str(node.val)]-=1
                 return
             
-            dfs(node.left, path.copy())
-            dfs(node.right, path.copy())
-            
-            path[node.val]-=1
-            
-        res = 0  
-        dfs(root, defaultdict(int))
+            if node.left: dfs(node.left, path, freqs)
+            if node.right: dfs(node.right, path, freqs)
+            path.pop()
+            freqs[str(node.val)]-=1
+            return
+        
+        dfs(root, [], defaultdict(int))
         return res
