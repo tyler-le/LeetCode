@@ -7,8 +7,6 @@ class Solution:
 
         for p3 in range(n+m-1, -1, -1):
 
-            
-
             # compare nums1[p1] and nums2[p2]
 
             # nothing left to merge in nums2
@@ -26,7 +24,7 @@ class Solution:
 
             # pull from nums1
             else:
-                nums1[p3] = nums1[p1]
+                nums1[p3], nums1[p1] = nums1[p1], nums1[p3]
                 p1-=1
         
 
