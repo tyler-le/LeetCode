@@ -12,7 +12,7 @@ class Solution:
 
             if sum(freqs.values()) % 2:
                 
-                # count odd (one char has odd count. rest have even counts)
+                # odd palindrome (one char has odd count. rest have even counts)
                 num_odds = 0
                 num_evens = 0
                 for freq in freqs.values():
@@ -25,7 +25,7 @@ class Solution:
 
 
             else:
-                # count even (all chars have even count)
+                # even palindrome (all chars have even count)
                 num_odds = 0
                 num_evens = 0
                 for freq in freqs.values():
@@ -36,10 +36,6 @@ class Solution:
                     
                 return num_odds == 0
 
-                
-
-
-            
         res = 0
         def dfs(node, path, freqs):
             nonlocal res
@@ -47,8 +43,6 @@ class Solution:
             freqs[str(node.val)]+=1
 
             if not node.left and not node.right:
-
-                # print(freqs)
                 res+=is_palindrome(freqs.copy())
                 path.pop()
                 freqs[str(node.val)]-=1
