@@ -18,7 +18,6 @@ class Solution:
         def is_perfect(node):
 
             if not node.left and not node.right: 
-                print(f"{node.val} is perfect with size {1}")
                 add_to_min_heap(1)
                 return (True, 1, 1)
             elif node.left and not node.right: 
@@ -32,7 +31,6 @@ class Solution:
             right_bool, right_size, right_height = is_perfect(node.right)
 
             if left_bool and right_bool and left_height == right_height: 
-                print(f"{node.val} is perfect with size {left_size + right_size + 1}")
                 add_to_min_heap(left_size + right_size + 1)
                 return (True, left_size + right_size + 1, left_height + 1)
             else: return (False, 0, 1)
