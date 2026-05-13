@@ -6,15 +6,10 @@ class Solution:
 
         def f(index, paths):
             if index == n:
-                flag = True
-                for x in paths.copy():
-                    if x != x[::-1]:
-                        return
-
-                sublist = []
-                for path in paths.copy():
-                    sublist.append("".join(path))
-                res.append(sublist)
+                # only the last group is unvalidated at this point
+                if not paths[-1] == paths[-1][::-1]:
+                    return
+                res.append(["".join(p) for p in paths])
                 return
 
 
@@ -25,9 +20,10 @@ class Solution:
                 paths[-1].pop()
             
             # create a new path
-            paths.append([s[index]])
-            f(index + 1, paths)
-            paths.pop()
+            if not paths or paths[-1] == paths[-1][::-1]:
+                paths.append([s[index]])
+                f(index + 1, paths)
+                paths.pop()
 
         f(0, [])
         return res
