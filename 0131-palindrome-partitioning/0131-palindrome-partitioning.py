@@ -6,21 +6,26 @@ class Solution:
 
         def f(index, paths):
             if index == n:
-                res.append(["".join(p) for p in paths])
+                flag = True
+                for x in paths.copy():
+                    if x != x[::-1]:
+                        return
+
+                sublist = []
+                for path in paths.copy():
+                    sublist.append("".join(path))
+                res.append(sublist)
                 return
 
 
             # include in most recent path
             if paths: 
                 paths[-1].append(s[index])
-                # early prune if added char is not a palindrome
-                if paths[-1] == paths[-1][::-1]:
-                    f(index + 1, paths)
+                f(index + 1, paths)
                 paths[-1].pop()
             
             # create a new path
             paths.append([s[index]])
-            # early prune if added char is not a palindrome
             f(index + 1, paths)
             paths.pop()
 
