@@ -217,6 +217,7 @@ My collection of LeetCode solutions.
 | [1457-pseudo-palindromic-paths-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1457-pseudo-palindromic-paths-in-a-binary-tree) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2331-evaluate-boolean-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/2331-evaluate-boolean-binary-tree) |
+| [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -264,6 +265,7 @@ My collection of LeetCode solutions.
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2331-evaluate-boolean-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/2331-evaluate-boolean-binary-tree) |
+| [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Binary Tree
 |  |
 | ------- |
@@ -293,6 +295,7 @@ My collection of LeetCode solutions.
 | [1457-pseudo-palindromic-paths-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1457-pseudo-palindromic-paths-in-a-binary-tree) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2331-evaluate-boolean-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/2331-evaluate-boolean-binary-tree) |
+| [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -430,6 +433,7 @@ My collection of LeetCode solutions.
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
+| [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Linked List
 |  |
 | ------- |
