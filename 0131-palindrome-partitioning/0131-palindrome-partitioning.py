@@ -1,32 +1,37 @@
 class Solution:
     def partition(self, s: str) -> List[List[str]]:
-        # backtrack(start) processes all possible prefixes starting at s[start]. 
-        # i.e. if s = "aab" and start = 0, all possible prefixes are "a", "aa", "aab". 
-        # For each of these prefixes, if it is a palindrome, then we recursively process the suffix 
+        
+        n = len(s)
+        res = []
 
-        cache = {}
+        def f(index, paths):
+            if index == n:
+                flag = True
+                for x in paths.copy():
+                    if x != x[::-1]:
+                        return
 
-        # backtrack(start) processes all possible prefixes starting at s[start]. 
-        def backtrack(start):
+                sublist = []
+                for path in paths.copy():
+                    sublist.append("".join(path))
+                res.append(sublist)
+                return
 
-            res = []
 
-            if start >= len(s):
-                return [[]]
+            # include in most recent path
+            if paths: 
+                paths[-1].append(s[index])
+                f(index + 1, paths)
+                paths[-1].pop()
+            
+            # create a new path
+            paths.append([s[index]])
+            f(index + 1, paths)
+            paths.pop()
 
-            if start in cache: return cache[start]
-
-            for end in range(start, len(s)):
-                # For each of these prefixes, if it is a palindrome, then we recursively process the suffix 
-                prefix = s[start:end+1]
-
-                if prefix == prefix[::-1]:    
-                    for result in backtrack(end+1):
-                        res.append([prefix] + result)
-
-            cache[start] = res
-            return res
+        f(0, [])
+        return res
 
             
-        return backtrack(0)
-
+            
+            
