@@ -20,6 +20,8 @@ class Solution:
                 paths[-1].pop()
             
             # create a new path
+
+            # early prune if prev substring was not a palindrome
             if not paths or paths[-1] == paths[-1][::-1]:
                 paths.append([s[index]])
                 f(index + 1, paths)
