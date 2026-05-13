@@ -15,6 +15,7 @@ class Solution:
             
 
         # bool, size, height
+        @cache
         def is_perfect(node):
 
             if not node.left and not node.right: 
