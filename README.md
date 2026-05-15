@@ -344,6 +344,7 @@ My collection of LeetCode solutions.
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
+| [1143-longest-common-subsequence](https://github.com/tyler-le/LeetCode/tree/master/1143-longest-common-subsequence) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1372-longest-zigzag-path-in-a-binary-tree) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
@@ -556,6 +557,7 @@ My collection of LeetCode solutions.
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [0981-time-based-key-value-store](https://github.com/tyler-le/LeetCode/tree/master/0981-time-based-key-value-store) |
 | [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
+| [1143-longest-common-subsequence](https://github.com/tyler-le/LeetCode/tree/master/1143-longest-common-subsequence) |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/1249-minimum-remove-to-make-valid-parentheses) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1405-longest-happy-string](https://github.com/tyler-le/LeetCode/tree/master/1405-longest-happy-string) |
