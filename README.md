@@ -108,6 +108,7 @@ My collection of LeetCode solutions.
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
+| [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
@@ -160,6 +161,7 @@ My collection of LeetCode solutions.
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
+| [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
@@ -437,6 +439,7 @@ My collection of LeetCode solutions.
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
+| [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
 | [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Linked List
