@@ -12,6 +12,7 @@ My collection of LeetCode solutions.
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
 | [0039-combination-sum](https://github.com/tyler-le/LeetCode/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0040-combination-sum-ii) |
+| [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/tyler-le/LeetCode/tree/master/0046-permutations) |
 | [0047-permutations-ii](https://github.com/tyler-le/LeetCode/tree/master/0047-permutations-ii) |
 | [0049-group-anagrams](https://github.com/tyler-le/LeetCode/tree/master/0049-group-anagrams) |
@@ -304,6 +305,7 @@ My collection of LeetCode solutions.
 | [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0022-generate-parentheses) |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/tyler-le/LeetCode/tree/master/0053-maximum-subarray) |
 | [0055-jump-game](https://github.com/tyler-le/LeetCode/tree/master/0055-jump-game) |
 | [0062-unique-paths](https://github.com/tyler-le/LeetCode/tree/master/0062-unique-paths) |
@@ -705,6 +707,7 @@ My collection of LeetCode solutions.
 | [0005-longest-palindromic-substring](https://github.com/tyler-le/LeetCode/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/tyler-le/LeetCode/tree/master/0015-3sum) |
 | [0018-4sum](https://github.com/tyler-le/LeetCode/tree/master/0018-4sum) |
+| [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
@@ -736,6 +739,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
@@ -846,6 +850,7 @@ My collection of LeetCode solutions.
 ## Monotonic Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 ## Queue
 |  |
