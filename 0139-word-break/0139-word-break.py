@@ -13,11 +13,9 @@ class Solution:
                 k = len(word)
 
                 if i-k+1 >=0 and s[i-k+1:i+1] == word:
-                    print(word)
                     if i-k+1 == 0: dp[i] = True
                     else: dp[i] |= dp[i-k]
 
-        print(dp)
         return dp[-1]
                     
 
