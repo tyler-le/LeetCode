@@ -1,6 +1,26 @@
 class Solution:
     def findLongestChain(self, pairs: List[List[int]]) -> int:
         
+        """
+        Greedy
+        """
+
+        pairs.sort(key = lambda x : x[1])
+        prev_start, prev_end = pairs[0]
+        res = 1
+        for curr_start, curr_end in pairs[1:]:
+            if prev_end < curr_start: 
+                res+=1
+                prev_end = curr_end
+        
+        return res
+
+
+
+        
+        """
+        DP
+        """
         pairs.sort(key = lambda x : x[0])
         n = len(pairs)
 
@@ -21,17 +41,11 @@ class Solution:
         
         return max(dp)
 
-
-
-
-
-
-
-
-
-
-
         
+
+        """
+        Recursive
+        """
         pairs.sort(key = lambda x : x[0])
         n = len(pairs)
 
