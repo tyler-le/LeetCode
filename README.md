@@ -72,6 +72,7 @@ My collection of LeetCode solutions.
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
+| [0740-delete-and-earn](https://github.com/tyler-le/LeetCode/tree/master/0740-delete-and-earn) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0759-employee-free-time](https://github.com/tyler-le/LeetCode/tree/master/0759-employee-free-time) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
@@ -144,6 +145,7 @@ My collection of LeetCode solutions.
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
+| [0740-delete-and-earn](https://github.com/tyler-le/LeetCode/tree/master/0740-delete-and-earn) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
@@ -340,6 +342,7 @@ My collection of LeetCode solutions.
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
 | [0647-palindromic-substrings](https://github.com/tyler-le/LeetCode/tree/master/0647-palindromic-substrings) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
+| [0740-delete-and-earn](https://github.com/tyler-le/LeetCode/tree/master/0740-delete-and-earn) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
