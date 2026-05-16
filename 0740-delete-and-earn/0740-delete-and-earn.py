@@ -1,16 +1,28 @@
 class Solution:
     def deleteAndEarn(self, nums: List[int]) -> int:
-     
-        # dp[i] be the max you can earn at some value i
+        cnt = Counter(nums)
+        mx = max(nums)
+        arr = [0 for _ in range(mx + 1)]
+
+        for num, freq in cnt.items():
+            arr[num] = num * freq
+
         
-        freq = Counter(nums)
-        dp = [0 for _ in range(max(nums)+1)]
-        
-        for num, f in freq.items():
-            dp[num] = num*f
-        
-        for i in range(2, len(dp)):
-            dp[i] = max(dp[i-1], dp[i-2] + dp[i])
-        
-        return dp[-1]
-        
+
+        # f(index) is the most we can earn from 0...index
+        @cache
+        def f(index):
+            if index < 0: return 0
+
+            # take from index i
+            take = arr[index] + f(index - 2)
+            
+
+            # do not take from index i
+            not_take = f(index - 1)
+
+            return max(take, not_take)
+
+        n = len(arr)
+        return f(n-1)
+
