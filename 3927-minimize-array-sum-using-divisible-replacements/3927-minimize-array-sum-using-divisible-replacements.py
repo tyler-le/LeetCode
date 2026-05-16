@@ -5,11 +5,11 @@ class Solution:
         min_value = {} # maps value -> minimum it can become
 
         def get_divisors(num):
-            out = set()  
-            for i in range(1, int(math.isqrt(num)) + 1):  
+            out = []
+            for i in range(1, 1 + ceil(sqrt(num))):  
                 if num % i == 0:
-                    out.add(i)
-                    out.add(num // i)  
+                    out.append(i)
+                    out.append(num // i)  
             return out
 
 
