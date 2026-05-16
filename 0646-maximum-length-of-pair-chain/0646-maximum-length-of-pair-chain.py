@@ -1,5 +1,37 @@
 class Solution:
     def findLongestChain(self, pairs: List[List[int]]) -> int:
+        
+        pairs.sort(key = lambda x : x[0])
+        n = len(pairs)
+
+        dp = [0 for _ in range(n)]
+        # dp[i] = maximum chain ending exactly at index i
+
+        for i in range(n):
+            ret = 0
+            curr_start, curr_end = pairs[i]
+
+            for j in range(i):
+                prev_start, prev_end = pairs[j]
+
+                if prev_end < curr_start:
+                    ret = max(ret, dp[j])
+
+            dp[i] = 1 + ret
+        
+        return max(dp)
+
+
+
+
+
+
+
+
+
+
+
+        
         pairs.sort(key = lambda x : x[0])
         n = len(pairs)
 
@@ -15,7 +47,6 @@ class Solution:
             if curr_start > prev_end:
                 take = 1 + f(index + 1, curr_end)
                 
-            
             # leave pairs[index]
             leave = f(index + 1, prev_end)
 
