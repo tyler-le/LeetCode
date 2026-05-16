@@ -26,7 +26,7 @@ class Solution:
         # dp[i] = maximum chain ending exactly at index i
 
         for i in range(n):
-            take = 1
+            take = 0
             leave = dp[i-1] if i-1 >= 0 else 0
             curr_start, curr_end = pairs[i]
 
@@ -34,9 +34,9 @@ class Solution:
                 prev_start, prev_end = pairs[j]
 
                 if prev_end < curr_start:
-                    take = max(take, 1 + dp[j])
+                    take = max(take, dp[j])
 
-            dp[i] = max(leave, take)
+            dp[i] = max(leave, 1 + take)
         
         return max(dp)
 
