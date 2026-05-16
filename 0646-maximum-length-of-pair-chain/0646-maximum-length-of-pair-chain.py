@@ -5,15 +5,15 @@ class Solution:
         Greedy
         """
 
-        pairs.sort(key = lambda x : x[1])
-        prev_start, prev_end = pairs[0]
-        res = 1
-        for curr_start, curr_end in pairs[1:]:
-            if prev_end < curr_start: 
-                res+=1
-                prev_end = curr_end
+        # pairs.sort(key = lambda x : x[1])
+        # prev_start, prev_end = pairs[0]
+        # res = 1
+        # for curr_start, curr_end in pairs[1:]:
+        #     if prev_end < curr_start: 
+        #         res+=1
+        #         prev_end = curr_end
         
-        return res
+        # return res
 
         
         """
@@ -26,16 +26,17 @@ class Solution:
         # dp[i] = maximum chain ending exactly at index i
 
         for i in range(n):
-            ret = 0
+            take = 1
+            leave = dp[i-1] if i-1 >= 0 else 0
             curr_start, curr_end = pairs[i]
 
             for j in range(i):
                 prev_start, prev_end = pairs[j]
 
                 if prev_end < curr_start:
-                    ret = max(ret, dp[j])
+                    take = max(take, 1 + dp[j])
 
-            dp[i] = 1 + ret
+            dp[i] = max(leave, take)
         
         return max(dp)
 
