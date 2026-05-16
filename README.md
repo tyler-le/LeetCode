@@ -65,6 +65,7 @@ My collection of LeetCode solutions.
 | [0605-can-place-flowers](https://github.com/tyler-le/LeetCode/tree/master/0605-can-place-flowers) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
 | [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
+| [0646-maximum-length-of-pair-chain](https://github.com/tyler-le/LeetCode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
@@ -340,6 +341,7 @@ My collection of LeetCode solutions.
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0494-target-sum](https://github.com/tyler-le/LeetCode/tree/master/0494-target-sum) |
+| [0646-maximum-length-of-pair-chain](https://github.com/tyler-le/LeetCode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0647-palindromic-substrings](https://github.com/tyler-le/LeetCode/tree/master/0647-palindromic-substrings) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
 | [0740-delete-and-earn](https://github.com/tyler-le/LeetCode/tree/master/0740-delete-and-earn) |
@@ -364,6 +366,7 @@ My collection of LeetCode solutions.
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0605-can-place-flowers](https://github.com/tyler-le/LeetCode/tree/master/0605-can-place-flowers) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
+| [0646-maximum-length-of-pair-chain](https://github.com/tyler-le/LeetCode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
@@ -427,6 +430,7 @@ My collection of LeetCode solutions.
 | [0406-queue-reconstruction-by-height](https://github.com/tyler-le/LeetCode/tree/master/0406-queue-reconstruction-by-height) |
 | [0435-non-overlapping-intervals](https://github.com/tyler-le/LeetCode/tree/master/0435-non-overlapping-intervals) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
+| [0646-maximum-length-of-pair-chain](https://github.com/tyler-le/LeetCode/tree/master/0646-maximum-length-of-pair-chain) |
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [0759-employee-free-time](https://github.com/tyler-le/LeetCode/tree/master/0759-employee-free-time) |
