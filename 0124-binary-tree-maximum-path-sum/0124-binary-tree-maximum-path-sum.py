@@ -18,12 +18,11 @@ class Solution:
             left = dfs(node.left)
             right = dfs(node.right)
 
-            print(f"{node.val} has a max path of {curr + left + right}")
-            if curr + left < curr:
-                left = 0
-            if curr + right < curr:
-                right = 0
+            # if adding left makes it bigger
+            if curr + left < curr: left = 0
 
+            # if adding right makes it bigger
+            if curr + right < curr: right = 0
 
             res = max(res, curr + left + right)
 
