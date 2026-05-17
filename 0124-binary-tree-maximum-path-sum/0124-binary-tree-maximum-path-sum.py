@@ -8,34 +8,28 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         
         res = -math.inf
-
-        # return (longest path from this node)
+        # return max(left, right)
+        
         def dfs(node):
             nonlocal res
             if not node: return 0
             
-            # only take left or right if it is positive
-            # if it is negative, we might as well NOT take it
-            left = max(dfs(node.left), 0)
-            right = max(dfs(node.right), 0)
+            curr = node.val
+            left = dfs(node.left)
+            right = dfs(node.right)
 
-            # calculate the result of the longest multi-branch path with this node at the root
-            # multi-branch means we can consider both left and right results 
-            res = max(res, node.val + left + right)
+            print(f"{node.val} has a max path of {curr + left + right}")
+            if curr + left < curr:
+                left = 0
+            if curr + right < curr:
+                right = 0
 
-            # return longest single-branch path starting at this node.
-            # because parent CANNOT use both branch-paths. 
-            # single-branch means we have to choose either left or right results
-            return node.val + max(left, right)
-        
+
+            res = max(res, curr + left + right)
+
+            return curr + max(left, right)
+
         dfs(root)
         return res
-
-
-
-           
-
-            
-
 
 
