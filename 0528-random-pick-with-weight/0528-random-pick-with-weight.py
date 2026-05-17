@@ -12,9 +12,6 @@ class Solution:
 
     def pickIndex(self) -> int:
         index = randint(self.mn, self.mx)
-  
-
-        print(f"{index} bisected at {bisect_right(self.prefix_sum, index)}")
         return bisect_right(self.prefix_sum, index)
 
 
