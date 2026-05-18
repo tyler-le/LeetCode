@@ -21,7 +21,7 @@ class Solution:
 
         if source == target: return 0
         src = stop_to_routes[source]
-        dest = stop_to_routes[target]
+        dest = set(stop_to_routes[target])
 
         q = deque()
         visited = set()
