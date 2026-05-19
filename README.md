@@ -91,6 +91,7 @@ My collection of LeetCode solutions.
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/tyler-le/LeetCode/tree/master/1101-the-earliest-moment-when-everyone-become-friends) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
@@ -185,6 +186,7 @@ My collection of LeetCode solutions.
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
@@ -271,6 +273,7 @@ My collection of LeetCode solutions.
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1372-longest-zigzag-path-in-a-binary-tree) |
 | [1382-balance-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/1382-balance-a-binary-search-tree) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
@@ -419,6 +422,7 @@ My collection of LeetCode solutions.
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1457-pseudo-palindromic-paths-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1457-pseudo-palindromic-paths-in-a-binary-tree) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
@@ -503,6 +507,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1657-determine-if-two-strings-are-close](https://github.com/tyler-le/LeetCode/tree/master/1657-determine-if-two-strings-are-close) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -847,6 +852,7 @@ My collection of LeetCode solutions.
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/tyler-le/LeetCode/tree/master/1101-the-earliest-moment-when-everyone-become-friends) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
+| [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 ## String Matching
