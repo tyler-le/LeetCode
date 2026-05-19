@@ -1,31 +1,37 @@
+class UnionFind:
+    def __init__(self, n):
+        self.parents = [i for i in range(n+1)]
+        self.parents[0] = -1
+        self.sizes = [1 for _ in range(n+1)]
+
+    def find(self, x):
+        if self.parents[x] == x: 
+            return x
+        else: 
+            self.parents[x] = self.find(self.parents[x])
+            return self.parents[x]
+        
+    # union by size 
+    # if sizes[x] >= sizes[y] -> x wins
+    # else sizes[x] < sizes[y] -> y wins
+    def union(self, x,y):
+        par_x, par_y = self.find(x), self.find(y)
+        if par_x == par_y: return
+        size_x, size_y = self.sizes[par_x], self.sizes[par_y]
+        if size_x >= size_y:
+            self.parents[par_y] = par_x
+            self.sizes[par_x]+=self.sizes[par_y]
+        else:
+            self.parents[par_x] = par_y
+            self.sizes[par_y]+=self.sizes[par_x]
+
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-        res = []
-        def find(node):
-            while roots[node] != node:
-                roots[node] = roots[roots[node]]
-                node = roots[node]
-            return node
+        uf = UnionFind(len(edges))
+
+        for x, y in edges:
+            par_x, par_y = uf.find(x), uf.find(y)
+            if par_x == par_y: return [x,y]
+            else: uf.union(x,y)
         
-        def union(x,y):
-            p1, p2 = find(x), find(y)
-            if p1 == p2: 
-                return
-            elif rank[p1] > rank[p2]:
-                roots[p2] = roots[p1]
-                rank[p1]+=rank[p2]
-            else:
-                roots[p1] = roots[p2]
-                rank[p2]+=rank[p1]
-                
-        roots = [i for i in range(len(edges)+1)]
-        rank = [1 for i in range(len(edges)+1)]
         
-        for u, v in edges:
-            if find(u) == find(v): return [u,v]
-            union(u,v)
-        
-        # return res[-1]
-            
-                
-                
