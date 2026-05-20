@@ -668,6 +668,7 @@ My collection of LeetCode solutions.
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+| [2924-find-champion-ii](https://github.com/tyler-le/LeetCode/tree/master/2924-find-champion-ii) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
