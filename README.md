@@ -42,6 +42,7 @@ My collection of LeetCode solutions.
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
+| [0256-paint-house](https://github.com/tyler-le/LeetCode/tree/master/0256-paint-house) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/tyler-le/LeetCode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0318-maximum-product-of-word-lengths](https://github.com/tyler-le/LeetCode/tree/master/0318-maximum-product-of-word-lengths) |
@@ -345,6 +346,7 @@ My collection of LeetCode solutions.
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
+| [0256-paint-house](https://github.com/tyler-le/LeetCode/tree/master/0256-paint-house) |
 | [0279-perfect-squares](https://github.com/tyler-le/LeetCode/tree/master/0279-perfect-squares) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/tyler-le/LeetCode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
