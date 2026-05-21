@@ -79,6 +79,7 @@ My collection of LeetCode solutions.
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0815-bus-routes](https://github.com/tyler-le/LeetCode/tree/master/0815-bus-routes) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
+| [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [0948-bag-of-tokens](https://github.com/tyler-le/LeetCode/tree/master/0948-bag-of-tokens) |
 | [0953-verifying-an-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0953-verifying-an-alien-dictionary) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
@@ -185,6 +186,7 @@ My collection of LeetCode solutions.
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
+| [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
@@ -269,6 +271,7 @@ My collection of LeetCode solutions.
 | [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
 | [0841-keys-and-rooms](https://github.com/tyler-le/LeetCode/tree/master/0841-keys-and-rooms) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
+| [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [0951-flip-equivalent-binary-trees](https://github.com/tyler-le/LeetCode/tree/master/0951-flip-equivalent-binary-trees) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1026-maximum-difference-between-node-and-ancestor](https://github.com/tyler-le/LeetCode/tree/master/1026-maximum-difference-between-node-and-ancestor) |
@@ -421,6 +424,7 @@ My collection of LeetCode solutions.
 | [0815-bus-routes](https://github.com/tyler-le/LeetCode/tree/master/0815-bus-routes) |
 | [0841-keys-and-rooms](https://github.com/tyler-le/LeetCode/tree/master/0841-keys-and-rooms) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
+| [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
