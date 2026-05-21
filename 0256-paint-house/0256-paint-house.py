@@ -11,13 +11,11 @@ class Solution:
         for j in range(len(costs[0])):
             dp[0][j] = costs[0][j]
         
-
+        # This is actually O(n) because m = number of colors = 3
         for i in range(1, n):
-            
             for j in range(m):
-
                 subproblem = math.inf
-                for k in range(3):
+                for k in range(m):
                     if k != j: subproblem = min(subproblem, dp[i-1][k])
                 total = costs[i][j] + subproblem
                 dp[i][j] = min(dp[i][j], total)
