@@ -4,32 +4,25 @@ class Solution:
         n = len(s)
         res = []
 
-        def f(index, paths):
-            if index == n:
-                # only the last group is unvalidated at this point
-                if not paths[-1] == paths[-1][::-1]:
-                    return
-                res.append(["".join(p) for p in paths])
+        def is_pal(l, r):
+
+            while l <= r:
+                if s[l] != s[r]: return False
+                l+=1
+                r-=1
+            return True
+
+        def f(start, path):
+            nonlocal res
+            if start == n:
+                res.append(path.copy())
                 return
-
-
-            # include in most recent path
-            if paths: 
-                paths[-1].append(s[index])
-                f(index + 1, paths)
-                paths[-1].pop()
             
-            # create a new path
-
-            # early prune if prev substring was not a palindrome
-            if not paths or paths[-1] == paths[-1][::-1]:
-                paths.append([s[index]])
-                f(index + 1, paths)
-                paths.pop()
+            for end in range(start, n):
+                if is_pal(start, end):
+                    path.append(s[start:end+1])
+                    f(end + 1, path)
+                    path.pop()
 
         f(0, [])
         return res
-
-            
-            
-            
