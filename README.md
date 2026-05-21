@@ -90,6 +90,7 @@ My collection of LeetCode solutions.
 | [1046-last-stone-weight](https://github.com/tyler-le/LeetCode/tree/master/1046-last-stone-weight) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/tyler-le/LeetCode/tree/master/1101-the-earliest-moment-when-everyone-become-friends) |
+| [1162-as-far-from-land-as-possible](https://github.com/tyler-le/LeetCode/tree/master/1162-as-far-from-land-as-possible) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
@@ -187,6 +188,7 @@ My collection of LeetCode solutions.
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
+| [1162-as-far-from-land-as-possible](https://github.com/tyler-le/LeetCode/tree/master/1162-as-far-from-land-as-possible) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
@@ -364,6 +366,7 @@ My collection of LeetCode solutions.
 | [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 | [1143-longest-common-subsequence](https://github.com/tyler-le/LeetCode/tree/master/1143-longest-common-subsequence) |
+| [1162-as-far-from-land-as-possible](https://github.com/tyler-le/LeetCode/tree/master/1162-as-far-from-land-as-possible) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1372-longest-zigzag-path-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1372-longest-zigzag-path-in-a-binary-tree) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
@@ -427,6 +430,7 @@ My collection of LeetCode solutions.
 | [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
+| [1162-as-far-from-land-as-possible](https://github.com/tyler-le/LeetCode/tree/master/1162-as-far-from-land-as-possible) |
 | [1254-number-of-closed-islands](https://github.com/tyler-le/LeetCode/tree/master/1254-number-of-closed-islands) |
 | [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
