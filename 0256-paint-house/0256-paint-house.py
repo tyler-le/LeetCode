@@ -17,7 +17,7 @@ class Solution:
             for j in range(m):
 
                 subproblem = math.inf
-                for k in range(m):
+                for k in range(3):
                     if k != j: subproblem = min(subproblem, dp[i-1][k])
                 total = costs[i][j] + subproblem
                 dp[i][j] = min(dp[i][j], total)
