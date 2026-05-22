@@ -1,31 +1,25 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
+
         n = len(prices)
-        cache = {}
 
-        # f(i, can_buy) is the max profit starting from day i
-        def f(i, can_buy):
 
-            if (i, can_buy) in cache: return cache[(i, can_buy)]
+        @cache
+        def f(index, can_buy):
+            if index >= n: return 0
 
             res = 0
 
-            # base cases
-            if i >= n: return 0
-
-            # recursive step
             if can_buy:
-                buy = -prices[i] + f(i+1, False)
-                hold = 0 + f(i+1, True)
-                res = max(buy, hold)
+                buy = -prices[index] + f(index + 1, False)
+                hold = f(index + 1, True)
+                res = max(res, buy, hold)
             else:
-                sell = prices[i] + f(i+2, True)
-                hold = 0 + f(i+1, False)
-                res = max(sell, hold)
+                sell = prices[index] + f(index + 2, True)
+                hold = f(index + 1, False)
+                res = max(res, sell, hold)
 
-            cache[(i, can_buy)] = res
-            
-            return cache[(i, can_buy)]
+            return res
 
         return f(0, True)
-        
+
