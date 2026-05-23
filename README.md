@@ -92,6 +92,7 @@ My collection of LeetCode solutions.
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1046-last-stone-weight](https://github.com/tyler-le/LeetCode/tree/master/1046-last-stone-weight) |
+| [1063-number-of-valid-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1063-number-of-valid-subarrays) |
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1101-the-earliest-moment-when-everyone-become-friends](https://github.com/tyler-le/LeetCode/tree/master/1101-the-earliest-moment-when-everyone-become-friends) |
 | [1162-as-far-from-land-as-possible](https://github.com/tyler-le/LeetCode/tree/master/1162-as-far-from-land-as-possible) |
@@ -806,6 +807,7 @@ My collection of LeetCode solutions.
 | [0735-asteroid-collision](https://github.com/tyler-le/LeetCode/tree/master/0735-asteroid-collision) |
 | [0921-minimum-add-to-make-parentheses-valid](https://github.com/tyler-le/LeetCode/tree/master/0921-minimum-add-to-make-parentheses-valid) |
 | [1003-check-if-word-is-valid-after-substitutions](https://github.com/tyler-le/LeetCode/tree/master/1003-check-if-word-is-valid-after-substitutions) |
+| [1063-number-of-valid-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1063-number-of-valid-subarrays) |
 | [1249-minimum-remove-to-make-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/1249-minimum-remove-to-make-valid-parentheses) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2390-removing-stars-from-a-string](https://github.com/tyler-le/LeetCode/tree/master/2390-removing-stars-from-a-string) |
@@ -913,6 +915,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
+| [1063-number-of-valid-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1063-number-of-valid-subarrays) |
 ## Queue
 |  |
 | ------- |
