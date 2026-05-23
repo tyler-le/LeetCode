@@ -42,6 +42,5 @@ class Solution:
                     if not indegrees[nbor]:
                         q.append(nbor)
 
-        print("res:", res, "letters:", letters, "indegrees:", dict(indegrees), "graph:", {k: v for k,v in graph.items()})
         if len(res) != len(letters): return ""
         return "".join(res)
