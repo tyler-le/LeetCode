@@ -103,6 +103,7 @@ My collection of LeetCode solutions.
 | [1314-matrix-block-sum](https://github.com/tyler-le/LeetCode/tree/master/1314-matrix-block-sum) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1395-count-number-of-teams](https://github.com/tyler-le/LeetCode/tree/master/1395-count-number-of-teams) |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/tyler-le/LeetCode/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1509-minimum-difference-between-largest-and-smallest-value-in-three-moves](https://github.com/tyler-le/LeetCode/tree/master/1509-minimum-difference-between-largest-and-smallest-value-in-three-moves) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
@@ -636,6 +637,7 @@ My collection of LeetCode solutions.
 | [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -713,6 +715,7 @@ My collection of LeetCode solutions.
 | [1094-car-pooling](https://github.com/tyler-le/LeetCode/tree/master/1094-car-pooling) |
 | [1268-search-suggestions-system](https://github.com/tyler-le/LeetCode/tree/master/1268-search-suggestions-system) |
 | [1405-longest-happy-string](https://github.com/tyler-le/LeetCode/tree/master/1405-longest-happy-string) |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 ## Shortest Path
 |  |
@@ -871,6 +874,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
 | [0729-my-calendar-i](https://github.com/tyler-le/LeetCode/tree/master/0729-my-calendar-i) |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 ## Interactive
 |  |
 | ------- |
@@ -922,5 +926,10 @@ My collection of LeetCode solutions.
 ## Queue
 |  |
 | ------- |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 | [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
+## Monotonic Queue
+|  |
+| ------- |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 <!---LeetCode Topics End-->
