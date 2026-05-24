@@ -11,7 +11,9 @@ class Solution:
 
         for r in range(1, n):
 
-            # cost to lift all elems in window to nums[r]
+            # calculate cost to lift all elems in window to nums[r]
+            # old_cost was number of operations to lift all elements to nums[r-1]
+            # so new_cost is the number of operations to uplift all those elements to nums[r]
             cost = cost + ((nums[r] - nums[r-1]) * (r-l))
 
             while cost > k:
