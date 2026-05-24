@@ -1,20 +1,24 @@
 class Solution:
     def numberOfWays(self, s: str) -> int:
-        # map all possible combinations to their count
-        # 0, 1, 01, 10, 010, 101, 110, 011, 000, 111
-        count = collections.defaultdict(int)
-        # 101 or 010
+        res = 0
+        hmap = defaultdict(int)
+
+        for ch in s:
+            if ch == "0":
+                if "1" in hmap: hmap["10"]+=hmap["1"]
+                if "01" in hmap: hmap["010"]+=hmap["01"]
+                hmap["0"]+=1
+            
+            else:
+                if "0" in hmap: hmap["01"]+=hmap["0"]
+                if "10" in hmap: hmap["101"]+=hmap["10"]
+                hmap["1"]+=1
+
+        return hmap["101"] + hmap["010"]
+
+
+
+
+
+
         
-        for digit in s:
-            if digit == "0":
-                count["0"]+=1
-                count["10"]+=count["1"]
-                count["010"]+=count["01"]
-                
-                
-            elif digit =="1":
-                count["1"]+=1
-                count["01"]+=count["0"]
-                count["101"]+=count["10"]
-                
-        return count["101"] + count["010"]
