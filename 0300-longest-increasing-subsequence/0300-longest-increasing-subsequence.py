@@ -1,30 +1,17 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-
-        dp = [1 for _ in range(len(nums))]
-
-        for i in range(len(nums)):
-
-            for j in range(i):
-                if nums[i] > nums[j]:
-                    subproblem = dp[j]
-                    dp[i] = max(dp[i], 1 + subproblem)
-
-        return max(dp)
-        
-
-        @cache
+        @ cache
         def f(i):
-            res = 1
+            out = 1
 
             for j in range(i):
-                if nums[i] > nums[j]:
-                    subproblem = f(j)
-                    res = max(res, 1 + subproblem)
-            
-            return res
+                if nums[j] < nums[i]:
+                    out = max(out, 1 + f(j))
+
+            return out
 
         res = 1
-        for x in range(len(nums)):
-            res = max(res, f(x))
+        for i in range(len(nums)):
+            res = max(res, f(i))
+
         return res
