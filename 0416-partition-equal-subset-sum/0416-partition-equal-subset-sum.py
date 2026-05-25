@@ -4,7 +4,9 @@ class Solution:
         if total % 2 != 0: return False
         target = total // 2
         n = len(nums)
+        
         dp = [[False for _ in range(target+1)] for _ in range(n+1)]
+        nums.sort(reverse=True)
 
         """
         corresponds to this base case is recursive sol:
