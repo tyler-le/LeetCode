@@ -1,8 +1,6 @@
 class UnionFind:
     def __init__(self, n):
         self.parents = [i for i in range(n+1)]
-        # self.sizes = [1 for i in range(n+1)]
-
 
     def union(self, x, y):
         x_par = self.find(x)
