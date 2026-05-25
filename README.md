@@ -38,6 +38,7 @@ My collection of LeetCode solutions.
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
+| [0221-maximal-square](https://github.com/tyler-le/LeetCode/tree/master/0221-maximal-square) |
 | [0228-summary-ranges](https://github.com/tyler-le/LeetCode/tree/master/0228-summary-ranges) |
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
@@ -192,6 +193,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/tyler-le/LeetCode/tree/master/0130-surrounded-regions) |
+| [0221-maximal-square](https://github.com/tyler-le/LeetCode/tree/master/0221-maximal-square) |
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0417-pacific-atlantic-water-flow](https://github.com/tyler-le/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
 | [0463-island-perimeter](https://github.com/tyler-le/LeetCode/tree/master/0463-island-perimeter) |
@@ -360,6 +362,7 @@ My collection of LeetCode solutions.
 | [0152-maximum-product-subarray](https://github.com/tyler-le/LeetCode/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/tyler-le/LeetCode/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/tyler-le/LeetCode/tree/master/0213-house-robber-ii) |
+| [0221-maximal-square](https://github.com/tyler-le/LeetCode/tree/master/0221-maximal-square) |
 | [0256-paint-house](https://github.com/tyler-le/LeetCode/tree/master/0256-paint-house) |
 | [0279-perfect-squares](https://github.com/tyler-le/LeetCode/tree/master/0279-perfect-squares) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
