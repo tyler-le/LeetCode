@@ -12,7 +12,7 @@ class Solution:
             skip = dp[index - 1] if index - 1 >= 0 else 0
             dp[index] = max(take, skip)
 
-        return dp[-1]
+        return dp[n-1]
 
 
 
