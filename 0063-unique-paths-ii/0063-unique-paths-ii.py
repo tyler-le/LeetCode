@@ -5,11 +5,10 @@ class Solution:
         if obstacleGrid[n-1][m-1] == 1: return 0
 
         dp[n-1][m-1] = 1
-        
         for i in range(n-1, -1, -1):
             for j in range(m-1, -1, -1):
                 if obstacleGrid[i][j] == 1: continue
-                if (i,j) == (n-1,m-1):continue
+                if (i,j) == (n-1,m-1): continue
 
                 down = dp[i+1][j] if i+1 < n else 0
                 right = dp[i][j+1] if j+1 < m else 0
