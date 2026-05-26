@@ -1,21 +1,28 @@
 class Solution:
     def minFallingPathSum(self, matrix: List[List[int]]) -> int:
-        # dp[i][j] = min falling path at matrix[i][j]
-        # dp[i][j] = matrix[i][j] + min(dp[i-1][j-1], dp[i-1][j], dp[i-1][j+1])
-        # return min(dp[n-1][col]) for all col
+        n, m = len(matrix), len(matrix[0])
+        res = math.inf
+
+        @cache
+        def f(i, j):
+            if j < 0 or j >= m: 
+                return math.inf
+            if i == n-1:
+                return matrix[i][j]
+
+            score = matrix[i][j]
+            left = f(i+1, j-1)
+            under = f(i+1, j)
+            right = f(i+1, j+1)
+            score += min(left, under, right)
+
+            return score
+
+        for col in range(len(matrix[0])):
+            num = matrix[0][col]
+
+            choice = f(0, col)
+            res = min(choice, res)
         
-        n = len(matrix)
-        
-        dp = [[float("inf") for _ in range(n)] for _ in range(n)]  
-        
-        for col in range(n):
-            dp[0][col] = matrix[0][col]
-        
-        for i in range(1,n):
-            for j in range(n):
-                first = dp[i-1][j-1] if j-1 >= 0 else float("inf")
-                second = dp[i-1][j] 
-                third = dp[i-1][j+1] if j+1 < n else float("inf")
-                dp[i][j] = matrix[i][j] + min(first, second, third)
-        print(dp)       
-        return min(dp[n-1])
+        return res
+            
