@@ -3,6 +3,7 @@ class Solution:
         graph = defaultdict(list)
         visited = set()
         q = deque([(0, -1)]) # (node, prev)
+        visited.add(0)
 
         for u, v in edges:
             graph[u].append(v)
@@ -10,12 +11,11 @@ class Solution:
 
         while q:
             popped, prev = q.popleft()
-            if popped in visited: return False
-            visited.add(popped)
 
             for nbor in graph[popped]:
                 if nbor == prev: continue
                 if nbor in visited: return False
+                visited.add(nbor)
                 q.append((nbor, popped))
 
         
