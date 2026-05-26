@@ -15,6 +15,7 @@ class Solution:
 
             for nbor in graph[popped]:
                 if nbor == prev: continue
+                if nbor in visited: return False
                 q.append((nbor, popped))
 
         
