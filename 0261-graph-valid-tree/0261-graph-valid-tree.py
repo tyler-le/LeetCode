@@ -10,11 +10,11 @@ class Solution:
 
         while q:
             popped, prev = q.popleft()
+            if popped in visited: return False
             visited.add(popped)
 
             for nbor in graph[popped]:
                 if nbor == prev: continue
-                if nbor in visited: return False
                 q.append((nbor, popped))
 
         
