@@ -1,6 +1,31 @@
 class Solution:
     def minFallingPathSum(self, matrix: List[List[int]]) -> int:
 
+        """
+        1d dp
+        since we only track the row below
+        """
+        n, m = len(matrix), len(matrix[0])
+        dp = matrix[-1]
+
+        for i in range(n-2, -1, -1):
+            new_dp = [math.inf for _ in range(m)]
+            row = matrix[i]
+            for j in range(m):
+                score = matrix[i][j]
+                left = dp[j-1] if j-1 >= 0 else math.inf
+                under = dp[j]
+                right = dp[j+1] if j+1 < m else math.inf
+                score+=min(left, under, right)
+                new_dp[j] = score
+            dp = new_dp
+
+
+        return min(dp)
+
+        """
+        2d dp
+        """
         n, m = len(matrix), len(matrix[0])
         dp = [[math.inf for _ in range(m)] for _ in range(n)]
 
@@ -24,6 +49,9 @@ class Solution:
         n, m = len(matrix), len(matrix[0])
         res = math.inf
 
+        """
+        recursive
+        """
         @cache
         def f(i, j):
             if j < 0 or j >= m: 
