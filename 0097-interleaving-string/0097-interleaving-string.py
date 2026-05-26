@@ -3,16 +3,19 @@ class Solution:
         
 
         @cache
-        def f(i, j, k):
+        def f(index, p1, p2):
 
-            if k == len(s3):
-                if i == len(s1) and j == len(s2): return True
-                else: return False
+            if index == len(s3):
+                if p1 == len(s1) and p2 == len(s2):
+                    return True
+                return False
             
-            print(i,j,k)
-            if i < len(s1) and k < len(s3) and s1[i] == s3[k] and f(i+1, j, k+1): return True
-            elif j < len(s2) and k < len(s3) and s2[j] == s3[k] and f(i, j+1, k+1): return True
-            else: return False
+            if p1 < len(s1) and s1[p1] == s3[index]:
+                if f(index + 1, p1 + 1, p2): return True
             
+            if p2 < len(s2) and s2[p2] == s3[index]:
+                if f(index + 1, p1, p2 + 1): return True
 
-        return f(0,0,0)
+            return False
+
+        return f(0, 0, 0)
