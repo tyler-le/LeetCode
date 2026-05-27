@@ -1,39 +1,29 @@
 class Solution:
     def eventualSafeNodes(self, graph: List[List[int]]) -> List[int]:
-        visited = set()
+        # topological sort - prune off leaves
+
         n = len(graph)
-        bad = set()        
-        cache = {}
-        safe_nodes = {}
-
-        def dfs(node) -> bool:
-
-            if node in safe_nodes: 
-                return safe_nodes[node]
-
-            if node in visited:
-                safe_nodes[node] = False
-                return False
-
-            visited.add(node)
-
-            for nbor in graph[node]:
-                if not dfs(nbor):
-                    safe_nodes[node] = False
-                    return False
-            
-            visited.remove(node)
-            safe_nodes[node] = True
-            return True
-            
-        
-        for node in range(n):
-            if node in visited: continue
-            dfs(node)
-        
+        indegrees = defaultdict(int)
+        inverted = defaultdict(list)
+        q = deque()
         res = []
 
-        for i in range(n):
-            if safe_nodes[i]: res.append(i)
+        for u in range(n):
+            for v in graph[u]:
+                inverted[v].append(u)
+                indegrees[u]+=1            
 
-        return res
+        for node in range(n):
+            if not indegrees[node]:
+                q.append(node)
+                res.append(node)
+
+        while q:
+            popped_node = q.popleft()
+            for nbor in inverted[popped_node]:
+                indegrees[nbor]-=1
+                if not indegrees[nbor]:
+                    q.append(nbor)
+                    res.append(nbor)
+
+        return sorted(res)
