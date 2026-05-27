@@ -1,22 +1,31 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         
+        res = 0
+
+        # create graph
         graph = defaultdict(list)
-        hmap = defaultdict(lambda : math.inf)
-        visited = set()
-        q = deque([(k, 0)]) # (node : time)
-        
-        # create adjacency list
+
         for u, v, w in times:
-            graph[u].append((v, w))
+            graph[u].append((v,w))
+
+        # create heap queue
+        min_heap = [(0, k)] # (distance, node)
+        visited = set()
+
+
+        # run dijkstras from the source
+        while min_heap:
+            popped_dist, popped_node = heappop(min_heap)
+            if popped_node in visited: continue
+            visited.add(popped_node)
+            res = popped_dist
             
-        while q:
-            popped_node, popped_time = q.popleft()
-            if popped_node not in visited or popped_time < hmap[popped_node]:
-                hmap[popped_node] = popped_time
-                visited.add(popped_node)
+            for nbor, edge_weight in graph[popped_node]:
+                heappush(min_heap, (popped_dist + edge_weight, nbor))
+
             
-                for nbor, t in graph[popped_node]:
-                    q.append((nbor, popped_time + t))
-                
-        return max(hmap.values()) if len(visited) == n else -1
+
+        # if we visited all nodes -> return res
+        # else -> return -1
+        return res if len(visited) == n else -1
