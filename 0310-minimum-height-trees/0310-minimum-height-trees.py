@@ -21,10 +21,10 @@ class Solution:
         
         while n > 2:
             level_size = len(q)
-            n-=level_size
-
+            
             for _ in range(level_size):
                 popped = q.popleft()
+                n-=1
                 for nbor in graph[popped]:
                     if nbor in visited: continue
                     indegrees[nbor]-=1
