@@ -26,4 +26,4 @@ class Solution:
                     q.append(nbor)
                     res.append(nbor)
 
-        return sorted(res)
+        return [i for i in range(n) if indegrees[i] == 0]
