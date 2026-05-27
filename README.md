@@ -290,6 +290,7 @@ My collection of LeetCode solutions.
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/tyler-le/LeetCode/tree/master/0797-all-paths-from-source-to-target) |
 | [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
@@ -452,6 +453,7 @@ My collection of LeetCode solutions.
 | [0694-number-of-distinct-islands](https://github.com/tyler-le/LeetCode/tree/master/0694-number-of-distinct-islands) |
 | [0695-max-area-of-island](https://github.com/tyler-le/LeetCode/tree/master/0695-max-area-of-island) |
 | [0721-accounts-merge](https://github.com/tyler-le/LeetCode/tree/master/0721-accounts-merge) |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/tyler-le/LeetCode/tree/master/0797-all-paths-from-source-to-target) |
 | [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
@@ -712,6 +714,7 @@ My collection of LeetCode solutions.
 | [0277-find-the-celebrity](https://github.com/tyler-le/LeetCode/tree/master/0277-find-the-celebrity) |
 | [0310-minimum-height-trees](https://github.com/tyler-le/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0684-redundant-connection](https://github.com/tyler-le/LeetCode/tree/master/0684-redundant-connection) |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0797-all-paths-from-source-to-target](https://github.com/tyler-le/LeetCode/tree/master/0797-all-paths-from-source-to-target) |
 | [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
@@ -729,6 +732,7 @@ My collection of LeetCode solutions.
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0621-task-scheduler](https://github.com/tyler-le/LeetCode/tree/master/0621-task-scheduler) |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 | [0759-employee-free-time](https://github.com/tyler-le/LeetCode/tree/master/0759-employee-free-time) |
 | [0767-reorganize-string](https://github.com/tyler-le/LeetCode/tree/master/0767-reorganize-string) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -742,6 +746,7 @@ My collection of LeetCode solutions.
 ## Shortest Path
 |  |
 | ------- |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
