@@ -721,6 +721,7 @@ My collection of LeetCode solutions.
 | [0841-keys-and-rooms](https://github.com/tyler-le/LeetCode/tree/master/0841-keys-and-rooms) |
 | [0997-find-the-town-judge](https://github.com/tyler-le/LeetCode/tree/master/0997-find-the-town-judge) |
 | [1129-shortest-path-with-alternating-colors](https://github.com/tyler-le/LeetCode/tree/master/1129-shortest-path-with-alternating-colors) |
+| [1136-parallel-courses](https://github.com/tyler-le/LeetCode/tree/master/1136-parallel-courses) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/tyler-le/LeetCode/tree/master/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
@@ -871,6 +872,7 @@ My collection of LeetCode solutions.
 | [0269-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0269-alien-dictionary) |
 | [0310-minimum-height-trees](https://github.com/tyler-le/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0802-find-eventual-safe-states](https://github.com/tyler-le/LeetCode/tree/master/0802-find-eventual-safe-states) |
+| [1136-parallel-courses](https://github.com/tyler-le/LeetCode/tree/master/1136-parallel-courses) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Combinatorics
 |  |
