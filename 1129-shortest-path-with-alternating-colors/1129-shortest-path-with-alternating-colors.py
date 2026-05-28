@@ -1,36 +1,44 @@
 class Solution:
     def shortestAlternatingPaths(self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]) -> List[int]:
-        q = deque([(0, None, 0)]) # node, prev_color, dist
-
-        graph = defaultdict(list)
-        distances = {}
-        visited = set((0, None)) # (node, edge_color)
-        res = []
+        graph = defaultdict(list) # [(nbor, edge_color)]
+        q = deque([(0, 0, None)]) # (node, dist, prev_edge_color)
+        RED, BLUE = 0, 1
+        answer = [-1 for _ in range(n)]
+        answer[0] = 0
+        visited = set() # (node, incoming color edge)
 
         for u, v in redEdges:
-            graph[u].append((v, "red"))
-        
+            graph[u].append((v, RED))
+
         for u, v in blueEdges:
-            graph[u].append((v, "blue"))
+            graph[u].append((v, BLUE))
 
+    
         while q:
-            popped_node, prev_color, popped_dist = q.popleft()
-            
-            for nbor_node, edge_color in graph[popped_node]:
-                if edge_color == prev_color: continue
-                if (nbor_node, edge_color) in visited: continue
-                
-                q.append((nbor_node, edge_color, popped_dist + 1))
-                if nbor_node not in distances:
-                    distances[nbor_node] = popped_dist + 1
-                visited.add((nbor_node, edge_color))
-        
+            popped_node, popped_dist, prev_edge_color = q.popleft()
 
-        for i in range(n):
-            if i == 0: res.append(0)
-            elif i not in distances: res.append(-1)
-            else: res.append(distances[i])
-        
-        return res
+            for nbor, edge_color in graph[popped_node]:
+                if (nbor, edge_color) in visited: continue
+                
+                if prev_edge_color == None:
+                    q.append((nbor, popped_dist + 1, edge_color))
+                    visited.add((nbor, edge_color))
+                    if answer[nbor] == -1:
+                        answer[nbor] = popped_dist + 1
+
+                elif prev_edge_color == RED and edge_color == BLUE:
+                    q.append((nbor, popped_dist + 1, edge_color))
+                    visited.add((nbor, edge_color))
+                    if answer[nbor] == -1:
+                        answer[nbor] = popped_dist + 1
+
+                elif prev_edge_color == BLUE and edge_color == RED:
+                    q.append((nbor, popped_dist + 1, edge_color))
+                    visited.add((nbor, edge_color))
+                    if answer[nbor] == -1:
+                        answer[nbor] = popped_dist + 1
+
+        return answer
+                
 
         
