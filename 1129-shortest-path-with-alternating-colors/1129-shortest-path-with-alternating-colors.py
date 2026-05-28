@@ -18,25 +18,12 @@ class Solution:
             popped_node, popped_dist, prev_edge_color = q.popleft()
 
             for nbor, edge_color in graph[popped_node]:
+                if prev_edge_color == edge_color: continue
                 if (nbor, edge_color) in visited: continue
-                
-                if prev_edge_color == None:
-                    q.append((nbor, popped_dist + 1, edge_color))
-                    visited.add((nbor, edge_color))
-                    if answer[nbor] == -1:
-                        answer[nbor] = popped_dist + 1
 
-                elif prev_edge_color == RED and edge_color == BLUE:
-                    q.append((nbor, popped_dist + 1, edge_color))
-                    visited.add((nbor, edge_color))
-                    if answer[nbor] == -1:
-                        answer[nbor] = popped_dist + 1
-
-                elif prev_edge_color == BLUE and edge_color == RED:
-                    q.append((nbor, popped_dist + 1, edge_color))
-                    visited.add((nbor, edge_color))
-                    if answer[nbor] == -1:
-                        answer[nbor] = popped_dist + 1
+                q.append((nbor, popped_dist + 1, edge_color))
+                visited.add((nbor, edge_color))
+                if answer[nbor] == -1: answer[nbor] = popped_dist + 1
 
         return answer
                 
