@@ -1,41 +1,41 @@
 class Solution:
     def maximumDetonation(self, bombs: List[List[int]]) -> int:
-        
-        
-        def dfs(node, visited):
-            
-            visited.add(node)
-            for nbor in graph[node]:
-                if nbor not in visited:
-                    dfs(nbor, visited)
 
-            return len(visited)
-        
-        
-        
         n = len(bombs)
         graph = defaultdict(list)
         res = 1
         
-        # turn this into a graph problem
+
+        def get_island_size(root):
+            q = deque([root])
+            visited = set()
+            visited.add(root)
+            island_size = 1
+
+            while q:
+                popped = q.popleft()
+                for nbor in graph[popped]:
+                    if nbor in visited: continue
+                    visited.add(nbor)
+                    q.append(nbor)
+                    island_size+=1
+
+            return island_size
+
+
+        def calc_distance(x1, y1, x2, y2):
+            return sqrt((x2-x1)**2 + (y2-y1)**2)
+
         for i in range(n):
             for j in range(n):
-                if i == j: 
-                    continue
-                u_x, u_y, u_r = bombs[i]
-                v_x, v_y, _ = bombs[j]
-                
-                dist = sqrt((u_x - v_x)**2 + (u_y - v_y)**2)
-                
-                if dist <= u_r:
-                    # there is a directed edge from u->v iff the distance from u->v is less than u_radius
+                if i == n: continue
+                x1, y1, r1 = bombs[i]
+                x2, y2, r2 = bombs[j]
+
+                if calc_distance(x1,y1,x2,y2) <= r1:
                     graph[i].append(j)
-                    
-        # calculate the number of reachable nodes starting at each node i
-        for i in range(n):
-            visited = set()
-            res = max(res, dfs(i, visited))
-        
+
+        for node in graph.keys():
+            res = max(res, get_island_size(node))
+
         return res
-        
-        
