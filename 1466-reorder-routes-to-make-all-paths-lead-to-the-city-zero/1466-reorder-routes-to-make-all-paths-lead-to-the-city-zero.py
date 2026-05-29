@@ -1,23 +1,24 @@
 class Solution:
     def minReorder(self, n: int, connections: List[List[int]]) -> int:
         graph = defaultdict(list)
-
-        def dfs(prev, curr):
-            out = 0
-
-            if prev is not None and (prev, curr) in connections:
-                out+=1
-
-            for nbor in graph[curr]:
-                if nbor == prev: continue
-                out+=dfs(curr, nbor)
-            
-            return out
-
+        edge_set = set([(u,v) for u, v in connections])
+        res = 0
 
         for u, v in connections:
             graph[u].append(v)
             graph[v].append(u)
+        
+        q = deque([0])
+        visited = set([0])
 
-        connections = set([tuple(x) for x in connections])
-        return dfs(None, 0)
+        while q: 
+            popped = q.popleft()
+
+            for nbor in graph[popped]:
+                if nbor in visited: continue
+                visited.add(nbor)
+                q.append(nbor)
+                if (popped, nbor) in edge_set:
+                    res+=1
+
+        return res
