@@ -116,6 +116,7 @@ My collection of LeetCode solutions.
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/tyler-le/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -309,6 +310,7 @@ My collection of LeetCode solutions.
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/tyler-le/LeetCode/tree/master/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2331-evaluate-boolean-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/2331-evaluate-boolean-binary-tree) |
 | [2359-find-closest-node-to-given-two-nodes](https://github.com/tyler-le/LeetCode/tree/master/2359-find-closest-node-to-given-two-nodes) |
 | [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
@@ -470,6 +472,7 @@ My collection of LeetCode solutions.
 | [1457-pseudo-palindromic-paths-in-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/1457-pseudo-palindromic-paths-in-a-binary-tree) |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/tyler-le/LeetCode/tree/master/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 ## Sorting
 |  |
 | ------- |
@@ -540,6 +543,7 @@ My collection of LeetCode solutions.
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2579-count-total-number-of-colored-cells](https://github.com/tyler-le/LeetCode/tree/master/2579-count-total-number-of-colored-cells) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
 ## Recursion
@@ -725,6 +729,7 @@ My collection of LeetCode solutions.
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/tyler-le/LeetCode/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/tyler-le/LeetCode/tree/master/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2359-find-closest-node-to-given-two-nodes](https://github.com/tyler-le/LeetCode/tree/master/2359-find-closest-node-to-given-two-nodes) |
 | [2924-find-champion-ii](https://github.com/tyler-le/LeetCode/tree/master/2924-find-champion-ii) |
 ## Heap (Priority Queue)
@@ -851,6 +856,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
+| [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 ## Quickselect
 |  |
 | ------- |
