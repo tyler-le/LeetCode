@@ -127,6 +127,7 @@ My collection of LeetCode solutions.
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
 | [2615-sum-of-distances](https://github.com/tyler-le/LeetCode/tree/master/2615-sum-of-distances) |
+| [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 | [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -217,6 +218,7 @@ My collection of LeetCode solutions.
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 | [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
+| [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 ## Simulation
 |  |
 | ------- |
@@ -313,6 +315,7 @@ My collection of LeetCode solutions.
 | [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2331-evaluate-boolean-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/2331-evaluate-boolean-binary-tree) |
 | [2359-find-closest-node-to-given-two-nodes](https://github.com/tyler-le/LeetCode/tree/master/2359-find-closest-node-to-given-two-nodes) |
+| [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 | [3319-k-th-largest-perfect-subtree-size-in-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/3319-k-th-largest-perfect-subtree-size-in-binary-tree) |
 ## Binary Tree
 |  |
@@ -473,6 +476,7 @@ My collection of LeetCode solutions.
 | [1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero](https://github.com/tyler-le/LeetCode/tree/master/1466-reorder-routes-to-make-all-paths-lead-to-the-city-zero) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
+| [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 ## Sorting
 |  |
 | ------- |
@@ -931,6 +935,7 @@ My collection of LeetCode solutions.
 | [1267-count-servers-that-communicate](https://github.com/tyler-le/LeetCode/tree/master/1267-count-servers-that-communicate) |
 | [1391-check-if-there-is-a-valid-path-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/1391-check-if-there-is-a-valid-path-in-a-grid) |
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
+| [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 ## String Matching
 |  |
 | ------- |
