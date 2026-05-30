@@ -137,6 +137,7 @@ My collection of LeetCode solutions.
 | [3637-trionic-array-i](https://github.com/tyler-le/LeetCode/tree/master/3637-trionic-array-i) |
 | [3719-longest-balanced-subarray-i](https://github.com/tyler-le/LeetCode/tree/master/3719-longest-balanced-subarray-i) |
 | [3865-reverse-k-subarrays](https://github.com/tyler-le/LeetCode/tree/master/3865-reverse-k-subarrays) |
+| [3905-multi-source-flood-fill](https://github.com/tyler-le/LeetCode/tree/master/3905-multi-source-flood-fill) |
 ## Hash Table
 |  |
 | ------- |
@@ -219,6 +220,7 @@ My collection of LeetCode solutions.
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 | [2428-maximum-sum-of-an-hourglass](https://github.com/tyler-le/LeetCode/tree/master/2428-maximum-sum-of-an-hourglass) |
 | [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
+| [3905-multi-source-flood-fill](https://github.com/tyler-le/LeetCode/tree/master/3905-multi-source-flood-fill) |
 ## Simulation
 |  |
 | ------- |
@@ -477,6 +479,7 @@ My collection of LeetCode solutions.
 | [1559-detect-cycles-in-2d-grid](https://github.com/tyler-le/LeetCode/tree/master/1559-detect-cycles-in-2d-grid) |
 | [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
+| [3905-multi-source-flood-fill](https://github.com/tyler-le/LeetCode/tree/master/3905-multi-source-flood-fill) |
 ## Sorting
 |  |
 | ------- |
