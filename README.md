@@ -124,6 +124,7 @@ My collection of LeetCode solutions.
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
+| [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/tyler-le/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
@@ -445,6 +446,7 @@ My collection of LeetCode solutions.
 | [1838-frequency-of-the-most-frequent-element](https://github.com/tyler-le/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
+| [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
@@ -526,6 +528,7 @@ My collection of LeetCode solutions.
 | [1657-determine-if-two-strings-are-close](https://github.com/tyler-le/LeetCode/tree/master/1657-determine-if-two-strings-are-close) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/tyler-le/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
+| [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 | [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
