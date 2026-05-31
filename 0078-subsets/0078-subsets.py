@@ -3,6 +3,7 @@ class Solution:
         # include exclude
         n = len(nums)
         res = []
+
         def f(index, path):
             nonlocal res
             if index == n:
