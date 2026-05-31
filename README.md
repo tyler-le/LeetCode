@@ -90,6 +90,7 @@ My collection of LeetCode solutions.
 | [0807-max-increase-to-keep-city-skyline](https://github.com/tyler-le/LeetCode/tree/master/0807-max-increase-to-keep-city-skyline) |
 | [0815-bus-routes](https://github.com/tyler-le/LeetCode/tree/master/0815-bus-routes) |
 | [0846-hand-of-straights](https://github.com/tyler-le/LeetCode/tree/master/0846-hand-of-straights) |
+| [0877-stone-game](https://github.com/tyler-le/LeetCode/tree/master/0877-stone-game) |
 | [0931-minimum-falling-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0931-minimum-falling-path-sum) |
 | [0934-shortest-bridge](https://github.com/tyler-le/LeetCode/tree/master/0934-shortest-bridge) |
 | [0948-bag-of-tokens](https://github.com/tyler-le/LeetCode/tree/master/0948-bag-of-tokens) |
@@ -407,6 +408,7 @@ My collection of LeetCode solutions.
 | [0740-delete-and-earn](https://github.com/tyler-le/LeetCode/tree/master/0740-delete-and-earn) |
 | [0746-min-cost-climbing-stairs](https://github.com/tyler-le/LeetCode/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/tyler-le/LeetCode/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0877-stone-game](https://github.com/tyler-le/LeetCode/tree/master/0877-stone-game) |
 | [0931-minimum-falling-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0931-minimum-falling-path-sum) |
 | [0978-longest-turbulent-subarray](https://github.com/tyler-le/LeetCode/tree/master/0978-longest-turbulent-subarray) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
@@ -557,6 +559,7 @@ My collection of LeetCode solutions.
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0523-continuous-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0523-continuous-subarray-sum) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
+| [0877-stone-game](https://github.com/tyler-le/LeetCode/tree/master/0877-stone-game) |
 | [0973-k-closest-points-to-origin](https://github.com/tyler-le/LeetCode/tree/master/0973-k-closest-points-to-origin) |
 | [1137-n-th-tribonacci-number](https://github.com/tyler-le/LeetCode/tree/master/1137-n-th-tribonacci-number) |
 | [1248-count-number-of-nice-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1248-count-number-of-nice-subarrays) |
@@ -892,6 +895,7 @@ My collection of LeetCode solutions.
 ## Game Theory
 |  |
 | ------- |
+| [0877-stone-game](https://github.com/tyler-le/LeetCode/tree/master/0877-stone-game) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 ## Topological Sort
 |  |
