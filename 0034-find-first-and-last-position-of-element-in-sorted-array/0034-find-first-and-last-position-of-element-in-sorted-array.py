@@ -1,15 +1,7 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        
-        if not nums: return [-1, -1]
-        n = len(nums)
+        low, high = 0, len(nums) - 1
         left_bound, right_bound = -1, -1
-        
-
-        
-        
-        # find left bound
-        low, high = 0, n-1
 
         while low <= high:
             mid = low + ((high - low) // 2)
@@ -22,10 +14,7 @@ class Solution:
                 left_bound = mid
                 high = mid - 1
 
-        
-        # find right bound
-        low, high = 0, n-1
-
+        low, high = 0, len(nums) - 1
         while low <= high:
             mid = low + ((high - low) // 2)
 
@@ -36,10 +25,7 @@ class Solution:
             else:
                 right_bound = mid
                 low = mid + 1
+        
+        return [left_bound, right_bound]
 
-
-        if left_bound == -1 or right_bound == -1:
-            return [-1, -1]
-        else:
-            return [left_bound, right_bound]
-
+        
