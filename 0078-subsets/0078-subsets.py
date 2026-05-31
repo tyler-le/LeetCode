@@ -1,17 +1,16 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        res = []
+        # include exclude
         n = len(nums)
-
-        def backtrack(start, path):
+        res = []
+        def f(index, path):
             nonlocal res
-
-            for i in range(start, n):
-                path.append(nums[i])
+            if index == n:
                 res.append(path.copy())
-                backtrack(i+1, path)
-                path.pop()
-        
-        backtrack(0, [])
-        res.append([])
+                return
+
+            f(index + 1, path + [nums[index]])
+            f(index + 1, path)
+
+        f(0, [])
         return res
