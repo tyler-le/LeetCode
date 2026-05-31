@@ -24,6 +24,7 @@ My collection of LeetCode solutions.
 | [0057-insert-interval](https://github.com/tyler-le/LeetCode/tree/master/0057-insert-interval) |
 | [0063-unique-paths-ii](https://github.com/tyler-le/LeetCode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0064-minimum-path-sum) |
+| [0074-search-a-2d-matrix](https://github.com/tyler-le/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
@@ -203,6 +204,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0063-unique-paths-ii](https://github.com/tyler-le/LeetCode/tree/master/0063-unique-paths-ii) |
 | [0064-minimum-path-sum](https://github.com/tyler-le/LeetCode/tree/master/0064-minimum-path-sum) |
+| [0074-search-a-2d-matrix](https://github.com/tyler-le/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
 | [0130-surrounded-regions](https://github.com/tyler-le/LeetCode/tree/master/0130-surrounded-regions) |
 | [0221-maximal-square](https://github.com/tyler-le/LeetCode/tree/master/0221-maximal-square) |
@@ -710,6 +712,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
+| [0074-search-a-2d-matrix](https://github.com/tyler-le/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
