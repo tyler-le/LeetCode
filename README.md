@@ -132,6 +132,7 @@ My collection of LeetCode solutions.
 | [2658-maximum-number-of-fish-in-a-grid](https://github.com/tyler-le/LeetCode/tree/master/2658-maximum-number-of-fish-in-a-grid) |
 | [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2831-find-the-longest-equal-subarray](https://github.com/tyler-le/LeetCode/tree/master/2831-find-the-longest-equal-subarray) |
+| [2915-length-of-the-longest-subsequence-that-sums-to-target](https://github.com/tyler-le/LeetCode/tree/master/2915-length-of-the-longest-subsequence-that-sums-to-target) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/tyler-le/LeetCode/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [2962-count-subarrays-where-max-element-appears-at-least-k-times](https://github.com/tyler-le/LeetCode/tree/master/2962-count-subarrays-where-max-element-appears-at-least-k-times) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
@@ -414,6 +415,7 @@ My collection of LeetCode solutions.
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/tyler-le/LeetCode/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 | [2222-number-of-ways-to-select-buildings](https://github.com/tyler-le/LeetCode/tree/master/2222-number-of-ways-to-select-buildings) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
+| [2915-length-of-the-longest-subsequence-that-sums-to-target](https://github.com/tyler-le/LeetCode/tree/master/2915-length-of-the-longest-subsequence-that-sums-to-target) |
 | [3032-count-numbers-with-unique-digits-ii](https://github.com/tyler-le/LeetCode/tree/master/3032-count-numbers-with-unique-digits-ii) |
 ## Greedy
 |  |
