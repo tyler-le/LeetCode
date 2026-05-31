@@ -1,24 +1,20 @@
 class Solution:
     def stoneGame(self, piles: List[int]) -> bool:
         
-        alice, bob = 0, 0
-        l, r = 0, len(piles) - 1
-        parity = True
+        @cache
+        def f(i, j, alice_turn):
+            if i > j: return 0
+            
+            first, second = -math.inf, -math.inf
 
-        while l <= r:
-            if parity:
-                if piles[l] < piles[r]:
-                    alice+=piles[r]
-                    r-=1
-                else:
-                    alice+=piles[l]
-                    l+=1
-            else:
-                if piles[l] < piles[r]:
-                    bob+=piles[r]
-                    r-=1
-                else:
-                    bob+=piles[l]
-                    l+=1
+            # take piles[i]
+            if alice_turn: first = piles[i] + f(i+1, j, not alice_turn)
+            else: first = -piles[i] + f(i+1, j, not alice_turn)
 
-        return alice > bob
+            # take piles[j]
+            if alice_turn: second = piles[j] + f(i, j-1, not alice_turn)
+            else: second = -piles[j] + f(i, j-1, not alice_turn)
+
+            return max(first, second) if alice_turn else min(first, second)
+
+        return f(0, len(piles) - 1, True) > 0
