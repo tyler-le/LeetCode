@@ -3,17 +3,21 @@ class Solution:
 
         res = []
 
-        def backtrack(start, path):
-            nonlocal res, n
-
+        def f(index, path):
             if len(path) == k:
                 res.append(path.copy())
                 return
+            
+            if index > n: 
+                return
 
-            for i in range(start, n+1):
-                path.append(i)
-                backtrack(i+1, path)
-                path.pop()
-        
-        backtrack(1, [])
+            # include
+            f(index + 1, path + [index])
+
+            # exclude
+            f(index + 1, path)
+
+        f(1, [])
         return res
+
+        
