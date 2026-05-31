@@ -2,20 +2,17 @@ class Solution:
     def lengthOfLongestSubsequence(self, nums: List[int], target: int) -> int:
         n, m = len(nums), target
         dp = [[-1 for _ in range(m + 1)] for _ in range(n + 1)]
-        dp[n][0] = 0
+        dp[0][0] = 0
 
-        for i in range(n-1, -1, -1):
-            for j in range(m, -1, -1):
-                exclude = dp[i+1][j]
-                include = -1
-                if j - nums[i] >= 0:
-                    prev = dp[i+1][j-nums[i]]
-                    if prev != -1:
-                        include = prev + 1
-                
+        for i in range(1, n+1):
+            for j in range(m+1):
+                num = nums[i-1]
+                include = dp[i-1][j - num] if j - num >= 0 else -1
+                if include != -1: include+=1
+                exclude = dp[i-1][j]
                 dp[i][j] = max(include, exclude)
 
-        return dp[0][m]
+        return dp[n][target]
 
         
         n = len(nums)
