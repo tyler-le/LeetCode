@@ -41,4 +41,6 @@ class Solution:
                     q.append(nbor)
                     res.append(nbor)
 
+        if len(res) != len(letters): 
+            return ""
         return "".join(res)
