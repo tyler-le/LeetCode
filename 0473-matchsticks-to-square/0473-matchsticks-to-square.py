@@ -1,52 +1,26 @@
 class Solution:
     def makesquare(self, matchsticks: List[int]) -> bool:
-        # four choices for one matchstick
-        # valid case - all 4 sides have the same sum - sum  // 4
 
-        # place the biggest matches first to allow early fail 
-        # when the side length becomes bigger than target
-        matchsticks.sort(reverse=True)
-
-        if sum(matchsticks) % 4: return False
-
+        
         target = sum(matchsticks) // 4
-        n = len(matchsticks)
-        cache = {}
+        if target * 4 != sum(matchsticks): return False
+        matchsticks.sort(reverse=True)
+        @cache
+        def backtrack(index, left, up, right, down):
+            if left == target and up == target and right == target and down == target: 
+                return True
 
-
-        def backtrack(index, left, right, top, bottom):
-            nonlocal target, n
-
-            if (index, left, right, top, bottom) in cache:
-                return cache[(index, left, right, top, bottom)]
-
-            if left > target or right > target:
-                return False
-            
-            if top > target or bottom > target:
+            if left > target or up > target  or right > target or down > target: 
                 return False
 
-            if left == target and right == target and top == target and bottom == target: return True
+            num = matchsticks[index]
 
-            if index == n: return False
+            if backtrack(index + 1, left + num, up, right, down): return True
+            if backtrack(index + 1, left, up + num, right, down): return True
+            if backtrack(index + 1, left, up, right + num, down): return True
+            if backtrack(index + 1, left, up, right, down + num): return True
 
-            match = matchsticks[index]
-
-            # place ith match in left position
-            try_left = backtrack(index + 1, left + match, right, top, bottom)
-
-            # place ith match in right position
-            try_right = backtrack(index + 1, left, right + match, top, bottom)
-
-            # place ith match in top position
-            try_top = backtrack(index + 1, left, right, top + match, bottom)
-
-            # place ith match in bottom position
-            try_bottom = backtrack(index + 1, left, right, top, bottom + match)
-
-            res = try_left or try_right or try_top or try_bottom
-            cache[(index, left, right, top, bottom)] = res
-
-            return res
+            return False
 
         return backtrack(0, 0, 0, 0, 0)
+
