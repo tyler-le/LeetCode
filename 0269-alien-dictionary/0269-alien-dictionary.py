@@ -1,46 +1,44 @@
 class Solution:
     def alienOrder(self, words: List[str]) -> str:
         n = len(words)
-        graph = defaultdict(set)
+        graph = defaultdict(list)
+        letters = set([x for x in "".join(words)])
         indegrees = defaultdict(int)
-        letters = set("".join(words))
-
-        # Build graph inline
-        for i in range(n - 1):
-            curr = words[i]
-            after = words[i + 1]
-            p1, p2 = 0, 0
-            found_diff = False
-            while p1 < len(curr) and p2 < len(after):
-                if curr[p1] != after[p2]:
-                    if after[p2] not in graph[curr[p1]]:
-                        graph[curr[p1]].add(after[p2])
-                        indegrees[after[p2]] += 1
-                    found_diff = True
-                    break
-                p1 += 1
-                p2 += 1
-            
-            if not found_diff and len(curr) > len(after): return ""
-                
-
-        # Topological sort
         q = deque()
         res = []
 
-        for letter in letters:
-            if not indegrees[letter]:
+
+        for i in range(n-1):
+            w1, w2 = words[i], words[i+1]
+            p1, p2 = 0, 0
+            found_diff = False
+
+            while p1 < len(w1) and p2 < len(w2):
+                if w1[p1] != w2[p2]:
+                    graph[w1[p1]].append(w2[p2])
+                    indegrees[w2[p2]]+=1
+                    found_diff = True
+                    break
+                p1+=1
+                p2+=1
+            
+            if not found_diff and len(w1) > len(w2): 
+                return ""
+        
+        for letter in letters: 
+            if indegrees[letter] == 0:
                 q.append(letter)
+                res.append(letter)
+
+        print(graph)
 
         while q:
-            level_size = len(q)
-            for _ in range(level_size):
-                popped = q.popleft()
-                res.append(popped)
-                for nbor in graph[popped]:
-                    indegrees[nbor] -= 1
-                    if not indegrees[nbor]:
-                        q.append(nbor)
+            popped = q.popleft()
 
-        if len(res) != len(letters): return ""
+            for nbor in graph[popped]:
+                indegrees[nbor]-=1
+                if indegrees[nbor] == 0:
+                    q.append(nbor)
+                    res.append(nbor)
+
         return "".join(res)
