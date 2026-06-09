@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/minimum-number-of-keypresses/">2268. Minimum Number of Keypresses</a></h2><h3>Medium</h3><hr><div><p>You have a keypad with <code>9</code> buttons, numbered from <code>1</code> to <code>9</code>, each mapped to lowercase English letters. You can choose which characters each button is matched to as long as:</p>
+<h2><a href="https://leetcode.com/problems/minimum-number-of-keypresses">2405. Minimum Number of Keypresses</a></h2><h3>Medium</h3><hr><p>You have a keypad with <code>9</code> buttons, numbered from <code>1</code> to <code>9</code>, each mapped to lowercase English letters. You can choose which characters each button is matched to as long as:</p>
 
 <ul>
 	<li>All 26 lowercase English letters are mapped to.</li>
@@ -14,27 +14,29 @@
 
 <p>&nbsp;</p>
 <p><strong class="example">Example 1:</strong></p>
-<img src="https://assets.leetcode.com/uploads/2022/05/05/image-20220505184346-1.png" style="width: 300px; height: 293px;">
-<pre><strong>Input:</strong> s = "apple"
+<img src="https://assets.leetcode.com/uploads/2022/05/05/image-20220505184346-1.png" style="width: 300px; height: 293px;" />
+<pre>
+<strong>Input:</strong> s = &quot;apple&quot;
 <strong>Output:</strong> 5
 <strong>Explanation:</strong> One optimal way to setup your keypad is shown above.
-Type 'a' by pressing button 1 once.
-Type 'p' by pressing button 6 once.
-Type 'p' by pressing button 6 once.
-Type 'l' by pressing button 5 once.
-Type 'e' by pressing button 3 once.
+Type &#39;a&#39; by pressing button 1 once.
+Type &#39;p&#39; by pressing button 6 once.
+Type &#39;p&#39; by pressing button 6 once.
+Type &#39;l&#39; by pressing button 5 once.
+Type &#39;e&#39; by pressing button 3 once.
 A total of 5 button presses are needed, so return 5.
 </pre>
 
 <p><strong class="example">Example 2:</strong></p>
-<img src="https://assets.leetcode.com/uploads/2022/05/05/image-20220505203823-1.png" style="width: 300px; height: 288px;">
-<pre><strong>Input:</strong> s = "abcdefghijkl"
+<img src="https://assets.leetcode.com/uploads/2022/05/05/image-20220505203823-1.png" style="width: 300px; height: 288px;" />
+<pre>
+<strong>Input:</strong> s = &quot;abcdefghijkl&quot;
 <strong>Output:</strong> 15
 <strong>Explanation:</strong> One optimal way to setup your keypad is shown above.
-The letters 'a' to 'i' can each be typed by pressing a button once.
-Type 'j' by pressing button 1 twice.
-Type 'k' by pressing button 2 twice.
-Type 'l' by pressing button 3 twice.
+The letters &#39;a&#39; to &#39;i&#39; can each be typed by pressing a button once.
+Type &#39;j&#39; by pressing button 1 twice.
+Type &#39;k&#39; by pressing button 2 twice.
+Type &#39;l&#39; by pressing button 3 twice.
 A total of 15 button presses are needed, so return 15.
 </pre>
 
@@ -45,4 +47,3 @@ A total of 15 button presses are needed, so return 15.
 	<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>
 	<li><code>s</code> consists of lowercase English letters.</li>
 </ul>
-</div>
