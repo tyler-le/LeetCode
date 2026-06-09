@@ -1,20 +1,27 @@
-class Solution(object):
-    def minimumKeypresses(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
-        res, count, max_heap = 0, Counter(s), []
-        max_heap = [(-v, k) for k,v in Counter(s).items()]
-        heapify(max_heap)
-        
-        # most freq go in first position
-        # populate numpad (i//9) decides the order in a specific key location
-        for i in range(len(max_heap)):
-            freq, char = heappop(max_heap)
-            # map to a key location and calc how many presses needed for this char
-            res+=(((i//9) + 1) * -freq)
-            
+class Solution:
+    def minimumKeypresses(self, s: str) -> int:
+        chars = set(s)
+        freqs = Counter(s)
+        indices = defaultdict(int)
+
+        hmap = defaultdict(list)
+
+        arr = sorted(freqs.items(), key=lambda x: x[1], reverse=True)
+
+        index = 0
+
+        for ch, freq in arr:
+            hmap[index].append(ch)
+            indices[ch] = len(hmap[index]) - 1
+            index = (index + 1) % 9
+
+        print(indices)
+        res = 0
+        for ch, index in indices.items():
+            res+=(freqs[ch] * (index + 1))
+
         return res
-            
-            
+
+
+
+
