@@ -5,14 +5,11 @@ class Solution:
 
         for person, group_size in enumerate(groupSizes):
             groups = hmap[group_size]
-            added_to_group = False
-            for group in groups:
-                if len(group) < group_size:
-                    group.append(person)
-                    added_to_group = True
-                    break
-            if not added_to_group: 
+            
+            if not groups or len(groups[-1]) == group_size:
                 groups.append([person])
+            else:
+                groups[-1].append(person)
                         
 
         res = []
