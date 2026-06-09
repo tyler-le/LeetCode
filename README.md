@@ -191,6 +191,7 @@ My collection of LeetCode solutions.
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
+| [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 | [2606-find-the-substring-with-maximum-cost](https://github.com/tyler-le/LeetCode/tree/master/2606-find-the-substring-with-maximum-cost) |
@@ -448,6 +449,7 @@ My collection of LeetCode solutions.
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
+| [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
 ## Breadth-First Search
@@ -530,6 +532,7 @@ My collection of LeetCode solutions.
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
 | [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
+| [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
 | [2784-check-if-array-is-good](https://github.com/tyler-le/LeetCode/tree/master/2784-check-if-array-is-good) |
 | [2971-find-polygon-with-the-largest-perimeter](https://github.com/tyler-le/LeetCode/tree/master/2971-find-polygon-with-the-largest-perimeter) |
@@ -585,6 +588,7 @@ My collection of LeetCode solutions.
 | [1657-determine-if-two-strings-are-close](https://github.com/tyler-le/LeetCode/tree/master/1657-determine-if-two-strings-are-close) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2225-find-players-with-zero-or-one-losses](https://github.com/tyler-le/LeetCode/tree/master/2225-find-players-with-zero-or-one-losses) |
+| [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
 | [2833-furthest-point-from-origin](https://github.com/tyler-le/LeetCode/tree/master/2833-furthest-point-from-origin) |
 ## Backtracking
 |  |
@@ -669,6 +673,7 @@ My collection of LeetCode solutions.
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/tyler-le/LeetCode/tree/master/2096-step-by-step-directions-from-a-binary-tree-node-to-another) |
 | [2222-number-of-ways-to-select-buildings](https://github.com/tyler-le/LeetCode/tree/master/2222-number-of-ways-to-select-buildings) |
+| [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
 | [2379-minimum-recolors-to-get-k-consecutive-black-blocks](https://github.com/tyler-le/LeetCode/tree/master/2379-minimum-recolors-to-get-k-consecutive-black-blocks) |
 | [2390-removing-stars-from-a-string](https://github.com/tyler-le/LeetCode/tree/master/2390-removing-stars-from-a-string) |
 | [2452-words-within-two-edits-of-dictionary](https://github.com/tyler-le/LeetCode/tree/master/2452-words-within-two-edits-of-dictionary) |
