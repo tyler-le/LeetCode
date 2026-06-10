@@ -51,6 +51,7 @@ My collection of LeetCode solutions.
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0256-paint-house](https://github.com/tyler-le/LeetCode/tree/master/0256-paint-house) |
 | [0269-alien-dictionary](https://github.com/tyler-le/LeetCode/tree/master/0269-alien-dictionary) |
+| [0287-find-the-duplicate-number](https://github.com/tyler-le/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/tyler-le/LeetCode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0318-maximum-product-of-word-lengths](https://github.com/tyler-le/LeetCode/tree/master/0318-maximum-product-of-word-lengths) |
@@ -626,6 +627,7 @@ My collection of LeetCode solutions.
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0187-repeated-dna-sequences](https://github.com/tyler-le/LeetCode/tree/master/0187-repeated-dna-sequences) |
+| [0287-find-the-duplicate-number](https://github.com/tyler-le/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0318-maximum-product-of-word-lengths](https://github.com/tyler-le/LeetCode/tree/master/0318-maximum-product-of-word-lengths) |
 | [0473-matchsticks-to-square](https://github.com/tyler-le/LeetCode/tree/master/0473-matchsticks-to-square) |
 | [0698-partition-to-k-equal-sum-subsets](https://github.com/tyler-le/LeetCode/tree/master/0698-partition-to-k-equal-sum-subsets) |
@@ -739,6 +741,7 @@ My collection of LeetCode solutions.
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/tyler-le/LeetCode/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/tyler-le/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
+| [0287-find-the-duplicate-number](https://github.com/tyler-le/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0300-longest-increasing-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0300-longest-increasing-subsequence) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0540-single-element-in-a-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
@@ -856,6 +859,7 @@ My collection of LeetCode solutions.
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0277-find-the-celebrity](https://github.com/tyler-le/LeetCode/tree/master/0277-find-the-celebrity) |
+| [0287-find-the-duplicate-number](https://github.com/tyler-le/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
 | [0360-sort-transformed-array](https://github.com/tyler-le/LeetCode/tree/master/0360-sort-transformed-array) |
 | [0392-is-subsequence](https://github.com/tyler-le/LeetCode/tree/master/0392-is-subsequence) |
