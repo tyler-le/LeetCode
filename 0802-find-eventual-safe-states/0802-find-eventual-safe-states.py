@@ -5,6 +5,7 @@ class Solution:
         q = deque()
         n = len(graph)
         res = []
+        safe = defaultdict(bool)
 
         for i in range(n):
             for nbor in graph[i]:
@@ -14,7 +15,7 @@ class Solution:
         for node in range(n):
             if not indegrees[node]:
                 q.append(node)
-                res.append(node)
+                safe[node] = True
         
         while q:
             popped_node = q.popleft()
@@ -23,9 +24,12 @@ class Solution:
                 indegrees[nbor]-=1
                 if not indegrees[nbor]:
                     q.append(nbor)
-                    res.append(nbor)
+                    safe[nbor] = True
 
-        return sorted(res)
+        for i in range(n):
+            if safe[i]: res.append(i)
+            
+        return res
         
 
 
