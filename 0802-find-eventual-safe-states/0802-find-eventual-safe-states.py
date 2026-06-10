@@ -14,7 +14,6 @@ class Solution:
         for node in range(n):
             if not indegrees[node]:
                 q.append(node)
-                # visited.add(node)
                 res.append(node)
         
         while q:
@@ -25,7 +24,6 @@ class Solution:
                 if not indegrees[nbor]:
                     q.append(nbor)
                     res.append(nbor)
-                    # visited.add(nbor)
 
         return sorted(res)
         
