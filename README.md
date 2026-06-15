@@ -560,6 +560,7 @@ My collection of LeetCode solutions.
 | [0160-intersection-of-two-linked-lists](https://github.com/tyler-le/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0716-max-stack](https://github.com/tyler-le/LeetCode/tree/master/0716-max-stack) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 ## Math
 |  |
@@ -871,6 +872,7 @@ My collection of LeetCode solutions.
 | [0777-swap-adjacent-in-lr-string](https://github.com/tyler-le/LeetCode/tree/master/0777-swap-adjacent-in-lr-string) |
 | [0948-bag-of-tokens](https://github.com/tyler-le/LeetCode/tree/master/0948-bag-of-tokens) |
 | [0986-interval-list-intersections](https://github.com/tyler-le/LeetCode/tree/master/0986-interval-list-intersections) |
+| [2095-delete-the-middle-node-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 | [2130-maximum-twin-sum-of-a-linked-list](https://github.com/tyler-le/LeetCode/tree/master/2130-maximum-twin-sum-of-a-linked-list) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/tyler-le/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
