@@ -247,6 +247,7 @@ My collection of LeetCode solutions.
 | [2352-equal-row-and-column-pairs](https://github.com/tyler-le/LeetCode/tree/master/2352-equal-row-and-column-pairs) |
 | [2390-removing-stars-from-a-string](https://github.com/tyler-le/LeetCode/tree/master/2390-removing-stars-from-a-string) |
 | [2402-meeting-rooms-iii](https://github.com/tyler-le/LeetCode/tree/master/2402-meeting-rooms-iii) |
+| [3612-process-string-with-special-operations-i](https://github.com/tyler-le/LeetCode/tree/master/3612-process-string-with-special-operations-i) |
 ## Tree
 |  |
 | ------- |
@@ -697,6 +698,7 @@ My collection of LeetCode solutions.
 | [2833-furthest-point-from-origin](https://github.com/tyler-le/LeetCode/tree/master/2833-furthest-point-from-origin) |
 | [2938-separate-black-and-white-balls](https://github.com/tyler-le/LeetCode/tree/master/2938-separate-black-and-white-balls) |
 | [3211-generate-binary-strings-without-adjacent-zeros](https://github.com/tyler-le/LeetCode/tree/master/3211-generate-binary-strings-without-adjacent-zeros) |
+| [3612-process-string-with-special-operations-i](https://github.com/tyler-le/LeetCode/tree/master/3612-process-string-with-special-operations-i) |
 | [3760-maximum-substrings-with-distinct-start](https://github.com/tyler-le/LeetCode/tree/master/3760-maximum-substrings-with-distinct-start) |
 | [3846-total-distance-to-type-a-string-using-one-finger](https://github.com/tyler-le/LeetCode/tree/master/3846-total-distance-to-type-a-string-using-one-finger) |
 ## Sliding Window
