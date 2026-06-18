@@ -27,6 +27,7 @@ My collection of LeetCode solutions.
 | [0074-search-a-2d-matrix](https://github.com/tyler-le/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0078-subsets](https://github.com/tyler-le/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/tyler-le/LeetCode/tree/master/0079-word-search) |
+| [0084-largest-rectangle-in-histogram](https://github.com/tyler-le/LeetCode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0088-merge-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0090-subsets-ii](https://github.com/tyler-le/LeetCode/tree/master/0090-subsets-ii) |
 | [0118-pascals-triangle](https://github.com/tyler-le/LeetCode/tree/master/0118-pascals-triangle) |
@@ -900,6 +901,7 @@ My collection of LeetCode solutions.
 | ------- |
 | [0032-longest-valid-parentheses](https://github.com/tyler-le/LeetCode/tree/master/0032-longest-valid-parentheses) |
 | [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0084-largest-rectangle-in-histogram](https://github.com/tyler-le/LeetCode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
@@ -1021,6 +1023,7 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/tyler-le/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0084-largest-rectangle-in-histogram](https://github.com/tyler-le/LeetCode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 | [1063-number-of-valid-subarrays](https://github.com/tyler-le/LeetCode/tree/master/1063-number-of-valid-subarrays) |
 ## Queue
