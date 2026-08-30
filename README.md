@@ -128,6 +128,7 @@ My collection of LeetCode solutions.
 | [1980-find-unique-binary-string](https://github.com/tyler-le/LeetCode/tree/master/1980-find-unique-binary-string) |
 | [2013-detect-squares](https://github.com/tyler-le/LeetCode/tree/master/2013-detect-squares) |
 | [2033-minimum-operations-to-make-a-uni-value-grid](https://github.com/tyler-le/LeetCode/tree/master/2033-minimum-operations-to-make-a-uni-value-grid) |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/tyler-le/LeetCode/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2101-detonate-the-maximum-bombs](https://github.com/tyler-le/LeetCode/tree/master/2101-detonate-the-maximum-bombs) |
 | [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/tyler-le/LeetCode/tree/master/2149-rearrange-array-elements-by-sign) |
@@ -465,6 +466,7 @@ My collection of LeetCode solutions.
 | [1838-frequency-of-the-most-frequent-element](https://github.com/tyler-le/LeetCode/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/tyler-le/LeetCode/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2038-remove-colored-pieces-if-both-neighbors-are-the-same-color](https://github.com/tyler-le/LeetCode/tree/master/2038-remove-colored-pieces-if-both-neighbors-are-the-same-color) |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/tyler-le/LeetCode/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2126-destroying-asteroids](https://github.com/tyler-le/LeetCode/tree/master/2126-destroying-asteroids) |
 | [2214-minimum-health-to-beat-game](https://github.com/tyler-le/LeetCode/tree/master/2214-minimum-health-to-beat-game) |
 | [2268-minimum-number-of-keypresses](https://github.com/tyler-le/LeetCode/tree/master/2268-minimum-number-of-keypresses) |
