@@ -71,6 +71,7 @@ My collection of LeetCode solutions.
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0518-coin-change-ii](https://github.com/tyler-le/LeetCode/tree/master/0518-coin-change-ii) |
 | [0523-continuous-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0523-continuous-subarray-sum) |
+| [0525-contiguous-array](https://github.com/tyler-le/LeetCode/tree/master/0525-contiguous-array) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0531-lonely-pixel-i](https://github.com/tyler-le/LeetCode/tree/master/0531-lonely-pixel-i) |
 | [0540-single-element-in-a-sorted-array](https://github.com/tyler-le/LeetCode/tree/master/0540-single-element-in-a-sorted-array) |
@@ -173,6 +174,7 @@ My collection of LeetCode solutions.
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0523-continuous-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0523-continuous-subarray-sum) |
+| [0525-contiguous-array](https://github.com/tyler-le/LeetCode/tree/master/0525-contiguous-array) |
 | [0531-lonely-pixel-i](https://github.com/tyler-le/LeetCode/tree/master/0531-lonely-pixel-i) |
 | [0535-encode-and-decode-tinyurl](https://github.com/tyler-le/LeetCode/tree/master/0535-encode-and-decode-tinyurl) |
 | [0560-subarray-sum-equals-k](https://github.com/tyler-le/LeetCode/tree/master/0560-subarray-sum-equals-k) |
@@ -845,6 +847,7 @@ My collection of LeetCode solutions.
 | [0209-minimum-size-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0209-minimum-size-subarray-sum) |
 | [0253-meeting-rooms-ii](https://github.com/tyler-le/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0523-continuous-subarray-sum](https://github.com/tyler-le/LeetCode/tree/master/0523-continuous-subarray-sum) |
+| [0525-contiguous-array](https://github.com/tyler-le/LeetCode/tree/master/0525-contiguous-array) |
 | [0528-random-pick-with-weight](https://github.com/tyler-le/LeetCode/tree/master/0528-random-pick-with-weight) |
 | [0560-subarray-sum-equals-k](https://github.com/tyler-le/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [1004-max-consecutive-ones-iii](https://github.com/tyler-le/LeetCode/tree/master/1004-max-consecutive-ones-iii) |
