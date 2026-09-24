@@ -1,61 +1,73 @@
 class Node:
-    def __init__(self, key, value):
+    def __init__(self, key, val, prev = None, nxt = None):
         self.key = key
-        self.value = value
-        self.next = None
-        self.prev = None
+        self.val = val
+        self.prev = prev
+        self.nxt = nxt
 
-class DLL:
+class DoublyLinkedList:
     def __init__(self):
+        self.mru = Node(-1, -1)
         self.lru = Node(-1, -1)
-        self.mru = Node(-1,-1)
-        self.lru.next = self.mru
+        self.lru.nxt = self.mru
         self.mru.prev = self.lru
-    
-    def insert(self, node):
-        prev = self.mru.prev
-        node.next = self.mru
-        self.mru.prev = node
-        prev.next = node
-        node.prev = prev
-
+        self.size = 0
 
     def remove(self, node):
-        prv, nxt = node.prev, node.next
-        prv.next = nxt
-        nxt.prev = prv
+        prev = node.prev
+        nxt = node.nxt
+        prev.nxt = nxt
+        nxt.prev = prev
+        self.size-=1
+        return node
+
+    def insert_at_mru(self, node):
+        prev = self.mru.prev
+        nxt = self.mru
+        prev.nxt = node
+        nxt.prev = node
+        node.prev = prev
+        node.nxt = nxt
+        self.size+=1
+        return node
+
 
 
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self.dll = DLL()
+        self.dll = DoublyLinkedList()
+        self.key_to_node = {}
         self.capacity = capacity
-        self.hmap = {}
-        
+
 
     def get(self, key: int) -> int:
-        if key not in self.hmap: return -1
-        node = self.hmap[key]
-        self.dll.remove(node)
-        self.dll.insert(node)
-        return node.value
-        
+        if key in self.key_to_node:
+            node = self.key_to_node[key]
+            self.dll.remove(node)
+            self.dll.insert_at_mru(node)
+            return node.val
+
+        else:
+            return -1
 
     def put(self, key: int, value: int) -> None:
-        if key in self.hmap:
-            node = self.hmap[key]
+        if key in self.key_to_node:
+            node = self.key_to_node[key]
             self.dll.remove(node)
-        
-        node = Node(key, value)
-        self.hmap[key] = node
-        self.dll.insert(node)
+            self.dll.insert_at_mru(node)
+            node.val = value
+            return node.val
 
-        if len(self.hmap) > self.capacity:
-            lru = self.dll.lru.next
-            self.dll.remove(lru)
-            del self.hmap[lru.key]
-        
+        else:
+            if self.dll.size >= self.capacity:
+                deleted = self.dll.remove(self.dll.lru.nxt)
+                del self.key_to_node[deleted.key]
+
+            node = Node(key, value)
+            self.key_to_node[key] = node
+            self.dll.insert_at_mru(node)
+            return node.val
 
 
 # Your LRUCache object will be instantiated and called as such:
