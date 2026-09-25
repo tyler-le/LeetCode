@@ -1,17 +1,22 @@
 class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        # include exclude
-        n = len(nums)
+    def subsets(self, nums: list[int]) -> list[list[int]]:
         res = []
+        n = len(nums)
 
-        def f(index, path):
+        def rec(path, index):
             nonlocal res
-            if index == n:
+            if index == n: 
                 res.append(path.copy())
-                return
+                return 
 
-            f(index + 1, path + [nums[index]])
-            f(index + 1, path)
+            # include
+            rec(path + [nums[index]], index + 1)
 
-        f(0, [])
+
+            # exclude
+            rec(path, index + 1)
+
+
+
+        rec([], 0)
         return res
