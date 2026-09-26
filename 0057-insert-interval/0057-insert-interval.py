@@ -1,9 +1,4 @@
 class Solution:
-    def _has_overlap(self, x, y):
-        x_start, x_end = x
-        y_start, y_end = y
-        return x_start <= y_start <= x_end or y_start <= x_start <= y_end
-
     def insert(self, intervals: list[list[int]], newInterval: list[int]) -> list[list[int]]:
         res = []
         
