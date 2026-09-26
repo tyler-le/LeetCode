@@ -18,8 +18,8 @@ class Solution:
                 return res
 
             # case 2 - newInterval comes after curr_interval
-                # append curr_interval
             elif newInterval[0] > curr_end:
+                # append curr_interval
                 res.append(intervals[i])
 
             # case 3 - newInterval conflicts with curr_interval
