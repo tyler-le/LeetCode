@@ -1,16 +1,16 @@
 class Solution:
-    def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
-        events = [] # (location, +/- passengers)
-
-        for passengers, src, dst in trips:
-            events.append((src, passengers))
-            events.append((dst, -passengers))
+    def carPooling(self, trips: list[list[int]], capacity: int) -> bool:
+        arr = []
+        for num_passengers, src, dst in trips:
+            arr.append((num_passengers, src))
+            arr.append((-num_passengers, dst))
         
-        events.sort(key = lambda x : (x[0], x[1]) )
-        curr_capacity = 0
-
-        for _, delta in events:
-            curr_capacity+=delta
-            if curr_capacity > capacity: return False
+        arr.sort(key = lambda x : (x[1], x[0]))
         
+        cnt = 0
+        for magnitude, _ in arr:
+            cnt+=magnitude
+            if cnt > capacity: return False
+
         return True
+
