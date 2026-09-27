@@ -1044,4 +1044,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
+## Dijkstra's Algorithm
+|  |
+| ------- |
+| [0743-network-delay-time](https://github.com/tyler-le/LeetCode/tree/master/0743-network-delay-time) |
 <!---LeetCode Topics End-->
