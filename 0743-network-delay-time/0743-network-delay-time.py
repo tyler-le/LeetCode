@@ -9,13 +9,13 @@ class Solution:
 
         while min_heap:
             popped_dist, popped_node = heappop(min_heap)
+            if popped_node in visited: continue
             visited.add(popped_node)
             if len(visited) == n: 
                 return popped_dist
 
             for nbor, weight in graph[popped_node]:
-                if nbor not in visited:
-                    heappush(min_heap, (popped_dist + weight, nbor))
+                heappush(min_heap, (popped_dist + weight, nbor))
 
         return -1
 
