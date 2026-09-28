@@ -269,6 +269,7 @@ My collection of LeetCode solutions.
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/tyler-le/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0337-house-robber-iii](https://github.com/tyler-le/LeetCode/tree/master/0337-house-robber-iii) |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0366-find-leaves-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
 | [0437-path-sum-iii](https://github.com/tyler-le/LeetCode/tree/master/0437-path-sum-iii) |
 | [0513-find-bottom-left-tree-value](https://github.com/tyler-le/LeetCode/tree/master/0513-find-bottom-left-tree-value) |
@@ -308,6 +309,7 @@ My collection of LeetCode solutions.
 | [0310-minimum-height-trees](https://github.com/tyler-le/LeetCode/tree/master/0310-minimum-height-trees) |
 | [0337-house-robber-iii](https://github.com/tyler-le/LeetCode/tree/master/0337-house-robber-iii) |
 | [0339-nested-list-weight-sum](https://github.com/tyler-le/LeetCode/tree/master/0339-nested-list-weight-sum) |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0366-find-leaves-of-binary-tree](https://github.com/tyler-le/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
 | [0417-pacific-atlantic-water-flow](https://github.com/tyler-le/LeetCode/tree/master/0417-pacific-atlantic-water-flow) |
@@ -737,6 +739,7 @@ My collection of LeetCode solutions.
 | [0155-min-stack](https://github.com/tyler-le/LeetCode/tree/master/0155-min-stack) |
 | [0244-shortest-word-distance-ii](https://github.com/tyler-le/LeetCode/tree/master/0244-shortest-word-distance-ii) |
 | [0295-find-median-from-data-stream](https://github.com/tyler-le/LeetCode/tree/master/0295-find-median-from-data-stream) |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0380-insert-delete-getrandom-o1](https://github.com/tyler-le/LeetCode/tree/master/0380-insert-delete-getrandom-o1) |
 | [0381-insert-delete-getrandom-o1-duplicates-allowed](https://github.com/tyler-le/LeetCode/tree/master/0381-insert-delete-getrandom-o1-duplicates-allowed) |
 | [0432-all-oone-data-structure](https://github.com/tyler-le/LeetCode/tree/master/0432-all-oone-data-structure) |
@@ -914,6 +917,7 @@ My collection of LeetCode solutions.
 | [0084-largest-rectangle-in-histogram](https://github.com/tyler-le/LeetCode/tree/master/0084-largest-rectangle-in-histogram) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/tyler-le/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/tyler-le/LeetCode/tree/master/0155-min-stack) |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0364-nested-list-weight-sum-ii](https://github.com/tyler-le/LeetCode/tree/master/0364-nested-list-weight-sum-ii) |
 | [0496-next-greater-element-i](https://github.com/tyler-le/LeetCode/tree/master/0496-next-greater-element-i) |
 | [0636-exclusive-time-of-functions](https://github.com/tyler-le/LeetCode/tree/master/0636-exclusive-time-of-functions) |
@@ -1041,6 +1045,7 @@ My collection of LeetCode solutions.
 ## Queue
 |  |
 | ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/tyler-le/LeetCode/tree/master/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) |
 | [3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i](https://github.com/tyler-le/LeetCode/tree/master/3191-minimum-operations-to-make-binary-array-elements-equal-to-one-i) |
 ## Monotonic Queue
@@ -1067,4 +1072,8 @@ My collection of LeetCode solutions.
 |  |
 | ------- |
 | [1584-min-cost-to-connect-all-points](https://github.com/tyler-le/LeetCode/tree/master/1584-min-cost-to-connect-all-points) |
+## Iterator
+|  |
+| ------- |
+| [0341-flatten-nested-list-iterator](https://github.com/tyler-le/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 <!---LeetCode Topics End-->
